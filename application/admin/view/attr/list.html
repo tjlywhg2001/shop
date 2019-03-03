@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+{include file='/common/_meta'}
+<body>
+	<!-- 头部 -->
+{include file='/common/top'}
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+                {include file='/common/left'}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Index/index')}">系统</a>
+                        </li>
+                        <li class="active">商品类型管理</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('attr/add')}'"> <i class="fa fa-plus"></i> 添加商品属性
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">商品属性ID</th>
+                                <th class="text-center">商品属性名称</th>
+                                <th class="text-center">商品属性类型</th>
+                                <th class="text-center">所属类型</th>
+                                <th class="text-center">商品属性值</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        {volist name="attrlist" id="attr"}
+                        <tbody>
+                                <tr>
+                                <td align="center" width="5%">{$attr.attr_id}</td>
+                                <td align="+center" width="12%">
+                                    {$attr.attr_name}
+                                    
+                                </td>
+                                <td align="center" width="5%">
+                                {if condition="$attr['attr_type'] eq 1"}
+                                    单选
+                                {else /}
+                                    唯一
+                                {/if}
+                                </td>
+                                <td align="center" width="10%">{$attr.type_name}</td>
+                                <td align="center" width="10%">{$attr.attr_values}</td>
+                                <td align="center" width="12%">
+                                    <a href="{:url('edit',array('attr_id'=>$attr['attr_id']))}" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '{:url('del',array('attr_id'=>$attr['attr_id']))}')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        {/volist}
+                    </table>
+                </div>
+                <div>
+                    {$attrlist->render()}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file='/common/footer'}    
+
+
+</body></html>
