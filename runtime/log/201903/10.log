@@ -1,0 +1,2452 @@
+---------------------------------------------------------------
+[ 2019-03-10T18:16:34+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.066000s][吞吐率：15.15req/s] [内存消耗：2,524.49kb] [文件加载：57]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'g.product_commodity_id' in 'on clause'[B:\aaaweb\shop\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-03-10T18:16:39+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:17:08+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：2,524.27kb] [文件加载：57]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.003000s ]
+[ error ] [10501]SQLSTATE[42S22]: Column not found: 1054 Unknown column 'g.product_commodity_id' in 'on clause'[B:\aaaweb\shop\thinkphp\library\think\db\Connection.php:390]
+---------------------------------------------------------------
+[ 2019-03-10T18:19:02+08:00 ] 127.0.0.1 GET /index.php
+[ info ] c.com/index.php [运行时间：0.026000s][吞吐率：38.46req/s] [内存消耗：1,359.70kb] [文件加载：40]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept-encoding' => 'compress,gzip',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\index\controller\Index->index[ B:\aaaweb\shop\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected end of file, expecting variable (T_VARIABLE) or ${ (T_DOLLAR_OPEN_CURLY_BRACES) or {$ (T_CURLY_OPEN)[x��T�n�F~�H��h�%i�RW�8ƃ���2?v�=��ԇ�Hb�RߠH�a.g��]�&�N��P|��}r���������ۍ{7���?\'w7��r{7�N_��t:y���~:�����L���7!���b�X�ltV���cS��.�<���ot�l�(iSC�k[2�aJ��YCr��2R�Z��eX�2K=�FK�D^bk4%�[��ǝ� ��kMMC_�o���}�iWG�+]K�%���N��<��ʯV�c�y�-�����u�E��3Cs��x�_�l5�����E9���yѬ�
+Ξ)�y�]�⥐p<C��S�4����KT�[�|�T8gV�R��E�=�����Oa��؛3ˈ��BIi�w_:kװ7�m)��⽷��C��[�H{����G�� �Q�5�؃���)(Z
+c�F�;8�x�2����b�n�Ԉ�k��N�ɡ�`�q�6���Y+�����G�Td��
+�K��x��Y��s���ಳ�G�6�R���}��K��K"����!p�0mA��bܫD����ԗ1��x�̆��C<�~أ�8�1x���.��^x����%�-R�49�#ht�;4��X�Y�1�$�XW�(s��3�/|gX Cn����ֻ��H0�/��ןh�:W��=��w��Yb���8[T�Țݠ吋��e�W�������7�~�*��>5�O��)�T����h��m@/Ј�nk�߫\�N�b�>Y�L����G��s�������+E[����H�F<����ow�7�ݮ4L����<��`�X�������E�~��{��9@���-�x>��j�~/�{�|�
+���8���C��~Í�[1hҬR�ƞؐl�sݡr�����5f8���q/��	�:�J�~n�y��S4�/�{��wҏ:�5/��A��nA?�Z()���ߏl��P��~\�x]�k�Nno���Q�(13) : eval()'d code(1) : eval()'d code(47) : eval()'d code:140]
+---------------------------------------------------------------
+[ 2019-03-10T18:19:43+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.061000s][吞吐率：16.39req/s] [内存消耗：2,789.98kb] [文件加载：58]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:19:44+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.047000s][吞吐率：21.28req/s] [内存消耗：2,629.40kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:19:45+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:19:45+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,350.87kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:20:08+08:00 ] 127.0.0.1 GET /admin/commodity/add.html
+[ info ] c.com/admin/commodity/add.html [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：2,729.39kb] [文件加载：55]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/lst.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/add_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->add[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\add.html [ array (
+  0 => 'cateslist',
+  1 => 'brandlist',
+  2 => 'mblevellist',
+  3 => 'attrlists',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `level_id`,`level_name` FROM `tp_member_level` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_type` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_cates` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cates` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `brand_id`,`brand_name` FROM `tp_brand` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:20:08+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.025000s][吞吐率：40.00req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:20:08+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,350.45kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:20:08+08:00 ] 127.0.0.1 GET /admin/commodity/add.html
+[ info ] c.com/admin/commodity/add.html [运行时间：0.091000s][吞吐率：10.99req/s] [内存消耗：2,536.43kb] [文件加载：53]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/add_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->add[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\add.html [ array (
+  0 => 'cateslist',
+  1 => 'brandlist',
+  2 => 'mblevellist',
+  3 => 'attrlists',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `level_id`,`level_name` FROM `tp_member_level` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_type` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_cates` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cates` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `brand_id`,`brand_name` FROM `tp_brand` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:20:21+08:00 ] 127.0.0.1 POST /admin/attr/ajaxattrs.html
+[ info ] c.com/admin/attr/ajaxattrs.html [运行时间：0.043000s][吞吐率：23.26req/s] [内存消耗：2,396.74kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'attr',
+    2 => 'ajaxattrs',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'content-length' => '14',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://c.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://c.com/admin/commodity/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/attr/ajaxattrs_html' => '',
+  'attr_type_id' => '1',
+)
+[ info ] [ RUN ] app\admin\controller\Attr->ajaxattrs[ B:\aaaweb\shop\application\admin\controller\Attr.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_attr` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_attr` WHERE  `attr_type_id` = 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:20:24+08:00 ] 127.0.0.1 GET /admin/commodity/add.html
+[ info ] c.com/admin/commodity/add.html [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,536.43kb] [文件加载：53]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/add_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->add[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\add.html [ array (
+  0 => 'cateslist',
+  1 => 'brandlist',
+  2 => 'mblevellist',
+  3 => 'attrlists',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `level_id`,`level_name` FROM `tp_member_level` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_type` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_cates` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cates` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `brand_id`,`brand_name` FROM `tp_brand` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:20:54+08:00 ] 127.0.0.1 POST /admin/commodity/add.html
+[ info ] c.com/admin/commodity/add.html [运行时间：0.651000s][吞吐率：1.54req/s] [内存消耗：3,176.63kb] [文件加载：60]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'content-length' => '521311',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://c.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundaryMaDA0nQ7Eri7hG6O',
+  'referer' => 'http://c.com/admin/commodity/add.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/add_html' => '',
+  'commodity_name' => '111',
+  'commodity_on_sale' => '1',
+  'cates_id' => '2',
+  'brand_id' => '113',
+  'commodity_market_price' => '222',
+  'commodity_shop_price' => '333',
+  'commodity_weight' => '444',
+  'commodity_weight_unit' => 'kg',
+  'commodity_description' => '<p>aa</p>',
+  'mls' => 
+  array (
+    3 => '1',
+    4 => '2',
+    5 => '3',
+    6 => '4',
+  ),
+  'attr_type_id' => '1',
+  'comm_attr' => 
+  array (
+    6 => 
+    array (
+      0 => '黑色',
+      1 => '黄色',
+      2 => '红色',
+    ),
+    15 => '',
+    16 => '8',
+    17 => 
+    array (
+      0 => '512G',
+      1 => '128G',
+    ),
+  ),
+  'commattr_attrprice' => 
+  array (
+    0 => '1',
+    1 => '2',
+    2 => '3',
+    3 => '4',
+    4 => '5',
+  ),
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->add[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_commodity` (`commodity_name` , `commodity_on_sale` , `cates_id` , `brand_id` , `commodity_market_price` , `commodity_shop_price` , `commodity_weight` , `commodity_weight_unit` , `commodity_description` , `commodity_code`) VALUES ('111' , 1 , 2 , 113 , 222 , 333 , 444 , 'kg' , '<p>aa</p>' , '1552213254421142') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_price` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_member_price` (`price_mlevel_id` , `price_mpprice` , `commoditys_id`) VALUES (3 , 1 , 135) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_member_price` (`price_mlevel_id` , `price_mpprice` , `commoditys_id`) VALUES (4 , 2 , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_member_price` (`price_mlevel_id` , `price_mpprice` , `commoditys_id`) VALUES (5 , 3 , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_member_price` (`price_mlevel_id` , `price_mpprice` , `commoditys_id`) VALUES (6 , 4 , 135) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_comm_attr` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_attr` (`commattr_attrid` , `commattr_value` , `commattr_attrprice` , `commattr_commid`) VALUES (6 , '黑色' , 1 , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_attr` (`commattr_attrid` , `commattr_value` , `commattr_attrprice` , `commattr_commid`) VALUES (6 , '黄色' , 2 , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_attr` (`commattr_attrid` , `commattr_value` , `commattr_attrprice` , `commattr_commid`) VALUES (6 , '红色' , 3 , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_attr` (`commattr_attrid` , `commattr_value` , `commattr_commid`) VALUES (16 , '8' , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_attr` (`commattr_attrid` , `commattr_value` , `commattr_attrprice` , `commattr_commid`) VALUES (17 , '512G' , 4 , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_attr` (`commattr_attrid` , `commattr_value` , `commattr_attrprice` , `commattr_commid`) VALUES (17 , '128G' , 5 , 135) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_comm_photo` [ RunTime:0.004000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_photo` (`comm_commodity_id` , `comm_photo_og` , `comm_photo_big` , `comm_photo_mid` , `comm_photo_sm`) VALUES (135 , '20190310\\0dd7274883d277e52697c1ae75975a9d.jpg' , '20190310\\big_0dd7274883d277e52697c1ae75975a9d.jpg' , '20190310\\mid_0dd7274883d277e52697c1ae75975a9d.jpg' , '20190310\\sm_0dd7274883d277e52697c1ae75975a9d.jpg') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_comm_photo` (`comm_commodity_id` , `comm_photo_og` , `comm_photo_big` , `comm_photo_mid` , `comm_photo_sm`) VALUES (135 , '20190310\\4e889c1fdba225e7027b1da673d171dd.png' , '20190310\\big_4e889c1fdba225e7027b1da673d171dd.png' , '20190310\\mid_4e889c1fdba225e7027b1da673d171dd.png' , '20190310\\sm_4e889c1fdba225e7027b1da673d171dd.png') [ RunTime:0.000000s ]
+[ error ] [2]unlink(B:\aaaweb\shop\public/../public/static/uploadss/20190310\0dd7274883d277e52697c1ae75975a9d.jpg): Permission denied[B:\aaaweb\shop\application\admin\model\Commodity.php:115]
+[ error ] [2]unlink(B:\aaaweb\shop\public/../public/static/uploadss/20190310\4e889c1fdba225e7027b1da673d171dd.png): Permission denied[B:\aaaweb\shop\application\admin\model\Commodity.php:115]
+---------------------------------------------------------------
+[ 2019-03-10T18:20:58+08:00 ] 127.0.0.1 GET /admin/commodity/add.html
+[ info ] c.com/admin/commodity/add.html [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,538.66kb] [文件加载：53]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/add.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/add_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->add[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\add.html [ array (
+  0 => 'cateslist',
+  1 => 'brandlist',
+  2 => 'mblevellist',
+  3 => 'attrlists',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `level_id`,`level_name` FROM `tp_member_level` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_type` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_cates` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cates` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `brand_id`,`brand_name` FROM `tp_brand` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:20:58+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:20:58+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,350.45kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:20:58+08:00 ] 127.0.0.1 GET /admin/commodity/add.html
+[ info ] c.com/admin/commodity/add.html [运行时间：0.058000s][吞吐率：17.24req/s] [内存消耗：2,536.43kb] [文件加载：53]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'add',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/add_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->add[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\add.html [ array (
+  0 => 'cateslist',
+  1 => 'brandlist',
+  2 => 'mblevellist',
+  3 => 'attrlists',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_member_level` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `level_id`,`level_name` FROM `tp_member_level` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_type` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_cates` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cates` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_brand` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `brand_id`,`brand_name` FROM `tp_brand` [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:21:01+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：2,629.16kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/add.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:21:01+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:21:02+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,350.45kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:21:02+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.049000s][吞吐率：20.41req/s] [内存消耗：2,626.98kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:21:10+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.044000s][吞吐率：22.73req/s] [内存消耗：2,629.47kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/add.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` INNER JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:21:10+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:21:10+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,350.87kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:22:17+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.057000s][吞吐率：17.54req/s] [内存消耗：2,632.76kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/add.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:22:18+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:22:18+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,350.87kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:32:24+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.069000s][吞吐率：14.49req/s] [内存消耗：2,798.87kb] [文件加载：58]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/add.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:32:24+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:32:24+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,350.87kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:32:30+08:00 ] 127.0.0.1 GET /admin/commodity/product/commodity_id/135.html
+[ info ] c.com/admin/commodity/product/commodity_id/135.html [运行时间：0.062000s][吞吐率：16.13req/s] [内存消耗：2,668.48kb] [文件加载：54]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'product',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/lst.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/product/commodity_id/135_html' => '',
+  'commodity_id' => '135',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->product[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\product.html [ array (
+  0 => 'attrContent',
+  1 => 'productRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_comm_attr` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `c`.`commattr_id`,`c`.`commattr_attrid`,`c`.`commattr_value`,`a`.`attr_name` FROM `tp_comm_attr` `c` INNER JOIN `tp_attr` `a` ON `c`.`commattr_attrid`=`a`.`attr_id` WHERE  `commattr_commid` = 135  AND `a`.`attr_type` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_product` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_product` WHERE  `product_commodity_id` = 135 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:32:30+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:32:30+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,350.45kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:32:31+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.027000s][吞吐率：37.04req/s] [内存消耗：1,349.57kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:32:31+08:00 ] 127.0.0.1 GET /admin/commodity/product/commodity_id/135.html
+[ info ] c.com/admin/commodity/product/commodity_id/135.html [运行时间：0.059000s][吞吐率：16.95req/s] [内存消耗：2,505.77kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'product',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/product/commodity_id/135_html' => '',
+  'commodity_id' => '135',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->product[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\product.html [ array (
+  0 => 'attrContent',
+  1 => 'productRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_comm_attr` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `c`.`commattr_id`,`c`.`commattr_attrid`,`c`.`commattr_value`,`a`.`attr_name` FROM `tp_comm_attr` `c` INNER JOIN `tp_attr` `a` ON `c`.`commattr_attrid`=`a`.`attr_id` WHERE  `commattr_commid` = 135  AND `a`.`attr_type` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_product` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_product` WHERE  `product_commodity_id` = 135 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:33:13+08:00 ] 127.0.0.1 POST /admin/commodity/product/commodity_id/135.html
+[ info ] c.com/admin/commodity/product/commodity_id/135.html [运行时间：0.058000s][吞吐率：17.24req/s] [内存消耗：2,520.18kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'product',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'content-length' => '380',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'origin' => 'http://c.com',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://c.com/admin/commodity/product/commodity_id/135.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/product/commodity_id/135_html' => '',
+  'product_attr_type' => 
+  array (
+    '颜色' => 
+    array (
+      0 => '133',
+      1 => '134',
+      2 => '135',
+    ),
+    '硬盘' => 
+    array (
+      0 => '',
+      1 => '138',
+      2 => '137',
+    ),
+  ),
+  'product_number' => 
+  array (
+    0 => '22',
+    1 => '22',
+    2 => '11',
+  ),
+  'commodity_id' => '135',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->product[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\product.html [ array (
+  0 => 'attrContent',
+  1 => 'productRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_product` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] DELETE FROM `tp_product`    WHERE  `product_commodity_id` = 135 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_product` (`product_commodity_id` , `product_commodity_number` , `product_commodity_attr_type`) VALUES (135 , 22 , '134,138') [ RunTime:0.001000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_product` (`product_commodity_id` , `product_commodity_number` , `product_commodity_attr_type`) VALUES (135 , 11 , '135,137') [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_comm_attr` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `c`.`commattr_id`,`c`.`commattr_attrid`,`c`.`commattr_value`,`a`.`attr_name` FROM `tp_comm_attr` `c` INNER JOIN `tp_attr` `a` ON `c`.`commattr_attrid`=`a`.`attr_id` WHERE  `commattr_commid` = 135  AND `a`.`attr_type` = 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_product` WHERE  `product_commodity_id` = 135 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:33:13+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:33:13+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,350.45kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:33:14+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:33:29+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.050000s][吞吐率：20.00req/s] [内存消耗：2,632.46kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/product/commodity_id/135.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.002000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:33:29+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:33:29+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.045000s][吞吐率：22.22req/s] [内存消耗：2,630.34kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:33:29+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,350.45kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:12+08:00 ] 127.0.0.1 GET /admin/commodity/lst.html
+[ info ] c.com/admin/commodity/lst.html [运行时间：0.055000s][吞吐率：18.18req/s] [内存消耗：2,632.70kb] [文件加载：56]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'commodity',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/product/commodity_id/135.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/commodity/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Commodity->lst[ B:\aaaweb\shop\application\admin\controller\Commodity.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\commodity\list.html [ array (
+  0 => 'commRes',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_commodity` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM ( SELECT count(*) FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ) `_group_count_` LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ FROM `tp_commodity` `g` INNER JOIN `tp_cates` `c` ON `g`.`cates_id`=`c`.`cates_id` LEFT JOIN `tp_brand` `b` ON `g`.`brand_id`=`b`.`brand_id` LEFT JOIN `tp_type` `t` ON `g`.`type_id`=`t`.`type_id` LEFT JOIN `tp_product` `p` ON `g`.`commodity_id`=`p`.`product_commodity_id` GROUP BY `g`.`commodity_id` ORDER BY `g`.`commodity_id` DESC LIMIT 0,10 [ RunTime:0.003000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:12+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:12+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,350.87kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:13+08:00 ] 127.0.0.1 GET /admin/data/index.html
+[ info ] c.com/admin/data/index.html [运行时间：0.048000s][吞吐率：20.83req/s] [内存消耗：2,272.68kb] [文件加载：54]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/commodity/lst.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Data->index[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\data\index.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW TABLE STATUS [ RunTime:0.003000s ]
+[ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:13+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.55kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:13+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,350.45kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:14+08:00 ] 127.0.0.1 GET /admin/data/index.html
+[ info ] c.com/admin/data/index.html [运行时间：0.036000s][吞吐率：27.78req/s] [内存消耗：2,087.92kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/index_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Data->index[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\data\index.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW TABLE STATUS [ RunTime:0.001000s ]
+[ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 POST /admin/data/export.html
+[ info ] c.com/admin/data/export.html [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,707.52kb] [文件加载：45]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'content-length' => '340',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://c.com',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'tables' => 
+  array (
+    0 => 'tp_article',
+    1 => 'tp_attr',
+    2 => 'tp_brand',
+    3 => 'tp_category',
+    4 => 'tp_cates',
+    5 => 'tp_comm_attr',
+    6 => 'tp_comm_photo',
+    7 => 'tp_commodity',
+    8 => 'tp_config',
+    9 => 'tp_links',
+    10 => 'tp_member_level',
+    11 => 'tp_member_price',
+    12 => 'tp_product',
+    13 => 'tp_type',
+  ),
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=0&start=0
+[ info ] c.com/admin/data/export.html?id=0&start=0 [运行时间：0.040000s][吞吐率：25.00req/s] [内存消耗：1,929.77kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '0',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_article` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_article` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=1&start=0
+[ info ] c.com/admin/data/export.html?id=1&start=0 [运行时间：0.037000s][吞吐率：27.03req/s] [内存消耗：1,926.72kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '1',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_attr` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_attr` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_attr` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=2&start=0
+[ info ] c.com/admin/data/export.html?id=2&start=0 [运行时间：0.045000s][吞吐率：22.22req/s] [内存消耗：1,926.48kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '2',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_brand` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_brand` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_brand` LIMIT 0, 1000 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=3&start=0
+[ info ] c.com/admin/data/export.html?id=3&start=0 [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,928.62kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '3',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=4&start=0
+[ info ] c.com/admin/data/export.html?id=4&start=0 [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,927.56kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '4',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_cates` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_cates` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cates` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=5&start=0
+[ info ] c.com/admin/data/export.html?id=5&start=0 [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,926.95kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '5',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_comm_attr` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_comm_attr` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_comm_attr` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=6&start=0
+[ info ] c.com/admin/data/export.html?id=6&start=0 [运行时间：0.033000s][吞吐率：30.30req/s] [内存消耗：1,925.88kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '6',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_comm_photo` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_comm_photo` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_comm_photo` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=7&start=0
+[ info ] c.com/admin/data/export.html?id=7&start=0 [运行时间：0.033000s][吞吐率：30.30req/s] [内存消耗：1,932.59kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '7',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_commodity` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_commodity` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_commodity` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:15+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=8&start=0
+[ info ] c.com/admin/data/export.html?id=8&start=0 [运行时间：0.038000s][吞吐率：26.32req/s] [内存消耗：1,931.38kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '8',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_config` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:16+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=9&start=0
+[ info ] c.com/admin/data/export.html?id=9&start=0 [运行时间：0.032000s][吞吐率：31.25req/s] [内存消耗：1,925.61kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '9',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_links` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_links` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_links` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:16+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=10&start=0
+[ info ] c.com/admin/data/export.html?id=10&start=0 [运行时间：0.038000s][吞吐率：26.32req/s] [内存消耗：1,925.23kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '10',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_member_level` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_member_level` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_level` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:16+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=11&start=0
+[ info ] c.com/admin/data/export.html?id=11&start=0 [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：1,925.86kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '11',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_member_price` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_member_price` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` LIMIT 0, 1000 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:16+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=12&start=0
+[ info ] c.com/admin/data/export.html?id=12&start=0 [运行时间：0.034000s][吞吐率：29.41req/s] [内存消耗：1,924.85kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '12',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_product` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_product` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_product` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:16+08:00 ] 127.0.0.1 GET /admin/data/export.html?id=13&start=0
+[ info ] c.com/admin/data/export.html?id=13&start=0 [运行时间：0.046000s][吞吐率：21.74req/s] [内存消耗：1,921.29kb] [文件加载：49]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'export',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/export_html' => '',
+  'id' => '13',
+  'start' => '0',
+)
+[ info ] [ RUN ] app\admin\controller\Data->export[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_type` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_type` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` LIMIT 0, 1000 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:25+08:00 ] 127.0.0.1 GET /admin/data/importlist.html
+[ info ] c.com/admin/data/importlist.html [运行时间：0.039000s][吞吐率：25.64req/s] [内存消耗：1,984.66kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'importlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'referer' => 'http://c.com/admin/data/index.html',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/importlist_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Data->importlist[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\data\importlist.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]
+---------------------------------------------------------------
+[ 2019-03-10T18:35:25+08:00 ] 127.0.0.1 GET /static/admin/style/jquery.slimscroll.min.js.map
+[ info ] c.com/static/admin/style/jquery.slimscroll.min.js.map [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.88kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'style',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/style/jquery_slimscroll_min_js_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:25+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,351.02kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'connection' => 'keep-alive',
+  'origin' => 'http://c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'accept-encoding' => 'gzip, deflate, sdch',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=6diod4173a2tpagon8qc92qd72',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-03-10T18:35:25+08:00 ] 127.0.0.1 GET /admin/data/importlist.html
+[ info ] c.com/admin/data/importlist.html [运行时间：0.030000s][吞吐率：33.33req/s] [内存消耗：1,816.78kb] [文件加载：48]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'data',
+    2 => 'importlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+  '/admin/data/importlist_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Data->importlist[ B:\aaaweb\shop\application\admin\controller\Data.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\data\importlist.html [ array (
+  0 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]

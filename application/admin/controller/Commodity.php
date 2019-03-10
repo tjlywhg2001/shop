@@ -15,9 +15,10 @@
 				['cates c','g.cates_id=c.cates_id'],
 				['brand b','g.brand_id=b.brand_id','LEFT'],
 				['type t','g.type_id=t.type_id','LEFT'],
+				['product p','g.commodity_id=p.product_commodity_id','LEFT'],
 			];
 
-			$commRes = db('commodity') -> alias('g') -> field('g.*,c.cates_name, b.brand_name, t.type_name') -> join($join) -> order('g.commodity_id DESC') -> paginate(10);
+			$commRes = db('commodity') -> alias('g') -> field('g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ') -> join($join) -> group('g.commodity_id') -> order('g.commodity_id DESC') -> paginate(10);
 			// dump($commRes);die;
 			$this -> assign( [
 				'commRes' => $commRes,
@@ -142,8 +143,53 @@
 		}
 
 
-
+		// 库存
 		public function product($commodity_id){
+			// 判断是否请求
+			if ( request()->isPost()){
+				// 删除信息
+				db('product')-> where('product_commodity_id','=',$commodity_id) -> delete();
+				// 获取所有数据信息
+				$data = input('post.');
+				// 定义要获取的name值
+				$productAttrType = $data['product_attr_type'];
+				$produmNumber = $data['product_number'];
+				// 定义表名
+				$product = db('product');
+
+
+				foreach ($produmNumber as $k => $v) {
+					$strAttr = array();
+					foreach ($productAttrType as $k1 => $v1) {
+						if (intval($v1[$k] <= 0)){
+							continue 2;
+						}
+						$strAttr[] = $v1[$k];
+					}
+					sort( $strAttr );
+					$strAttrs = implode(',', $strAttr );
+					$product->insert([
+						'product_commodity_id' => $commodity_id,
+						'product_commodity_number' => $v,
+						'product_commodity_attr_type' => $strAttrs,
+					]);
+				}
+				// dump($data);die;
+
+
+
+				// // 存入数据库
+				// $add= model('product') ->save($data);
+				// dump($data);die;
+
+				// 判断是否传值成功
+				// if($add){
+				// 	$this->success('添加成功');
+				// }else{
+				// 	$this->error('添加失败');
+				// }
+			}
+
 			// $commAttr = [
 			// 	'c.commattr_id',
 			// 	'c.commattr_attrid',
@@ -156,10 +202,15 @@
 			foreach ($_attrContent as $k => $v) {
 				$attrContent[$v['attr_name']][] = $v;
 			}
+
+			$productRes = db('product') -> where ('product_commodity_id','=',$commodity_id) -> select();
+
 			$this -> assign([
 				'attrContent'=>$attrContent,
+				'productRes'=>$productRes,
 			]);
-			// dump($attrContent);die;
+
+			// dump($productRes);die;
 			return view();
 		}
 

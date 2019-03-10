@@ -49,6 +49,7 @@
                                 <th class="text-center" width="6%">类型</th>
                                 <th class="text-center" width="6%">重量</th>
                                 <th class="text-center" width="4%">单位</th>
+                                <th class="text-center" width="4%">库存</th>
                                 <th class="text-center" width="14%">操作</th>
                             </tr>
                         </thead>
@@ -98,6 +99,13 @@
                                </td>
                                 <td align="center">{$comms.commodity_weight}</td>
                                 <td align="center">{$comms.commodity_weight_unit}</td>
+                                <td align="center">
+                                    {if condition="$comms.produ neq ''"}
+                                        {$comms.produ}
+                                    {else}
+                                        0
+                                    {/if}
+                                </td>
                                 <td align="center">
                                     <a href="{:url('commodity/product',array('commodity_id'=>$comms['commodity_id']))}" class="btn btn-sm btn-warning shiny">
                                         <i class="fa fa-check-square-o"></i> 库存
