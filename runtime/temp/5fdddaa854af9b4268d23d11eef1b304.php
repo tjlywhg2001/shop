@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:66:"B:\aaaweb\shop\public/../application/admin\view\commodity\add.html";i:1552181836;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1552181836;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1552181836;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1552181836;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1552181836;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:65:"B:\aaaa\shop\public/../application/admin\view\commodity\edit.html";i:1552814901;s:53:"B:\aaaa\shop\application\admin\view\common\_meta.html";i:1552785432;s:51:"B:\aaaa\shop\application\admin\view\common\top.html";i:1552785432;s:52:"B:\aaaa\shop\application\admin\view\common\left.html";i:1552785432;s:54:"B:\aaaa\shop\application\admin\view\common\footer.html";i:1552785432;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -333,7 +333,7 @@
                                             <li>
                             <a href="<?php echo url('commodity/lst'); ?>">商品管理</a>
                         </li>
-                        <li class="active">添加商品</li>
+                        <li class="active">修改商品</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -360,6 +360,11 @@
                      </ul>
 
                     <form id="accountForm" method="post" class="form-horizontal bv-form" enctype="multipart/form-data">
+                        <input type="hidden" id="" name="commodity_id" value="<?php echo $commedit['commodity_id']; ?>" />
+                        <input type="hidden" id="" name="commodity_ogthumb" value="<?php echo $commedit['commodity_ogthumb']; ?>" />
+                        <input type="hidden" id="" name="commodity_smthumb" value="<?php echo $commedit['commodity_smthumb']; ?>" />
+                        <input type="hidden" id="" name="commodity_midthumb" value="<?php echo $commedit['commodity_midthumb']; ?>" />
+                        <input type="hidden" id="" name="commodity_bigthumb" value="<?php echo $commedit['commodity_bigthumb']; ?>" />
                         <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;">
                         </button>
                         <!-- 商品信息开始 -->
@@ -372,25 +377,21 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">商品名称</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="commodity_name" type="text">
+                                        <input class="form-control" id="username" placeholder="" name="commodity_name" type="text" value="<?php echo $commedit['commodity_name']; ?>">
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
 
-
-<!--                                 <div class="form-group">
-                                    <label for="username" class="col-sm-2 control-label no-padding-right">商品编号</label>
-                                    <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="commodity_code" type="text">
-                                    </div>
-                                    <p class="help-block col-sm-4 red">* 必填</p>
-                                </div>
- -->
 
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">商品主图</label>
                                     <div class="col-sm-6">
-                                        <input id="username" placeholder="" name="commodity_ogthumb" type="file">
+                                        <input id="username" placeholder="" name="commodity_ogthumb" type="file" value="$commedit['commodity_ogthumb']">
+                                        <?php if($commedit['commodity_ogthumb'] != ''): ?>
+                                        <img src="/static/uploadss/<?php echo $commedit['commodity_ogthumb']; ?>" style="width: 50px;" />
+                                        <?php else: ?>
+                                            暂无图片
+                                        <?php endif; ?>
                                     </div>
                                 </div>
 
@@ -400,13 +401,20 @@
                                     <div class="col-sm-6">
                                         <div class="radio" style="float:left; padding-right: 10px;">
                                             <label>
-                                                <input class="inverted colored-blue" value="1" name="commodity_on_sale" type="radio" checked="checked">
+                                                <input class="inverted colored-blue" value="1" name="commodity_on_sale" type="radio"
+                                                <?php if($commedit['commodity_on_sale'] == 1): ?>
+                                                    checked="checked"
+                                                <?php endif; ?>>
+                                                    
                                                 <span class="text">上架</span>
                                             </label>
                                         </div>
                                         <div class="radio" style="float:left">
                                             <label>
-                                                <input class="inverted colored-blue" value="0" name="commodity_on_sale" type="radio">
+                                                <input class="inverted colored-blue" value="0" name="commodity_on_sale" type="radio"
+                                                <?php if($commedit['commodity_on_sale'] == 0): ?>
+                                                    checked="checked"
+                                                <?php endif; ?>>
                                                 <span class="text">下架</span>
                                             </label>
                                         </div>
@@ -421,6 +429,9 @@
                                             <option value="">请选择</option>
                                             <?php if(is_array($cateslist) || $cateslist instanceof \think\Collection || $cateslist instanceof \think\Paginator): $i = 0; $__LIST__ = $cateslist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catess): $mod = ($i % 2 );++$i;?>
                                             <option <?php if($catess['cates_id'] == $catess['cates_pid']): ?> disabled="disabled" <?php endif; ?> value="<?php echo $catess['cates_id']; ?>"
+                                            <?php if($commedit['cates_id'] == $catess['cates_id']): ?>
+                                                selected="selected"
+                                            <?php endif; ?>
                                             >
                                             
                                              <?php if($catess['cates_pid'] != 0): ?>
@@ -443,6 +454,9 @@
                                             <option value="">请选择</option>
                                             <?php if(is_array($brandlist) || $brandlist instanceof \think\Collection || $brandlist instanceof \think\Paginator): $i = 0; $__LIST__ = $brandlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brands): $mod = ($i % 2 );++$i;?>
                                             <option value="<?php echo $brands['brand_id']; ?>"
+                                            <?php if($commedit['brand_id'] == $brands['brand_id']): ?>
+                                                selected="selected" 
+                                            <?php endif; ?>
                                             >
                                             <?php echo $brands['brand_name']; ?>
                                             </option>
@@ -457,7 +471,7 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">市场价</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="commodity_market_price" type="text">
+                                        <input class="form-control" id="username" placeholder="" name="commodity_market_price" type="text" value="<?php echo $commedit['commodity_market_price']; ?>">
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
@@ -467,7 +481,7 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">本店价</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="commodity_shop_price" type="text">
+                                        <input class="form-control" id="username" placeholder="" name="commodity_shop_price" type="text" value="<?php echo $commedit['commodity_shop_price']; ?>">
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
@@ -477,11 +491,19 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">重量</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" name="commodity_weight" type="text" style="display: inline-block;width: 50%;">
+                                        <input class="form-control" id="username" name="commodity_weight" type="text" style="display: inline-block;width: 50%;" value="<?php echo $commedit['commodity_weight']; ?>">
                                         <select name="commodity_weight_unit" style="display: inline; width: 100px">
                                             <option value="">请选择</option>
-                                            <option value="kg" selected="selected">kg</option>
-                                            <option value="g">g</option>
+                                            <option value="kg"
+                                            <?php if($commedit['commodity_weight_unit'] == 'kg'): ?>
+                                                selected="selected"
+                                            <?php endif; ?>
+                                            >kg</option>
+                                            <option value="g"
+                                            <?php if($commedit['commodity_weight_unit'] == 'g'): ?>
+                                                selected="selected"
+                                            <?php endif; ?>
+                                            >g</option>
                                         </select>
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
@@ -495,7 +517,7 @@
                                 <!-- 描述信息 -->
                                 <div class="form-group">
                                     <div class="col-sm-6">
-                                        <textarea id="content" name="commodity_description" type="text"></textarea>
+                                        <textarea id="content" name="commodity_description" type="text"><?php echo $commedit['commodity_description']; ?></textarea>
                                     </div>
                                     <p class="help-block col-sm-4 red"></p>
                                 </div>
@@ -506,13 +528,15 @@
                              <div class="tab-pane" id="address-tab2">
                                 <!-- 会员价格 -->
                             <?php if(is_array($mblevellist) || $mblevellist instanceof \think\Collection || $mblevellist instanceof \think\Paginator): $i = 0; $__LIST__ = $mblevellist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$level): $mod = ($i % 2 );++$i;?>
-
-                                    <div class="form-group">
-                                        <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $level['level_name']; ?></label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" id="username" placeholder="" name="mls[<?php echo $level['level_id']; ?>]" type="text">
-                                        </div>
+                                
+                                <div class="form-group">
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $level['level_name']; ?></label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" id="username" placeholder="" name="mls[<?php echo $level['level_id']; ?>]" type="text"
+                                        value="<?php if (isset($mblevelarr[$level['level_id']]['price_mpprice'])) { echo $mblevelarr[$level['level_id']]['price_mpprice']; } else { echo ''; } ?>"
+                                        />
                                     </div>
+                                </div>
 
                             <?php endforeach; endif; else: echo "" ;endif; ?>
 
@@ -549,6 +573,16 @@
 
 
                             <div class="tab-pane" id="address-tab4">
+                                <?php if(is_array($photoedit) || $photoedit instanceof \think\Collection || $photoedit instanceof \think\Paginator): $i = 0; $__LIST__ = $photoedit;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$photoedits): $mod = ($i % 2 );++$i;?>
+                                <div value="<?php echo $photoedits['comm_photo_id']; ?>" class="form-group">
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"></label>
+                                    <div class="col-sm-6">
+                                        <a href='####' onclick='deldiv(this);' style='display:inline-block; margin-right:20px ; width: 40px; height:35px; border-radius: 2px; line-height:30px;  background:#eee; color:#906; text-align:center; font-size:18px; '>[-]</a>
+                                        <input value="/static/uploadss/<?php echo $photoedits['comm_photo_sm']; ?>" class="" id="username" placeholder="" name="comm_photo[]" type="file" style='display: inline-block;width: 70%;'>
+                                    <img src="/static/uploadss/<?php echo $photoedits['comm_photo_sm']; ?>" alt="">
+                                    </div>
+                                </div>
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
 
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right"></label>
@@ -676,6 +710,33 @@
                 divs.remove();
             }
         }
+
+        function deldiv(s){
+            // 定义这个div的父级div
+            var divs = $(s).parent().parent();
+            // 定义要获取值的指向选择器
+            var divsId = divs.attr('value');
+            if (confirm('确定要删除商品图片吗？')){
+                $.ajax({
+                    type: 'POST',
+                    url: '<?php echo url("commodity/ajaxdelphoto"); ?>',
+                    data: {
+                        id: divsId
+                    },
+                    success: function(data){
+                        if ( data == 1 ){
+                            divs.remove();
+                        } else {
+                            alert('删除失败！')
+                        }
+                    },
+                    error: function(){
+                        alert('您的网页遭病毒进攻了！请刷新！');
+                    }
+                })
+            }
+        }
+
     </script>
 
 </body></html>

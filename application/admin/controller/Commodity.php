@@ -88,47 +88,74 @@
 
 		public function edit(){
 
+			$comm = db('commodity');
+
+			$commodityId = input('commodity_id');
+
 			if (request()->isPost()){
 				$data=input('post.');
-				
-
-				if ($data['config_formtype'] =='radio' || $data['config_formtype'] =='select' || $data['config_formtype'] =='checked' ) {
-				 	# code...
-				 } {
-					$data['config_values'] = str_replace('，', ',', $data['config_values']);
-					$data['config_default'] = str_replace('，', ',', $data['config_default']);
-				}
-			
-				
-
-				// $validate = validate('config');
-				// if (!$validate -> check($data)){
-				// 	$this -> error( $validate -> getError());
-				// }
-
-
-
-				$save=db('config')->update($data);
+				// dump($data);
+				$getsedit= model('commodity') ->update($data);
 				// dump($_FILES);
 				// dump($data);die;
-				if($save){
-					$this->success('修改成功','lst');
+				if($getsedit){
+					$this->success('添加成功');
 				}else{
-					$this->error('修改失败');
+					$this->error('添加失败');
 				}
 
-				return;
+				// return;
 			}
 
 
 
-			$config_id=input('config_id');
-			$config = db('config')->find($config_id);
-			$this->assign('config',$config);
+			// 提取会员级别数据
+			$mblevel = db('member_level');
+			$mblevellist = $mblevel -> field('level_id,level_name') -> select();
+
+
+			// 获取商品类型
+			$attrlists = db('type') -> select();
+
+			// 商品栏目
+			$cates = new catestree();
+			$cateslist = db('cates') ->select();
+			$cateslist = $cates -> catestree($cateslist);
+
+			$brandlist = db('brand') -> field( 'brand_id,brand_name') -> select();
+
+			// 当前商品信息
+			$commedit = $comm -> find($commodityId);
+
+			// 提取会员价钱数据
+			$mbleveledit = db('member_price') -> where('commoditys_id','=', $commodityId) -> select();
+			// dump($mbleveledit);die;
+			$mblevelarr = array();
+			foreach ($mbleveledit as $k => $v) {
+				$mblevelarr[$v['price_mlevel_id']] = $v;
+			}
+
+			// 提取图片数据
+			$photoedit = db('comm_photo') -> where('comm_commodity_id','=', $commodityId ) -> select();
+
+			// dump($photoedit);die;
+			$this -> assign([	'cateslist' => $cateslist,
+								'brandlist' => $brandlist,
+								'mblevellist' => $mblevellist,
+								'attrlists' => $attrlists,
+								'commedit' => $commedit,
+								'mblevelarr' => $mblevelarr,
+								'photoedit' => $photoedit
+							]);
+
+
+
+
+
+
 			return view();
 
 		}
-
 
 		public function del($commodity_id){
 
@@ -238,6 +265,26 @@
 		//     }
 		// }
 
+		public function ajaxdelphoto($id){
+			$photo = db('comm_photo');
+			// dump($photo);die;
+			$photosId = $photo -> find($id);
+			$ogthumb = imgupload.$photosId['comm_photo_og'];
+			$smthumb = imgupload.$photosId['comm_photo_sm'];
+			$midthumb = imgupload.$photosId['comm_photo_mid'];
+			$bigthumb = imgupload.$photosId['comm_photo_big'];
+    		@unlink($ogthumb);
+    		@unlink($smthumb);
+    		@unlink($midthumb);
+    		@unlink($bigthumb);
+
+    		$del = $photo -> delete($id);
+    		if ($del){
+    			echo 1;
+    		} else {
+    			echo 2;
+    		}
+		}
 
 
 

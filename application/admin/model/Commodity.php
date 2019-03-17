@@ -14,9 +14,7 @@ class Commodity extends Model
 	{
 		//生成商品主图的三张缩略图
         Commodity::beforeInsert(function ($commodity) {
-
-
-
+        	// 添加图片
         	if ($_FILES['commodity_ogthumb']['tmp_name']) {
 	        	$thumbs=$commodity->upload('commodity_ogthumb');
 	        	$ogthumb=date("Ymd").DS.$thumbs;
@@ -37,7 +35,84 @@ class Commodity extends Model
         	// dump($smthumb);die;
         	$commodity->commodity_code = time().rand(111111,999999);
 
+        });
 
+
+        Commodity::beforeUpdate(function ($commodity) {
+	        // 定义商品Id
+	     	$commodityid = $commodity -> commodity_id;
+	       	// 商品相册处理
+        	// dump($_FILES);die;
+        	if($commodity -> _hasimgs($_FILES['comm_photo']['tmp_name'])){
+
+    			$files = request()->file('comm_photo');
+			    foreach($files as $file){
+			        // 移动到框架应用根目录/public/uploads/ 目录下
+			        $info = $file-> validate( ['ext' => 'jpg,png,gif'] ) -> move( ROOT_PATH . 'public' . DS . 'static'. DS . 'uploadss');
+			        if($info){
+			            // 成功上传后 获取上传信息
+			            // 输出 jpg
+			            $photos = $info -> getFilename();
+			        	$ogphoto=date("Ymd").DS.$photos;
+			        	$bigphoto=date("Ymd").DS.'big_'.$photos;
+			        	$midphoto=date("Ymd").DS.'mid_'.$photos;
+			        	$smphoto=date("Ymd").DS.'sm_'.$photos;
+			        	$photon = \think\Image::open(imgupload.$ogphoto);
+			        	$photon->thumb(500, 500)->save(imgupload.$bigphoto);
+			        	$photon->thumb(200, 200)->save(imgupload.$midphoto);
+			        	$photon->thumb(80, 80)->save(imgupload.$smphoto);
+			        	@unlink(imgupload.$ogphoto);
+	       				db('comm_photo') -> insert(['comm_commodity_id' => $commodityid,'comm_photo_og' => $ogphoto, 'comm_photo_big' => $bigphoto, 'comm_photo_mid' => $midphoto, 'comm_photo_sm' => $smphoto]);
+			        }else{
+			            // 上传失败获取错误信息
+			            echo $file->getError();
+			        }    
+			    }
+        	}
+ 
+        	// 处理会员价格
+        	$mblevelarr = $commodity -> mls;
+        	$mbprice = db('member_price');
+        	// 删除会员价格
+        	$mbprice -> where('commoditys_id', '=', $commodityid) -> delete();
+         	// 批量写入会员价格
+        	if($mblevelarr){
+
+        		foreach ($mblevelarr as $k => $v) {
+
+        			if (trim($v) == '') {
+        				continue;
+        			} else {
+	       				$mbprice -> insert(['price_mlevel_id' => $k, 'price_mpprice' => $v, 'commoditys_id' => $commodityid]);
+        			}
+        		}
+        	}
+       	// 修改图片
+        	if ($_FILES['commodity_ogthumb']['tmp_name']) {
+        		// 图片存在那删除图片
+        		@unlink(imgupload.$commodity -> commodity_ogthumb);
+        		@unlink(imgupload.$commodity -> commodity_smthumb);
+        		@unlink(imgupload.$commodity -> commodity_midthumb);
+        		@unlink(imgupload.$commodity -> commodity_bigthumb);
+        		// 添加图片
+	        	$thumbs=$commodity->upload('commodity_ogthumb');
+	        	$ogthumb=date("Ymd").DS.$thumbs;
+	        	$bigthumb=date("Ymd").DS.'big_'.$thumbs;
+	        	$midthumb=date("Ymd").DS.'mid_'.$thumbs;
+	        	$smthumb=date("Ymd").DS.'sm_'.$thumbs;
+	        	$image = \think\Image::open(imgupload.$ogthumb);
+	        	$image->thumb(500, 500)->save(imgupload.$bigthumb);
+	        	$image->thumb(200, 200)->save(imgupload.$midthumb);
+	        	$image->thumb(80, 80)->save(imgupload.$smthumb);
+
+	        	$commodity->commodity_ogthumb = $ogthumb;
+	        	$commodity->commodity_bigthumb = $bigthumb;
+	        	$commodity->commodity_midthumb = $midthumb;
+	        	$commodity->commodity_smthumb = $smthumb;
+
+        	}
+        	// // dump($smthumb);die;
+        	// $commodity->commodity_code = time().rand(111111,999999);
 
         });
 
