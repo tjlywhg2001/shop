@@ -1,23 +1,20 @@
-/*
-Navicat MySQL Data Transfer
+-- -----------------------------
+-- Think MySQL Data Transfer 
+-- 
+-- Host     : 127.0.0.1
+-- Port     : 
+-- Database : tested
+-- 
+-- Part : #1
+-- Date : 2019-03-24 19:30:45
+-- -----------------------------
 
-Source Server         : localhost_3306
-Source Server Version : 50553
-Source Host           : localhost:3306
-Source Database       : tested
+SET FOREIGN_KEY_CHECKS = 0;
 
-Target Server Type    : MYSQL
-Target Server Version : 50553
-File Encoding         : 65001
 
-Date: 2019-03-24 19:31:03
-*/
-
-SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_article`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_article`;
 CREATE TABLE `tp_article` (
   `ar_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '文章id',
@@ -36,15 +33,15 @@ CREATE TABLE `tp_article` (
   PRIMARY KEY (`ar_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_article
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_article`
+-- -----------------------------
 INSERT INTO `tp_article` VALUES ('24', '爱得发疯沙发', '儿童网特网特网特', '52543525', '33333', '11@333.com', 'http://3333333', '20180501\\f802e9443d371ba1d572d4cf0703f5f9.jpg', '<p>啊是发是发发发发方法</p><p><br/></p><p><img src=\"/static/ueditor/image/20180501/1525162970646208.jpg\" title=\"1525162970646208.jpg\"/></p><p><br/></p>', '1', '0', '3', '1525161027');
 INSERT INTO `tp_article` VALUES ('25', 'asdfasdfasdf', '', '', '', '', '', '', '<p><img src=\"/static/ueditor/image/20180502/1525262966807233.jpg\" title=\"1525262966807233.jpg\"/></p><p><img src=\"/static/ueditor/image/20180502/1525262966998208.jpg\" title=\"1525262966998208.jpg\"/></p><p><img src=\"/static/ueditor/image/20180502/1525262966560575.jpg\" title=\"1525262966560575.jpg\"/></p><p><br/></p>', '0', '1', '4', '1525262979');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_attr`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_attr`;
 CREATE TABLE `tp_attr` (
   `attr_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -55,9 +52,9 @@ CREATE TABLE `tp_attr` (
   PRIMARY KEY (`attr_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_attr
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_attr`
+-- -----------------------------
 INSERT INTO `tp_attr` VALUES ('6', '颜色', '1', '黑色,白色,红色,黄色', '1');
 INSERT INTO `tp_attr` VALUES ('7', '衣长', '1', '35,36,37,38,39', '3');
 INSERT INTO `tp_attr` VALUES ('8', '肩宽', '1', '38,39,40,41,42,43', '3');
@@ -70,9 +67,9 @@ INSERT INTO `tp_attr` VALUES ('15', 'hahaha', '2', '', '1');
 INSERT INTO `tp_attr` VALUES ('16', '尺寸', '2', '8,11', '1');
 INSERT INTO `tp_attr` VALUES ('17', '硬盘', '1', '512G,256G,128G,64G', '1');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_brand`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_brand`;
 CREATE TABLE `tp_brand` (
   `brand_id` mediumint(9) unsigned NOT NULL AUTO_INCREMENT,
@@ -85,17 +82,17 @@ CREATE TABLE `tp_brand` (
   PRIMARY KEY (`brand_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=116 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_brand
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_brand`
+-- -----------------------------
 INSERT INTO `tp_brand` VALUES ('112', '耐克', 'http://nike', '20180513\\158f7404a0d72a4f7aeb37cdb1a97da2.jpg', '运动服', '50', '1');
 INSERT INTO `tp_brand` VALUES ('113', '万斯', 'http://vans.com', '20180513\\b0c681996b508517981c3e8017e02ffb.jpg', '休闲鞋', '50', '1');
 INSERT INTO `tp_brand` VALUES ('114', '阿迪达斯', 'http://adidas.com', '20180513\\1954291b8f368499ad8bcc44df064bed.jpg', '夏季运动服', '50', '1');
 INSERT INTO `tp_brand` VALUES ('115', 'air jordan', 'http://nike.com', '20180513\\db5165c1c0b99766b7ce616c95c39c20.jpg', '明星鞋', '50', '1');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_category`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_category`;
 CREATE TABLE `tp_category` (
   `cate_id` smallint(6) NOT NULL AUTO_INCREMENT COMMENT '栏目id',
@@ -110,9 +107,9 @@ CREATE TABLE `tp_category` (
   PRIMARY KEY (`cate_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_category
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_category`
+-- -----------------------------
 INSERT INTO `tp_category` VALUES ('1', '系统', '1', '', '', '0', '2', '0', '1');
 INSERT INTO `tp_category` VALUES ('2', '网店帮助分类', '2', '', '', '0', '8', '1', '1');
 INSERT INTO `tp_category` VALUES ('3', '网店信息', '3', '', '', '0', '7', '1', '0');
@@ -120,9 +117,9 @@ INSERT INTO `tp_category` VALUES ('4', '新手上路', '3', '', '', '1', '50', '
 INSERT INTO `tp_category` VALUES ('5', '配送与支付', '3', '', '', '0', '5', '2', '0');
 INSERT INTO `tp_category` VALUES ('11', '嘿嘿', '5', '', '', '1', '20', '0', '1');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_cates`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_cates`;
 CREATE TABLE `tp_cates` (
   `cates_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -136,64 +133,18 @@ CREATE TABLE `tp_cates` (
   PRIMARY KEY (`cates_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_cates
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_cates`
+-- -----------------------------
 INSERT INTO `tp_cates` VALUES ('1', '一级nav--1', 'asdfasdf', '', '20180512\\1211c45844f50480f5205d490c585ae7.jpg', '1', '2', '0');
 INSERT INTO `tp_cates` VALUES ('2', '二级nav--1-1', 'aa', '', '20180512\\b67526ad6486318334844ba62436588d.jpg', '1', '1', '1');
 INSERT INTO `tp_cates` VALUES ('3', '三级nav--1-1-1', 'rr', '', '20180512\\0df7bc8db57dcad866abee552b94b5c4.jpg', '1', '4', '2');
 INSERT INTO `tp_cates` VALUES ('4', '二级nav--1-2', 'aa', '', '20180512\\b0acd86ff5600ac35296012e357646ae.jpg', '1', '30', '1');
 INSERT INTO `tp_cates` VALUES ('5', '一级nav--2', 's\'s', '', '20180512\\2cbbc5602476b14d0af8214307d9036d.jpg', '1', '6', '0');
 
--- ----------------------------
--- Table structure for `tp_commodity`
--- ----------------------------
-DROP TABLE IF EXISTS `tp_commodity`;
-CREATE TABLE `tp_commodity` (
-  `commodity_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-  `commodity_name` varchar(50) NOT NULL COMMENT '商品名称',
-  `commodity_code` char(16) NOT NULL COMMENT '商品编号',
-  `commodity_ogthumb` varchar(100) NOT NULL COMMENT '原图',
-  `commodity_smthumb` varchar(100) NOT NULL COMMENT '小缩略图',
-  `commodity_midthumb` varchar(100) NOT NULL COMMENT '中缩略图',
-  `commodity_bigthumb` varchar(100) NOT NULL COMMENT '大缩略图',
-  `commodity_market_price` decimal(10,2) NOT NULL COMMENT '市场价',
-  `commodity_shop_price` decimal(10,2) NOT NULL COMMENT '本店价格',
-  `commodity_on_sale` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否上架：1上架2下架',
-  `cates_id` mediumint(9) NOT NULL COMMENT '所属栏目',
-  `brand_id` mediumint(9) NOT NULL DEFAULT '0' COMMENT '所属品牌',
-  `type_id` mediumint(9) NOT NULL DEFAULT '0' COMMENT '所属类型',
-  `commodity_description` longtext NOT NULL COMMENT '描述',
-  `commodity_weight` decimal(10,2) NOT NULL COMMENT '重量',
-  `commodity_weight_unit` varchar(10) NOT NULL DEFAULT 'kg' COMMENT '单位',
-  PRIMARY KEY (`commodity_id`),
-  KEY `brand_id` (`brand_id`) USING BTREE,
-  KEY `cates_id` (`cates_id`) USING BTREE,
-  KEY `type_id` (`type_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=165 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of tp_commodity
--- ----------------------------
-INSERT INTO `tp_commodity` VALUES ('135', '111', '1552213254421142', '', '', '', '', '222.00', '333.00', '1', '2', '113', '1', '<p>aa</p>', '444.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('132', 'qqq', '1552182842164821', '', '', '', '', '0.00', '1111.00', '1', '1', '0', '1', '', '11.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('134', 'bbb', '1552193956578260', '', '', '', '', '11.00', '22.00', '1', '1', '113', '1', '<p>1</p>', '33.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('138', '3333', '1552789614699327', '20190317\\c0a90fc599ed172cdfdbbab391bb40a7.png', '20190317\\sm_c0a90fc599ed172cdfdbbab391bb40a7.png', '20190317\\mid_c0a90fc599ed172cdfdbbab391bb40a7.png', '20190317\\big_c0a90fc599ed172cdfdbbab391bb40a7.png', '10.00', '20.00', '1', '2', '0', '1', '', '0.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('139', '2222', '1552789658950276', '20190317\\e062a285ced0b9b16a3b14bd117642cb.jpg', '20190317\\sm_e062a285ced0b9b16a3b14bd117642cb.jpg', '20190317\\mid_e062a285ced0b9b16a3b14bd117642cb.jpg', '20190317\\big_e062a285ced0b9b16a3b14bd117642cb.jpg', '232.00', '345.00', '1', '2', '113', '1', '', '657.00', 'g');
-INSERT INTO `tp_commodity` VALUES ('140', '444', '1552792596283772', '', '', '', '', '111.00', '222.00', '0', '2', '113', '1', '', '333.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('141', '222', '1553395825976860', '', '', '', '', '111.00', '222.00', '1', '3', '112', '1', '<p>asdf</p>', '333.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('142', '222', '1553395851771050', '', '', '', '', '111.00', '222.00', '1', '3', '112', '1', '<p>asdf</p>', '333.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('158', '111', '1553399392800347', '', '', '', '', '222.00', '333.00', '1', '3', '114', '1', '<p>sfg</p>', '444.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('159', '8888', '1553411188540120', '', '', '', '', '888.00', '888.00', '1', '3', '113', '1', '<p>888</p>', '888.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('160', '111aaaaa', '1553412322879394', '', '', '', '', '11111.00', '0.00', '1', '2', '113', '1', '', '0.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('161', 'asdf', '1553413984333007', '', '', '', '', '111.00', '0.00', '1', '3', '113', '1', '', '0.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('162', '1234wwww', '1553417680523871', '', '', '', '', '0.00', '0.00', '1', '1', '113', '1', '', '0.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('163', '3245aaa', '1553417781325764', '', '', '', '', '0.00', '0.00', '1', '1', '113', '1', '', '0.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('164', 'zxcv', '1553420010718261', '', '', '', '', '0.00', '0.00', '1', '2', '113', '1', '', '0.00', 'kg');
-
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_comm_attr`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_comm_attr`;
 CREATE TABLE `tp_comm_attr` (
   `commattr_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -204,9 +155,9 @@ CREATE TABLE `tp_comm_attr` (
   PRIMARY KEY (`commattr_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=178 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_comm_attr
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_comm_attr`
+-- -----------------------------
 INSERT INTO `tp_comm_attr` VALUES ('136', '16', '8', '0.00', '135');
 INSERT INTO `tp_comm_attr` VALUES ('135', '6', '红色', '3.00', '135');
 INSERT INTO `tp_comm_attr` VALUES ('134', '6', '黄色', '2.00', '135');
@@ -257,9 +208,9 @@ INSERT INTO `tp_comm_attr` VALUES ('175', '6', '黑色', '0.00', '164');
 INSERT INTO `tp_comm_attr` VALUES ('176', '15', 'asdf', '0.00', '164');
 INSERT INTO `tp_comm_attr` VALUES ('177', '16', '8', '0.00', '164');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_comm_photo`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_comm_photo`;
 CREATE TABLE `tp_comm_photo` (
   `comm_photo_id` mediumint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -272,15 +223,61 @@ CREATE TABLE `tp_comm_photo` (
   KEY `comm_commodity_id` (`comm_commodity_id`) USING BTREE
 ) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_comm_photo
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_comm_photo`
+-- -----------------------------
 INSERT INTO `tp_comm_photo` VALUES ('58', '135', '20190317\\219ad061528b28e547d41eb47ccaeb6f.jpg', '20190317\\sm_219ad061528b28e547d41eb47ccaeb6f.jpg', '20190317\\mid_219ad061528b28e547d41eb47ccaeb6f.jpg', '20190317\\big_219ad061528b28e547d41eb47ccaeb6f.jpg');
 INSERT INTO `tp_comm_photo` VALUES ('59', '135', '20190317\\fb3fe54a241671dd9fdd533bb4202689.jpg', '20190317\\sm_fb3fe54a241671dd9fdd533bb4202689.jpg', '20190317\\mid_fb3fe54a241671dd9fdd533bb4202689.jpg', '20190317\\big_fb3fe54a241671dd9fdd533bb4202689.jpg');
 
--- ----------------------------
+-- -----------------------------
+-- Table structure for `tp_commodity`
+-- -----------------------------
+DROP TABLE IF EXISTS `tp_commodity`;
+CREATE TABLE `tp_commodity` (
+  `commodity_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `commodity_name` varchar(50) NOT NULL COMMENT '商品名称',
+  `commodity_code` char(16) NOT NULL COMMENT '商品编号',
+  `commodity_ogthumb` varchar(100) NOT NULL COMMENT '原图',
+  `commodity_smthumb` varchar(100) NOT NULL COMMENT '小缩略图',
+  `commodity_midthumb` varchar(100) NOT NULL COMMENT '中缩略图',
+  `commodity_bigthumb` varchar(100) NOT NULL COMMENT '大缩略图',
+  `commodity_market_price` decimal(10,2) NOT NULL COMMENT '市场价',
+  `commodity_shop_price` decimal(10,2) NOT NULL COMMENT '本店价格',
+  `commodity_on_sale` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否上架：1上架2下架',
+  `cates_id` mediumint(9) NOT NULL COMMENT '所属栏目',
+  `brand_id` mediumint(9) NOT NULL DEFAULT '0' COMMENT '所属品牌',
+  `type_id` mediumint(9) NOT NULL DEFAULT '0' COMMENT '所属类型',
+  `commodity_description` longtext NOT NULL COMMENT '描述',
+  `commodity_weight` decimal(10,2) NOT NULL COMMENT '重量',
+  `commodity_weight_unit` varchar(10) NOT NULL DEFAULT 'kg' COMMENT '单位',
+  PRIMARY KEY (`commodity_id`),
+  KEY `brand_id` (`brand_id`) USING BTREE,
+  KEY `cates_id` (`cates_id`) USING BTREE,
+  KEY `type_id` (`type_id`) USING BTREE
+) ENGINE=MyISAM AUTO_INCREMENT=165 DEFAULT CHARSET=utf8;
+
+-- -----------------------------
+-- Records of `tp_commodity`
+-- -----------------------------
+INSERT INTO `tp_commodity` VALUES ('135', '111', '1552213254421142', '', '', '', '', '222.00', '333.00', '1', '2', '113', '1', '<p>aa</p>', '444.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('132', 'qqq', '1552182842164821', '', '', '', '', '0.00', '1111.00', '1', '1', '0', '1', '', '11.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('134', 'bbb', '1552193956578260', '', '', '', '', '11.00', '22.00', '1', '1', '113', '1', '<p>1</p>', '33.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('138', '3333', '1552789614699327', '20190317\\c0a90fc599ed172cdfdbbab391bb40a7.png', '20190317\\sm_c0a90fc599ed172cdfdbbab391bb40a7.png', '20190317\\mid_c0a90fc599ed172cdfdbbab391bb40a7.png', '20190317\\big_c0a90fc599ed172cdfdbbab391bb40a7.png', '10.00', '20.00', '1', '2', '0', '1', '', '0.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('139', '2222', '1552789658950276', '20190317\\e062a285ced0b9b16a3b14bd117642cb.jpg', '20190317\\sm_e062a285ced0b9b16a3b14bd117642cb.jpg', '20190317\\mid_e062a285ced0b9b16a3b14bd117642cb.jpg', '20190317\\big_e062a285ced0b9b16a3b14bd117642cb.jpg', '232.00', '345.00', '1', '2', '113', '1', '', '657.00', 'g');
+INSERT INTO `tp_commodity` VALUES ('140', '444', '1552792596283772', '', '', '', '', '111.00', '222.00', '0', '2', '113', '1', '', '333.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('141', '222', '1553395825976860', '', '', '', '', '111.00', '222.00', '1', '3', '112', '1', '<p>asdf</p>', '333.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('142', '222', '1553395851771050', '', '', '', '', '111.00', '222.00', '1', '3', '112', '1', '<p>asdf</p>', '333.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('158', '111', '1553399392800347', '', '', '', '', '222.00', '333.00', '1', '3', '114', '1', '<p>sfg</p>', '444.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('159', '8888', '1553411188540120', '', '', '', '', '888.00', '888.00', '1', '3', '113', '1', '<p>888</p>', '888.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('160', '111aaaaa', '1553412322879394', '', '', '', '', '11111.00', '0.00', '1', '2', '113', '1', '', '0.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('161', 'asdf', '1553413984333007', '', '', '', '', '111.00', '0.00', '1', '3', '113', '1', '', '0.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('162', '1234wwww', '1553417680523871', '', '', '', '', '0.00', '0.00', '1', '1', '113', '1', '', '0.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('163', '3245aaa', '1553417781325764', '', '', '', '', '0.00', '0.00', '1', '1', '113', '1', '', '0.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('164', 'zxcv', '1553420010718261', '', '', '', '', '0.00', '0.00', '1', '2', '113', '1', '', '0.00', 'kg');
+
+-- -----------------------------
 -- Table structure for `tp_config`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_config`;
 CREATE TABLE `tp_config` (
   `config_id` mediumint(9) NOT NULL AUTO_INCREMENT,
@@ -294,9 +291,9 @@ CREATE TABLE `tp_config` (
   PRIMARY KEY (`config_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_config
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_config`
+-- -----------------------------
 INSERT INTO `tp_config` VALUES ('9', 'description', '店铺描述', 'textarea', '1', '', '请描述店铺信息', '1');
 INSERT INTO `tp_config` VALUES ('8', 'language', '语言', 'checked', '1', '中文,英文,日文,韩文,法文,美文', '英文,日文', '3');
 INSERT INTO `tp_config` VALUES ('6', 'name', '店铺名称', 'input', '1', '', '请填写店铺名称', '6');
@@ -312,9 +309,9 @@ INSERT INTO `tp_config` VALUES ('20', 'shopdescript', '商品描述', 'textarea'
 INSERT INTO `tp_config` VALUES ('21', 'shopconf', '商品配送方式', 'select', '0', 'ems,申通,圆通,顺丰,天天', '圆通', '16');
 INSERT INTO `tp_config` VALUES ('22', 'shoppic', '商品图片', 'file', '0', '', '20180506\\bbd1a6daa57bc1def9532df6103cfbc2.jpg', '15');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_links`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_links`;
 CREATE TABLE `tp_links` (
   `links_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '链接ID',
@@ -327,14 +324,14 @@ CREATE TABLE `tp_links` (
   PRIMARY KEY (`links_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_links
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_links`
+-- -----------------------------
 INSERT INTO `tp_links` VALUES ('2', '噶发射点发', 'http://adfasdf', '20180503\\2cfa4aa5f2712e3180b93a9a85b26b6b.jpg', '阿朵发射点发打发打发', '0', '0');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_member_level`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_member_level`;
 CREATE TABLE `tp_member_level` (
   `level_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -345,17 +342,17 @@ CREATE TABLE `tp_member_level` (
   PRIMARY KEY (`level_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_member_level
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_member_level`
+-- -----------------------------
 INSERT INTO `tp_member_level` VALUES ('3', '注册会员', '0', '10000', '100');
 INSERT INTO `tp_member_level` VALUES ('4', '中级会员', '10001', '20000', '90');
 INSERT INTO `tp_member_level` VALUES ('5', '高级会员', '20001', '3000', '80');
 INSERT INTO `tp_member_level` VALUES ('6', 'VIP会员', '30001', '50000', '70');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_member_price`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_member_price`;
 CREATE TABLE `tp_member_price` (
   `price_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -365,9 +362,9 @@ CREATE TABLE `tp_member_price` (
   PRIMARY KEY (`price_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=191 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_member_price
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_member_price`
+-- -----------------------------
 INSERT INTO `tp_member_price` VALUES ('114', '4.00', '6', '135');
 INSERT INTO `tp_member_price` VALUES ('113', '2.00', '4', '135');
 INSERT INTO `tp_member_price` VALUES ('112', '1.00', '3', '135');
@@ -456,9 +453,9 @@ INSERT INTO `tp_member_price` VALUES ('188', '888.00', '4', '159');
 INSERT INTO `tp_member_price` VALUES ('189', '8888.00', '5', '159');
 INSERT INTO `tp_member_price` VALUES ('190', '88888.00', '6', '159');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_product`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_product`;
 CREATE TABLE `tp_product` (
   `product_id` mediumint(9) NOT NULL AUTO_INCREMENT,
@@ -468,18 +465,18 @@ CREATE TABLE `tp_product` (
   PRIMARY KEY (`product_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=87 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_product
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_product`
+-- -----------------------------
 INSERT INTO `tp_product` VALUES ('86', '135', '11', '135,137');
 INSERT INTO `tp_product` VALUES ('85', '135', '22', '134,138');
 INSERT INTO `tp_product` VALUES ('84', '134', '11', '128,132');
 INSERT INTO `tp_product` VALUES ('83', '134', '22', '129,132');
 INSERT INTO `tp_product` VALUES ('82', '134', '22', '128,132');
 
--- ----------------------------
+-- -----------------------------
 -- Table structure for `tp_type`
--- ----------------------------
+-- -----------------------------
 DROP TABLE IF EXISTS `tp_type`;
 CREATE TABLE `tp_type` (
   `type_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
@@ -487,9 +484,9 @@ CREATE TABLE `tp_type` (
   PRIMARY KEY (`type_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tp_type
--- ----------------------------
+-- -----------------------------
+-- Records of `tp_type`
+-- -----------------------------
 INSERT INTO `tp_type` VALUES ('1', '笔记本');
 INSERT INTO `tp_type` VALUES ('3', '女装');
 INSERT INTO `tp_type` VALUES ('4', '男装');

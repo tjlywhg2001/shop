@@ -240,17 +240,71 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">商品类型</label>
                                     <div class="col-sm-6">
-                                        <select name="attr_type_id">
+                                        <select name="type_id" disabled="disabled">
                                             <option value="">请选择</option>
                                             {volist name="attrlists" id="attrr"}
-                                            <option value="{$attrr.type_id}">{$attrr.type_name}</option>
+                                                <option {if condition="$commedit['type_id'] eq $attrr.type_id"} selected="selected" {/if} value="{$attrr.type_id}">{$attrr.type_name}</option>
                                             {/volist}
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group attrxx">
+                                <?php foreach( $typeedit as $k => $v):?>
+                                        <?php foreach( $commattreditArr[$v['attr_id']] as $k1 => $v1 ):?>
+                                                {if condition=" $v['attr_type'] eq 1"}
+                                                    <?php
+                                                        $attrValue = explode(",",$v['attr_values']);
+                                                    ?>
+                                                        <div class='lists'>
+                                                            <div class='form-group' value="{$v1.commattr_id}">
+                                                                <label for='username' class='col-sm-2 control-label no-padding-right'>{$v['attr_name']}</label>
+                                                                <div class='col-sm-6'>
+                                                                    <a href='####' onClick='adddiv(this);' style='display:inline-block; margin-right:20px ; width: 40px; height:35px; border-radius: 2px; line-height:30px;  background:#eee; color:#906; text-align:center; font-size:18px; '><?php if ( $k1 == 0 ) echo '[+]'; else echo '[-]'; ?></a>
+                                                                    <select name='' style='display: inline-block; margin-right: 20px;'>
+                                                                        <option value=''>请选择</option>
+                                                                        <?php foreach( $attrValue as $k2 => $v2 ):?>
+                                                                            <option {if condition="$v2 eq $v1['commattr_value']"} selected="selected" {/if} value='"{$k2}"'>{$v2}</option>
+                                                                        <?php endforeach;?>
+                                                                    </select>
+                                                                    <input class='form-control' id='username' placeholder='' name='commattr_attrprice[]' type='text' style='display: inline-block;width: 50%;' value='{$v1.commattr_attrprice}' />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                           
 
+                                                {else /}
+                                                    <?php if( !$v['attr_values']):?>
+                                                        <div class='lists'>
+                                                            <div class='form-group'>
+                                                                <label for='username' class='col-sm-2 control-label no-padding-right'>{$v['attr_name']}</label>
+                                                                <div class='col-sm-6'>
+                                                                    <input class='form-control' id='username' placeholder='' name='comm_attr["+ v.attr_id +"]' type='text' style='display: inline-block;width: 70%;' value="<?php echo $commattreditArr[$v['attr_id']][0]['commattr_value']; ?>" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <?php else:?>
+                                                        <?php
+                                                            $attrValue = explode(",",$v['attr_values']);
+                                                        ?>
+                                                            <div class='lists'>
+                                                                <div class='form-group' value="{$v1.commattr_id}">
+                                                                    <label for='username' class='col-sm-2 control-label no-padding-right'>{$v['attr_name']}</label>
+                                                                    <div class='col-sm-6'>
+                                                                        <a href='####' onClick='adddiv(this);' style='display:inline-block; margin-right:20px ; width: 40px; height:35px; border-radius: 2px; line-height:30px;  background:#eee; color:#906; text-align:center; font-size:18px; '><?php if ( $k1 == 0 ) echo '[+]'; else echo '[-]'; ?></a>
+                                                                        <select name='' style='display: inline-block; margin-right: 20px;'>
+                                                                            <option value=''>请选择</option>
+                                                                            <?php foreach( $attrValue as $k2 => $v2 ):?>
+                                                                                <option {if condition="$v2 eq $commattreditArr[$v['attr_id']][0]['commattr_value']"} selected="selected" {/if} value='"{$k2}"'>{$v2}</option>
+                                                                            <?php endforeach;?>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                    <?php endif;?>
+                                                {/if}
+                                        <?php endforeach;?>
+                                <?php endforeach;?>
 
 
                                 </div>
@@ -316,12 +370,12 @@
 	    <!--Basic Scripts-->
     {include file='/common/footer'}
     <script>
-        $("select[name=attr_type_id]").change(function(){
+        $("select[name=type_id]").change(function(){
             var attr_typeid = $(this).val();
             $.ajax({
                 type:"POST",
                 url:"{:url('attr/ajaxattrs')}",
-                data:{attr_type_id:attr_typeid},
+                data:{type_id:attr_typeid},
                 dataType:'json',
                 success:function(data){
                     var html = '';
@@ -386,8 +440,27 @@
                     $(s).eq(0).html('[-]');
                 }
             } else {
-                divs.parent().children().eq(0).children('.col-sm-6').children('a').html('[+]');
-                divs.remove();
+                var divsVal = divs.attr('value');
+                 if (confirm('确定要删除商品图片吗？')){
+                    $.ajax({
+                        type: 'POST',
+                        url: '{:url("CommoAttr/ajaxdelAttr")}',
+                        data: {
+                            value: divsVal
+                        },
+                        success: function(data){
+                            if ( data == 1 ){
+                                divs.parent().children().eq(0).children('.col-sm-6').children('a').html('[+]');
+                                divs.remove();
+                            } else {
+                                alert('删除失败！')
+                            }
+                        },
+                        error: function(){
+                            alert('您的网页遭病毒进攻了！请刷新！');
+                        }
+                    })
+                }
             }
         }
 

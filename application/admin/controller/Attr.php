@@ -120,7 +120,7 @@
 
 		public function ajaxattrs(){
 
-			$typeaa = input('attr_type_id');
+			$typeaa = input('type_id');
 			$attrcc = db('attr') -> where(array('attr_type_id' => $typeaa)) ->select();
 			echo json_encode($attrcc);
 

@@ -216,7 +216,7 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">商品类型</label>
                                     <div class="col-sm-6">
-                                        <select name="attr_type_id">
+                                        <select name="type_id">
                                             <option value="">请选择</option>
                                             {volist name="attrlists" id="attrr"}
                                             <option value="{$attrr.type_id}">{$attrr.type_name}</option>
@@ -282,12 +282,14 @@
 	    <!--Basic Scripts-->
     {include file='/common/footer'}
     <script>
-        $("select[name=attr_type_id]").change(function(){
+        $("select[name=type_id]").change(function(){
             var attr_typeid = $(this).val();
             $.ajax({
                 type:"POST",
                 url:"{:url('attr/ajaxattrs')}",
-                data:{attr_type_id:attr_typeid},
+                data:{
+                    type_id: attr_typeid
+                },
                 dataType:'json',
                 success:function(data){
                     var html = '';

@@ -68,7 +68,6 @@
 
 			$brandlist = db('brand') -> field( 'brand_id,brand_name') -> select();
 
-			
 
 			$this -> assign([	'cateslist' => $cateslist,
 								'brandlist' => $brandlist,
@@ -134,7 +133,15 @@
 			foreach ($mbleveledit as $k => $v) {
 				$mblevelarr[$v['price_mlevel_id']] = $v;
 			}
-
+			// 提取属性类型
+			$typeedit = db('attr') -> where('attr_type_id', '=', $commedit['type_id']) -> select();
+			// 提取商品属性
+			$commattredit = db('commAttr') -> where('commattr_commid','=', $commodityId) -> select();
+			$commattreditArr = array();
+			foreach ($commattredit as $k => $v) {
+				$commattreditArr[$v['commattr_attrid']][] = $v;
+			}
+			// dump($commattreditArr);die;
 			// 提取图片数据
 			$photoedit = db('comm_photo') -> where('comm_commodity_id','=', $commodityId ) -> select();
 
@@ -145,7 +152,9 @@
 								'attrlists' => $attrlists,
 								'commedit' => $commedit,
 								'mblevelarr' => $mblevelarr,
-								'photoedit' => $photoedit
+								'photoedit' => $photoedit,
+								'typeedit' => $typeedit,
+								'commattreditArr' => $commattreditArr,
 							]);
 
 
