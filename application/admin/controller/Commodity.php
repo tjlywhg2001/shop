@@ -93,7 +93,7 @@
 
 			if (request()->isPost()){
 				$data=input('post.');
-				// dump($data);
+				dump($data);
 				$getsedit= model('commodity') ->update($data);
 				// dump($_FILES);
 				// dump($data);die;

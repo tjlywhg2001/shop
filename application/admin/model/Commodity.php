@@ -41,6 +41,68 @@ class Commodity extends Model
         Commodity::beforeUpdate(function ($commodity) {
 	        // 定义商品Id
 	     	$commodityid = $commodity -> commodity_id;
+	     	// 处理商品属性
+        	$goodsData = input('post.');
+        	// dump($goodsData);die;
+        	// 新增商品属性
+        	if ( isset( $goodsData['comm_attr'] ) ) {
+	        	$i=0;
+        		foreach ($goodsData['comm_attr'] as $k => $v) {
+        			if ( is_array($v) ) {
+
+        				if ( !empty($v) ){
+	        				foreach ( $v as $k1 => $v1 ) {
+	        					if ( !$v1 ) {
+	        						$i++;
+	        						continue;
+	        					}
+		        				db('comm_attr') -> insert( ['commattr_attrid' => $k, 'commattr_value' => $v1, 'commattr_attrprice' =>$goodsData['commattr_attrprice'][$i], 'commattr_commid' => $commodityid ] );
+		        				$i++;
+		        				
+	        				}
+        				}
+        			} else {
+    					if ( !empty($v) ) {
+	        				db('comm_attr') -> insert(['commattr_attrid' => $k, 'commattr_value' => $v, 'commattr_commid' => $commodityid ] );
+    					}
+        			}
+        		}
+
+        	}
+
+        	// 修改商品属性
+        	if ( isset( $goodsData['old_comm_attr'] ) ) {
+	        	$oldcommPrice = $goodsData['old_commattr_attrprice'];
+	        	$oldattrIdKeys = array_keys($oldcommPrice);
+	        	$oldattrValues = array_values($oldcommPrice);
+	        	// dump($oldattrKeys);
+	        	// dump($oldattrValues);die;
+	        	$i=0;
+        		foreach ($goodsData['old_comm_attr'] as $k => $v) {
+        			if ( is_array($v) ) {
+
+        				if ( !empty($v) ){
+	        				foreach ( $v as $k1 => $v1 ) {
+	        					if ( !$v1 ) {
+	        						$i++;
+	        						continue;
+	        					}
+		        				db('comm_attr') -> where( 'commattr_id', '=', $oldattrIdKeys[$i] ) -> update( ['commattr_value' => $v1, 'commattr_attrprice' =>$oldattrValues[$i] ] );
+		        				$i++;
+		        				
+	        				}
+        				}
+        			} else {
+    					if ( !empty($v) ) {
+	        				db('comm_attr') -> where( 'commattr_id', '=', $oldattrIdKeys[$i] ) -> update( [ 'commattr_value' => $v, 'commattr_attrprice' => $oldattrValues[$i] ] );
+	        				$i++;
+    					}
+        			}
+        		}
+
+        	}
+
+
 	       	// 商品相册处理
         	// dump($_FILES);die;
         	if($commodity -> _hasimgs($_FILES['comm_photo']['tmp_name'])){
