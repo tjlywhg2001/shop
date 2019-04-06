@@ -141,6 +141,7 @@ return [
     // 视图输出字符串内容替换
     'view_replace_str'       => [
         '__admin__' => '/static/admin',
+        '__index__' => '/static/index',
         '__plus__' => '/static/plus',
         '__upload__' => '/static/uploadss',
     ],
