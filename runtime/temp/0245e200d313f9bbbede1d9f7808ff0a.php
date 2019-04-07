@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:72:"B:\aaaweb\shop\public/../application/index\view\goodslist\goodslist.html";i:1554543958;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554524928;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1554545838;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554545766;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1554543557;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1554530834;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554545819;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1554519381;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:72:"B:\aaaweb\shop\public/../application/index\view\goodslist\goodslist.html";i:1554621116;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554621116;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1554621116;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1554621116;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554630885;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1554621116;}*/ ?>
 <!doctype html>
 <html>
 
@@ -3735,6 +3735,42 @@
 </div>
    
 
+
+
+    <div class="duibi_box" id="slideTxtBox">
+	    <div class="parWarp">
+	        <div class="parTit">对比栏</div>
+	        <div class="parBd">
+	            <div class="slideBox5" id="duibilan">
+	                <div id="diff-items" class="diff-items clearfix">
+	                    <dl class="hasItem" id="compare_goods1">  
+	                        <dt><h1>1</h1></dt>
+	                        <dd><span class="ts">您还可以继续添加</span></dd>
+	                    </dl>
+	                    <dl class="hasItem" id="compare_goods2">  
+	                        <dt><h1>2</h1></dt>
+	                        <dd><span class="ts">您还可以继续添加</span></dd>
+	                    </dl>
+	                    <dl class="hasItem" id="compare_goods3">  
+	                        <dt><h1>3</h1></dt>
+	                        <dd><span class="ts">您还可以继续添加</span></dd>
+	                    </dl>
+	                    <dl class="hasItem" id="compare_goods4">  
+	                        <dt><h1>4</h1></dt>
+	                        <dd><span class="ts">您还可以继续添加</span></dd>
+	                    </dl>
+	                </div>
+	                <div class="diff-operate">
+	                	<a id="compare_button" class="compare-active"></a>
+						<a id="qingkong" class="del-items">清空对比栏</a>
+	                    <a href="#" class="hide-me" ectype="db_hide">隐藏</a>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+
+
     
     <div class="footer-new">
     <div class="footer-new-top">
@@ -3772,7 +3808,21 @@
     <div class="footer-new-con">
     	<div class="fnc-warp">
             <div class="help-list">
-				<div class="help-item">
+				<?php if(is_array($bases) || $bases instanceof \think\Collection || $bases instanceof \think\Paginator): $i = 0; $__LIST__ = $bases;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$footers): $mod = ($i % 2 );++$i;?>
+
+					<div class="help-item">
+					    <h3><?php echo $footers['cate_name']; ?> </h3>
+					    <ul>
+					    	<?php if(is_array($footers["arts"]) || $footers["arts"] instanceof \think\Collection || $footers["arts"] instanceof \think\Paginator): $i = 0; $__LIST__ = $footers["arts"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artis): $mod = ($i % 2 );++$i;?>
+					            <li><a href="#"><?php echo $artis['ar_title']; ?></a></li>
+					    	<?php endforeach; endif; else: echo "" ;endif; ?>
+					    </ul>
+
+					</div>
+
+
+				<?php endforeach; endif; else: echo "" ;endif; ?>
+<!-- 				<div class="help-item">
 				    <h3>新手上路 </h3>
 				    <ul>
 			            <li><a href="#">售后流程</a></li>
@@ -3816,7 +3866,7 @@
 						<li><a href="#">投诉与建议</a></li>
 		            </ul>
 
-				</div>
+				</div> -->
 		  
             </div>
             <div class="qr-code">

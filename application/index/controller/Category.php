@@ -3,7 +3,7 @@
 
 	use think\Controller;
 
-	class Category extends Controller
+	class Category extends Base
 	{
 		public function index()
 		{

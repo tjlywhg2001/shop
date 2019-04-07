@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1554545434;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554524928;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1554545838;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554545766;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1554543557;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1554545389;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554545819;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1554621116;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554621116;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1554621116;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1554639918;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554630885;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1373,6 +1373,7 @@
 		<div class="article-side">
     <dl class="article-menu">
         <dt class="am-t"><a href="#">文章分类列表</a></dt>
+        <!-- 系统分类 -->
         <dd class="am-c">
             <div class="menu-item active">
                 <div class="item-hd">
@@ -1382,96 +1383,29 @@
                 <ul class="item-bd">
                 </ul>
                 <ul class="item-bd">
-                    <li><a href="#">新手上路 </a></li>
-                    <li><a href="#">配送与支付 </a></li>
-                    <li><a href="#">服务保证 </a></li>
-                    <li><a href="#">联系我们 </a></li>
-                    <li><a href="#">会员中心</a></li>
+                    <?php if(is_array($bases) || $bases instanceof \think\Collection || $bases instanceof \think\Paginator): $i = 0; $__LIST__ = $bases;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$base): $mod = ($i % 2 );++$i;?>
+                        <li><a href="#"><?php echo $base['cate_name']; ?></a></li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </dd>
+        <!-- 普通分类 -->
         <dd class="am-c">
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">3G资讯</a>
-                    <i class="iconfont icon-down"></i>
+            <?php if(is_array($ComCate) || $ComCate instanceof \think\Collection || $ComCate instanceof \think\Paginator): $i = 0; $__LIST__ = $ComCate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ComCates): $mod = ($i % 2 );++$i;?>
+                <div class="menu-item active">
+                    <div class="item-hd">
+                        <a href="#"><?php echo $ComCates['cate_name']; ?></a>
+                        <i class="iconfont icon-down"></i>
+                    </div>
+                    <?php if($ComCates['childCate']): ?>
+                        <ul class="item-bd">
+                            <?php if(is_array($ComCates['childCate']) || $ComCates['childCate'] instanceof \think\Collection || $ComCates['childCate'] instanceof \think\Paginator): $i = 0; $__LIST__ = $ComCates['childCate'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$childCates): $mod = ($i % 2 );++$i;?>
+                                <li><a href="#"><?php echo $childCates['cate_name']; ?></a></li>
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                        </ul>
+                    <?php endif; ?>
                 </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">站内快讯</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商城公告</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商家入驻流程说明</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商家入驻商家说明</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">App</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                    <li><a href="#">ios</a></li>
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">发票问题</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">公告</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">促销</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">微分销</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
         </dd>
     </dl>
 </div>
@@ -1563,7 +1497,21 @@ function selectPage(sel)
     <div class="footer-new-con">
     	<div class="fnc-warp">
             <div class="help-list">
-				<div class="help-item">
+				<?php if(is_array($bases) || $bases instanceof \think\Collection || $bases instanceof \think\Paginator): $i = 0; $__LIST__ = $bases;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$footers): $mod = ($i % 2 );++$i;?>
+
+					<div class="help-item">
+					    <h3><?php echo $footers['cate_name']; ?> </h3>
+					    <ul>
+					    	<?php if(is_array($footers["arts"]) || $footers["arts"] instanceof \think\Collection || $footers["arts"] instanceof \think\Paginator): $i = 0; $__LIST__ = $footers["arts"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artis): $mod = ($i % 2 );++$i;?>
+					            <li><a href="#"><?php echo $artis['ar_title']; ?></a></li>
+					    	<?php endforeach; endif; else: echo "" ;endif; ?>
+					    </ul>
+
+					</div>
+
+
+				<?php endforeach; endif; else: echo "" ;endif; ?>
+<!-- 				<div class="help-item">
 				    <h3>新手上路 </h3>
 				    <ul>
 			            <li><a href="#">售后流程</a></li>
@@ -1607,7 +1555,7 @@ function selectPage(sel)
 						<li><a href="#">投诉与建议</a></li>
 		            </ul>
 
-				</div>
+				</div> -->
 		  
             </div>
             <div class="qr-code">

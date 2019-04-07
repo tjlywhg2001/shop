@@ -34,7 +34,21 @@
     <div class="footer-new-con">
     	<div class="fnc-warp">
             <div class="help-list">
-				<div class="help-item">
+				{volist name="bases" id="footers"}
+
+					<div class="help-item">
+					    <h3>{$footers.cate_name} </h3>
+					    <ul>
+					    	{volist name='$footers["arts"]' id="artis"}
+					            <li><a href="#">{$artis.ar_title}</a></li>
+					    	{/volist}
+					    </ul>
+
+					</div>
+
+
+				{/volist}
+<!-- 				<div class="help-item">
 				    <h3>新手上路 </h3>
 				    <ul>
 			            <li><a href="#">售后流程</a></li>
@@ -78,7 +92,7 @@
 						<li><a href="#">投诉与建议</a></li>
 		            </ul>
 
-				</div>
+				</div> -->
 		  
             </div>
             <div class="qr-code">

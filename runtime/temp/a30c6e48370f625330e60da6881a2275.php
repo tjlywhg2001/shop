@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"B:\aaaweb\shop\public/../application/admin\view\commodity\list.html";i:1554513689;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1554513689;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1554513689;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1554513689;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1554513689;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:66:"B:\aaaweb\shop\public/../application/admin\view\category\edit.html";i:1554621116;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1554621116;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1554621116;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1554621116;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1554621116;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-                <div class="page-sidebar" id="sidebar">
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -330,7 +330,10 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">商品管理</li>
+                                            <li>
+                            <a href="<?php echo url('category/lst'); ?>">分类管理</a>
+                        </li>
+                        <li class="active">添加分类</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -338,100 +341,143 @@
                 <!-- Page Body -->
                 <div class="page-body">
                     
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('commodity/add'); ?>'"> <i class="fa fa-plus"></i> 添加商品
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">编辑分类</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr>
-                                <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">名称</th>
-                                <th class="text-center" width="10%">编号</th>
-                                <th class="text-center" width="6%">缩略图</th>
-                                <th class="text-center" width="6%">市场价</th>
-                                <th class="text-center" width="6%">本店价</th>
-                                <th class="text-center" width="6%">上架</th>
-                                <th class="text-center" width="6%">栏目</th>
-                                <th class="text-center" width="6%">品牌</th>
-                                <th class="text-center" width="6%">类型</th>
-                                <th class="text-center" width="6%">重量</th>
-                                <th class="text-center" width="4%">单位</th>
-                                <th class="text-center" width="4%">库存</th>
-                                <th class="text-center" width="14%">操作</th>
-                            </tr>
-                        </thead>
-                        
-                        <?php if(is_array($commRes) || $commRes instanceof \think\Collection || $commRes instanceof \think\Paginator): $i = 0; $__LIST__ = $commRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$comms): $mod = ($i % 2 );++$i;?>
-                        <tbody>
-                            <tr>
-                                <td align="center"><?php echo $comms['commodity_id']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_name']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_code']; ?></td>
-                                <td align="center">
-                                    <?php if($comms['commodity_ogthumb'] != ''): ?>
-                                        <img src="/static/uploadss/<?php echo $comms['commodity_ogthumb']; ?>" alt="" style="width: 100%" />
-                                    <?php else: ?>
-                                        无缩略图
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="cate_id" value="<?php echo $categorys['cate_id']; ?>">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">上级分类</label>
+                            <div class="col-sm-6">
+                                <select name="cate_pid">
+
+
+
+                                    <?php if(is_array($catelist) || $catelist instanceof \think\Collection || $catelist instanceof \think\Paginator): $i = 0; $__LIST__ = $catelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$categord): $mod = ($i % 2 );++$i;?>
+                                    <option style="display: none;"><?php echo $categorys['cate_name']; ?></option>
+                                    
+                                    <option <?php if($categord['cate_son'] == 1): ?> disabled="disabled" <?php endif; if($categord['cate_id'] == $categorys['cate_id']): endif; ?>  disabled="disabled" <?php if($categord['cate_id'] == $categorys['cate_pid']): ?>
+                                    selected="selected" value="<?php echo $categorys['cate_id']; ?>"
+
+                                    <?php endif; ?>>
+                                    <?php if($categord['cate_pid'] != 0): ?>
+                                     |
                                     <?php endif; ?>
-                                </td>
-                                <td align="center"><?php echo $comms['commodity_market_price']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_shop_price']; ?></td>
-                                <td align="center">
-                                    <?php if($comms['commodity_on_sale'] == 1): ?>
-                                        上架
-                                    <?php else: ?>
-                                        下架
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <?php if($comms['cates_name'] != ''): ?>
-                                        <?php echo $comms['cates_name']; else: ?>
-                                        未设置
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <?php if($comms['brand_name'] != ''): ?>
-                                        <?php echo $comms['brand_name']; else: ?>
-                                        未设置
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <?php if($comms['type_name'] != ''): ?>
-                                        <?php echo $comms['type_name']; else: ?>
-                                        未设置
-                                    <?php endif; ?>
-                               </td>
-                                <td align="center"><?php echo $comms['commodity_weight']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_weight_unit']; ?></td>
-                                <td align="center">
-                                    <?php if($comms['produ'] != ''): ?>
-                                        <?php echo $comms['produ']; else: ?>
-                                        0
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <a href="<?php echo url('commodity/product',array('commodity_id'=>$comms['commodity_id'])); ?>" class="btn btn-sm btn-warning shiny">
-                                        <i class="fa fa-check-square-o"></i> 库存
-                                    </a>
-                                    <a href="<?php echo url('edit',array('commodity_id'=>$comms['commodity_id'])); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('commodity_id'=>$comms['commodity_id'])); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
+                                        <?php echo str_repeat('-',$categord['lever']*5); if($categorys['cate_pid'] == 0 && $categorys['cate_name'] == $categord['cate_name']): ?> 
+                                        <?php echo $categorys['cate_name']; else: ?>
+                                        <?php echo $categord['cate_name']; endif; ?>
+                                    </option>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
+
+
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">栏目名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cate_name" type="text" required="" value="<?php echo $categorys['cate_name']; ?>" >
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">分类类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="cate_type" type="radio" <?php if($categorys['cate_type'] == 1): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">系统分类</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="2" name="cate_type" type="radio" <?php if($categorys['cate_type'] == 2): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">帮助分类</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="3" name="cate_type" type="radio" <?php if($categorys['cate_type'] == 3): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">网店帮助</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="4" name="cate_type" type="radio" <?php if($categorys['cate_type'] == 4): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">网店信息</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="5" name="cate_type" type="radio" <?php if($categorys['cate_type'] == 5): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">普通分类</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">栏目关键词</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cate_keywords" value="<?php echo $categorys['cate_keywords']; ?>" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">栏目描述</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="username" placeholder="" name="cate_description" value="<?php echo $categorys['cate_description']; ?>" type="text"></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+<!--                         <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌LOGO</label>
+                            <div class="col-sm-6">
+                                <input class="" id="username" name="brand_img" type="file">
+                            </div>
+                        </div>
+
+ -->
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">显示导航</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" checked="checked" value="1" name="cate_shownav" type="radio" <?php if($categorys['cate_shownav'] == 1): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">是</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="cate_shownav" type="radio" <?php if($categorys['cate_shownav'] == 0): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">否</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div> 
-                    <?php echo $commRes->render(); ?>
-              	</div>
             </div>
         </div>
     </div>
@@ -454,7 +500,7 @@
     
 
 
-	</script>    
-
+	</script>
+    
 
 </body></html>

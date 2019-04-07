@@ -3,7 +3,7 @@
 
 	use think\Controller;
 
-	class Reg extends Controller
+	class Reg extends Base
 	{
 		public function index()
 		{

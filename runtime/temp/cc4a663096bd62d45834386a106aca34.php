@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"B:\aaaweb\shop\public/../application/index\view\reg\reg.html";i:1554541459;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554524928;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554545766;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554545819;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"B:\aaaweb\shop\public/../application/index\view\reg\reg.html";i:1554621116;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554621116;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554630885;}*/ ?>
 <!doctype html>
 <html>
 
@@ -421,7 +421,21 @@
     <div class="footer-new-con">
     	<div class="fnc-warp">
             <div class="help-list">
-				<div class="help-item">
+				<?php if(is_array($bases) || $bases instanceof \think\Collection || $bases instanceof \think\Paginator): $i = 0; $__LIST__ = $bases;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$footers): $mod = ($i % 2 );++$i;?>
+
+					<div class="help-item">
+					    <h3><?php echo $footers['cate_name']; ?> </h3>
+					    <ul>
+					    	<?php if(is_array($footers["arts"]) || $footers["arts"] instanceof \think\Collection || $footers["arts"] instanceof \think\Paginator): $i = 0; $__LIST__ = $footers["arts"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artis): $mod = ($i % 2 );++$i;?>
+					            <li><a href="#"><?php echo $artis['ar_title']; ?></a></li>
+					    	<?php endforeach; endif; else: echo "" ;endif; ?>
+					    </ul>
+
+					</div>
+
+
+				<?php endforeach; endif; else: echo "" ;endif; ?>
+<!-- 				<div class="help-item">
 				    <h3>新手上路 </h3>
 				    <ul>
 			            <li><a href="#">售后流程</a></li>
@@ -465,7 +479,7 @@
 						<li><a href="#">投诉与建议</a></li>
 		            </ul>
 
-				</div>
+				</div> -->
 		  
             </div>
             <div class="qr-code">

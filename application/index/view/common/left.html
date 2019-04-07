@@ -1,6 +1,7 @@
 <div class="article-side">
     <dl class="article-menu">
         <dt class="am-t"><a href="#">文章分类列表</a></dt>
+        <!-- 系统分类 -->
         <dd class="am-c">
             <div class="menu-item active">
                 <div class="item-hd">
@@ -10,96 +11,29 @@
                 <ul class="item-bd">
                 </ul>
                 <ul class="item-bd">
-                    <li><a href="#">新手上路 </a></li>
-                    <li><a href="#">配送与支付 </a></li>
-                    <li><a href="#">服务保证 </a></li>
-                    <li><a href="#">联系我们 </a></li>
-                    <li><a href="#">会员中心</a></li>
+                    {volist name="bases" id="base"}
+                        <li><a href="#">{$base.cate_name}</a></li>
+                    {/volist}
                 </ul>
             </div>
         </dd>
+        <!-- 普通分类 -->
         <dd class="am-c">
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">3G资讯</a>
-                    <i class="iconfont icon-down"></i>
+            {volist name="ComCate" id="ComCates"}
+                <div class="menu-item active">
+                    <div class="item-hd">
+                        <a href="#">{$ComCates.cate_name}</a>
+                        <i class="iconfont icon-down"></i>
+                    </div>
+                    {if condition="$ComCates.childCate"}
+                        <ul class="item-bd">
+                            {volist name="ComCates.childCate" id="childCates"}
+                                <li><a href="#">{$childCates.cate_name}</a></li>
+                            {/volist}
+                        </ul>
+                    {/if}
                 </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">站内快讯</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商城公告</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商家入驻流程说明</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商家入驻商家说明</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">App</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                    <li><a href="#">ios</a></li>
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">发票问题</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">公告</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">促销</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">微分销</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
+            {/volist}
         </dd>
     </dl>
 </div>

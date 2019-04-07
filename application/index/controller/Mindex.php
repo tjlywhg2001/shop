@@ -3,7 +3,7 @@
 
 	use think\Controller;
 
-	class Mindex extends Controller
+	class Mindex extends Base
 	{
 		public function index()
 		{

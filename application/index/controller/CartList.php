@@ -3,7 +3,7 @@
 
 	use think\Controller;
 
-	class CartList extends Controller
+	class CartList extends Base
 	{
 		public function index()
 		{
