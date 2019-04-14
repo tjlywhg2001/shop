@@ -46,7 +46,7 @@
                     </li> -->
                     {volist name="artiRes" id="artiResList"}
                     <li>
-                        <h3><a href="{:url('category/index',array('ar_id'=>$artiResList['ar_id']))}" title="{$artiResList.ar_title}">{$artiResList.ar_title}</a></h3>
+                        <h3><a href="{if condition="$artiResList['ar_linkurl']"} {$artiResList['ar_linkurl']}" target="_balck" {else} {:url('article/index',array('ar_id'=>$artiResList['ar_id']))}" {/if} title="{$artiResList.ar_title}">{$artiResList.ar_title}</a></h3>
                         <p></p>
                     </li>
                     {/volist}

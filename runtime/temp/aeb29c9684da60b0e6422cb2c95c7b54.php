@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1554621116;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554621116;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1554621116;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1554637546;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554630885;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1555234540;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1555228766;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555235771;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1363,9 +1363,6 @@
 
 
 
-
-
-
 <div class="content article-content">
     <div class="w w1200 clearfix">
 
@@ -1374,6 +1371,7 @@
     <dl class="article-menu">
         <dt class="am-t"><a href="#">文章分类列表</a></dt>
         <!-- 系统分类 -->
+        <?php if($bases): ?>
         <dd class="am-c">
             <div class="menu-item active">
                 <div class="item-hd">
@@ -1384,16 +1382,12 @@
                 </ul>
                 <ul class="item-bd">
                     <?php if(is_array($bases) || $bases instanceof \think\Collection || $bases instanceof \think\Paginator): $i = 0; $__LIST__ = $bases;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$base): $mod = ($i % 2 );++$i;?>
-                        <li><a href="#"><?php echo $base['cate_name']; ?></a></li>
+                        <li><a href="<?php echo url('category/index',array('cate_id' => $base['cate_id'])); ?>"><?php echo $base['cate_name']; ?></a></li>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
-<!--                     <li><a href="#">新手上路 </a></li>
-                    <li><a href="#">配送与支付 </a></li>
-                    <li><a href="#">服务保证 </a></li>
-                    <li><a href="#">联系我们 </a></li>
-                    <li><a href="#">会员中心</a></li>
- -->                </ul>
+                </ul>
             </div>
         </dd>
+        <?php endif; ?>
         <!-- 普通分类 -->
         <dd class="am-c">
             <?php if(is_array($ComCate) || $ComCate instanceof \think\Collection || $ComCate instanceof \think\Paginator): $i = 0; $__LIST__ = $ComCate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ComCates): $mod = ($i % 2 );++$i;?>
@@ -1405,93 +1399,12 @@
                     <?php if($ComCates['childCate']): ?>
                         <ul class="item-bd">
                             <?php if(is_array($ComCates['childCate']) || $ComCates['childCate'] instanceof \think\Collection || $ComCates['childCate'] instanceof \think\Paginator): $i = 0; $__LIST__ = $ComCates['childCate'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$childCates): $mod = ($i % 2 );++$i;?>
-                                <li><a href="#"><?php echo $childCates['cate_name']; ?></a></li>
+                                <li><a href="<?php echo url('category/index',array('cate_id' => $childCates['cate_id'])); ?>"><?php echo $childCates['cate_name']; ?></a></li>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     <?php endif; ?>
                 </div>
             <?php endforeach; endif; else: echo "" ;endif; ?>
-<!--             <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">3G资讯</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">站内快讯</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商城公告</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商家入驻流程说明</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">商家入驻商家说明</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">App</a>
-                    <i class="iconfont icon-down"></i>
-                </div>
-                <ul class="item-bd">
-                    <li><a href="#">ios</a></li>
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">发票问题</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">公告</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">促销</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div>
-            <div class="menu-item active">
-                <div class="item-hd">
-                    <a href="#">微分销</a><i class="iconfont icon-down">
-                    </i>
-                </div>
-                <ul class="item-bd">
-                </ul>
-            </div> -->
         </dd>
     </dl>
 </div>
@@ -1499,114 +1412,25 @@
 
         <div class="article-main">
             <div class="am-hd">
-                <h2>隐私声明</h2>
+                <h2><?php echo $articleContent['ar_title']; ?></h2>
                 <div class="extra">
-	    <a href="#">系统分类</a>
-    <i>&gt;</i>
-        <a href="#">网店帮助分类</a>
-    <i>&gt;</i>
-        <a href="#">新手上路 </a>
-    <i>&gt;</i>
-            <span>隐私声明</span>
-    </div>
+				    <a href="#">系统分类</a>
+				    <i>&gt;</i>
+			        <a href="#">网店帮助分类</a>
+				    <i>&gt;</i>
+			        <a href="#"><?php echo $categoryName['cate_name']; ?></a>
+				    <i>&gt;</i>
+		            <span><?php echo $articleContent['ar_title']; ?></span>
+			    </div>
             </div>
             <div class="am-bd">
-                <div class="article-words">
-<p>&nbsp;<strong style="font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif; line-height: 24px; margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">隐私政策</strong></p><div class="content_list border_none list_top_txt" style="margin: 0px; padding: 25px 0px 15px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网以此声明对本站用户隐私保护的许诺。随着本站服务范围的扩大，会随时更新隐私声明。我们欢迎您随时查看隐私声明。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网非常重视对用户隐私权的保护，用户的邮件及手机号等个人资料为用户重要隐私，本站承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下擅自将用户的个人资料信息出租或出售给任何第三方，但以下情况除外：</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">A、用户同意让第三方共享资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">B、用户为享受产品和服务同意公开其个人资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">C、本站发现用户违反了本站服务条款或本站其它使用规定。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">使用说明</strong>
- &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网用户可以通过设定的密码来保护账户和资料安全。用户应当对其密码的保密负全部责任。请不要和他人分享此信息。如果您使用的是公共电脑，请在离开电脑时退出商创网、以保证您的信息不被后来的使用者获取。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">服务条款说明</strong>
- &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">接受商创网的用户同时受本站用户协议的约束。</p></div>                </div>
-				
-<div class="no_records no_comments_qt">
-    <i class="no_icon no_icon_three"></i>
-    <span class="block">暂无评价</span>
-</div>
-<div class="discuss-left">
-<form method="post" action="article.php" id="theFrom">
-<div class="review-form" id="doPost" name="doPost">
-	<div class="r-u-name">
-		<div class="u-ico"><img src="/static/index/img/avatar.png"></div>
-		<span>发表评论</span>
-	</div>
-	<div class="item">
-		<div class="item-label"><em class="red">*</em>&nbsp;内容：</div>
-		<div class="item-value">
-			<textarea class="textarea" id="test_content" name="content"></textarea>
-			<div class="form_prompt"></div>
-		</div>
-	</div>
-	<div class="item">
-		<div class="item-label">&nbsp;</div>
-		<div class="item-value">
-			<input type="hidden" name="act" value="add_comment" />
-			<input type="hidden" name="article_id" value="36" />	
-			<input type="hidden" name="user_id" value="0" />				
-			<input type="button" class="btn sc-redBg-btn" ectype="submit" value="发表">
-		</div>
-	</div>
-</div>
-</form>
-</div>
-<script type="text/javascript" src="/static/index/img/js/jquery.purebox.js"></script>
-<script type="text/javascript">
-	$(function(){
-		$('.comment_nice').click(function(){
-			var T = $(this);
-			var comment_id = T.data('commentid');
-			var goods_id = T.data('idvalue');
-			var type = 'comment';
-			
-			Ajax.call('comment.php', 'act=add_useful&id=' + comment_id + '&goods_id=' + goods_id + '&type=' + type, niceResponse, 'GET', 'JSON');
-		});
-	});
-	function niceResponse(res){
-		if(res.err_no == 1){
-			var back_url = res.url;
-			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
-			return false;
-		}else if(res.err_no == 0){
-			$(".reply-nice" + res.id).html(res.useful);
-            $(".comment_nice").addClass("selected");
-		}
-	}
-	
-	$(document).on("click","[ectype='submit']",function(){		
-		var user_id = $("input[name='user_id']").val();
-		var article_id = $("input[name='article_id']").val();
-		//判断是否登录
-		if(user_id == 0){
-			var back_url = "article.php?id=" + article_id;
-			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
-			return false;
-		}
-			
-		var content = $("#test_content").val();
-		if(!content){
-			var message = "评论内容不能为空！";
-			pbDialog(message,"",0);
-			return false;
-		}else{
-			Ajax.call('article.php', 'act=add_comment&content=' + content + '&article_id=' + article_id, function(data){
-					if(data.error){
-pbDialog(data.message,"",0);
-					}else{
-pbDialog(data.message,"",1,'','','',true,function(){location.reload();});					
-					}
-			}, 'GET', 'JSON');
-		}		
-	})
-</script>                <div class="more_article">
-<span class="art_prev">
-        上一篇：<a href="#" >订购方式</a>
-    </span>
-<span class="art_next">
-    </span>
-                </div>
+				<?php echo $articleContent['ar_content']; ?>
             </div>
         </div>
     </div>
 </div>
 
-
+	
     <div class="footer-new">
     <div class="footer-new-top">
     	<div class="w w1200">
@@ -1649,7 +1473,7 @@ pbDialog(data.message,"",1,'','','',true,function(){location.reload();});
 					    <h3><?php echo $footers['cate_name']; ?> </h3>
 					    <ul>
 					    	<?php if(is_array($footers["arts"]) || $footers["arts"] instanceof \think\Collection || $footers["arts"] instanceof \think\Paginator): $i = 0; $__LIST__ = $footers["arts"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artis): $mod = ($i % 2 );++$i;?>
-					            <li><a href="#"><?php echo $artis['ar_title']; ?></a></li>
+					            <li><a href="<?php if($artis['ar_linkurl']): ?> <?php echo $artis['ar_linkurl']; ?>" target="_balck"> <?php else: ?> <?php echo url('article/index',array('ar_id'=>$artis['ar_id'])); ?>"> <?php endif; ?> <?php echo $artis['ar_title']; ?></a></li>
 					    	<?php endforeach; endif; else: echo "" ;endif; ?>
 					    </ul>
 
@@ -1863,6 +1687,7 @@ $(function () {
 </script>   
 
 
+
 <script type="text/javascript" src="/static/index/js/suggest.js"></script>
 <script type="text/javascript" src="/static/index/js/scroll_city.js"></script>
 <script type="text/javascript" src="/static/index/js/utils.js"></script>
@@ -1879,3 +1704,116 @@ $(function(){
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                 <div class="article-words">
+					<p>&nbsp;<strong style="font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif; line-height: 24px; margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">隐私政策</strong></p><div class="content_list border_none list_top_txt" style="margin: 0px; padding: 25px 0px 15px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网以此声明对本站用户隐私保护的许诺。随着本站服务范围的扩大，会随时更新隐私声明。我们欢迎您随时查看隐私声明。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网非常重视对用户隐私权的保护，用户的邮件及手机号等个人资料为用户重要隐私，本站承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下擅自将用户的个人资料信息出租或出售给任何第三方，但以下情况除外：</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">A、用户同意让第三方共享资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">B、用户为享受产品和服务同意公开其个人资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">C、本站发现用户违反了本站服务条款或本站其它使用规定。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">使用说明</strong>
+					 &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网用户可以通过设定的密码来保护账户和资料安全。用户应当对其密码的保密负全部责任。请不要和他人分享此信息。如果您使用的是公共电脑，请在离开电脑时退出商创网、以保证您的信息不被后来的使用者获取。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">服务条款说明</strong>
+					 &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">接受商创网的用户同时受本站用户协议的约束。</p></div>                </div>
+				
+<div class="no_records no_comments_qt">
+    <i class="no_icon no_icon_three"></i>
+    <span class="block">暂无评价</span>
+</div>
+<div class="discuss-left">
+	<form method="post" action="article.php" id="theFrom">
+	<div class="review-form" id="doPost" name="doPost">
+		<div class="r-u-name">
+			<div class="u-ico"><img src="/static/index/img/avatar.png"></div>
+			<span>发表评论</span>
+		</div>
+		<div class="item">
+			<div class="item-label"><em class="red">*</em>&nbsp;内容：</div>
+			<div class="item-value">
+				<textarea class="textarea" id="test_content" name="content"></textarea>
+				<div class="form_prompt"></div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-label">&nbsp;</div>
+			<div class="item-value">
+				<input type="hidden" name="act" value="add_comment" />
+				<input type="hidden" name="article_id" value="36" />	
+				<input type="hidden" name="user_id" value="0" />				
+				<input type="button" class="btn sc-redBg-btn" ectype="submit" value="发表">
+			</div>
+		</div>
+	</div>
+	</form>
+</div>
+<script type="text/javascript" src="/static/index/img/js/jquery.purebox.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.comment_nice').click(function(){
+			var T = $(this);
+			var comment_id = T.data('commentid');
+			var goods_id = T.data('idvalue');
+			var type = 'comment';
+			
+			Ajax.call('comment.php', 'act=add_useful&id=' + comment_id + '&goods_id=' + goods_id + '&type=' + type, niceResponse, 'GET', 'JSON');
+		});
+	});
+	function niceResponse(res){
+		if(res.err_no == 1){
+			var back_url = res.url;
+			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+			return false;
+		}else if(res.err_no == 0){
+			$(".reply-nice" + res.id).html(res.useful);
+            $(".comment_nice").addClass("selected");
+		}
+	}
+	
+	$(document).on("click","[ectype='submit']",function(){		
+		var user_id = $("input[name='user_id']").val();
+		var article_id = $("input[name='article_id']").val();
+		//判断是否登录
+		if(user_id == 0){
+			var back_url = "article.php?id=" + article_id;
+			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+			return false;
+		}
+			
+		var content = $("#test_content").val();
+		if(!content){
+			var message = "评论内容不能为空！";
+			pbDialog(message,"",0);
+			return false;
+		}else{
+			Ajax.call('article.php', 'act=add_comment&content=' + content + '&article_id=' + article_id, function(data){
+				if(data.error){
+					pbDialog(data.message,"",0);
+				}else{
+					pbDialog(data.message,"",1,'','','',true,function(){location.reload();});					
+				}
+			}, 'GET', 'JSON');
+		}		
+	})
+</script>
+                <div class="more_article">
+					<span class="art_prev">
+				        上一篇：<a href="#" >订购方式</a>
+				    </span>
+					<span class="art_next">
+				    </span>
+                </div>
+ -->

@@ -40,7 +40,7 @@
 					    <h3>{$footers.cate_name} </h3>
 					    <ul>
 					    	{volist name='$footers["arts"]' id="artis"}
-					            <li><a href="#">{$artis.ar_title}</a></li>
+					            <li><a href="{if condition="$artis['ar_linkurl']"} {$artis['ar_linkurl']}" target="_balck"> {else} {:url('article/index',array('ar_id'=>$artis['ar_id']))}"> {/if} {$artis.ar_title}</a></li>
 					    	{/volist}
 					    </ul>
 

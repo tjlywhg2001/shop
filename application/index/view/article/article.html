@@ -13,9 +13,6 @@
 
 
 
-
-
-
 <div class="content article-content">
     <div class="w w1200 clearfix">
 
@@ -25,52 +22,100 @@
 
         <div class="article-main">
             <div class="am-hd">
-                <h2>隐私声明</h2>
+                <h2>{$articleContent.ar_title}</h2>
                 <div class="extra">
-	    <a href="#">系统分类</a>
-    <i>&gt;</i>
-        <a href="#">网店帮助分类</a>
-    <i>&gt;</i>
-        <a href="#">新手上路 </a>
-    <i>&gt;</i>
-            <span>隐私声明</span>
-    </div>
+				    <a href="#">系统分类</a>
+				    <i>&gt;</i>
+			        <a href="#">网店帮助分类</a>
+				    <i>&gt;</i>
+			        <a href="#">{$categoryName.cate_name}</a>
+				    <i>&gt;</i>
+		            <span>{$articleContent.ar_title}</span>
+			    </div>
             </div>
             <div class="am-bd">
-                <div class="article-words">
-<p>&nbsp;<strong style="font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif; line-height: 24px; margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">隐私政策</strong></p><div class="content_list border_none list_top_txt" style="margin: 0px; padding: 25px 0px 15px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网以此声明对本站用户隐私保护的许诺。随着本站服务范围的扩大，会随时更新隐私声明。我们欢迎您随时查看隐私声明。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网非常重视对用户隐私权的保护，用户的邮件及手机号等个人资料为用户重要隐私，本站承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下擅自将用户的个人资料信息出租或出售给任何第三方，但以下情况除外：</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">A、用户同意让第三方共享资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">B、用户为享受产品和服务同意公开其个人资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">C、本站发现用户违反了本站服务条款或本站其它使用规定。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">使用说明</strong>
- &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网用户可以通过设定的密码来保护账户和资料安全。用户应当对其密码的保密负全部责任。请不要和他人分享此信息。如果您使用的是公共电脑，请在离开电脑时退出商创网、以保证您的信息不被后来的使用者获取。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">服务条款说明</strong>
- &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">接受商创网的用户同时受本站用户协议的约束。</p></div>                </div>
+				{$articleContent.ar_content}
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+    {include file='/common/footer'}   
+
+
+
+<script type="text/javascript" src="__index__/js/suggest.js"></script>
+<script type="text/javascript" src="__index__/js/scroll_city.js"></script>
+<script type="text/javascript" src="__index__/js/utils.js"></script>
+<script type="text/javascript" src="__index__/js/warehouse.js"></script>
+<script type="text/javascript" src="__index__/js/warehouse_area.js"></script>
+<script type="text/javascript" src="__index__/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="__index__/img/js/dsc-common.js"></script>
+<script type="text/javascript">
+$(function(){
+    $(".article-side .side-goods").slide({
+        effect: 'leftLoop'
+    });
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                 <div class="article-words">
+					<p>&nbsp;<strong style="font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif; line-height: 24px; margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">隐私政策</strong></p><div class="content_list border_none list_top_txt" style="margin: 0px; padding: 25px 0px 15px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网以此声明对本站用户隐私保护的许诺。随着本站服务范围的扩大，会随时更新隐私声明。我们欢迎您随时查看隐私声明。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网非常重视对用户隐私权的保护，用户的邮件及手机号等个人资料为用户重要隐私，本站承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下擅自将用户的个人资料信息出租或出售给任何第三方，但以下情况除外：</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">A、用户同意让第三方共享资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">B、用户为享受产品和服务同意公开其个人资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">C、本站发现用户违反了本站服务条款或本站其它使用规定。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">使用说明</strong>
+					 &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网用户可以通过设定的密码来保护账户和资料安全。用户应当对其密码的保密负全部责任。请不要和他人分享此信息。如果您使用的是公共电脑，请在离开电脑时退出商创网、以保证您的信息不被后来的使用者获取。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">服务条款说明</strong>
+					 &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">接受商创网的用户同时受本站用户协议的约束。</p></div>                </div>
 				
 <div class="no_records no_comments_qt">
     <i class="no_icon no_icon_three"></i>
     <span class="block">暂无评价</span>
 </div>
 <div class="discuss-left">
-<form method="post" action="article.php" id="theFrom">
-<div class="review-form" id="doPost" name="doPost">
-	<div class="r-u-name">
-		<div class="u-ico"><img src="__index__/img/avatar.png"></div>
-		<span>发表评论</span>
-	</div>
-	<div class="item">
-		<div class="item-label"><em class="red">*</em>&nbsp;内容：</div>
-		<div class="item-value">
-			<textarea class="textarea" id="test_content" name="content"></textarea>
-			<div class="form_prompt"></div>
+	<form method="post" action="article.php" id="theFrom">
+	<div class="review-form" id="doPost" name="doPost">
+		<div class="r-u-name">
+			<div class="u-ico"><img src="__index__/img/avatar.png"></div>
+			<span>发表评论</span>
+		</div>
+		<div class="item">
+			<div class="item-label"><em class="red">*</em>&nbsp;内容：</div>
+			<div class="item-value">
+				<textarea class="textarea" id="test_content" name="content"></textarea>
+				<div class="form_prompt"></div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-label">&nbsp;</div>
+			<div class="item-value">
+				<input type="hidden" name="act" value="add_comment" />
+				<input type="hidden" name="article_id" value="36" />	
+				<input type="hidden" name="user_id" value="0" />				
+				<input type="button" class="btn sc-redBg-btn" ectype="submit" value="发表">
+			</div>
 		</div>
 	</div>
-	<div class="item">
-		<div class="item-label">&nbsp;</div>
-		<div class="item-value">
-			<input type="hidden" name="act" value="add_comment" />
-			<input type="hidden" name="article_id" value="36" />	
-			<input type="hidden" name="user_id" value="0" />				
-			<input type="button" class="btn sc-redBg-btn" ectype="submit" value="发表">
-		</div>
-	</div>
-</div>
-</form>
+	</form>
 </div>
 <script type="text/javascript" src="__index__/img/js/jquery.purebox.js"></script>
 <script type="text/javascript">
@@ -112,43 +157,20 @@
 			return false;
 		}else{
 			Ajax.call('article.php', 'act=add_comment&content=' + content + '&article_id=' + article_id, function(data){
-					if(data.error){
-pbDialog(data.message,"",0);
-					}else{
-pbDialog(data.message,"",1,'','','',true,function(){location.reload();});					
-					}
+				if(data.error){
+					pbDialog(data.message,"",0);
+				}else{
+					pbDialog(data.message,"",1,'','','',true,function(){location.reload();});					
+				}
 			}, 'GET', 'JSON');
 		}		
 	})
-</script>                <div class="more_article">
-<span class="art_prev">
-        上一篇：<a href="#" >订购方式</a>
-    </span>
-<span class="art_next">
-    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    {include file='/common/footer'}   
-
-
-<script type="text/javascript" src="__index__/js/suggest.js"></script>
-<script type="text/javascript" src="__index__/js/scroll_city.js"></script>
-<script type="text/javascript" src="__index__/js/utils.js"></script>
-<script type="text/javascript" src="__index__/js/warehouse.js"></script>
-<script type="text/javascript" src="__index__/js/warehouse_area.js"></script>
-<script type="text/javascript" src="__index__/js/jquery.SuperSlide.2.1.1.js"></script>
-<script type="text/javascript" src="__index__/img/js/dsc-common.js"></script>
-<script type="text/javascript">
-$(function(){
-    $(".article-side .side-goods").slide({
-        effect: 'leftLoop'
-    });
-});
 </script>
-</body>
-</html>
+                <div class="more_article">
+					<span class="art_prev">
+				        上一篇：<a href="#" >订购方式</a>
+				    </span>
+					<span class="art_next">
+				    </span>
+                </div>
+ -->

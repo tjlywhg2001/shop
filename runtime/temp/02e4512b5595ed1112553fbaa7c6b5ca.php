@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1555228013;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1555228013;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555228013;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1555228013;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1555228013;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1555228013;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555235771;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1555228013;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -2306,7 +2306,7 @@
 					    <h3><?php echo $footers['cate_name']; ?> </h3>
 					    <ul>
 					    	<?php if(is_array($footers["arts"]) || $footers["arts"] instanceof \think\Collection || $footers["arts"] instanceof \think\Paginator): $i = 0; $__LIST__ = $footers["arts"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artis): $mod = ($i % 2 );++$i;?>
-					            <li><a href="#"><?php echo $artis['ar_title']; ?></a></li>
+					            <li><a href="<?php if($artis['ar_linkurl']): ?> <?php echo $artis['ar_linkurl']; ?>" target="_balck"> <?php else: ?> <?php echo url('article/index',array('ar_id'=>$artis['ar_id'])); ?>"> <?php endif; ?> <?php echo $artis['ar_title']; ?></a></li>
 					    	<?php endforeach; endif; else: echo "" ;endif; ?>
 					    </ul>
 

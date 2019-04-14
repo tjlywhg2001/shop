@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1555231428;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1555228766;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555228013;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1555236042;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1555228766;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555235771;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1436,7 +1436,7 @@
                     </li> -->
                     <?php if(is_array($artiRes) || $artiRes instanceof \think\Collection || $artiRes instanceof \think\Paginator): $i = 0; $__LIST__ = $artiRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artiResList): $mod = ($i % 2 );++$i;?>
                     <li>
-                        <h3><a href="<?php echo url('category/index',array('ar_id'=>$artiResList['ar_id'])); ?>" title="<?php echo $artiResList['ar_title']; ?>"><?php echo $artiResList['ar_title']; ?></a></h3>
+                        <h3><a href="<?php if($artiResList['ar_linkurl']): ?> <?php echo $artiResList['ar_linkurl']; ?>" target="_balck" <?php else: ?> <?php echo url('article/index',array('ar_id'=>$artiResList['ar_id'])); ?>" <?php endif; ?> title="<?php echo $artiResList['ar_title']; ?>"><?php echo $artiResList['ar_title']; ?></a></h3>
                         <p></p>
                     </li>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
@@ -1499,7 +1499,7 @@ function selectPage(sel)
 					    <h3><?php echo $footers['cate_name']; ?> </h3>
 					    <ul>
 					    	<?php if(is_array($footers["arts"]) || $footers["arts"] instanceof \think\Collection || $footers["arts"] instanceof \think\Paginator): $i = 0; $__LIST__ = $footers["arts"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artis): $mod = ($i % 2 );++$i;?>
-					            <li><a href="#"><?php echo $artis['ar_title']; ?></a></li>
+					            <li><a href="<?php if($artis['ar_linkurl']): ?> <?php echo $artis['ar_linkurl']; ?>" target="_balck"> <?php else: ?> <?php echo url('article/index',array('ar_id'=>$artis['ar_id'])); ?>"> <?php endif; ?> <?php echo $artis['ar_title']; ?></a></li>
 					    	<?php endforeach; endif; else: echo "" ;endif; ?>
 					    </ul>
 
