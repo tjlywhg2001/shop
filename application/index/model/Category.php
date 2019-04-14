@@ -18,6 +18,30 @@ class Category extends Model
 
 	}
 
+	// 面包屑导航
+	public function position($cateId){
+		$navdata = $this -> field('cate_id,cate_pid,cate_name') -> select();
+		return $this -> _position( $navdata, $cateId );
+	}
+
+	private function _position( $navdata, $cateId ){
+		static $arr = array();
+		$cates = $this -> field('cate_id,cate_pid,cate_name')->find($cateId);
+		// dump(db('category'));die;
+		if (empty($arr)){
+			$arr[] = $cates;
+		}
+		foreach ($navdata as $k => $v) {
+			if ( $v['cate_id'] == $cates['cate_pid'] ){
+				$arr[]=$v;
+				$this -> _position( $navdata, $v['cate_id'] );
+			}
+		}
+		return array_reverse( $arr );
+
+
+	}
+
 }
 
 

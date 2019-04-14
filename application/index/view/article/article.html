@@ -24,12 +24,10 @@
             <div class="am-hd">
                 <h2>{$articleContent.ar_title}</h2>
                 <div class="extra">
-				    <a href="#">系统分类</a>
+                	{volist name="cateNav" id="cateNavs"}
+				    <a href="{:url('category/index',array('cate_id'=> $cateNavs['cate_id']))}">{$cateNavs.cate_name}</a>
 				    <i>&gt;</i>
-			        <a href="#">网店帮助分类</a>
-				    <i>&gt;</i>
-			        <a href="#">{$categoryName.cate_name}</a>
-				    <i>&gt;</i>
+				    {/volist}
 		            <span>{$articleContent.ar_title}</span>
 			    </div>
             </div>

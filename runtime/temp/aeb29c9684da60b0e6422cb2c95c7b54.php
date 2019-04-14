@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1555234540;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1555228766;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555235771;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1555243920;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1555228766;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555235771;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1414,12 +1414,10 @@
             <div class="am-hd">
                 <h2><?php echo $articleContent['ar_title']; ?></h2>
                 <div class="extra">
-				    <a href="#">系统分类</a>
+                	<?php if(is_array($cateNav) || $cateNav instanceof \think\Collection || $cateNav instanceof \think\Paginator): $i = 0; $__LIST__ = $cateNav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cateNavs): $mod = ($i % 2 );++$i;?>
+				    <a href="<?php echo url('category/index',array('cate_id'=> $cateNavs['cate_id'])); ?>"><?php echo $cateNavs['cate_name']; ?></a>
 				    <i>&gt;</i>
-			        <a href="#">网店帮助分类</a>
-				    <i>&gt;</i>
-			        <a href="#"><?php echo $categoryName['cate_name']; ?></a>
-				    <i>&gt;</i>
+				    <?php endforeach; endif; else: echo "" ;endif; ?>
 		            <span><?php echo $articleContent['ar_title']; ?></span>
 			    </div>
             </div>

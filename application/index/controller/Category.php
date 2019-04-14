@@ -22,7 +22,6 @@
 			// 栏目
 			$cateName = $category -> find($cate_id);
 
-			// dump($artiRes);die;
 
 			$this -> assign([
 				'artiRes' => $artiRes,

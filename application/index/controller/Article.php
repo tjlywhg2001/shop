@@ -10,11 +10,14 @@
 			$article = db('article');
 			$category = db('category');
 			$articleContent = $article -> find( $ar_id );
-			$categoryName = $category -> where( 'cate_id','=', $articleContent['ar_cateid'] ) -> find();
-			// dump( $categoryName );die;
+			// 面包屑导航
+			$cateNav = model('category') -> position($articleContent['ar_cateid']);
+ 
+			// dump( $cateNav );die;
+			
 			$this -> assign([
 				'articleContent' => $articleContent,
-				'categoryName' => $categoryName,
+				'cateNav' => $cateNav,
 			]);
 			return view('article');
 		}
