@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1554621116;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1554621116;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1554621116;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1554621116;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1554621116;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1555228013;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1555228013;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1555228013;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1555228013;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1555228013;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>

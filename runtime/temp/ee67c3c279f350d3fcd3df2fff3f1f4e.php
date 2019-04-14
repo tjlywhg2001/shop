@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1554621116;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1554621116;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1554621116;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1554621116;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1554639918;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1554630885;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1555231428;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555228013;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555228013;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555228013;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1555228766;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555228013;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1374,6 +1374,7 @@
     <dl class="article-menu">
         <dt class="am-t"><a href="#">文章分类列表</a></dt>
         <!-- 系统分类 -->
+        <?php if($bases): ?>
         <dd class="am-c">
             <div class="menu-item active">
                 <div class="item-hd">
@@ -1384,11 +1385,12 @@
                 </ul>
                 <ul class="item-bd">
                     <?php if(is_array($bases) || $bases instanceof \think\Collection || $bases instanceof \think\Paginator): $i = 0; $__LIST__ = $bases;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$base): $mod = ($i % 2 );++$i;?>
-                        <li><a href="#"><?php echo $base['cate_name']; ?></a></li>
+                        <li><a href="<?php echo url('category/index',array('cate_id' => $base['cate_id'])); ?>"><?php echo $base['cate_name']; ?></a></li>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
         </dd>
+        <?php endif; ?>
         <!-- 普通分类 -->
         <dd class="am-c">
             <?php if(is_array($ComCate) || $ComCate instanceof \think\Collection || $ComCate instanceof \think\Paginator): $i = 0; $__LIST__ = $ComCate;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$ComCates): $mod = ($i % 2 );++$i;?>
@@ -1400,7 +1402,7 @@
                     <?php if($ComCates['childCate']): ?>
                         <ul class="item-bd">
                             <?php if(is_array($ComCates['childCate']) || $ComCates['childCate'] instanceof \think\Collection || $ComCates['childCate'] instanceof \think\Paginator): $i = 0; $__LIST__ = $ComCates['childCate'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$childCates): $mod = ($i % 2 );++$i;?>
-                                <li><a href="#"><?php echo $childCates['cate_name']; ?></a></li>
+                                <li><a href="<?php echo url('category/index',array('cate_id' => $childCates['cate_id'])); ?>"><?php echo $childCates['cate_name']; ?></a></li>
                             <?php endforeach; endif; else: echo "" ;endif; ?>
                         </ul>
                     <?php endif; ?>
@@ -1413,37 +1415,31 @@
 
         <div class="article-main">
             <div class="am-hd">
-                <h2>新手上路 </h2>
+                <h2><?php echo $cateName['cate_name']; ?></h2>
                 <div class="mod-list-sort fr mt10">
-                <form action="" name="search_form" method="post" class="article_search">
-<div class="f-search">
-    <input name="keywords" type="text" id="requirement" value="" class="text" placeholder="请填写搜索内容" />
-    <input name="id" type="hidden" value="5" />
-    <input name="cur_url" id="cur_url" type="hidden" value="" />
-    <input type="submit" value="立即搜索" class="btn sc-redBg-btn ui-btn-submit" />
-</div>
-                </form>
+                    <form action="" name="search_form" method="post" class="article_search">
+                        <div class="f-search">
+                            <input name="keywords" type="text" id="requirement" value="" class="text" placeholder="请填写搜索内容" />
+                            <input name="id" type="hidden" value="5" />
+                            <input name="cur_url" id="cur_url" type="hidden" value="" />
+                            <input type="submit" value="立即搜索" class="btn sc-redBg-btn ui-btn-submit" />
+                        </div>
+                    </form>
                 </div>
             </div>
             
             <div class="am-bd">
                 <ul class="artilce-list">
-<li>
-    <h3><a href="#" title="隐私声明">隐私声明</a></h3>
-    <p></p>
-</li>
-<li>
-    <h3><a href="#" title="订购方式">订购方式</a></h3>
-    <p></p>
-</li>
-<li>
-    <h3><a href="#" title="购物流程">购物流程</a></h3>
-    <p></p>
-</li>
-<li>
-    <h3><a href="#" title="售后流程">售后流程</a></h3>
-    <p></p>
-</li>
+<!--                     <li>
+                        <h3><a href="#" title="隐私声明">隐私声明</a></h3>
+                        <p></p>
+                    </li> -->
+                    <?php if(is_array($artiRes) || $artiRes instanceof \think\Collection || $artiRes instanceof \think\Paginator): $i = 0; $__LIST__ = $artiRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artiResList): $mod = ($i % 2 );++$i;?>
+                    <li>
+                        <h3><a href="<?php echo url('category/index',array('ar_id'=>$artiResList['ar_id'])); ?>" title="<?php echo $artiResList['ar_title']; ?>"><?php echo $artiResList['ar_title']; ?></a></h3>
+                        <p></p>
+                    </li>
+                    <?php endforeach; endif; else: echo "" ;endif; ?>
                 </ul>
             </div>
             

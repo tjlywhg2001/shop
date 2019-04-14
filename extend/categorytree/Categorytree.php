@@ -1,6 +1,7 @@
 <?php
 	namespace categorytree;
 	
+	// 栏目
 	class Categorytree{
 
 		public function categorytree($catelist){

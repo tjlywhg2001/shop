@@ -2,6 +2,7 @@
     <dl class="article-menu">
         <dt class="am-t"><a href="#">文章分类列表</a></dt>
         <!-- 系统分类 -->
+        {if condition="$bases"}
         <dd class="am-c">
             <div class="menu-item active">
                 <div class="item-hd">
@@ -12,11 +13,12 @@
                 </ul>
                 <ul class="item-bd">
                     {volist name="bases" id="base"}
-                        <li><a href="#">{$base.cate_name}</a></li>
+                        <li><a href="{:url('category/index',array('cate_id' => $base['cate_id']))}">{$base.cate_name}</a></li>
                     {/volist}
                 </ul>
             </div>
         </dd>
+        {/if}
         <!-- 普通分类 -->
         <dd class="am-c">
             {volist name="ComCate" id="ComCates"}
@@ -28,7 +30,7 @@
                     {if condition="$ComCates.childCate"}
                         <ul class="item-bd">
                             {volist name="ComCates.childCate" id="childCates"}
-                                <li><a href="#">{$childCates.cate_name}</a></li>
+                                <li><a href="{:url('category/index',array('cate_id' => $childCates['cate_id']))}">{$childCates.cate_name}</a></li>
                             {/volist}
                         </ul>
                     {/if}
