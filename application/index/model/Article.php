@@ -10,7 +10,7 @@ use think\Model;
 */
 class Article extends Model
 {
-	
+	// 底部帮助中心
 	public function getFooterArts()
 	{
 		$bases = model('category') -> where( array('cate_type' => 3, 'cate_pid' => 2 ) ) -> order('cate_sort asc') -> select();	
@@ -19,6 +19,15 @@ class Article extends Model
 		}
 		// dump($bases);die;
 		return $bases;
+	}
+
+
+	// 底部帮助中心的底部配置项
+	public function getBottomArts(){
+		$bottomArt = $this -> where( 'ar_cateid', '=', 26 ) -> field('ar_id,ar_title,ar_linkurl') -> select();	
+		return $bottomArt;
+
+
 	}
 }
 

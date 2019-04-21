@@ -21,7 +21,7 @@
         <div class="dsc-search">
             <div class="form">
 				<form id="searchForm" name="searchForm" method="get" action="search.php" onsubmit="return checkSearchForm()" class="search-form">
-				    <input autocomplete="off" onkeyup="lookup(this.value);" name="keywords" id="keyword" value="内衣" class="search-text" type="text">
+				    <input autocomplete="off" onkeyup="lookup(this.value);" name="keywords" id="keyword" value="{$configArr['search_value']}" class="search-text" type="text">
 				    <input name="store_search_cmt" value="0" type="hidden">
 				    <button type="submit" class="button button-goods" onclick="checkstore_search_cmt(0)">搜商品</button>
 
@@ -31,10 +31,14 @@
 
 
 				<ul class="keyword">
-					<li><a href="search.php?keywords=%E5%91%A8%E5%A4%A7%E7%A6%8F" target="_blank">周大福</a></li>
-					<li><a href="search.php?keywords=%E5%86%85%E8%A1%A3" target="_blank">内衣</a></li>
+					<?php 
+						$searchKey = explode(',',$configArr['search_keywords']);
+						foreach ($searchKey as $k => $v):?>
+						<li><a href="search.php?keywords=%E5%91%A8%E5%A4%A7%E7%A6%8F" target="_blank"><?php echo $v; ?></a></li>
+					<?php endforeach;?>
+<!-- 					<li><a href="search.php?keywords=%E5%86%85%E8%A1%A3" target="_blank">内衣</a></li>
 					<li><a href="search.php?keywords=Five+Plus" target="_blank">Five Plus</a></li>
-					<li><a href="search.php?keywords=%E6%89%8B%E6%9C%BA" target="_blank">手机</a></li>
+					<li><a href="search.php?keywords=%E6%89%8B%E6%9C%BA" target="_blank">手机</a></li> -->
 				</ul>
 
 				<div class="suggestions_box" id="suggestions" style="display:none;">

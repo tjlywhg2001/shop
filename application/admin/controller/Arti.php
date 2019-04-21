@@ -10,7 +10,7 @@
 
 		public function lst(){
 		$ardb = db('article');
-			$artilist = $ardb -> field ('a.*,b.cate_name') -> alias('a')->join('category b','a.ar_cateid = b.cate_id')->order('ar_id desc')->paginate(5);
+			$artilist = $ardb -> field ('a.*,b.cate_name') -> alias('a')->join('category b','a.ar_cateid = b.cate_id')->order('ar_id desc')->paginate(25);
 			$this -> assign('artilist',$artilist);
 
 			return view('list');

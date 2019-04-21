@@ -9,23 +9,38 @@ header("Content-Type: text/html;charset=utf-8");
 */
 class Base extends Controller
 {
+
+	// 配置项数组
+	public $configss;
 	
 	public function _initialize()
 	{
+		// 获取并分配底部帮助信息
 		$this -> _getFooterArtis();
+		// 获取并分配导航
 		$this -> _getNav();
+		// 获取并分配配置项，为config赋值
+		$this -> _getConfig();
 	}
 
 	private function _getFooterArtis()
 	{
+		$Articles = model('article');
+
 		// 底部帮助中心
-		$bases = model('article') -> getFooterArts();
+		$bases = $Articles -> getFooterArts();
+
+		// 底部帮助中心的底部配置项
+		$bottoms = model('article') -> getBottomArts();
+		// dump($bottoms);die;
+		
 		// 左边nav
 		$ComCate = model('category') -> getComCate();
 
 		// 赋值输出
 		$this -> assign([
 			'bases' => $bases,
+			'bottoms' => $bottoms,
 			'ComCate' => $ComCate,
 		]);
 	}
@@ -43,6 +58,19 @@ class Base extends Controller
 			'navArr' => $navArr,
 		]);
 	}
+
+
+	private function _getConfig(){
+
+		$configArr = model('config') -> getConfigs();
+		// dump($configArr);die;
+		$this->configss = $configArr;
+		$this -> assign([
+			'configArr' => $configArr,
+		]);
+
+	}
+
 }
 
 

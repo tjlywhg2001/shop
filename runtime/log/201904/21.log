@@ -1,0 +1,2601 @@
+---------------------------------------------------------------
+[ 2019-04-21T20:09:44+08:00 ] 127.0.0.1 GET /category/5.html
+[ info ] c.com/category/5.html [运行时间：0.077000s][吞吐率：12.99req/s] [内存消耗：3,357.40kb] [文件加载：60]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/article/28.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/category/5_html' => '',
+  'cate_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ B:\aaaweb\shop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\category\category.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+  5 => 'artiRes',
+  6 => 'cateName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `cate_id`,`cate_pid` FROM `tp_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` IN (5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_id` = 5 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:09:53+08:00 ] 127.0.0.1 GET /category/5.html
+[ info ] c.com/category/5.html [运行时间：0.076000s][吞吐率：13.16req/s] [内存消耗：3,127.79kb] [文件加载：58]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/category/5.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/category/5_html' => '',
+  'cate_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ B:\aaaweb\shop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\category\category.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+  5 => 'artiRes',
+  6 => 'cateName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `cate_id`,`cate_pid` FROM `tp_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` IN (5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_id` = 5 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:10:04+08:00 ] 127.0.0.1 GET /admin/arti/lst.html
+[ info ] c.com/admin/arti/lst.html [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：2,887.41kb] [文件加载：58]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'arti',
+    2 => 'lst',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/admin/category/add.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/admin/arti/lst_html' => '',
+)
+[ info ] [ RUN ] app\admin\controller\Arti->lst[ B:\aaaweb\shop\application\admin\controller\Arti.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\arti\list.html [ array (
+  0 => 'artilist',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `tp_article` `a` INNER JOIN `tp_category` `b` ON `a`.`ar_cateid`=`b`.`cate_id` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`cate_name` FROM `tp_article` `a` INNER JOIN `tp_category` `b` ON `a`.`ar_cateid`=`b`.`cate_id` ORDER BY `ar_id` DESC LIMIT 0,25 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:10:04+08:00 ] 127.0.0.1 GET /static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[ info ] c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0 [运行时间：0.039000s][吞吐率：25.64req/s] [内存消耗：1,349.20kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'admin',
+    2 => 'fonts',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'identity',
+  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
+  'v' => '4.3.0',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:12:03+08:00 ] 127.0.0.1 GET /category/5.html
+[ info ] c.com/category/5.html [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,779.09kb] [文件加载：51]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/category/5.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/category/5_html' => '',
+  'cate_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:13:54+08:00 ] 127.0.0.1 GET /category/5.html
+[ info ] c.com/category/5.html [运行时间：0.053000s][吞吐率：18.87req/s] [内存消耗：2,779.09kb] [文件加载：51]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/category/5.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/category/5_html' => '',
+  'cate_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:14:04+08:00 ] 127.0.0.1 GET /
+[ info ] c.com/ [运行时间：0.054000s][吞吐率：18.52req/s] [内存消耗：2,770.31kb] [文件加载：51]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:14:25+08:00 ] 127.0.0.1 GET /
+[ info ] c.com/ [运行时间：0.077000s][吞吐率：12.99req/s] [内存消耗：3,474.38kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ B:\aaaweb\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\index\index.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:14:25+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,348.84kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:14:26+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] c.com/get_ajax_content.php [运行时间：0.025000s][吞吐率：40.00req/s] [内存消耗：1,350.52kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '81',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'get_cat_top_list',
+  'tpl' => '1',
+  'cat_id' => '347',
+  'rome_key' => '0',
+  'prent_id' => '6',
+  'region_id' => '1',
+  'area_id' => '7',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:14:37+08:00 ] 127.0.0.1 GET /
+[ info ] c.com/ [运行时间：0.068000s][吞吐率：14.71req/s] [内存消耗：3,146.98kb] [文件加载：57]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ B:\aaaweb\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\index\index.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:14:37+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:14:37+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.028000s][吞吐率：35.71req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:14:37+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] c.com/get_ajax_content.php [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,350.83kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '81',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'get_cat_top_list',
+  'tpl' => '1',
+  'cat_id' => '347',
+  'rome_key' => '0',
+  'prent_id' => '6',
+  'region_id' => '1',
+  'area_id' => '7',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:15:03+08:00 ] 127.0.0.1 GET /
+[ info ] c.com/ [运行时间：0.076000s][吞吐率：13.16req/s] [内存消耗：3,474.87kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ B:\aaaweb\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\index\index.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:15:03+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:15:03+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:15:04+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] c.com/get_ajax_content.php [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,350.83kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '81',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'get_cat_top_list',
+  'tpl' => '1',
+  'cat_id' => '347',
+  'rome_key' => '0',
+  'prent_id' => '6',
+  'region_id' => '1',
+  'area_id' => '7',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:16:23+08:00 ] 127.0.0.1 GET /
+[ info ] c.com/ [运行时间：0.080000s][吞吐率：12.50req/s] [内存消耗：3,474.88kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ B:\aaaweb\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\index\index.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:16:23+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:16:23+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:16:24+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] c.com/get_ajax_content.php [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,350.83kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '81',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'get_cat_top_list',
+  'tpl' => '1',
+  'cat_id' => '347',
+  'rome_key' => '0',
+  'prent_id' => '6',
+  'region_id' => '1',
+  'area_id' => '7',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:18:12+08:00 ] 127.0.0.1 GET /
+[ info ] c.com/ [运行时间：0.083000s][吞吐率：12.05req/s] [内存消耗：3,475.03kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ B:\aaaweb\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\index\index.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:18:12+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:18:12+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:18:13+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] c.com/get_ajax_content.php [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,350.83kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '81',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'get_cat_top_list',
+  'tpl' => '1',
+  'cat_id' => '347',
+  'rome_key' => '0',
+  'prent_id' => '6',
+  'region_id' => '1',
+  'area_id' => '7',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /index/login
+[ info ] c.com/index/login [运行时间：0.059000s][吞吐率：16.95req/s] [内存消耗：3,214.66kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/index/login' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Login->index[ B:\aaaweb\shop\application\index\controller\Login.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\login\login.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /static/index/js/user_register.js
+[ info ] c.com/static/index/js/user_register.js [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,348.71kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_register_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,349.34kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /static/index/js/user.js
+[ info ] c.com/static/index/js/user.js [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,348.69kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /static/index/js/user.js
+[ info ] c.com/static/index/js/user.js [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,348.91kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /static/index/img/check/checkbox_12x12.png
+[ info ] c.com/static/index/img/check/checkbox_12x12.png [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,349.52kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/static/index/css/base.css',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/check/checkbox_12x12_png' => '',
+  'check' => 'checkbox_12x12.png',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /static/index/js/user_register.js
+[ info ] c.com/static/index/js/user_register.js [运行时间：0.019000s][吞吐率：52.63req/s] [内存消耗：1,349.04kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_register_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.018000s][吞吐率：55.56req/s] [内存消耗：1,349.60kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:19:33+08:00 ] 127.0.0.1 GET /index/favicon.ico
+[ info ] c.com/index/favicon.ico [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,354.47kb] [文件加载：39]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/index/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:20:27+08:00 ] 127.0.0.1 GET /static/index/img/check/checkbox_cur_12x12.png
+[ info ] c.com/static/index/img/check/checkbox_cur_12x12.png [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.29kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/static/index/css/base.css',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/check/checkbox_cur_12x12_png' => '',
+  'check' => 'checkbox_cur_12x12.png',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /index/login
+[ info ] c.com/index/login [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：3,214.77kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/index/login' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Login->index[ B:\aaaweb\shop\application\index\controller\Login.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\login\login.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /static/index/js/user.js
+[ info ] c.com/static/index/js/user.js [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,348.91kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /static/index/js/user_register.js
+[ info ] c.com/static/index/js/user_register.js [运行时间：0.026000s][吞吐率：38.46req/s] [内存消耗：1,349.04kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_register_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.60kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /static/index/js/user.js
+[ info ] c.com/static/index/js/user.js [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,348.91kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /static/index/img/check/checkbox_12x12.png
+[ info ] c.com/static/index/img/check/checkbox_12x12.png [运行时间：0.019000s][吞吐率：52.63req/s] [内存消耗：1,349.52kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/static/index/css/base.css',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/check/checkbox_12x12_png' => '',
+  'check' => 'checkbox_12x12.png',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /static/index/js/user_register.js
+[ info ] c.com/static/index/js/user_register.js [运行时间：0.018000s][吞吐率：55.56req/s] [内存消耗：1,349.04kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_register_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:37+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.019000s][吞吐率：52.63req/s] [内存消耗：1,349.60kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:45+08:00 ] 127.0.0.1 GET /index/goodsList
+[ info ] c.com/index/goodsList [运行时间：0.086000s][吞吐率：11.63req/s] [内存消耗：3,704.46kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'goodsList',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/index/goodsList' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Goodslist->index[ B:\aaaweb\shop\application\index\controller\Goodslist.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\goodslist\goodslist.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:23:45+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.023000s][吞吐率：43.48req/s] [内存消耗：1,349.62kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/goodsList',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:45+08:00 ] 127.0.0.1 GET /static/index/img/dian-ico2.png
+[ info ] c.com/static/index/img/dian-ico2.png [运行时间：0.019000s][吞吐率：52.63req/s] [内存消耗：1,348.76kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/static/index/css/style.css',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/dian-ico2_png' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:45+08:00 ] 127.0.0.1 GET /static/index/img/check/checkbox_12x12.png
+[ info ] c.com/static/index/img/check/checkbox_12x12.png [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,349.52kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/static/index/css/base.css',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/check/checkbox_12x12_png' => '',
+  'check' => 'checkbox_12x12.png',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:45+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,349.62kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/goodsList',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:50+08:00 ] 127.0.0.1 GET /article/40.html
+[ info ] c.com/article/40.html [运行时间：0.076000s][吞吐率：13.16req/s] [内存消耗：3,355.00kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'article',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/goodsList',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  '/article/40_html' => '',
+  'ar_id' => '40',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Article->index[ B:\aaaweb\shop\application\index\controller\Article.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\article\article.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+  5 => 'articleContent',
+  6 => 'cateNav',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_id` = 40 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `cate_id`,`cate_pid`,`cate_name` FROM `tp_category` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `cate_id`,`cate_pid`,`cate_name` FROM `tp_category` WHERE  `cate_id` = 26 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:23:50+08:00 ] 127.0.0.1 GET /static/index/img/js/dsc-common.js
+[ info ] c.com/static/index/img/js/dsc-common.js [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,348.95kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/article/40.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/js/dsc-common_js' => '',
+  'js' => 'dsc-common.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:50+08:00 ] 127.0.0.1 GET /article/favicon.ico
+[ info ] c.com/article/favicon.ico [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,348.38kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'article',
+    1 => 'favicon.ico',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/article/favicon_ico' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:23:53+08:00 ] 127.0.0.1 POST /article/get_ajax_content.php
+[ info ] c.com/article/get_ajax_content.php [运行时间：0.019000s][吞吐率：52.63req/s] [内存消耗：1,349.44kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'article',
+    1 => 'get_ajax_content.php',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/article/40.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '13',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+)
+[ info ] [ PARAM ] array (
+  '/article/get_ajax_content_php' => '',
+  'act' => 'cart_info',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:26:01+08:00 ] 127.0.0.1 GET /category/5.html
+[ info ] c.com/category/5.html [运行时间：0.083000s][吞吐率：12.05req/s] [内存消耗：3,357.49kb] [文件加载：60]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/article/28.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/category/5_html' => '',
+  'cate_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ B:\aaaweb\shop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\category\category.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+  5 => 'artiRes',
+  6 => 'cateName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `cate_id`,`cate_pid` FROM `tp_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` IN (5) [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_id` = 5 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:27:37+08:00 ] 127.0.0.1 GET /category/5.html
+[ info ] c.com/category/5.html [运行时间：0.079000s][吞吐率：12.66req/s] [内存消耗：3,357.45kb] [文件加载：60]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/article/28.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/category/5_html' => '',
+  'cate_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ B:\aaaweb\shop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\category\category.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+  5 => 'artiRes',
+  6 => 'cateName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `cate_id`,`cate_pid` FROM `tp_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` IN (5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_id` = 5 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:27:40+08:00 ] 127.0.0.1 GET /index/login
+[ info ] c.com/index/login [运行时间：0.060000s][吞吐率：16.67req/s] [内存消耗：3,214.83kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'login',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/index/login' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Login->index[ B:\aaaweb\shop\application\index\controller\Login.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\login\login.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:27:40+08:00 ] 127.0.0.1 GET /static/index/js/user.js
+[ info ] c.com/static/index/js/user.js [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,348.91kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:27:41+08:00 ] 127.0.0.1 GET /static/index/js/user_register.js
+[ info ] c.com/static/index/js/user_register.js [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,349.04kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_register_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:27:41+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.024000s][吞吐率：41.67req/s] [内存消耗：1,349.60kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:27:41+08:00 ] 127.0.0.1 GET /static/index/img/check/checkbox_12x12.png
+[ info ] c.com/static/index/img/check/checkbox_12x12.png [运行时间：0.022000s][吞吐率：45.45req/s] [内存消耗：1,349.52kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/static/index/css/base.css',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/check/checkbox_12x12_png' => '',
+  'check' => 'checkbox_12x12.png',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:27:41+08:00 ] 127.0.0.1 GET /static/index/js/user.js
+[ info ] c.com/static/index/js/user.js [运行时间：0.020000s][吞吐率：50.00req/s] [内存消耗：1,348.91kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:27:41+08:00 ] 127.0.0.1 GET /static/index/js/user_register.js
+[ info ] c.com/static/index/js/user_register.js [运行时间：0.019000s][吞吐率：52.63req/s] [内存消耗：1,349.04kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/user_register_js' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:27:41+08:00 ] 127.0.0.1 GET /static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[ info ] c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js [运行时间：0.018000s][吞吐率：55.56req/s] [内存消耗：1,349.60kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/index/login',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/perfect-scrollbar/perfect-scrollbar_min_js' => '',
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:28:42+08:00 ] 127.0.0.1 GET /
+[ info ] c.com/ [运行时间：0.078000s][吞吐率：12.82req/s] [内存消耗：3,474.73kb] [文件加载：59]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ B:\aaaweb\shop\application\index\controller\Index.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\index\index.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-04-21T20:28:42+08:00 ] 127.0.0.1 GET /static/index/img/0_thumb_G_1490174241651.jpg
+[ info ] c.com/static/index/img/0_thumb_G_1490174241651.jpg [运行时间：0.026000s][吞吐率：38.46req/s] [内存消耗：1,349.12kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'img',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/img/0_thumb_G_1490174241651_jpg' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:28:42+08:00 ] 127.0.0.1 POST /get_ajax_content.php
+[ info ] c.com/get_ajax_content.php [运行时间：0.019000s][吞吐率：52.63req/s] [内存消耗：1,350.83kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '81',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'get_cat_top_list',
+  'tpl' => '1',
+  'cat_id' => '347',
+  'rome_key' => '0',
+  'prent_id' => '6',
+  'region_id' => '1',
+  'area_id' => '7',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:28:42+08:00 ] 127.0.0.1 GET /get_ajax_content.php?act=getCategotyParentTree&cat_id=347&defa=
+[ info ] c.com/get_ajax_content.php?act=getCategotyParentTree&cat_id=347&defa= [运行时间：0.021000s][吞吐率：47.62req/s] [内存消耗：1,349.87kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/',
+  'x-requested-with' => 'XMLHttpRequest',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'getCategotyParentTree',
+  'cat_id' => '347',
+  'defa' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-04-21T20:28:48+08:00 ] 127.0.0.1 GET /category/5.html
+[ info ] c.com/category/5.html [运行时间：0.084000s][吞吐率：11.90req/s] [内存消耗：3,357.45kb] [文件加载：60]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'category',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/article/28.html',
+  'connection' => 'keep-alive',
+  'cookie' => 'PHPSESSID=jhqde5mtq0p0j0nrr8t73k6iq0',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  '/category/5_html' => '',
+  'cate_id' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Category->index[ B:\aaaweb\shop\application\index\controller\Category.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/index\view\category\category.html [ array (
+  0 => 'bases',
+  1 => 'bottoms',
+  2 => 'ComCate',
+  3 => 'navArr',
+  4 => 'configArr',
+  5 => 'artiRes',
+  6 => 'cateName',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_category` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 3  AND `cate_pid` = 2 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 4 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 12 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 13 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` = 14 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_type` = 5  AND `cate_pid` = 0 ORDER BY `cate_sort` ASC [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 16 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 15 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 11 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 17 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 18 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 19 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 22 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 23 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 24 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_pid` = 25 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_nav` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_config` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `config_ename`,`config_default` FROM `tp_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `cate_id`,`cate_pid` FROM `tp_category` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` WHERE  `ar_cateid` IN (5) [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_category` WHERE  `cate_id` = 5 LIMIT 1 [ RunTime:0.000000s ]
