@@ -455,12 +455,10 @@
 
         <div class="nav-main" id="nav">
             <ul class="navitems">
-	            <li><a href="index.php" class="curr">首页</a></li>
-	            <li><a href="category.php?id=6">女装街</a></li>
-	            <li><a href="category.php?id=6">男人柜</a></li>
-	            <li><a href="brand.php">品牌专区</a></li>
-	            <li><a href="group_buy.php">聚划算</a></li>
-	            <li><a href="exchange.php">积分商城</a></li>
+	            <li><a href="{:url('index/Index/index')}" class="curr">首页</a></li>
+	            {volist name="navArr.mid" id="midNav"}
+	            <li><a href="{$midNav.nav_url}" {if condition="$midNav.nav_open eq 1"} target="_blank" {/if}>{$midNav.nav_name}</a></li>
+	            {/volist}
         	</ul>
         </div>
 	</div>

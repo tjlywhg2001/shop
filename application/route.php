@@ -38,15 +38,15 @@
 
 
 
-think\Route::group('aa',[
-			'/:num'=>'index1',
-			'/:str'=>'index2',
-			'/:bool'=>'index3',
-		],['method'=>'get','prefix'=>'admin/index/'],[
-			'num'=>'\d{2,5}',
-			'str'=>'[a-zA-Z]',
-			'bool'=>'0|1',]
-	);
+// think\Route::group('aa',[
+// 			'/:num'=>'index1',
+// 			'/:str'=>'index2',
+// 			'/:bool'=>'index3',
+// 		],['method'=>'get','prefix'=>'admin/index/'],[
+// 			'num'=>'\d{2,5}',
+// 			'str'=>'[a-zA-Z]',
+// 			'bool'=>'0|1',]
+// 	);
 
 // think\Route::group(['name'=>'aa','method'=>'get','prefix'=>'admin/index/'],[
 // 			'/:num'=>'index1',
@@ -78,3 +78,31 @@ think\Route::group('aa',[
 // 		'/:bool'=>['admin/index/index3',['method'=>'get'],['bool'=>'0|1']],
 // 	],
 // ];
+// 
+// 
+// 
+// 
+
+
+
+
+
+
+
+use think\Route;
+
+// 首页
+Route::rule('index','index/Index/index','GET',['ext'=>'html']);
+
+// 其他页面
+Route::rule([
+	'category/:cate_id'=>[
+		'index/category/index',
+		['cate_id'=>'\d{1,4}']
+	],
+	'article/:ar_id'=>[
+		'index/article/index',
+		['ar_id'=>'\d{1,4}']
+	]
+], '', 'GET', ['ext'=>'html']);
+

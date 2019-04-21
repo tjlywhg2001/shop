@@ -25,7 +25,7 @@
                 <h2>{$articleContent.ar_title}</h2>
                 <div class="extra">
                 	{volist name="cateNav" id="cateNavs"}
-				    <a href="{:url('category/index',array('cate_id'=> $cateNavs['cate_id']))}">{$cateNavs.cate_name}</a>
+				    <a href="{:url('index/category/index',array('cate_id'=> $cateNavs['cate_id']))}">{$cateNavs.cate_name}</a>
 				    <i>&gt;</i>
 				    {/volist}
 		            <span>{$articleContent.ar_title}</span>

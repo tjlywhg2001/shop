@@ -13,7 +13,7 @@
                 </ul>
                 <ul class="item-bd">
                     {volist name="bases" id="base"}
-                        <li><a href="{:url('category/index',array('cate_id' => $base['cate_id']))}">{$base.cate_name}</a></li>
+                        <li><a href="{:url('index/category/index',array('cate_id' => $base['cate_id']))}">{$base.cate_name}</a></li>
                     {/volist}
                 </ul>
             </div>
@@ -30,7 +30,7 @@
                     {if condition="$ComCates.childCate"}
                         <ul class="item-bd">
                             {volist name="ComCates.childCate" id="childCates"}
-                                <li><a href="{:url('category/index',array('cate_id' => $childCates['cate_id']))}">{$childCates.cate_name}</a></li>
+                                <li><a href="{:url('index/category/index',array('cate_id' => $childCates['cate_id']))}">{$childCates.cate_name}</a></li>
                             {/volist}
                         </ul>
                     {/if}

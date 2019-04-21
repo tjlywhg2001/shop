@@ -543,11 +543,13 @@
 
 		</div>
 		<ul class="quick-menu fr">
+			{volist name="navArr.top" id="topNav"}
 			<li>
-		    	<div class="dt"><a href="user.php?act=order_list">我的订单</a></div>
+		    	<div class="dt"><a href="{$topNav.nav_url}" {if condition="$topNav.nav_open eq 1"} target="_blank" {/if}>{$topNav.nav_name}</a></div>
 		    </li>
 		    <li class="spacer"></li>
-			<li>
+		    {/volist}
+<!-- 			<li>
 		    	<div class="dt"><a href="history_list.php">我的浏览</a></div>
 		    </li>
 		    <li class="spacer"></li>
@@ -558,7 +560,7 @@
 			<li>
 		    	<div class="dt"><a href="user.php?act=message_list">客户服务</a></div>
 		    </li>
-		    <li class="spacer"></li>
+		    <li class="spacer"></li> -->
 		    <li class="li_dorpdown" data-ectype="dorpdown">
 				<div class="dt dsc-cm">网站导航<i class="iconfont icon-down"></i></div>
 				<div class="dd dorpdown-layer">

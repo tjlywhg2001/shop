@@ -13,6 +13,7 @@ class Base extends Controller
 	public function _initialize()
 	{
 		$this -> _getFooterArtis();
+		$this -> _getNav();
 	}
 
 	private function _getFooterArtis()
@@ -29,6 +30,19 @@ class Base extends Controller
 		]);
 	}
 
+	private function _getNav(){
+		// 导航布局
+		$navLayout = db('nav') -> select();
+		$navArr = array();
+		foreach ($navLayout as $k => $v) {
+			$navArr[$v['nav_pos']][] = $v;
+		}
+		// dump($navArr);die;
+
+		$this -> assign([
+			'navArr' => $navArr,
+		]);
+	}
 }
 
 

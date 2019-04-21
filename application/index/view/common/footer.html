@@ -40,7 +40,7 @@
 					    <h3>{$footers.cate_name} </h3>
 					    <ul>
 					    	{volist name='$footers["arts"]' id="artis"}
-					            <li><a href="{if condition="$artis['ar_linkurl']"} {$artis['ar_linkurl']}" target="_balck"> {else} {:url('article/index',array('ar_id'=>$artis['ar_id']))}"> {/if} {$artis.ar_title}</a></li>
+					            <li><a href="{if condition="$artis['ar_linkurl']"} {$artis['ar_linkurl']}" target="_balck"> {else} {:url('index/article/index',array('ar_id'=>$artis['ar_id']))}"> {/if} {$artis.ar_title}</a></li>
 					    	{/volist}
 					    </ul>
 
@@ -48,51 +48,6 @@
 
 
 				{/volist}
-<!-- 				<div class="help-item">
-				    <h3>新手上路 </h3>
-				    <ul>
-			            <li><a href="#">售后流程</a></li>
-						<li><a href="#">购物流程</a></li>
-						<li><a href="#">订购方式</a></li>
-				    </ul>
-
-				</div>
-				<div class="help-item">
-				    <h3>配送与支付 </h3>
-				    <ul>
-			            <li><a href="#">货到付款区域</a></li>
-						<li><a href="#">配送支付智能查询</a></li>
-						<li><a href="#">支付方式说明</a></li>
-				    </ul>
-
-				</div>
-				<div class="help-item">
-				    <h3>会员中心</h3>
-				    <ul>
-			            <li><a href="#">资金管理</a></li>
-						<li><a href="#">我的收藏</a></li>
-						<li><a href="#">我的订单</a></li>
-		            </ul>
-
-				</div>
-				<div class="help-item">
-				    <h3>服务保证 </h3>
-				    <ul>
-			            <li><a href="#">退换货原则</a></li>
-						<li><a href="#">售后服务保证</a></li>
-						<li><a href="#">产品质量保证</a></li>
-		            </ul>
-
-				</div>
-				<div class="help-item">
-				    <h3>联系我们 </h3>
-				    <ul>
-			            <li><a href="#">网站故障报告</a></li>
-						<li><a href="#">选机咨询</a></li>
-						<li><a href="#">投诉与建议</a></li>
-		            </ul>
-
-				</div> -->
 		  
             </div>
             <div class="qr-code">
@@ -111,27 +66,20 @@
     	<div class="w w1200">
              
             <p class="copyright_links">
-				<a href="#">首页</a>
+            	{volist name="navArr.bottom" id="bottomNav"}
+
+	            	{if condition="$bottomNav.nav_name eq '首页'"}
+
+					<a href="{:url('index/Index/index')}" {if condition="$bottomNav.nav_open eq 1"} target="_blank" {/if} >首页</a>
+
+					{else /}
+				 		<span class="spacer"></span>
+						<a href="{$bottomNav.nav_url}" {if condition="$bottomNav.nav_open eq 1"} target="_blank"{/if}>{$bottomNav.nav_name}</a>
+
+					{/if}
+
+				{/volist}
 				 
-				<span class="spacer"></span>
-				 
-				<a href="#">隐私保护</a>
-				 
-				<span class="spacer"></span>
-				 
-				<a href="#">联系我们</a>
-				 
-				<span class="spacer"></span>
-				 
-				<a href="#">免责条款</a>
-				 
-				<span class="spacer"></span>
-				 
-				<a href="#">公司简介</a>
-				 
-				<span class="spacer"></span>
-				 
-				<a href="#">意见反馈</a>
  
  
             </p>
@@ -166,17 +114,26 @@
 	<div class="dsc-copyright">
 		<div class="w w1200">
 			<p class="footer-ecscinfo pb10">
-				<a href="#" >首页</a> 
-				| 
-				<a href="#" >隐私保护</a> 
-				| 
-				<a href="#" >联系我们</a> 
-				| 
-				<a href="#" >免责条款</a> 
-				| 
-				<a href="#" >公司简介</a> 
-				| 
-				<a href="#" >意见反馈</a> 
+
+
+				
+            	{volist name="navArr.bottom" id="bottomNav"}
+
+	            	{if condition="$bottomNav.nav_name eq '首页'"}
+
+						<a href="{:url('index/Index/index')}" {if condition="$bottomNav.nav_open eq 1"} target="_blank" {/if} >首页</a>
+
+					{else /}
+				 		<span style="padding: 0 10px;">|</span>
+						<a href="{$bottomNav.nav_url}" {if condition="$bottomNav.nav_open eq 1"} target="_blank"{/if}>{$bottomNav.nav_name}</a>
+
+					{/if}
+
+				{/volist}
+
+
+
+
 			</p>
 			 <p><span>©&nbsp;2015-2017&nbsp;tongpankt.com&nbsp;版权所有&nbsp;&nbsp;</span><span>ICP备案证书号:</span><a href="#">豫ICP备*****号-1</a>&nbsp;<a href="#">POWERED by童攀课堂</a></p>
 		</div>
