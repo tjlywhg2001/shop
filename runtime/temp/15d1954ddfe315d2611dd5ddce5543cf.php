@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:62:"B:\aaaweb\shop\public/../application/admin\view\arti\list.html";i:1555809016;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1555809016;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1555809016;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1555816517;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1555809016;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:62:"B:\aaaweb\shop\public/../application/admin\view\arti\list.html";i:1556716437;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556716437;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556716437;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556718504;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556716437;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -237,6 +237,27 @@
                     <i class="menu-expand"></i>
                 </a>
             </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">导航模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('nav/lst'); ?>">
+                    <span class="menu-text">导航管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+<!--             <li>
+                <a href="<?php echo url('arti/imglist'); ?>">
+                    <span class="menu-text">图片管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li> -->
         </ul>
     </li>
     <li>

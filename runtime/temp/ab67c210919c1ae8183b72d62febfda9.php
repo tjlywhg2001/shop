@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\data\index.html";i:1556716437;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556716437;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556716437;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556718575;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556716437;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"B:\aaaweb\shop\public/../application/admin\view\data\importlist.html";i:1556716437;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556716437;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556716437;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556716437;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556716437;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,11 +42,11 @@
     
 </head>
 
-
 <script type="text/javascript" src="/static/admin/layui/layui.js"></script>
 
+
 <body>
-    <!-- 头部-->
+    <!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -266,27 +266,6 @@
     <li>
         <a href="#" class="menu-dropdown">
             <i class="menu-icon fa fa-gear"></i>
-            <span class="menu-text">推荐位模块</span>
-            <i class="menu-expand"></i>
-        </a>
-        <ul class="submenu"  style="display: block;">
-            <li>
-                <a href="<?php echo url('recpos/lst'); ?>">
-                    <span class="menu-text">推荐管理</span>
-                    <i class="menu-expand"></i>
-                </a>
-            </li>
-<!--             <li>
-                <a href="<?php echo url('arti/imglist'); ?>">
-                    <span class="menu-text">图片管理</span>
-                    <i class="menu-expand"></i>
-                </a>
-            </li> -->
-        </ul>
-    </li>
-    <li>
-        <a href="#" class="menu-dropdown">
-            <i class="menu-icon fa fa-gear"></i>
             <span class="menu-text">链接模块</span>
             <i class="menu-expand"></i>
         </a>
@@ -375,10 +354,10 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                                            <li>
+                        <li>
                             <a href="">商品管理</a>
                         </li>
-                        <li class="active">数据备份</li>
+                        <li class="active">数据恢复</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -386,94 +365,12 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-<script>
-    layui.use(['jquery','layer'],function(){
-      window.$ = layui.$;
-      var layer = layui.layer;
-      //备份表方法
-      $("#export").click(function(){
-          $(this).html("正在发送备份请求...");
-          $.post(
-            $("#export-form").attr("action"),
-            $("#export-form").serialize(), 
-            function(data){
-               
-              if(data.code==1){
-                $("#export").html( "开始备份，请不要关闭本页面！");
-                backup(data.data.tab);
-                window.onbeforeunload = function(){ return "正在备份数据库，请不要关闭！" }
-              }else{
-                 layer.tips(data.msg, "#export", {
-                  tips: [1, '#3595CC'],
-                  time: 4000
-                });
-                $("#export").html("立即备份");
-              }
-              
-            }, "json");
-            return false;  
-      }); 
-      //递归备份表
-      function backup(tab,status){
-        status && showmsg(tab.id, "开始备份...(0%)");
-        $.get( $("#export-form").attr("action"), tab, function(data){
-          // console.log(data)
-                if(data.code==1){
-                  showmsg(tab, data.msg);
 
-                  if(!$.isPlainObject(data.data.tab)){
-                    $("#export").html("备份完成");
-                    window.onbeforeunload = function(){ return null }
-                    return;
-                  } 
 
-                  backup(data.data.tab, tab.id != data.data.tab.id);
-                } else {
-                  $("#export").html("立即备份");
-                }
-            }, "json");
-
-      }
-    //修改备份状态
-    function showmsg(tab, msg){
-       $("table tbody tr").eq(tab.id).find(".infos").html(msg)
-    }
-   
-     //优化表
-      $("#optimize").click(function(){
-           $.post(this.href, $("#export-form").serialize(), function(data){
-           
-            layer.tips(data.msg, "#optimize", {
-              tips: [1, '#3595CC'],
-              time: 4000
-            });
-    
-            }, "json");
-            return false;    
-      });
-
-      //修复表
-      $("#repair").on("click",function(e){
-         
-          $.post(this.href, $("#export-form").serialize(), function(data){
-            layer.tips(data.msg, "#repair", {
-              tips: [1, '#3595CC'],
-              time: 4000
-            });
-            }, "json");
-            return false; 
-      });
-    });
-
-  </script>
-
-    <a id="export" class="btn btn-sm btn-azure btn-addon" href="javascript:;" autocomplete="off">立即备份</a>
-
-    <a id="optimize" href="<?php echo url('data/optimize'); ?>" class="btn btn-sm btn-azure btn-addon">优化表</a>
-    <a id="repair" href="<?php echo url('data/repair'); ?>" class="btn btn-sm btn-azure btn-addon">修复表</a>
-    <a  href="<?php echo url('data/importlist'); ?>" class="btn btn-sm btn-azure btn-addon">还原数据库</a>
+<!-- <div class="layui-form">
+ -->   
+    <a class="btn btn-sm btn-azure btn-addon" href="javascript:;" autocomplete="off"> 数据库还原  </a>
     <div class="row">
-    <form id="export-form" method="post" action="<?php echo url('data/export'); ?>">
         <div class="col-lg-12 col-sm-12 col-xs-12">
             <div class="widget">
                 <div class="widget-body">
@@ -481,56 +378,102 @@
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th width="48" class="text-center">
-                                        <label style="padding-right: 10px;">
-                                            <input class="layuiss form-control" id="username" name="" checked="checked" value="" type="checkbox">
-                                            <span class="text"></span>
-                                        </label>
-                                    </th>
-                                    <th class="text-center">表名</th>
-                                    <th class="text-center">数据量</th>
+
+                                    <th class="text-center">数据库名称</th>
+                                    <th class="text-center">卷数</th>
+                                    <th class="text-center">压缩</th>
                                     <th class="text-center">数据大小</th>
-                                    <th class="text-center">创建时间</th>
-                                    <th class="text-center">备份状态</th>
+                                    <th class="text-center">备份时间</th>
+                                    <th class="text-center">状态</th>
                                     <th class="text-center">操作</th>
                                 </tr> 
                             </thead>
-    
-
-
                             <tbody>
-                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): if( count($list)==0 ) : echo "" ;else: foreach($list as $key=>$table): ?>   
+                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): if( count($list)==0 ) : echo "" ;else: foreach($list as $key=>$data): ?>   
                                 <tr>
-                                    <td class="text-center">
-                                        <label style="padding-right: 10px;">
-                                            <input class="ids form-control" id="username" name="tables[]" checked="checked" value="<?php echo $table['name']; ?>" type="checkbox">
-                                            <span class="text"></span>
-                                        </label>
-                                    </td>
-                                    <td class="text-center"><?php echo $table['name']; ?></td>
-                                    <td class="text-center"><?php echo $table['rows']; ?></td>
-                                    <td class="text-center"><?php echo format_bytes($table['data_length']); ?></td>
-                                    <td class="text-center"><?php echo $table['create_time']; ?></td>
-                                    <td class="infos text-center" width='200' style="color:#09f">未备份</td>
-                                    <td class="text-center">
-                                        <a  href="<?php echo url('data/optimize',['tables'=>$table['name']]); ?>" class="btn btn-sm btn-warning shiny">优化表</a>&nbsp;
-                                        <a  href="<?php echo url('data/repair',['tables'=>$table['name']]); ?>" class="btn btn-primary btn-sm shiny">修复表</a>
+                                    <td class="text-center"><?php echo date('Ymd-His',$data['time']); ?></td>
+                                    <td class="text-center"><?php echo $data['part']; ?></td>
+                                    <td class="text-center"><?php echo $data['compress']; ?></td>
+                                    <td class="text-center"><?php echo format_bytes($data['size']); ?></td>
+                                    <td class="text-center"><?php echo $key; ?></td>
+                                    <td class="status text-center" style="width: 200px;">-</td>
+                                    <td class="action text-center">
+                                        <a class="btn btn-primary btn-sm shiny db-import" href="<?php echo url('data/import',['time'=>$data['time']]); ?>">还原</a>&nbsp;
+                                        <a class="btn btn-danger btn-sm shiny" href="<?php echo url('data/del',['time'=>$data['time']]); ?>">删除</a>
                                     </td>
                                 </tr>
                                 <?php endforeach; endif; else: echo "" ;endif; ?>
                             </tbody>
+                            <script>
+                                layui.use(['jquery','layer'],function(){
+                                      window.$ = layui.$;
+                                      var layer = layui.layer;
 
+
+                                      $(".db-import").click(function(){
+                                            var self = this, status = ".";
+
+                                            $(this).parent().prevAll('.status').html("").html('等待还原');
+
+                                            $.get(self.href, success, "json");
+                                            window.onbeforeunload = function(){ return "正在还原数据库，请不要关闭！" }
+                                            return false;
+                                        
+                                            function success(data){
+
+                                                if(data.code==1){
+
+                                                    $(self).parent().prev().text(data.msg);
+
+                                                    if(data.data.part){
+                                                        $.get(self.href, 
+                                                            {"part" : data.data.part, "start" : data.data.start}, 
+                                                            success, 
+                                                            "json"
+                                                        );
+                                                        
+                                                    }  else {
+                                                        layer.alert(data.msg);
+                                                        //window.onbeforeunload = function(){ return null; }
+                                                    }
+                                                } else {
+                                                    layer.alert(data.msg);
+                                                }
+                                            }
+                                        });
+
+                                    //   $(".db-import").click(function(){
+                                    //     // console.log($(this).parents().find(".status").html() );//正常
+                                    //     // console.log($(this).parent().prevAll('.status').html() );
+                                    //     var statusem=$(this).parent().prevAll('.status');
+                                    //     $(this).parent().prevAll('.status').html("").html('等待还原');
+                                    //     thisobj=this;
+                                    //     $.post(this.href, function(data){
+                                         
+                                    //       if(data.code==1){
+                                    //         // statusem.text(""); // 清空数据
+                                    //         // statusem.append('data'); 
+                                    //         // statusem.text("").append('132');
+                                    //         // $(this).parent().prevAll('.status').html("").html(data.msg);//error ：异常原因无法获取当前节点
+                                    //         statusem.html(data.msg);
+                                    //         getdbimport(thisobj,data.data);
+                                    //       }
+                                    //     }, "json");
+                                    //     return false;
+                                    // });
+
+                                    });
+
+                                </script>
 
                         </table>
+
                     </div>
                 </div>
             </div>
         </div>
-        </form>
     </div>
-
-
-                </div>
+                  </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
@@ -549,17 +492,5 @@
 
 	</script>
     
-
-    <script>
-
-        $(".layuiss").click(function(){
-            if($(this).is(':checked')){
-                $('.ids').prop('checked','checked');             
-            } else {
-                $('.ids').prop('checked',false);             
-            }
-        })
-
-    </script>
 
 </body></html>
