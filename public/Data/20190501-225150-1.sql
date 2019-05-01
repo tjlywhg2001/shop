@@ -6,7 +6,7 @@
 -- Database : tested
 -- 
 -- Part : #1
--- Date : 2019-04-14 20:17:15
+-- Date : 2019-05-01 22:51:50
 -- -----------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
@@ -31,7 +31,7 @@ CREATE TABLE `tp_article` (
   `ar_cateid` smallint(6) NOT NULL COMMENT '所属栏目',
   `ar_addtime` int(10) NOT NULL COMMENT '发布时间',
   PRIMARY KEY (`ar_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_article`
@@ -51,6 +51,11 @@ INSERT INTO `tp_article` VALUES ('35', '产品质量保证', '', '', '', '', '',
 INSERT INTO `tp_article` VALUES ('36', '网站故障报告', '', '', '', '', '', '', '', '0', '1', '14', '1554638281');
 INSERT INTO `tp_article` VALUES ('37', '选机咨询', '', '', '', '', '', '', '', '0', '1', '14', '1554638289');
 INSERT INTO `tp_article` VALUES ('38', '投诉与建议', '', '', '', '', '', '', '', '0', '1', '14', '1554638299');
+INSERT INTO `tp_article` VALUES ('39', '隐私保护', '', '', '', '', '', '', '<p><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">隐私保护</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">隐私保护</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">隐私保护</a></p>', '0', '1', '26', '1555837028');
+INSERT INTO `tp_article` VALUES ('40', '联系我们', '', '', '', '', '', '', '<p>联系我们联系我们联系我们</p>', '0', '1', '26', '1555837048');
+INSERT INTO `tp_article` VALUES ('41', '免责条款', '', '', '', '', '', '', '<p><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a></p>', '0', '1', '26', '1555837063');
+INSERT INTO `tp_article` VALUES ('42', '公司简介', '', '', '', '', '', '', '<p>公司简介公司简介公司简介公司简介</p>', '0', '1', '26', '1555837076');
+INSERT INTO `tp_article` VALUES ('43', '意见反馈', '', '', '', '', '', '', '<p><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a></p>', '0', '1', '26', '1555837087');
 
 -- -----------------------------
 -- Table structure for `tp_attr`
@@ -118,7 +123,7 @@ CREATE TABLE `tp_category` (
   `cate_pid` smallint(6) NOT NULL DEFAULT '0' COMMENT '上级栏目id',
   `cate_son` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示子栏目1.是2.否',
   PRIMARY KEY (`cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_category`
@@ -143,6 +148,7 @@ INSERT INTO `tp_category` VALUES ('22', '发票问题', '5', '发票问题', '�
 INSERT INTO `tp_category` VALUES ('23', '公告', '5', '公告', '公告', '1', '508', '0', '1');
 INSERT INTO `tp_category` VALUES ('24', '促销', '5', '促销', '促销', '1', '509', '0', '1');
 INSERT INTO `tp_category` VALUES ('25', '微分销', '5', '微分销', '微分销', '1', '510', '0', '1');
+INSERT INTO `tp_category` VALUES ('26', '网站信息', '4', '', '', '1', '20', '0', '1');
 
 -- -----------------------------
 -- Table structure for `tp_cates`
@@ -320,7 +326,7 @@ CREATE TABLE `tp_config` (
   `config_default` varchar(255) NOT NULL COMMENT '默认值',
   `config_sort` int(11) NOT NULL DEFAULT '50' COMMENT '排序',
   PRIMARY KEY (`config_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_config`
@@ -333,12 +339,19 @@ INSERT INTO `tp_config` VALUES ('10', 'add', '地点', 'select', '1', '中国,�
 INSERT INTO `tp_config` VALUES ('11', 'picture', '店铺图片', 'file', '1', '', '20180512\\f7686b73198712885a481c51069d33d3.jpg', '2');
 INSERT INTO `tp_config` VALUES ('15', 'picname', '店铺图片2', 'file', '1', '', '20180512\\7983916d04eaa648b7982b055bd80469.jpg', '2');
 INSERT INTO `tp_config` VALUES ('16', 'ceshi', '测试', 'checked', '1', '测试1,测试2,测试3,测试4', '测试2,测试3', '3');
-INSERT INTO `tp_config` VALUES ('17', 'shopname', '商品名称', 'input', '0', '', '请输入商品名称', '20');
+INSERT INTO `tp_config` VALUES ('17', 'shopname', '商品名称', 'input', '0', '', '', '20');
 INSERT INTO `tp_config` VALUES ('18', 'shoptype', '商品类型', 'radio', '0', '服装,汽车,电子数码', '电子数码', '19');
 INSERT INTO `tp_config` VALUES ('19', 'shopadd', '商品配送地点', 'checked', '0', '中国,英国,美国,法国', '中国,英国,美国', '18');
 INSERT INTO `tp_config` VALUES ('20', 'shopdescript', '商品描述', 'textarea', '0', '', '请描述商品内容', '17');
 INSERT INTO `tp_config` VALUES ('21', 'shopconf', '商品配送方式', 'select', '0', 'ems,申通,圆通,顺丰,天天', '圆通', '16');
 INSERT INTO `tp_config` VALUES ('22', 'shoppic', '商品图片', 'file', '0', '', '20180506\\bbd1a6daa57bc1def9532df6103cfbc2.jpg', '15');
+INSERT INTO `tp_config` VALUES ('23', 'keywords', '站点描述', 'textarea', '1', '', '', '50');
+INSERT INTO `tp_config` VALUES ('24', 'webname', '站点名称', 'input', '1', '', 'PHP商城', '50');
+INSERT INTO `tp_config` VALUES ('25', 'description', '站点描述', 'textarea', '1', '', '', '50');
+INSERT INTO `tp_config` VALUES ('26', 'webYesNo', '关闭站点', 'radio', '1', '', '', '50');
+INSERT INTO `tp_config` VALUES ('27', 'search_keywords', '搜索框关键词', 'textarea', '1', '', '周大福, 内衣, Five,Plus,手机', '50');
+INSERT INTO `tp_config` VALUES ('28', 'search_value', '搜索框默认值', 'input', '1', '', '内衣', '50');
+INSERT INTO `tp_config` VALUES ('29', 'footer_copyright', '站点版权', 'textarea', '1', '', '©&nbsp;2015-2017&nbsp;tongpankt.com&nbsp;版权所有&nbsp;&nbsp;,ICP备案证书号:,豫ICP备*****号-1,&nbsp;,POWERED by童攀课堂', '50');
 
 -- -----------------------------
 -- Table structure for `tp_links`
@@ -485,6 +498,39 @@ INSERT INTO `tp_member_price` VALUES ('189', '8888.00', '5', '159');
 INSERT INTO `tp_member_price` VALUES ('190', '88888.00', '6', '159');
 
 -- -----------------------------
+-- Table structure for `tp_nav`
+-- -----------------------------
+DROP TABLE IF EXISTS `tp_nav`;
+CREATE TABLE `tp_nav` (
+  `nav_id` smallint(5) unsigned NOT NULL AUTO_INCREMENT COMMENT '导航id',
+  `nav_name` varchar(30) NOT NULL COMMENT '导航名称',
+  `nav_url` varchar(30) NOT NULL COMMENT '导航地址',
+  `nav_open` tinyint(1) NOT NULL COMMENT '打开新页面 1.是 0.否',
+  `nav_pos` varchar(6) NOT NULL COMMENT '导航位置：top:顶部 mid:中间 bottom:底部',
+  `nav_sort` varchar(50) NOT NULL,
+  PRIMARY KEY (`nav_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+-- -----------------------------
+-- Records of `tp_nav`
+-- -----------------------------
+INSERT INTO `tp_nav` VALUES ('1', '我的订单', '', '0', 'top', '');
+INSERT INTO `tp_nav` VALUES ('2', '我的浏览', '', '0', 'top', '');
+INSERT INTO `tp_nav` VALUES ('3', '我的收藏', '', '0', 'top', '');
+INSERT INTO `tp_nav` VALUES ('4', '客户服务', '', '0', 'top', '');
+INSERT INTO `tp_nav` VALUES ('5', '女装街', '', '1', 'mid', '');
+INSERT INTO `tp_nav` VALUES ('6', '男人柜', '', '1', 'mid', '');
+INSERT INTO `tp_nav` VALUES ('7', '品牌专区', '', '1', 'mid', '');
+INSERT INTO `tp_nav` VALUES ('8', '聚划算', '', '1', 'mid', '');
+INSERT INTO `tp_nav` VALUES ('9', '积分商城', '', '1', 'mid', '');
+INSERT INTO `tp_nav` VALUES ('10', '首页', '', '1', 'bottom', '');
+INSERT INTO `tp_nav` VALUES ('11', '隐私保护', '', '1', 'bottom', '');
+INSERT INTO `tp_nav` VALUES ('12', '联系我们', '', '1', 'bottom', '');
+INSERT INTO `tp_nav` VALUES ('13', '免责条款', '', '1', 'bottom', '');
+INSERT INTO `tp_nav` VALUES ('14', '公司简介', '', '1', 'bottom', '');
+INSERT INTO `tp_nav` VALUES ('15', '意见反馈', '', '1', 'bottom', '');
+
+-- -----------------------------
 -- Table structure for `tp_product`
 -- -----------------------------
 DROP TABLE IF EXISTS `tp_product`;
@@ -504,6 +550,23 @@ INSERT INTO `tp_product` VALUES ('85', '135', '22', '134,138');
 INSERT INTO `tp_product` VALUES ('84', '134', '11', '128,132');
 INSERT INTO `tp_product` VALUES ('83', '134', '22', '129,132');
 INSERT INTO `tp_product` VALUES ('82', '134', '22', '128,132');
+
+-- -----------------------------
+-- Table structure for `tp_recpos`
+-- -----------------------------
+DROP TABLE IF EXISTS `tp_recpos`;
+CREATE TABLE `tp_recpos` (
+  `rec_id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `rec_name` varbinary(255) NOT NULL COMMENT '推荐位名称',
+  `rec_type` tinyint(1) NOT NULL COMMENT '推荐位类型：1.商品2.分类',
+  PRIMARY KEY (`rec_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- -----------------------------
+-- Records of `tp_recpos`
+-- -----------------------------
+INSERT INTO `tp_recpos` VALUES ('1', 'adfasdf111', '1');
+INSERT INTO `tp_recpos` VALUES ('2', 'adfzcxvzcvzcv', '1');
 
 -- -----------------------------
 -- Table structure for `tp_type`

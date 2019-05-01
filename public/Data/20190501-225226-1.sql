@@ -6,7 +6,7 @@
 -- Database : tested
 -- 
 -- Part : #1
--- Date : 2019-04-21 20:30:12
+-- Date : 2019-05-01 22:52:26
 -- -----------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
@@ -550,6 +550,33 @@ INSERT INTO `tp_product` VALUES ('85', '135', '22', '134,138');
 INSERT INTO `tp_product` VALUES ('84', '134', '11', '128,132');
 INSERT INTO `tp_product` VALUES ('83', '134', '22', '129,132');
 INSERT INTO `tp_product` VALUES ('82', '134', '22', '128,132');
+
+-- -----------------------------
+-- Table structure for `tp_recpos`
+-- -----------------------------
+DROP TABLE IF EXISTS `tp_recpos`;
+CREATE TABLE `tp_recpos` (
+  `rec_id` smallint(6) NOT NULL AUTO_INCREMENT,
+  `rec_name` varbinary(255) NOT NULL COMMENT '推荐位名称',
+  `rec_type` tinyint(1) NOT NULL COMMENT '推荐位类型：1.商品2.分类',
+  PRIMARY KEY (`rec_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- -----------------------------
+-- Records of `tp_recpos`
+-- -----------------------------
+INSERT INTO `tp_recpos` VALUES ('1', 'adfasdf111', '1');
+INSERT INTO `tp_recpos` VALUES ('2', 'adfzcxvzcvzcv', '1');
+
+-- -----------------------------
+-- Table structure for `tp_recpos_comm`
+-- -----------------------------
+DROP TABLE IF EXISTS `tp_recpos_comm`;
+CREATE TABLE `tp_recpos_comm` (
+  `recpos_id` smallint(6) unsigned NOT NULL,
+  `commodity_id` smallint(6) unsigned NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
 
 -- -----------------------------
 -- Table structure for `tp_type`
