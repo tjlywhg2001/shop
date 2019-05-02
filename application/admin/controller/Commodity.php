@@ -57,6 +57,9 @@
 			$mblevel = db('member_level');
 			$mblevellist = $mblevel -> field('level_id,level_name') -> select();
 
+			// 提取推荐位数据
+			$recpos = db('recpos');
+			$recposlist = $recpos -> where('rec_type','=',1) -> select();
 
 			// 获取商品类型
 			$attrlists = db('type') -> select();
@@ -72,7 +75,8 @@
 			$this -> assign([	'cateslist' => $cateslist,
 								'brandlist' => $brandlist,
 								'mblevellist' => $mblevellist,
-								'attrlists' => $attrlists
+								'attrlists' => $attrlists,
+								'recposlist' => $recposlist
 							]);
 
 
@@ -93,7 +97,7 @@
 
 			if (request()->isPost()){
 				$data=input('post.');
-				dump($data);
+				//dump($data);die;
 				$getsedit= model('commodity') ->update($data);
 				// dump($_FILES);
 				// dump($data);die;
@@ -126,6 +130,20 @@
 			// 当前商品信息
 			$commedit = $comm -> find($commodityId);
 
+			// 推荐位信息
+			$recpos = db('recpos');
+			$recposlist = $recpos -> where('rec_type','=',1) -> select();
+
+			// 提取商品推荐位
+			$recposComm = db('recpos_comm');
+			$_recposCommlist = $recposComm -> where(array('commodity_id'=> $commodityId,'recpos_type' =>1)) -> select();
+			// dump($recposCommlist);die;
+			$recposCommlist = array();
+			foreach ($_recposCommlist as $k => $v) {
+				$recposCommlist[] = $v['recpos_id'];
+			}
+			// dump($recposCommlist);die;
+
 			// 提取会员价钱数据
 			$mbleveledit = db('member_price') -> where('commoditys_id','=', $commodityId) -> select();
 			// dump($mbleveledit);die;
@@ -155,6 +173,8 @@
 								'photoedit' => $photoedit,
 								'typeedit' => $typeedit,
 								'commattreditArr' => $commattreditArr,
+								'recposlist' => $recposlist,
+								'recposCommlist' => $recposCommlist,
 							]);
 
 

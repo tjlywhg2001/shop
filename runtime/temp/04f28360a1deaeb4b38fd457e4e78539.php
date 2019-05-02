@@ -1,15 +1,368 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"B:\aaaweb\shop\public/../application/admin\view\commodity\edit.html";i:1556781179;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556760451;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556760451;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556760451;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556760451;}*/ ?>
 <!DOCTYPE html>
 <html>
-{include file='/common/_meta'}
+<head>
+	    <meta charset="utf-8">
+    <title>童老师ThinkPHP交流群：484519446</title>
+
+    <meta name="description" content="Dashboard">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <!--Basic Styles-->
+    <link href="/static/admin/style/bootstrap.css" rel="stylesheet">
+    <link href="/static/admin/style/font-awesome.css" rel="stylesheet">
+    <link href="/static/admin/style/weather-icons.css" rel="stylesheet">
+
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="/static/admin/style/beyond.css" rel="stylesheet" type="text/css">
+    <link href="/static/admin/style/demo.css" rel="stylesheet">
+    <link href="/static/admin/style/typicons.css" rel="stylesheet">
+    <link href="/static/admin/style/animate.css" rel="stylesheet">
+
+
+    <!--Beyond Scripts-->
+    <script src="/static/admin/style/jquery.js"></script>
+    <script src="/static/admin/style/jquery_002.js"></script>
+    <script src="/static/admin/style/bootstrap.js"></script>
+    <script src="/static/admin/style/beyond.js"></script>
+
+    <!-- uedit -->
+    <script src="/static/plus/ueditor/ueditor.config.js"></script>
+    <script src="/static/plus/ueditor/ueditor.all.min.js"></script>
+    <script src="/static/plus/ueditor/lang/zh-cn/zh-cn.js"></script>
+
+
+    <!-- udloadify -->
+<!--     <link href="/static/plus/uploadify/uploadify.css" rel="stylesheet">
+ -->    <script src="/static/plus/uploadify/jquery.uploadify.js"></script>
+    
+</head>
+
 <body>
 	<!-- 头部 -->
-{include file='/common/top'}
+	<div class="navbar">
+    <div class="navbar-inner">
+        <div class="navbar-container">
+            <!-- Navbar Barnd -->
+            <div class="navbar-header pull-left">
+                <a href="#" class="navbar-brand">
+                    <small>
+                            <img src="/static/admin/images/logo.png" alt="">
+                        </small>
+                </a>
+            </div>
+            <!-- /Navbar Barnd -->
+            <!-- Sidebar Collapse -->
+            <div class="sidebar-collapse" id="sidebar-collapse">
+                <i class="collapse-icon fa fa-bars"></i>
+            </div>
+            <!-- /Sidebar Collapse -->
+            <!-- Account Area and Settings -->
+            <div class="navbar-header pull-right">
+                <div class="navbar-account">
+                    <ul class="account-area">
+                        <li>
+                            <a class="login-area dropdown-toggle" data-toggle="dropdown">
+                                <div class="avatar" title="View your public profile">
+                                    <img src="/static/admin/images/adam-jansen.jpg">
+                                </div>
+                                <section>
+                                    <h2><span class="profile"><span>admin</span></span></h2>
+                                </section>
+                            </a>
+                            <!--Login Area Dropdown-->
+                            <ul class="pull-right dropdown-menu dropdown-arrow dropdown-login-area">
+                                <li class="username"><a>David Stevenson</a></li>
+                                <li class="dropdown-footer">
+                                    <a href="/admin/user/logout.html">
+                                            退出登录
+                                        </a>
+                                </li>
+                                <li class="dropdown-footer">
+                                    <a href="/admin/user/changePwd.html">
+                                            修改密码
+                                        </a>
+                                </li>
+                            </ul>
+                            <!--/Login Area Dropdown-->
+                        </li>
+                        <!-- /Account Area -->
+                        <!--Note: notice that setting div must start right after account area list.
+                            no space must be between these elements-->
+                        <!-- Settings -->
+                    </ul>
+                </div>
+            </div>
+            <!-- /Account Area and Settings -->
+        </div>
+    </div>
+</div>
+
 	<!-- /头部 -->
 	
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-        {include file='/common/left'}
+        <div class="page-sidebar" id="sidebar">
+<!-- Page Sidebar Header-->
+<div class="sidebar-header-wrapper">
+    <input class="searchinput" type="text">
+    <i class="searchicon fa fa-search"></i>
+    <div class="searchhelper">Search Reports, Charts, Emails or Notifications</div>
+</div>
+<!-- /Page Sidebar Header -->
+<!-- Sidebar Menu -->
+
+<ul class="nav sidebar-menu ">
+    <!--Dashboard-->
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">商品管理</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('data/index'); ?>">
+                    <span class="menu-text">数据备份</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('data/importlist'); ?>">
+                    <span class="menu-text">数据恢复</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('category/lst'); ?>">
+                    <span class="menu-text">商品****</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('commodity/lst'); ?>">
+                    <span class="menu-text">商品管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('brand/lst'); ?>">
+                    <span class="menu-text">商品品牌</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('cates/lst'); ?>">
+                    <span class="menu-text">商品分类</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('type/lst'); ?>">
+                    <span class="menu-text">商品类型</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+<!--             <li>
+                <a href="<?php echo url('config/lst'); ?>">
+                    <span class="menu-text">商品回收站</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+ -->        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">会员管理</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('member/lst'); ?>">
+                    <span class="menu-text">会员列表</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('member/add'); ?>">
+                    <span class="menu-text">会员级别</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('Category/lst'); ?>">
+                    <span class="menu-text">会员留言</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">栏目模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('Category/lst'); ?>">
+                    <span class="menu-text">栏目管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">文章模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('arti/lst'); ?>">
+                    <span class="menu-text">文章管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('arti/imglist'); ?>">
+                    <span class="menu-text">图片管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">导航模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('nav/lst'); ?>">
+                    <span class="menu-text">导航管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+<!--             <li>
+                <a href="<?php echo url('arti/imglist'); ?>">
+                    <span class="menu-text">图片管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li> -->
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">推荐位模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('recpos/lst'); ?>">
+                    <span class="menu-text">推荐管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+<!--             <li>
+                <a href="<?php echo url('arti/imglist'); ?>">
+                    <span class="menu-text">图片管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li> -->
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">链接模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('link/lst'); ?>">
+                    <span class="menu-text">链接管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">配置模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('config/configlst'); ?>">
+                    <span class="menu-text">配置项</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('config/lst'); ?>">
+                    <span class="menu-text">配置管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">系统</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu" style="display: block;">
+            <li>
+                <a href="<?php echo url('attr/lst'); ?>">
+                    <span class="menu-text">商品属性管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>                        
+<!--     <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">系统</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu" style="display: block;">
+            <li>
+                <a href="">
+                    <span class="menu-text">用户管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="menu-text">角色管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="menu-text">权限列表</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>                        
+ --></ul>
+<!-- /Sidebar Menu -->
+</div>
+
             <!-- /Page Sidebar -->
             <!-- Page Content -->
             <div class="page-content">
@@ -17,10 +370,10 @@
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
                         <li>
-                            <a href="{:url('Index/index')}">系统</a>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
                                             <li>
-                            <a href="{:url('commodity/lst')}">商品管理</a>
+                            <a href="<?php echo url('commodity/lst'); ?>">商品管理</a>
                         </li>
                         <li class="active">修改商品</li>
                     </ul>
@@ -49,11 +402,11 @@
                      </ul>
 
                     <form id="accountForm" method="post" class="form-horizontal bv-form" enctype="multipart/form-data">
-                        <input type="hidden" id="" name="commodity_id" value="{$commedit.commodity_id}" />
-                        <input type="hidden" id="" name="commodity_ogthumb" value="{$commedit.commodity_ogthumb}" />
-                        <input type="hidden" id="" name="commodity_smthumb" value="{$commedit.commodity_smthumb}" />
-                        <input type="hidden" id="" name="commodity_midthumb" value="{$commedit.commodity_midthumb}" />
-                        <input type="hidden" id="" name="commodity_bigthumb" value="{$commedit.commodity_bigthumb}" />
+                        <input type="hidden" id="" name="commodity_id" value="<?php echo $commedit['commodity_id']; ?>" />
+                        <input type="hidden" id="" name="commodity_ogthumb" value="<?php echo $commedit['commodity_ogthumb']; ?>" />
+                        <input type="hidden" id="" name="commodity_smthumb" value="<?php echo $commedit['commodity_smthumb']; ?>" />
+                        <input type="hidden" id="" name="commodity_midthumb" value="<?php echo $commedit['commodity_midthumb']; ?>" />
+                        <input type="hidden" id="" name="commodity_bigthumb" value="<?php echo $commedit['commodity_bigthumb']; ?>" />
                         <button type="submit" class="bv-hidden-submit" style="display: none; width: 0px; height: 0px;">
                         </button>
                         <!-- 商品信息开始 -->
@@ -66,7 +419,7 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">商品名称</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="commodity_name" type="text" value="{$commedit['commodity_name']}">
+                                        <input class="form-control" id="username" placeholder="" name="commodity_name" type="text" value="<?php echo $commedit['commodity_name']; ?>">
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
@@ -76,7 +429,7 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right" style="padding: 0;">推荐位</label>
                                     <div class="col-sm-6">
-                                        {volist name='recposlist' id="recpos"}
+                                        <?php if(is_array($recposlist) || $recposlist instanceof \think\Collection || $recposlist instanceof \think\Paginator): $i = 0; $__LIST__ = $recposlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$recpos): $mod = ($i % 2 );++$i;?>
                                         <div class="" style="float:left; padding-right: 30px;">
                                             <label>
                                                 <?php 
@@ -86,11 +439,11 @@
                                                         $checked = '';
                                                     }
                                                 ?>
-                                                <input {$checked} class="colored-blue" value="{$recpos.rec_id}" name="recposs[]" type="checkbox" >
-                                                <span class="text">{$recpos.rec_name}</span>
+                                                <input <?php echo $checked; ?> class="colored-blue" value="<?php echo $recpos['rec_id']; ?>" name="recposs[]" type="checkbox" >
+                                                <span class="text"><?php echo $recpos['rec_name']; ?></span>
                                             </label>
                                         </div>
-                                        {/volist}
+                                        <?php endforeach; endif; else: echo "" ;endif; ?>
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
@@ -100,11 +453,11 @@
                                     <label for="username" class="col-sm-2 control-label no-padding-right">商品主图</label>
                                     <div class="col-sm-6">
                                         <input id="username" placeholder="" name="commodity_ogthumb" type="file" value="$commedit['commodity_ogthumb']">
-                                        {if condition="$commedit['commodity_ogthumb'] neq ''"}
-                                        <img src="__upload__/{$commedit.commodity_ogthumb}" style="width: 50px;" />
-                                        {else /}
+                                        <?php if($commedit['commodity_ogthumb'] != ''): ?>
+                                        <img src="/static/uploadss/<?php echo $commedit['commodity_ogthumb']; ?>" style="width: 50px;" />
+                                        <?php else: ?>
                                             暂无图片
-                                        {/if}
+                                        <?php endif; ?>
                                     </div>
                                 </div>
 
@@ -115,9 +468,9 @@
                                         <div class="radio" style="float:left; padding-right: 10px;">
                                             <label>
                                                 <input class="inverted colored-blue" value="1" name="commodity_on_sale" type="radio"
-                                                {if condition = "$commedit['commodity_on_sale'] eq 1"}
+                                                <?php if($commedit['commodity_on_sale'] == 1): ?>
                                                     checked="checked"
-                                                {/if}>
+                                                <?php endif; ?>>
                                                     
                                                 <span class="text">上架</span>
                                             </label>
@@ -125,9 +478,9 @@
                                         <div class="radio" style="float:left">
                                             <label>
                                                 <input class="inverted colored-blue" value="0" name="commodity_on_sale" type="radio"
-                                                {if condition = "$commedit['commodity_on_sale'] eq 0"}
+                                                <?php if($commedit['commodity_on_sale'] == 0): ?>
                                                     checked="checked"
-                                                {/if}>
+                                                <?php endif; ?>>
                                                 <span class="text">下架</span>
                                             </label>
                                         </div>
@@ -140,19 +493,19 @@
                                     <div class="col-sm-6">
                                         <select name="cates_id">
                                             <option value="">请选择</option>
-                                            {volist name="cateslist" id="catess"}
-                                            <option {if condition="$catess['cates_id'] eq $catess['cates_pid']"} disabled="disabled" {/if} value="{$catess.cates_id}"
-                                            {if condition = "$commedit['cates_id'] eq $catess.cates_id"}
+                                            <?php if(is_array($cateslist) || $cateslist instanceof \think\Collection || $cateslist instanceof \think\Paginator): $i = 0; $__LIST__ = $cateslist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catess): $mod = ($i % 2 );++$i;?>
+                                            <option <?php if($catess['cates_id'] == $catess['cates_pid']): ?> disabled="disabled" <?php endif; ?> value="<?php echo $catess['cates_id']; ?>"
+                                            <?php if($commedit['cates_id'] == $catess['cates_id']): ?>
                                                 selected="selected"
-                                            {/if}
+                                            <?php endif; ?>
                                             >
                                             
-                                             {if condition="$catess['cates_pid'] neq 0"}
+                                             <?php if($catess['cates_pid'] != 0): ?>
                                              |
-                                             {/if}
-                                             <?php echo str_repeat('-',$catess['lever']*5); ?>{$catess.cates_name}
+                                             <?php endif; ?>
+                                             <?php echo str_repeat('-',$catess['lever']*5); ?><?php echo $catess['cates_name']; ?>
                                             </option>
-                                            {/volist}
+                                            <?php endforeach; endif; else: echo "" ;endif; ?>
                                         </select>
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
@@ -165,15 +518,15 @@
                                     <div class="col-sm-6">
                                         <select name="brand_id">
                                             <option value="">请选择</option>
-                                            {volist name="brandlist" id="brands"}
-                                            <option value="{$brands.brand_id}"
-                                            {if condition = "$commedit['brand_id'] eq $brands.brand_id"}
+                                            <?php if(is_array($brandlist) || $brandlist instanceof \think\Collection || $brandlist instanceof \think\Paginator): $i = 0; $__LIST__ = $brandlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brands): $mod = ($i % 2 );++$i;?>
+                                            <option value="<?php echo $brands['brand_id']; ?>"
+                                            <?php if($commedit['brand_id'] == $brands['brand_id']): ?>
                                                 selected="selected" 
-                                            {/if}
+                                            <?php endif; ?>
                                             >
-                                            {$brands.brand_name}
+                                            <?php echo $brands['brand_name']; ?>
                                             </option>
-                                            {/volist}
+                                            <?php endforeach; endif; else: echo "" ;endif; ?>
                                         </select>
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
@@ -184,7 +537,7 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">市场价</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="commodity_market_price" type="text" value="{$commedit['commodity_market_price']}">
+                                        <input class="form-control" id="username" placeholder="" name="commodity_market_price" type="text" value="<?php echo $commedit['commodity_market_price']; ?>">
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
@@ -194,7 +547,7 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">本店价</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="commodity_shop_price" type="text" value="{$commedit['commodity_shop_price']}">
+                                        <input class="form-control" id="username" placeholder="" name="commodity_shop_price" type="text" value="<?php echo $commedit['commodity_shop_price']; ?>">
                                     </div>
                                     <p class="help-block col-sm-4 red">* 必填</p>
                                 </div>
@@ -204,18 +557,18 @@
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right">重量</label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" name="commodity_weight" type="text" style="display: inline-block;width: 50%;" value="{$commedit['commodity_weight']}">
+                                        <input class="form-control" id="username" name="commodity_weight" type="text" style="display: inline-block;width: 50%;" value="<?php echo $commedit['commodity_weight']; ?>">
                                         <select name="commodity_weight_unit" style="display: inline; width: 100px">
                                             <option value="">请选择</option>
                                             <option value="kg"
-                                            {if condition = "$commedit['commodity_weight_unit'] eq 'kg'"}
+                                            <?php if($commedit['commodity_weight_unit'] == 'kg'): ?>
                                                 selected="selected"
-                                            {/if}
+                                            <?php endif; ?>
                                             >kg</option>
                                             <option value="g"
-                                            {if condition = "$commedit['commodity_weight_unit'] eq 'g'"}
+                                            <?php if($commedit['commodity_weight_unit'] == 'g'): ?>
                                                 selected="selected"
-                                            {/if}
+                                            <?php endif; ?>
                                             >g</option>
                                         </select>
                                     </div>
@@ -230,7 +583,7 @@
                                 <!-- 描述信息 -->
                                 <div class="form-group">
                                     <div class="col-sm-6">
-                                        <textarea id="content" name="commodity_description" type="text">{$commedit['commodity_description']}</textarea>
+                                        <textarea id="content" name="commodity_description" type="text"><?php echo $commedit['commodity_description']; ?></textarea>
                                     </div>
                                     <p class="help-block col-sm-4 red"></p>
                                 </div>
@@ -240,18 +593,18 @@
 
                              <div class="tab-pane" id="address-tab2">
                                 <!-- 会员价格 -->
-                            {volist name="mblevellist" id="level"}
+                            <?php if(is_array($mblevellist) || $mblevellist instanceof \think\Collection || $mblevellist instanceof \think\Paginator): $i = 0; $__LIST__ = $mblevellist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$level): $mod = ($i % 2 );++$i;?>
                                 
                                 <div class="form-group">
-                                    <label for="username" class="col-sm-2 control-label no-padding-right">{$level.level_name}</label>
+                                    <label for="username" class="col-sm-2 control-label no-padding-right"><?php echo $level['level_name']; ?></label>
                                     <div class="col-sm-6">
-                                        <input class="form-control" id="username" placeholder="" name="mls[{$level.level_id}]" type="text"
+                                        <input class="form-control" id="username" placeholder="" name="mls[<?php echo $level['level_id']; ?>]" type="text"
                                         value="<?php if (isset($mblevelarr[$level['level_id']]['price_mpprice'])) { echo $mblevelarr[$level['level_id']]['price_mpprice']; } else { echo ''; } ?>"
                                         />
                                     </div>
                                 </div>
 
-                            {/volist}
+                            <?php endforeach; endif; else: echo "" ;endif; ?>
 
 
                             </div>
@@ -266,71 +619,62 @@
                                     <div class="col-sm-6">
                                         <select name="type_id" disabled="disabled">
                                             <option value="">请选择</option>
-                                            {volist name="attrlists" id="attrr"}
-                                                <option {if condition="$commedit['type_id'] eq $attrr.type_id"} selected="selected" {/if} value="{$attrr.type_id}">{$attrr.type_name}</option>
-                                            {/volist}
+                                            <?php if(is_array($attrlists) || $attrlists instanceof \think\Collection || $attrlists instanceof \think\Paginator): $i = 0; $__LIST__ = $attrlists;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$attrr): $mod = ($i % 2 );++$i;?>
+                                                <option <?php if($commedit['type_id'] == $attrr['type_id']): ?> selected="selected" <?php endif; ?> value="<?php echo $attrr['type_id']; ?>"><?php echo $attrr['type_name']; ?></option>
+                                            <?php endforeach; endif; else: echo "" ;endif; ?>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group attrxx">
-                                <?php foreach( $typeedit as $k => $v):?>
-                                                {if condition=" $v['attr_type'] eq 1"}
-                                                    <?php
+                                <?php foreach( $typeedit as $k => $v):if($v['attr_type'] == 1): 
                                                         $attrValue = explode(",",$v['attr_values']);
-                                                    ?>
-                                        <?php foreach( $commattreditArr[$v['attr_id']] as $k1 => $v1 ):?>
+                                                    foreach( $commattreditArr[$v['attr_id']] as $k1 => $v1 ):?>
                                                         <div class='lists'>
-                                                            <div class='form-group' value="{$v1.commattr_id}">
-                                                                <label for='username' class='col-sm-2 control-label no-padding-right'>{$v['attr_name']}</label>
+                                                            <div class='form-group' value="<?php echo $v1['commattr_id']; ?>">
+                                                                <label for='username' class='col-sm-2 control-label no-padding-right'><?php echo $v['attr_name']; ?></label>
                                                                 <div class='col-sm-6'>
                                                                     <a href='####' onClick='adddiv(this);' style='display:inline-block; margin-right:20px ; width: 40px; height:35px; border-radius: 2px; line-height:30px;  background:#eee; color:#906; text-align:center; font-size:18px; '><?php if ( $k1 == 0 ) echo '[+]'; else echo '[-]'; ?></a>
                                                                     <select name="old_comm_attr[<?php echo $v['attr_id'];?>][]" style='display: inline-block; margin-right: 20px;'>
                                                                         <option value=''>请选择</option>
                                                                         <?php foreach( $attrValue as $k2 => $v2 ):?>
-                                                                            <option {if condition="$v2 eq $v1['commattr_value']"} selected="selected" {/if} value='{$v2}'>{$v2}</option>
+                                                                            <option <?php if($v2 == $v1['commattr_value']): ?> selected="selected" <?php endif; ?> value='<?php echo $v2; ?>'><?php echo $v2; ?></option>
                                                                         <?php endforeach;?>
                                                                     </select>
-                                                                    <input class='form-control' id='username' placeholder='' name='old_commattr_attrprice[<?php echo $v1["commattr_id"]?>]' type='text' style='display: inline-block;width: 50%;' value='{$v1.commattr_attrprice}' />
+                                                                    <input class='form-control' id='username' placeholder='' name='old_commattr_attrprice[<?php echo $v1["commattr_id"]?>]' type='text' style='display: inline-block;width: 50%;' value='<?php echo $v1['commattr_attrprice']; ?>' />
                                                                 </div>
                                                             </div>
                                                         </div>
                                                            
-                                        <?php endforeach;?>
-
-                                                {else /}
-                                                    <?php if( !$v['attr_values']):?>
+                                        <?php endforeach;else: if( !$v['attr_values']):?>
                                                         <div class='lists'>
                                                             <div class='form-group'>
-                                                                <label for='username' class='col-sm-2 control-label no-padding-right'>{$v['attr_name']}</label>
+                                                                <label for='username' class='col-sm-2 control-label no-padding-right'><?php echo $v['attr_name']; ?></label>
                                                                 <div class='col-sm-6'>
                                                                     <input name="old_comm_attr[<?php echo $v['attr_id'];?>]" class='form-control' id='username' placeholder='' type='text' style='display: inline-block;width: 70%;' value="<?php echo $commattreditArr[$v['attr_id']][0]['commattr_value']; ?>" />
                                                                     <input type="hidden" name="old_commattr_attrprice[<?php echo $commattreditArr[$v['attr_id']][0]['commattr_id'] ?>]" />
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    <?php else:?>
-                                                        <?php
+                                                    <?php else:
                                                             $attrValue = explode(",",$v['attr_values']);
                                                         ?>
                                                             <div class='lists'>
-                                                                <div class='form-group' value="{$v1.commattr_id}">
-                                                                    <label for='username' class='col-sm-2 control-label no-padding-right'>{$v['attr_name']}</label>
+                                                                <div class='form-group' value="<?php echo $v1['commattr_id']; ?>">
+                                                                    <label for='username' class='col-sm-2 control-label no-padding-right'><?php echo $v['attr_name']; ?></label>
                                                                     <div class='col-sm-6'>
 <!--                                                                         <a href='####' onClick='adddiv(this);' style='display:inline-block; margin-right:20px ; width: 40px; height:35px; border-radius: 2px; line-height:30px;  background:#eee; color:#906; text-align:center; font-size:18px; '><?php if ( $k1 == 0 ) echo '[+]'; else echo '[-]'; ?></a>
  -->                                                                        <select name="old_comm_attr[<?php echo $v['attr_id'];?>]" style='display: inline-block; margin-right: 20px;'>
                                                                             <option value=''>请选择</option>
                                                                             <?php foreach( $attrValue as $k2 => $v2 ):?>
-                                                                                <option {if condition="$v2 eq $commattreditArr[$v['attr_id']][0]['commattr_value']"} selected="selected" {/if} value='{$v2}'>{$v2}</option>
+                                                                                <option <?php if($v2 == $commattreditArr[$v['attr_id']][0]['commattr_value']): ?> selected="selected" <?php endif; ?> value='<?php echo $v2; ?>'><?php echo $v2; ?></option>
                                                                             <?php endforeach;?>
                                                                         </select>
                                                                          <input type="hidden" name="old_commattr_attrprice[<?php echo $commattreditArr[$v['attr_id']][0]['commattr_id'] ?>]" />
                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                    <?php endif;?>
-                                                {/if}
-                                <?php endforeach;?>
+                                                    <?php endif;endif; endforeach;?>
 
 
                                 </div>
@@ -342,16 +686,16 @@
 
 
                             <div class="tab-pane" id="address-tab4">
-                                {volist name="photoedit" id="photoedits"}
-                                <div value="{$photoedits.comm_photo_id}" class="form-group">
+                                <?php if(is_array($photoedit) || $photoedit instanceof \think\Collection || $photoedit instanceof \think\Paginator): $i = 0; $__LIST__ = $photoedit;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$photoedits): $mod = ($i % 2 );++$i;?>
+                                <div value="<?php echo $photoedits['comm_photo_id']; ?>" class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right"></label>
                                     <div class="col-sm-6">
                                         <a href='####' onclick='deldiv(this);' style='display:inline-block; margin-right:20px ; width: 40px; height:35px; border-radius: 2px; line-height:30px;  background:#eee; color:#906; text-align:center; font-size:18px; '>[-]</a>
-                                        <input value="__upload__/{$photoedits.comm_photo_sm}" class="" id="username" placeholder="" name="comm_photo[]" type="file" style='display: inline-block;width: 70%;'>
-                                    <img src="__upload__/{$photoedits.comm_photo_sm}" alt="">
+                                        <input value="/static/uploadss/<?php echo $photoedits['comm_photo_sm']; ?>" class="" id="username" placeholder="" name="comm_photo[]" type="file" style='display: inline-block;width: 70%;'>
+                                    <img src="/static/uploadss/<?php echo $photoedits['comm_photo_sm']; ?>" alt="">
                                     </div>
                                 </div>
-                                {/volist}
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
 
                                 <div class="form-group">
                                     <label for="username" class="col-sm-2 control-label no-padding-right"></label>
@@ -394,13 +738,22 @@
 	</div>
 
 	    <!--Basic Scripts-->
-    {include file='/common/footer'}
+    
+	<script type="text/javascript">
+
+	    //实例化编辑器
+	    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+	    UE.getEditor('content',{initialFrameWidth:795,initialFrameHeight:300,});
+    
+
+
+	</script>
     <script>
         $("select[name=type_id]").change(function(){
             var attr_typeid = $(this).val();
             $.ajax({
                 type:"POST",
-                url:"{:url('attr/ajaxattrs')}",
+                url:"<?php echo url('attr/ajaxattrs'); ?>",
                 data:{type_id:attr_typeid},
                 dataType:'json',
                 success:function(data){
@@ -478,7 +831,7 @@
                  if (confirm('确定要删除商品图片吗？')){
                     $.ajax({
                         type: 'POST',
-                        url: '{:url("CommoAttr/ajaxdelAttr")}',
+                        url: '<?php echo url("CommoAttr/ajaxdelAttr"); ?>',
                         data: {
                             value: divsVal
                         },
@@ -513,7 +866,7 @@
             if (confirm('确定要删除商品图片吗？')){
                 $.ajax({
                     type: 'POST',
-                    url: '{:url("commodity/ajaxdelphoto")}',
+                    url: '<?php echo url("commodity/ajaxdelphoto"); ?>',
                     data: {
                         id: divsId
                     },

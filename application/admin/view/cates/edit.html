@@ -138,6 +138,31 @@
                             </div>
                         </div>
 
+
+                        <!-- 推荐位 -->
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right" style="padding: 0;">推荐位</label>
+                            <div class="col-sm-6">
+                                {volist name='reclist' id="recpos"}
+                                    <div class="" style="float:left; padding-right: 30px;">
+                                        <label>
+                                            <?php 
+                                                if (in_array($recpos['rec_id'],$recposCommlist)){
+                                                    $checked = 'checked="checked"';
+                                                } else {
+                                                    $checked = '';
+                                                }
+                                            ?>
+                                            <input {$checked} class="colored-blue" value="{$recpos.rec_id}" name="recposs[]" type="checkbox" >
+                                            <span class="text">{$recpos.rec_name}</span>
+                                        </label>
+                                    </div>
+                                {/volist}
+                            </div>
+                        </div>
+
+
+
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-default">保存信息</button>

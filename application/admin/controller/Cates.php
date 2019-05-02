@@ -4,6 +4,8 @@
 	use think\Controller;
 	use catestree\Catestree;
 
+	// 商品分类
+
 	class cates extends Controller
 	{
 		public function lst(){
@@ -28,49 +30,37 @@
 			$catest = new catestree();
 			$cateslist = $cates -> select();
 			$cateslist = $catest ->catestree($cateslist);
-			$this -> assign('cateslist',$cateslist);
 			if (request()->isPost()){
 				$data=input('post.');
-				
-				// if(in_array($data['cates_pid'], ['1','3'])){
-				// 	$this->error("系统分类不能作为上级分类！");
-				// }
-				
-				// if($data['cates_pid'] ==2){
-				// 	$data['cate_type'] =3;
-				// } 
-
-				//  $catesID = $cates->field('cates_pid')->find($data['cates_pid']);
-				//  $catesID = $catesID['cates_pid'];
-				//  if ($catesID == 2 ){
-				//  	$this->error("此分类不能作为上级分类！");
-				//  }
-				 
-
-
-				// $validate = validate('cates');
-				// if (!$validate -> check($data)){
-				// 	$this -> error( $validate -> getError());
-				// }
-
-
+			
 				if ($_FILES['cates_img']['tmp_name']){
 					$data['cates_img']=$this -> upload();
 				}
 
 
-				$add=db('cates')->insert($data);
+				$add=model('cates')->save($data);
 				if($add){
 					$this->success('添加成功','lst');
 				}else{
 					$this->error('添加失败');
 				}
+
 				$cateslist = $cates->order('cates_sort desc')->select();
 				$cateslist = $catest ->catestree($cateslist);
 
 				return;
 			}
+
 			$cates_id=input('cates_id');
+
+			// 推荐位
+			$recpos = db('recpos');
+			$reclist = $recpos -> where('rec_type','=',2) -> select();
+			// dump($reclist);die;
+			$this -> assign([
+				'cateslist'=>$cateslist,
+				'reclist' => $reclist,
+			]);
 			$catess = $cates ->find($cates_id);
 			$this->assign('catess',$catess);
 
@@ -85,7 +75,27 @@
 			$catest = new catestree();
 			$cateslist = $cates -> select();
 			$cateslist = $catest ->catestree($cateslist);
-			$this -> assign('cateslist',$cateslist);
+
+			// 推荐位
+			$recpos = db('recpos');
+			$reclist = $recpos -> where('rec_type','=',2) -> select();
+
+			// 提取商品分类推荐位
+			$recposComm = db('recpos_comm');
+			$_recposCommlist = $recposComm -> where(array('commodity_id'=> input('cates_id'),'recpos_type' =>2)) -> select();
+			// dump($recposComm);die;
+			$recposCommlist = array();
+			foreach ($_recposCommlist as $k => $v) {
+				$recposCommlist[] = $v['recpos_id'];
+			}
+
+
+			$this -> assign([
+				'cateslist' => $cateslist,
+				'reclist' => $reclist,
+				'recposCommlist' => $recposCommlist,
+			]);
+
 
 
 			if (request()->isPost()){
@@ -108,7 +118,11 @@
 				// 	$this -> error( $validate -> getError());
 				// }
 
-				$save=$cates->update($data);
+				// $save=$cates->update($data);
+
+				$save=model('cates') ->update($data);
+
+
 				if($save){
 					$this->success('修改成功','lst');
 				}else{

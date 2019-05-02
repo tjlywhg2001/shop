@@ -44,6 +44,22 @@ class Commodity extends Model
 	     	// 处理商品属性
         	$goodsData = input('post.');
         	// dump($goodsData);die;
+
+
+        	// 处理商品推荐位
+        	$recposComm = db('recpos_comm');
+
+        	$recposComm -> where(array('recpos_type' => 1, 'commodity_id' => $commodityid)) -> delete();
+
+        	if ( $goodsData['recposs']){
+        	// dump($recposData['recposs']);die;
+	        	foreach ($goodsData['recposs'] as $k => $v) {
+	        		// 存入数据信息
+		        	$recposComm -> insert(['recpos_id' => $v, 'commodity_id' => $commodityid, 'recpos_type' => 1]);
+	        	}
+        	}
+
+
         	// 新增商品属性
         	if ( isset( $goodsData['comm_attr'] ) ) {
 	        	$i=0;
@@ -180,10 +196,25 @@ class Commodity extends Model
 
 
         Commodity::afterInsert(function($commodity){
+
+        	$commodityid = $commodity -> commodity_id;
+        	$goodsData = input('post.');
+
         	// 批量写入会员价格
         	$mblevelarr = $commodity -> mls;
 
-        	$commodityid = $commodity -> commodity_id;
+        	// 处理商品推荐位
+        	$recposComm = db('recpos_comm');
+
+        	if ( $goodsData['recposs']){
+        	// dump($recposData['recposs']);die;
+	        	foreach ($goodsData['recposs'] as $k => $v) {
+	        		// 存入数据信息
+		        	$recposComm -> insert(['recpos_id' => $v, 'commodity_id' => $commodityid, 'recpos_type' => 1]);
+	        	}
+        	}
+
+
         	if($mblevelarr){
 
         		foreach ($mblevelarr as $k => $v) {
@@ -200,7 +231,6 @@ class Commodity extends Model
         	// 处理商品属性
         	// $commodityAttr = $commodity -> comm_attr;
         	// $commodityPrice = $commodity -> comm_price;
-        	$goodsData = input('post.');
         	$i=0;
         	if ( isset( $goodsData['comm_attr'] ) ) {
         		foreach ($goodsData['comm_attr'] as $k => $v) {

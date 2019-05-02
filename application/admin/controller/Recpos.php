@@ -23,9 +23,6 @@
 
 		public function add(){
 
-			// $recpos =db('recpos');
-			// $reclist = $recpos -> select();
-			// $this -> assign(['reclist' => $reclist]);
 
 			if (request()->isPost()){
 

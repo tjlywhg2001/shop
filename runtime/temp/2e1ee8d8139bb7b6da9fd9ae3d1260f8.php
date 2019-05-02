@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1556760451;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556760451;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556760451;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556760451;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556760451;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\brand\list.html";i:1556760451;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556760451;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556760451;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556760451;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556760451;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 
 <body>
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+                <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -369,18 +369,80 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                        <li class="active">品牌管理</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
                     
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('brand/add'); ?>'"> <i class="fa fa-plus"></i> 添加品牌
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">品牌名称</th>
+                                <th class="text-center">品牌地址</th>
+                                <th class="text-center">品牌描述</th>
+                                <th class="text-center">品牌logo</th>
+                                <th class="text-center">状态</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        <?php if(is_array($brandlist) || $brandlist instanceof \think\Collection || $brandlist instanceof \think\Paginator): $i = 0; $__LIST__ = $brandlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brand): $mod = ($i % 2 );++$i;?>
+                        <tbody>
+                                <tr>
+                                <td align="center"><?php echo $brand['brand_id']; ?></td>
+                                <td align="center"><?php echo $brand['brand_name']; ?></td>
+                                <td align="center"><?php echo $brand['brand_url']; ?></td>
+                                <td align="+center"><?php echo cut_str($brand['brand_description'] ,30); ?></td>
+                                <td align="center">
+                                <?php if($brand['brand_img'] != ''): ?>
+                                    <img style="height: 30px" src="/static/uploadss/<?php echo $brand['brand_img']; ?>" />
+                                <?php else: ?>
+                                    暂无图片
+                                <?php endif; ?>
+                                </td>
+                                <td align="center">
+                                
+                                <?php if($brand['brand_status'] != 0): ?>
+                                    显示
+                                <?php else: ?>
+                                    隐藏
+                                <?php endif; ?>
+
+                                </td>
+                                <td align="center">
+                                    <a href="<?php echo url('edit',array('brand_id'=>$brand['brand_id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('brand_id'=>$brand['brand_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </table>
                 </div>
-                
+                <div> 
+                    <?php echo $brandlist->render(); ?>
+              	</div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -390,7 +452,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器
