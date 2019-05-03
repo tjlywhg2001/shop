@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1556846466;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556846466;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556875651;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1556846466;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556846466;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1556846466;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556846466;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556877879;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1556846466;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556846466;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1210,25 +1210,10 @@
 				    <?php endforeach; endif; else: echo "" ;endif; ?>
 
 				    <script>
+				    	// ajax异步获取顶级分类下的子分类、品牌、频道等相关信息在右侧菜单显示
 				    	var ajaxCommCatesUrl = "<?php echo url('cates/getCommsCates'); ?>";
-
-				    	function getCommsCates(data){
-				    		$('.cate_detail').empty();
-				    		console.log(data);
-				    		var list = data;
-			    			var div = '';
-				    		for ( i= 0; i<list.length; i++){
-				    			div += '<dl class="dl_fore' + (i+1) + '>';
-				    			div += '<dt><a href="#" target="_blank">' + list[i].cates_name + '</a></dt>';
-				    			div += '<dd>';
-				    			var childs = list[i].children;
-				    			for ( j=0; j<childs.length; j++ ){
-				    				div += '<a href="#" target="_blank">' + childs[j].cates_name + '</a>'
-				    			}
-				    			div += '</dd></dl>';
-				    		}
-				    		$('.cate_detail').append(div);
-				    	}
+				    	// 加载中图片路径
+				    	var imgLoad = '/static/index/img/loadGoods.gif';
 				    </script>
 				</div>
 			</div>

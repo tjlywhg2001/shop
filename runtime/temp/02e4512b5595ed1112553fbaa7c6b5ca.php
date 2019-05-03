@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1556846466;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556846466;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556869653;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1556846466;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556846466;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1556846466;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1556846466;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556846466;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556877879;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1556846466;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556846466;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1556846466;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -1199,17 +1199,22 @@
 				        <div class="categorys-items-layer" ectype="cateLayer">
 				            <div class="cate-layer-con clearfix">
 				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_858"></div>
-									<div class="cate_detail" ectype="subitems_858"></div>
+									<div class="cate_channel" ectype="channels_<?php echo $CommCates['cates_id']; ?>"></div>
+									<div class="cate_detail" ectype="subitems_<?php echo $CommCates['cates_id']; ?>"></div>
 				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_858"></div>
+				                <div class="cate-layer-rihgt" ectype="brands_<?php echo $CommCates['cates_id']; ?>"></div>
 				            </div>
 				        </div>
 				        <div class="clear"></div>
 				    </div>
 				    <?php endforeach; endif; else: echo "" ;endif; ?>
 
-
+				    <script>
+				    	// ajax异步获取顶级分类下的子分类、品牌、频道等相关信息在右侧菜单显示
+				    	var ajaxCommCatesUrl = "<?php echo url('cates/getCommsCates'); ?>";
+				    	// 加载中图片路径
+				    	var imgLoad = '/static/index/img/loadGoods.gif';
+				    </script>
 				</div>
 			</div>
 		</div>

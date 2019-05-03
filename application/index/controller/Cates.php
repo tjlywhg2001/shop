@@ -23,15 +23,15 @@
 			$datas = model('cates') -> getCommCates($CommCateid);
 			$subitems = '';
 			foreach ($datas as $k => $v) {
-				$subitems .= '<dl class="dl_fore>';
-				$subitems .= '<dt><a href="#" target="_blank">'.$v['cates_name'].'</a></dt><dd>';
+				$subitems .= '<dl class="dl_fore"><dt>';
+				$subitems .= '<a href="#" target="_blank">'.$v['cates_name'].'</a></dt><dd>';
 				foreach ($v['children'] as $k1 => $v1) {
 					$subitems .= '<a href="#" target="_blank">'.$v1['cates_name'].'</a>';
 				}
 				$subitems .= '</dd></dl>';
 			}
 			$data['cat_content'] = $subitems;
-			
+
 			$data['brands_ad_content'] = '22222';
 			// dump($catesList);die;
 			return json($data);
