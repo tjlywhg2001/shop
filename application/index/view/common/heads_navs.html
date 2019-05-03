@@ -280,7 +280,7 @@
 		    <div class="categorys-tab-content">
 		    	<div class="categorys-items" id="cata-nav">
 		    		{volist name="CommCates" id="CommCates"}
-		            <div class="categorys-item" ectype="cateItem" data-id="858" data-eveval="0">
+		            <div class="categorys-item" ectype="cateItem" data-id="{$CommCates.cates_id}" data-eveval="0">
 				        <div class="item item-content">
 						    <i class="iconfont icon-ele"></i>
 						    <div class="categorys-title">
@@ -301,15 +301,22 @@
 				        <div class="categorys-items-layer" ectype="cateLayer">
 				            <div class="cate-layer-con clearfix">
 				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_858"></div>
-									<div class="cate_detail" ectype="subitems_858"></div>
+									<div class="cate_channel" ectype="channels_{$CommCates.cates_id}"></div>
+									<div class="cate_detail" ectype="subitems_{$CommCates.cates_id}"></div>
 				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_858"></div>
+				                <div class="cate-layer-rihgt" ectype="brands_{$CommCates.cates_id}"></div>
 				            </div>
 				        </div>
 				        <div class="clear"></div>
 				    </div>
 				    {/volist}
+
+				    <script>
+				    	// ajax异步获取顶级分类下的子分类、品牌、频道等相关信息在右侧菜单显示
+				    	var ajaxCommCatesUrl = "{:url('cates/getCommsCates')}";
+				    	// 加载中图片路径
+				    	var imgLoad = '__index__/img/loadGoods.gif';
+				    </script>
 				</div>
 			</div>
 		</div>
@@ -326,3 +333,4 @@
         </div>
 	</div>
 </div>
+

@@ -3,11 +3,11 @@
 
 	use think\Controller;
 
-	class Goodslist extends Base
+	class GoodsList extends Base
 	{
 		public function index()
 		{
-			return view('goodslist');
+			return view('goodsList');
 		}
 
 
