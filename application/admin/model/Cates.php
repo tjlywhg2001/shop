@@ -26,7 +26,7 @@ class Cates extends Model
 
         	$recposComm -> where(array('recpos_type' => 2, 'commodity_id' => $catesid)) -> delete();
 
-        	if ( $goodsData['recposs']){
+        	if ( isset( $goodsData['recposs'] )){
         	// dump($recposData['recposs']);die;
 	        	foreach ($goodsData['recposs'] as $k => $v) {
 	        		// 存入数据信息
@@ -46,7 +46,7 @@ class Cates extends Model
         	// 处理商品推荐位
         	$recposComm = db('recpos_comm');
 
-        	if ( $goodsData['recposs']){
+        	if ( isset( $goodsData['recposs'] )){
         	// dump($recposData['recposs']);die;
 	        	foreach ($goodsData['recposs'] as $k => $v) {
 	        		// 存入数据信息

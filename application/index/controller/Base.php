@@ -21,7 +21,27 @@ class Base extends Controller
 		$this -> _getNav();
 		// 获取并分配配置项，为config赋值
 		$this -> _getConfig();
+		// 获取商品并且分配商品推荐位
+		$this -> _HomeShowGoods();
 	}
+
+
+	private function _HomeShowGoods(){
+
+		$CommRecpos = model('commodity') -> HomeShowGoods(2,1);
+		$CommCates = model('cates') -> getCates();
+		// dump($CommCates);die;
+		$this -> assign([
+			'CommRecpos' => $CommRecpos,
+			'CommCates' => $CommCates,
+		]);
+
+	}
+
+
+
+
+
 
 	private function _getFooterArtis()
 	{

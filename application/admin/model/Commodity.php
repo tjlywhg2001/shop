@@ -51,7 +51,7 @@ class Commodity extends Model
 
         	$recposComm -> where(array('recpos_type' => 1, 'commodity_id' => $commodityid)) -> delete();
 
-        	if ( $goodsData['recposs']){
+        	if ( isset( $goodsData['recposs'] )){
         	// dump($recposData['recposs']);die;
 	        	foreach ($goodsData['recposs'] as $k => $v) {
 	        		// 存入数据信息
@@ -206,7 +206,7 @@ class Commodity extends Model
         	// 处理商品推荐位
         	$recposComm = db('recpos_comm');
 
-        	if ( $goodsData['recposs']){
+        	if ( isset( $goodsData['recposs'] )){
         	// dump($recposData['recposs']);die;
 	        	foreach ($goodsData['recposs'] as $k => $v) {
 	        		// 存入数据信息

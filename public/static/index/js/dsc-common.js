@@ -1,4 +1,4 @@
-/*
+ /*
 **Name:dsc-common.js
 **Author:ecmoban Team sunle
 **Description:Commonly used JS

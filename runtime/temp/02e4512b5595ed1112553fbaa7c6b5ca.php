@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1556716437;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556716437;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556716437;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556716437;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556716437;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1556716437;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556716437;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1556716437;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1556846466;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556846466;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556857998;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1556846466;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556846466;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1556846466;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -1179,17 +1179,21 @@
             </div>
 		    <div class="categorys-tab-content">
 		    	<div class="categorys-items" id="cata-nav">
+		    		<?php if(is_array($CommCates) || $CommCates instanceof \think\Collection || $CommCates instanceof \think\Paginator): $i = 0; $__LIST__ = $CommCates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CommCates): $mod = ($i % 2 );++$i;?>
 		            <div class="categorys-item" ectype="cateItem" data-id="858" data-eveval="0">
 				        <div class="item item-content">
 						    <i class="iconfont icon-ele"></i>
 						    <div class="categorys-title">
 				                <strong>
-						            <a href="category.php?id=858" target="_blank">家用电器</a>
+						            <a href="category.php?id=858" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
 					            </strong>
+				            	<?php if($CommCates['children']): ?>
 					            <span>
-									<a href="category.php?id=1105" target="_blank">大家电</a>
-									<a href="category.php?id=1115" target="_blank">生活电器</a>
+					            	<?php if(is_array($CommCates['children']) || $CommCates['children'] instanceof \think\Collection || $CommCates['children'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CommCates['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesChildren): $mod = ($i % 2 );++$i;?>
+									<a href="category.php?id=1105" target="_blank"><?php echo $CatesChildren['cates_name']; ?></a>
+									<?php endforeach; endif; else: echo "" ;endif; ?>
 				                </span>
+								<?php endif; ?>
 					        </div>
 				        </div>
 				        <div class="categorys-items-layer" ectype="cateLayer">
@@ -1203,6 +1207,7 @@
 				        </div>
 				        <div class="clear"></div>
 				    </div>
+				    <?php endforeach; endif; else: echo "" ;endif; ?>
 		            <div class="categorys-item" ectype="cateItem" data-id="3" data-eveval="0">
 				        <div class="item item-content">
 						    <i class="iconfont icon-digital"></i>

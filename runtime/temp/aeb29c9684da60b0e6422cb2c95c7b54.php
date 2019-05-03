@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1555814122;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1555843239;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1555837095;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1555844277;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1555831042;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1555813891;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1555849415;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:68:"B:\aaaweb\shop\public/../application/index\view\article\article.html";i:1556846466;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556846466;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556858353;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1556846466;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556846466;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1179,17 +1179,21 @@
             </div>
 		    <div class="categorys-tab-content">
 		    	<div class="categorys-items" id="cata-nav">
+		    		<?php if(is_array($CommCates) || $CommCates instanceof \think\Collection || $CommCates instanceof \think\Paginator): $i = 0; $__LIST__ = $CommCates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CommCates): $mod = ($i % 2 );++$i;?>
 		            <div class="categorys-item" ectype="cateItem" data-id="858" data-eveval="0">
 				        <div class="item item-content">
 						    <i class="iconfont icon-ele"></i>
 						    <div class="categorys-title">
 				                <strong>
-						            <a href="category.php?id=858" target="_blank">家用电器</a>
+						            <a href="category.php?id=858" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
 					            </strong>
+				            	<?php if($CommCates['children']): ?>
 					            <span>
-									<a href="category.php?id=1105" target="_blank">大家电</a>
-									<a href="category.php?id=1115" target="_blank">生活电器</a>
+					            	<?php if(is_array($CommCates['children']) || $CommCates['children'] instanceof \think\Collection || $CommCates['children'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CommCates['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesChildren): $mod = ($i % 2 );++$i;if($i < 3): ?>
+									<a href="category.php?id=1105" target="_blank"><?php echo $CatesChildren['cates_name']; ?></a>
+									<?php endif; endforeach; endif; else: echo "" ;endif; ?>
 				                </span>
+								<?php endif; ?>
 					        </div>
 				        </div>
 				        <div class="categorys-items-layer" ectype="cateLayer">
@@ -1203,150 +1207,7 @@
 				        </div>
 				        <div class="clear"></div>
 				    </div>
-		            <div class="categorys-item" ectype="cateItem" data-id="3" data-eveval="0">
-				        <div class="item item-content">
-						    <i class="iconfont icon-digital"></i>
-						    <div class="categorys-title">
-				                <strong>
-						            <a href="category.php?id=33" target="_blank" class="division_cat">手机</a>、<a href="category.php?id=64" target="_blank" class="division_cat">数码</a>、<a href="category.php?id=37" target="_blank" class="division_cat">通信</a>
-					        	</strong>
-					            <span>
-									<a href="category.php?id=112" target="_blank">智能设备</a>
-									<a href="category.php?id=76" target="_blank">数码配件</a>
-				                </span>
-					        </div>
-				        </div>
-				        <div class="categorys-items-layer" ectype="cateLayer">
-				            <div class="cate-layer-con clearfix">
-				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_3"></div>
-									<div class="cate_detail" ectype="subitems_3"></div>
-				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_3"></div>
-				            </div>
-				        </div>
-				        <div class="clear"></div>
-				    </div>
-			        <div class="categorys-item" ectype="cateItem" data-id="4" data-eveval="0">
-				        <div class="item item-content">
-						    <i class="iconfont icon-computer"></i>
-						    <div class="categorys-title">
-				                <strong>
-						            <a href="category.php?id=4" target="_blank">电脑、办公</a>
-					            </strong>
-					            <span>
-									<a href="category.php?id=158" target="_blank">服务产品</a>
-									<a href="category.php?id=132" target="_blank">电脑整机</a>
-				                </span>
-					        </div>
-				        </div>
-				        <div class="categorys-items-layer" ectype="cateLayer">
-				            <div class="cate-layer-con clearfix">
-				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_4"></div>
-									<div class="cate_detail" ectype="subitems_4"></div>
-				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_4"></div>
-				            </div>
-				        </div>
-				        <div class="clear"></div>
-				    </div>
-		            <div class="categorys-item" ectype="cateItem" data-id="5" data-eveval="0">
-				        <div class="item item-content">
-						    <i class="iconfont icon-bed"></i>
-						    <div class="categorys-title">
-				                <strong>
-						            <a href="category.php?id=5" target="_blank">家居、家具、家装、厨具</a>
-					            </strong>
-					            <span>
-									<a href="category.php?id=143" target="_blank">厨具</a>
-									<a href="category.php?id=159" target="_blank">家装建材</a>
-				                </span>
-					        </div>
-				        </div>
-				        <div class="categorys-items-layer" ectype="cateLayer">
-				            <div class="cate-layer-con clearfix">
-				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_5"></div>
-									<div class="cate_detail" ectype="subitems_5"></div>
-				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_5"></div>
-				            </div>
-				        </div>
-				        <div class="clear"></div>
-				    </div>
-			        <div class="categorys-item" ectype="cateItem" data-id="6" data-eveval="0">
-				        <div class="item item-content">
-						    <i class="iconfont icon-clothes"></i>
-						    <div class="categorys-title">
-				                <strong>
-						            <a href="category.php?id=6" target="_blank">男装、女装、内衣</a>
-					            </strong>
-					            <span>
-									<a href="category.php?id=347" target="_blank">女装</a>
-									<a href="category.php?id=463" target="_blank">男装</a>
-				                </span>
-					        </div>
-				        </div>
-				        <div class="categorys-items-layer" ectype="cateLayer">
-				            <div class="cate-layer-con clearfix">
-				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_6"></div>
-									<div class="cate_detail" ectype="subitems_6"></div>
-				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_6"></div>
-				            </div>
-				        </div>
-				        <div class="clear"></div>
-				    </div>
-		            <div class="categorys-item" ectype="cateItem" data-id="8" data-eveval="0">
-				        <div class="item item-content">
-						    <i class="iconfont icon-shoes"></i>
-						    <div class="categorys-title">
-				                <strong>
-						            <a href="category.php?id=8" target="_blank">鞋靴、箱包、钟表、奢侈品</a>
-					            </strong>
-					            <span>
-									<a href="category.php?id=362" target="_blank">奢侈品</a>
-									<a href="category.php?id=360" target="_blank">功能箱包</a>
-				                </span>
-					        </div>
-				        </div>
-				        <div class="categorys-items-layer" ectype="cateLayer">
-				            <div class="cate-layer-con clearfix">
-				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_8"></div>
-									<div class="cate_detail" ectype="subitems_8"></div>
-				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_8"></div>
-				            </div>
-				        </div>
-				        <div class="clear"></div>
-				    </div>
-		            <div class="categorys-item" ectype="cateItem" data-id="860" data-eveval="0">
-				        <div class="item item-content">
-						    <i class="iconfont icon-heal"></i>
-						    <div class="categorys-title">
-				                <strong>
-						            <a href="category.php?id=860" target="_blank">个人化妆、清洁用品</a>
-					            </strong>
-					            <span>
-									<a href="category.php?id=876" target="_blank">面部护肤</a>
-									<a href="category.php?id=880" target="_blank">洗发护发</a>
-				                </span>
-					        </div>
-				        </div>
-				        <div class="categorys-items-layer" ectype="cateLayer">
-				            <div class="cate-layer-con clearfix">
-				                <div class="cate-layer-left">
-									<div class="cate_channel" ectype="channels_860"></div>
-									<div class="cate_detail" ectype="subitems_860"></div>
-				                </div>
-				                <div class="cate-layer-rihgt" ectype="brands_860"></div>
-				            </div>
-				        </div>
-				        <div class="clear"></div>
-				    </div>
+				    <?php endforeach; endif; else: echo "" ;endif; ?>
 				</div>
 			</div>
 		</div>
@@ -1501,7 +1362,7 @@
     <div class="footer-new-bot">
     	<div class="w w1200">
              
-			<p class="footer-ecscinfo pb10">
+			<p class="copyright_links">
 
 				<a href="<?php echo url('index/Index/index'); ?>">首页</a>
 
@@ -1525,7 +1386,11 @@
 				foreach ($footerCopyright as $k => $v ):
 			 if ($k <=1 ) { echo '<span>'.$v.'</span>'; } else { echo '<a href="#">'.$v.'</a>'; }endforeach?>
 			</p>
-	        
+
+
+
+
+
 	        <p class="copyright_auth">&nbsp;</p>
 	    </div>
     </div>

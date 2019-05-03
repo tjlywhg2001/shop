@@ -10,16 +10,14 @@ class Index extends Base
     public function index()
     {
 	    // dump($this->configss);die;
-	    $this -> HomeShowGoods();
+	    // $this -> HomeShowGoods();
+
+        // $CommRecpos = model('commodity') -> HomeShowGoods(2,1);
+        // dump($CommRecpos);die;
+
         return view();
     }
 
-    public function HomeShowGoods(){
-
-    	$recpos = db('recpos_comm');
-    	$recposlist = $recpos -> where(array('recpos_type' => 1,'recpos_id' => 1 )) -> select();
-    	dump($recposlist);die;
 
 
-    }
 }
