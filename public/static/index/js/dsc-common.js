@@ -111,7 +111,7 @@ $(function(){
 			   },
 			   dataType:'json',
 			   success: function(data){
-
+			   		// console.log(data);
 					var strLength = Number(data.topic_content.length),
 						channels = $("*[ectype='channels_" + data.cat_id + "']"),
 						subitems = $("*[ectype='subitems_" + data.cat_id + "']"),

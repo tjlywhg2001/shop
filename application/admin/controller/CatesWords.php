@@ -9,9 +9,8 @@
 	{
 		public function lst(){
 
-			// $cwList = db('cates_words') -> alias('cw')->field('cw.*,c.cates_name') -> join('cates c','cw.cw_cates_id=c.cates_id','LEFT') ->order('cw.cw_id desc')->paginate(25);
-			$cwList = db('cates') -> alias('cw')->field('cw.*,c.cw_word') -> join('cates_words c','c.cw_cates_id=cw.cates_id','RIGHT') ->order('cw.cates_id desc')->paginate(25);
-			dump($cwList);die;
+			$cwList = db('cates_words') -> alias('cw')->field('cw.*,c.cates_name') -> join('cates c','cw.cw_cates_id=c.cates_id','LEFT') ->order('cw.cw_id desc')->paginate(25);
+			// dump($cwList);die;
 			$this -> assign('cwList',$cwList);
 
 			return view('list');

@@ -24,8 +24,6 @@ class Cates extends Model
 
 
 
-
-
 	// 通过顶级分类ID获取二级和三级子分类
 	public function getCommCates($id){
 

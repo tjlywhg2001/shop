@@ -11,8 +11,9 @@ class CatesWords extends Model
 
 	public function getCommWords($id){
 
-		$CommWordList = $this -> where(''=> $id) -> select();
-		dump($CommWordList);die;
+		$CommWordList = $this -> where('cw_cates_id','=',$id) -> select();
+		// dump($CommWordList);die;
+		return $CommWordList;
 	}
 
 
