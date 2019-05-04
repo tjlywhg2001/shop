@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"B:\aaaweb\shop\public/../application/admin\view\data\importlist.html";i:1556930864;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556930864;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1556930864;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556930864;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,12 +42,9 @@
     
 </head>
 
-<script type="text/javascript" src="/static/admin/layui/layui.js"></script>
-
-
 <body>
-    <!-- 头部 -->
-	<div class="navbar">
+	<!-- 头部 -->
+    	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -105,12 +102,12 @@
     </div>
 </div>
 
-    <!-- /头部 -->
-    
-    <div class="main-container container-fluid">
-        <div class="page-container">
-                        <!-- Page Sidebar -->
-        <div class="page-sidebar" id="sidebar">
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -372,137 +369,28 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                        <li>
-                            <a href="<?php echo url('Index/index'); ?>">系统</a>
-                        </li>
-                        <li>
-                            <a href="">商品管理</a>
-                        </li>
-                        <li class="active">数据恢复</li>
-                    </ul>
+                                        <li class="active">控制面板</li>
+                                        </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-
-
-
-<!-- <div class="layui-form">
- -->   
-    <a class="btn btn-sm btn-azure btn-addon" href="javascript:;" autocomplete="off"> 数据库还原  </a>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="widget">
-                <div class="widget-body">
-                    <div class="flip-scroll">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-
-                                    <th class="text-center">数据库名称</th>
-                                    <th class="text-center">卷数</th>
-                                    <th class="text-center">压缩</th>
-                                    <th class="text-center">数据大小</th>
-                                    <th class="text-center">备份时间</th>
-                                    <th class="text-center">状态</th>
-                                    <th class="text-center">操作</th>
-                                </tr> 
-                            </thead>
-                            <tbody>
-                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): if( count($list)==0 ) : echo "" ;else: foreach($list as $key=>$data): ?>   
-                                <tr>
-                                    <td class="text-center"><?php echo date('Ymd-His',$data['time']); ?></td>
-                                    <td class="text-center"><?php echo $data['part']; ?></td>
-                                    <td class="text-center"><?php echo $data['compress']; ?></td>
-                                    <td class="text-center"><?php echo format_bytes($data['size']); ?></td>
-                                    <td class="text-center"><?php echo $key; ?></td>
-                                    <td class="status text-center" style="width: 200px;">-</td>
-                                    <td class="action text-center">
-                                        <a class="btn btn-primary btn-sm shiny db-import" href="<?php echo url('data/import',['time'=>$data['time']]); ?>">还原</a>&nbsp;
-                                        <a class="btn btn-danger btn-sm shiny" href="<?php echo url('data/del',['time'=>$data['time']]); ?>">删除</a>
-                                    </td>
-                                </tr>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                            </tbody>
-                            <script>
-                                layui.use(['jquery','layer'],function(){
-                                      window.$ = layui.$;
-                                      var layer = layui.layer;
-
-
-                                      $(".db-import").click(function(){
-                                            var self = this, status = ".";
-
-                                            $(this).parent().prevAll('.status').html("").html('等待还原');
-
-                                            $.get(self.href, success, "json");
-                                            window.onbeforeunload = function(){ return "正在还原数据库，请不要关闭！" }
-                                            return false;
-                                        
-                                            function success(data){
-
-                                                if(data.code==1){
-
-                                                    $(self).parent().prev().text(data.msg);
-
-                                                    if(data.data.part){
-                                                        $.get(self.href, 
-                                                            {"part" : data.data.part, "start" : data.data.start}, 
-                                                            success, 
-                                                            "json"
-                                                        );
-                                                        
-                                                    }  else {
-                                                        layer.alert(data.msg);
-                                                        //window.onbeforeunload = function(){ return null; }
-                                                    }
-                                                } else {
-                                                    layer.alert(data.msg);
-                                                }
-                                            }
-                                        });
-
-                                    //   $(".db-import").click(function(){
-                                    //     // console.log($(this).parents().find(".status").html() );//正常
-                                    //     // console.log($(this).parent().prevAll('.status').html() );
-                                    //     var statusem=$(this).parent().prevAll('.status');
-                                    //     $(this).parent().prevAll('.status').html("").html('等待还原');
-                                    //     thisobj=this;
-                                    //     $.post(this.href, function(data){
-                                         
-                                    //       if(data.code==1){
-                                    //         // statusem.text(""); // 清空数据
-                                    //         // statusem.append('data'); 
-                                    //         // statusem.text("").append('132');
-                                    //         // $(this).parent().prevAll('.status').html("").html(data.msg);//error ：异常原因无法获取当前节点
-                                    //         statusem.html(data.msg);
-                                    //         getdbimport(thisobj,data.data);
-                                    //       }
-                                    //     }, "json");
-                                    //     return false;
-                                    // });
-
-                                    });
-
-                                </script>
-
-                        </table>
-
-                    </div>
+                    
+				<div style="text-align:center; line-height:1000%; font-size:24px;">
+                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
                 </div>
-            </div>
-        </div>
-    </div>
-                  </div>
+                
+
+                </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-        </div>  
-    </div>
+		</div>	
+	</div>
 
-        <!--Basic Scripts-->
-    
+	    <!--Basic Scripts-->
+
 	<script type="text/javascript">
 
 	    //实例化编辑器
@@ -511,7 +399,7 @@
     
 
 
-	</script>
-    
+	</script>    
+
 
 </body></html>
