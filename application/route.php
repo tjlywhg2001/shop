@@ -94,7 +94,7 @@ use think\Route;
 // 首页
 Route::rule('index','index/Index/index','GET',['ext'=>'html']);
 
-// 其他页面
+// 文章和分类列表
 Route::rule([
 	'category/:cate_id'=>[
 		'index/category/index',
@@ -103,6 +103,12 @@ Route::rule([
 	'article/:ar_id'=>[
 		'index/article/index',
 		['ar_id'=>'\d{1,4}']
+	],
+	'cates/:Catesid'=>[
+		'index/cates/index',
+		['Catesid'=>'\d{1,4}']
 	]
 ], '', 'GET', ['ext'=>'html']);
+
+
 

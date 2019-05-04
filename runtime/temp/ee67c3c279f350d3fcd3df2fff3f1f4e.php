@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1556846466;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556846466;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556846466;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556877879;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1556846466;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556846466;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1556930864;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556930864;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556934607;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1556930864;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556930864;}*/ ?>
 <!doctype html>
 <html>
 
@@ -1186,7 +1186,7 @@
 						    <i class="iconfont icon-ele"></i>
 						    <div class="categorys-title">
 				                <strong>
-						            <a href="category.php?id=858" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
+						            <a href="#" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
 					            </strong>
 				            	<?php if($CommCates['children']): ?>
 					            <span>

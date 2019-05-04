@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1556930864;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556930864;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556937531;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1556930864;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556930864;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1556930864;}*/ ?>
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\goods\goods.html";i:1556930864;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556930864;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556932083;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1556930864;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556930864;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1556930864;}*/ ?>
+<!doctype html>
 <html>
 
-<head>
+	<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><?php echo $configArr['webname']; ?></title>
@@ -146,9 +146,9 @@
 	</script>
 </head>
 
-<body data-type="index1">
-
-		<div class="site-nav" id="site-nav">
+<body data-type="goods1">
+	
+	<div class="site-nav" id="site-nav">
     <div class="w w1200">
         <div class="fl">	
             <div class="city-choice" id="city-choice" data-ectype="dorpdown">
@@ -742,7 +742,7 @@
 
 
 
-		<div class="header">
+	<div class="header">
     <div class="w w1200">
         <div class="logo">
             <div class="logoImg"><a href="#"><img src="/static/index/img/logo.png"></a></div>
@@ -898,7 +898,7 @@
 </div>
 
 
-		<div class="nav dsc-zoom" ectype="dscNav">
+	<div class="nav dsc-zoom" ectype="dscNav">
 	<div class="w w1200">
 		<div class="categorys site-masts">
 			<div class="categorys-type"><a href="#">男装、女装、内衣</a></div>
@@ -1185,12 +1185,12 @@
 						    <i class="iconfont icon-ele"></i>
 						    <div class="categorys-title">
 				                <strong>
-						            <a href="" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
+						            <a href="<?php echo url('',['cate_id'=>$CommCates['cates_id']]); ?>" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
 					            </strong>
 				            	<?php if($CommCates['children']): ?>
 					            <span>
 					            	<?php if(is_array($CommCates['children']) || $CommCates['children'] instanceof \think\Collection || $CommCates['children'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CommCates['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesChildren): $mod = ($i % 2 );++$i;if($i < 3): ?>
-									<a href="" target="_blank"><?php echo $CatesChildren['cates_name']; ?></a>
+									<a href="category.php?id=1105" target="_blank"><?php echo $CatesChildren['cates_name']; ?></a>
 									<?php endif; endforeach; endif; else: echo "" ;endif; ?>
 				                </span>
 								<?php endif; ?>
@@ -1234,803 +1234,881 @@
 
 
 
-		<div class="banner catetop-banner">
-			<div class="bd">
-				<ul style="position: relative; width: 1903px; height: 450px;">
-					<li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none;"><div class="banner-width"><a style="background: url(/static/index/img/1489958299308242697.jpg) no-repeat;" href="https://www.dscmall.cn/" width="1903" height="327"></a></div></li>
-					<li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none;"><div class="banner-width"><a style="background: url(/static/index/img/1490123276201426626.jpg) no-repeat;" href="https://www.dscmall.cn/" width="1903" height="327"></a></div></li>
-					<li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none;"><div class="banner-width"><a style="background: url(/static/index/img/1490123436237080312.jpg) no-repeat;" href="https://www.dscmall.cn/" width="1903" height="327"></a></div></li>
-					<li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: none;"><div class="banner-width"><a style="background: url(/static/index/img/1490123306523369831.jpg) no-repeat;" href="https://www.dscmall.cn/" width="1903" height="327"></a></div></li>
-					<li style="position: absolute; width: 1903px; left: 0px; top: 0px; display: list-item;"><div class="banner-width"><a style="background: url(/static/index/img/1490123319351624402.jpg) no-repeat;" href="https://www.dscmall.cn/" width="1903" height="327"></a></div></li>
-				</ul>
-			</div>
-			<div class="cloth-hd">
-				<ul>
-					<li class="">1</li>
-					<li class="">2</li>
-					<li class="">3</li>
-					<li class="">4</li>
-					<li class="on">5</li>
-				</ul>
-			</div>
-		</div>
-		<div class="catetop-main w w1200" ectype="catetopWarp">
 
-			<div class="limitime" id="limitime">
-				<div class="hd">
-					<h2>限时抢购</h2>
-					<h3>每日精彩不断</h3>
+
+
+
+
+
+
+    <div class="full-main-n">
+        <div class="w w1200 relative">
+        <div class="crumbs-nav">
+	<div class="crumbs-nav-main clearfix">
+				<div class="crumbs-nav-item">
+			<div class="menu-drop">
+				<div class="trigger">
+					<a href="category.php?id=6"><span>男装、女装、内衣</span></a>
+					<i class="iconfont icon-down"></i>
 				</div>
-				<div class="bd">
-					<ul class="limitime-list clearfix">
-				
-						<li class="mod-shadow-card">
-							<a href="#" class="img"><img src="/static/index/img/0_thumb_G_1490174547624.jpg" alt=""></a>
-							<p class="price">
-								<em>¥</em>124.00											
-								<del><em>¥</em>165.60</del>
-							</p>
-							<a href="#" class="name" title="贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装">贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装</a>
-							<a href="#" class="limitime-btn">查看详情</a>
-						</li>
-						<li class="mod-shadow-card">
-							<a href="#" class="img"><img src="/static/index/img/0_thumb_G_1490174303715.jpg" alt=""></a>
-							<p class="price">
-								<em>¥</em>130.00											
-								<del><em>¥</em>190.79</del>
-							</p>
-							<a href="#" class="name" title="YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购">YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购</a>
-							<a href="#" class="limitime-btn">查看详情</a>
-						</li>
-						<li class="mod-shadow-card">
-							<a href="#" class="img"><img src="/static/index/img/0_thumb_G_1490174741051.jpg" alt=""></a>
-							<p class="price">
-								<em>¥</em>40.00											
-								<del><em>¥</em>78.00</del>
-							</p>
-							<a href="#" class="name" title="初棉纯色圆领长袖T恤打底衫秋衣女上衣体恤女士修身打底衣春秋 挺拔有型 棉氨材质 柔软舒适 耐洗耐磨">初棉纯色圆领长袖T恤打底衫秋衣女上衣体恤女士修身打底衣春秋 挺拔有型 棉氨材质 柔软舒适 耐洗耐磨</a>
-							<a href="#" class="limitime-btn">查看详情</a>
-						</li>
-						<li class="mod-shadow-card">
-							<a href="#" class="img"><img src="/static/index/img/0_thumb_G_1490174547624.jpg" alt=""></a>
-							<p class="price">
-								<em>¥</em>124.00											
-								<del><em>¥</em>165.60</del>
-							</p>
-							<a href="#" class="name" title="贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装">贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装</a>
-							<a href="#" class="limitime-btn">查看详情</a>
-						</li>
-						<li class="mod-shadow-card">
-							<a href="#" class="img"><img src="/static/index/img/0_thumb_G_1490174303715.jpg" alt=""></a>
-							<p class="price">
-								<em>¥</em>130.00											
-								<del><em>¥</em>190.79</del>
-							</p>
-							<a href="#" class="name" title="YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购">YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购</a>
-							<a href="#" class="limitime-btn">查看详情</a>
-						</li>
-									
+                				<div class="menu-drop-main">
+					<ul>
+<li><a href="category.php?id=347">女装</a></li>
+<li><a href="category.php?id=463">男装</a></li>
+<li><a href="category.php?id=547">内衣</a></li>
+<li><a href="category.php?id=630">服饰配件</a></li>
+<li><a href="category.php?id=1442">运动户外</a></li>
 					</ul>
 				</div>
+                			</div>
+			<i class="iconfont icon-right"></i>		</div>
+				<div class="crumbs-nav-item">
+			<div class="menu-drop">
+				<div class="trigger">
+					<a href="category.php?id=347"><span>女装</span></a>
+					<i class="iconfont icon-down"></i>
+				</div>
+                				<div class="menu-drop-main">
+					<ul>
+<li><a href="category.php?id=349">连衣裙</a></li>
+<li><a href="category.php?id=350">蕾丝/雪纺衫</a></li>
+<li><a href="category.php?id=351">衬衫</a></li>
+<li><a href="category.php?id=352">T恤</a></li>
+<li><a href="category.php?id=354">半身裙</a></li>
+<li><a href="category.php?id=356">休闲裤</a></li>
+<li><a href="category.php?id=358">短裤</a></li>
+<li><a href="category.php?id=361">牛仔裤</a></li>
+<li><a href="category.php?id=363">针织衫</a></li>
+<li><a href="category.php?id=365">吊带/背心</a></li>
+<li><a href="category.php?id=367">打底衫</a></li>
+<li><a href="category.php?id=369">打底裤</a></li>
+<li><a href="category.php?id=370">正装裤</a></li>
+<li><a href="category.php?id=372">小西服</a></li>
+<li><a href="category.php?id=374">马甲</a></li>
+<li><a href="category.php?id=377">风衣</a></li>
+<li><a href="category.php?id=379">羊毛衫</a></li>
+<li><a href="category.php?id=381">羊绒衫</a></li>
+<li><a href="category.php?id=383">短外套</a></li>
+<li><a href="category.php?id=385">棉服</a></li>
+<li><a href="category.php?id=388">毛呢大衣</a></li>
+<li><a href="category.php?id=390">加绒裤</a></li>
+<li><a href="category.php?id=395">羽绒服</a></li>
+<li><a href="category.php?id=400">皮草</a></li>
+<li><a href="category.php?id=429">真皮皮衣</a></li>
+<li><a href="category.php?id=431">仿皮皮衣</a></li>
+<li><a href="category.php?id=444">旗袍/唐装</a></li>
+<li><a href="category.php?id=448">礼服</a></li>
+<li><a href="category.php?id=451">婚纱</a></li>
+<li><a href="category.php?id=454">中老年女装</a></li>
+<li><a href="category.php?id=455">大码女装</a></li>
+					</ul>
+				</div>
+                			</div>
+			<i class="iconfont icon-right"></i>		</div>
+				<div class="crumbs-nav-item">
+			<div class="menu-drop">
+				<div class="trigger bottom">
+					<a href="category.php?id=350"><span>蕾丝/雪纺衫</span></a>
+					<i class="iconfont icon-down"></i>
+				</div>
+                			</div>
+			<i class="iconfont icon-right"></i>		</div>
+<span class="cn-goodsName">韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10</span>
 			</div>
-
-		
+</div>
+        </div>
+    </div>
+    <div class="container">
+    	<div class="w w1200">
+            <div class="product-info">
+                
+<div class="preview" if="preview">
+	<div class="gallery_wrap"><a href="/static/index/img/0_P_1490174858621.jpg" class="MagicZoomPlus" id="Zoomer" rel="hint-text: ; selectors-effect: false; selectors-class: img-hover; selectors-change: mouseover; zoom-distance: 10;zoom-width: 400; zoom-height: 474;"><img src="/static/index/img/0_P_1490174858621.jpg" id="J_prodImg" alt="韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10"></a></div>
+	<div class="spec-list">
+		<a href="javascript:void(0);" class="spec-prev"><i class="iconfont icon-left"></i></a>
+		<div class="spec-items">
+			<ul>
+            	            	 
+            <li>
+					<a href="/static/index/img/0_P_1490174858621.jpg" rel="zoom-id: Zoomer" rev="/static/index/img/0_P_1490174858621.jpg" class="img-hover">
+<img src="/static/index/img/0_thumb_P_1490174858959.jpg" alt="韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10" width="58" height="58" />
+					</a>
+				</li>
+                 
+              				</ul>
+		</div>
+		<a href="javascript:void(0);" class="spec-next"><i class="iconfont icon-right"></i></a>
+	</div>
+        <div class="short-share">
+        <div class="short-share-r bar_code hide">条形条码：<em id="bar_code"></em></div>        <div class="left-btn">
+            <div class="duibi">
+                <a href="javascript:void(0);" id="compareLink">
+<input type="checkbox" name="" class="ui-checkbox" id="799" onClick="Compare.add(this, 799,'韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10','0', '/static/index/img/0_thumb_G_1490174858999.jpg', '68', '<em>¥</em>81.60')">
+<label for="799" class="ui-label">对比</label>
+                </a>
+            </div>
+            <a href="javascript:void(0);" class="collection choose-btn-coll" data-dialog="goods_collect_dialog" data-divid="goods_collect" data-url="user.php?act=collect" data-goodsid="799"><i class="iconfont choose-btn-icon icon-collection" id="collection_iconfont"></i><em>收藏 (<span id="collect_count"></span>)</em></a>
+    <div class="bdsharebuttonbox" style=" width:50px; height:25px; float:left;">
+                <a href="javascript:void(0);" data-cmd="more" class="share bds_more" style=" width:50px; height:25px; background:none; margin:0px 0px 0px 15px; padding:0px;"><i class="iconfont icon-share"></i><em>分享</em></a>
+            </div>
+            			        </div>
+    </div>
+    </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=692785" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+	document.getElementById("bdshell_js").src = "https://test.dscmall.cn/static/api/js/share.js?v=89860593.js?cdnversion=" + new Date().getHours();
+</script>
+<script type="text/javascript">
+$(function(){
+	get_collection();
+});
+function get_collection(){
+	Ajax.call('ajax_dialog.php', 'act=goods_collection&goods_id=' + 799, goodsCollectionResponse, 'GET', 'JSON');
+}
+function goodsCollectionResponse(res){
+	$("#collect_count").html(res.collect_count);
 	
-			<div class="catetop-floor-wp" ectype="goods_cat_level">
-				<div class="catetop-floor" id="floor_1" ectype="floorItem">
-					<div class="f-hd">
-						<h2>女装</h2>
-						<h3>1F</h3>
-						<div class="extra">
-							<div class="fgoods-hd">
-								<ul>
-									<li class="on">连衣裙</li>
-									<li>蕾丝/雪纺衫</li>
-									<li>衬衫</li>
-									<li>T恤</li>
-									<li>半身裙</li>
+	if(res.is_collect > 0){
+		$(".collection").addClass('selected');
+		$("#collection_iconfont").addClass("icon-collection-alt");
+		$("#collection_iconfont").removeClass('icon-collection');
+	}else{
+		$(".collection").removeClass('selected');
+		$("#collection_iconfont").addClass("icon-collection");
+		$("#collection_iconfont").removeClass('icon-collection-alt');
+	}
+}
+</script>
+                <div class="product-wrap">
+<form action="javascript:addToCart(799)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY" >
+                		<div class="name">韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10</div>
+            <div class="summary">
+        <div class="summary-price-wrap">
+            <div class="s-p-w-wrap">
+                <div class="summary-item si-shop-price">
+<div class="si-tit">商 城 价</div>
+<div class="si-warp">
+    <strong class="shop-price" id="ECS_SHOPPRICE" ectype="SHOP_PRICE"></strong>
+    <span class="price-notify" data-userid="62" data-goodsid="799" ectype="priceNotify">降价通知</span>
+</div>
+                </div>
+            <div class="summary-item si-market-price">
+<div class="si-tit">市 场 价</div>
+<div class="si-warp"><div class="m-price" id="ECS_MARKETPRICE"><em>¥</em>81.60</div></div>
+                </div>
+            <div class="si-info">
+<div class="si-cumulative">累计评价<em>0</em></div>
+<div class="si-cumulative">累计销量<em>0</em></div>
+                </div>
+            <div class="si-phone-code">
+<div class="qrcode-wrap">
+    <div class="qrcode_tit">手机购买<i class="iconfont icon-qr-code"></i></div>
+    <div class="qrcode_pop">
+        <div class="mobile-qrcode"><img src="/static/index/img/weixin_code_799.png" alt="商品二维码" title="" width="175"></div>
+    </div>
+</div>
+                </div>
+        <div class="summary-item si-coupon">
+<div class="si-tit">领 券</div>
+<div class="si-warp">
+        <a class="J-open-tb" href="#none" data-goodsid="799">
+        <div class="quan-item"><i class="i-left"></i>满2000减100<i class="i-right"></i></div>
+    </a>
+        <a class="J-open-tb" href="#none" data-goodsid="799">
+        <div class="quan-item"><i class="i-left"></i>满1000减35<i class="i-right"></i></div>
+    </a>
+        <a class="J-open-tb" href="#none" data-goodsid="799">
+        <div class="quan-item"><i class="i-left"></i>满10000减500<i class="i-right"></i></div>
+    </a>
+        <a class="J-open-tb" href="#none" data-goodsid="799">
+        <div class="quan-item"><i class="i-left"></i>满10000减888<i class="i-right"></i></div>
+    </a>
+        <a class="J-open-tb" href="#none" data-goodsid="799">
+        <div class="quan-item"><i class="i-left"></i>满50000减5888<i class="i-right"></i></div>
+    </a>
+        <a class="J-open-tb" href="#none" data-goodsid="799">
+        <div class="quan-item"><i class="i-left"></i>满10减500<i class="i-right"></i></div>
+    </a>
+    </div>
+                </div>
+        <div class="clear"></div>
+            </div>
+        </div>
+        <div class="summary-basic-info">
+    
+    
+            <div class="summary-item is-stock">
+                <div class="si-tit">配送</div>
+                <div class="si-warp">
+<span class="initial-area">
+            上海市      
+</span>
+<span>至</span>
+<div class="store-selector">
+    <div class="text-select" id="area_address" ectype="areaSelect"></div>
+</div>
+<div class="store-warehouse">
+    <div class="store-warehouse-info"></div>
+    <div id="isHas_warehouse_num" class="store-prompt"></div>
+</div>
+                </div>  
+            </div>
+            <div class="summary-item is-service">
+                <div class="si-tit">服务</div>
+                <div class="si-warp">
+<div class="fl"> 
+    由 <a href="javascript:void(0)" class="link-red">童攀课堂</a> 发货并提供售后服务
+</div>
+<div class="fl pl10" id="user_area_shipping">
+</div>
+                </div>
+            </div>
+                <div class="summary-item is-integral">
+                <div class="si-tit">可用积分</div>
+                <div class="si-warp">可用 <span class="integral">0</span></div>
+            </div>
+                
+    <div class="summary-item is-number">
+                <div class="si-tit">数量</div>
+                <div class="si-warp">
+<div class="amount-warp">
+    <input class="text buy-num" ectype="quantity" value="1" name="number" defaultnumber="1">
+    <div class="a-btn">
+        <a href="javascript:void(0);" class="btn-add" ectype="btnAdd"><i class="iconfont icon-up"></i></a>
+        <a href="javascript:void(0);" class="btn-reduce btn-disabled" ectype="btnReduce"><i class="iconfont icon-down"></i></a>
+        <input type="hidden" name="perNumber" id="perNumber" ectype="perNumber" value="0">
+        <input type="hidden" name="perMinNumber" id="perMinNumber" ectype="perMinNumber" value="1">
+    </div>
+    <input name="confirm_type" id="confirm_type" type="hidden" value="3" />
+</div>
+<span>库存&nbsp;<em id="goods_attr_num" ectype="goods_attr_num"></em>&nbsp;个</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="choose-btns ml60 clearfix">
+        <a href="javascript:bool=0;addToCart(799)" data-type="0" class="btn-buynow" ectype="btn-buynow">立即购买</a>
+    <a href="javascript:bool=0;addToCartShowDiv(799)" class="btn-append" ectype="btn-append"><i class="iconfont icon-carts"></i>加入购物车</a>
+
+
+        </div>
+    <div class="summary-basic-info">
+            <div class="summary-item is-service">
+                <div class="si-tit">温馨提示</div>
+                <div class="si-warp gray">
+·不支持退换货服务
+                </div>
+            </div>
+        </div>
+        	</div>
+    <input type="hidden" value="62" id="user_id" name="user_id" />
+    <input type="hidden" value="799" id="good_id" name="good_id" />
+    <input type="hidden" value="2" id="region_id" name="region_id" />
+    <input type="hidden" value="16" id="area_id" name="area_id" />
+    <input type="hidden" value="0" name="street_list" />
+    <input type="hidden" value="0" name="restrictShop" ectype="restrictShop" />
+    <input type="hidden" value="1" name="add_shop_price" ectype="add_shop_price" />
+</form>
+                </div>
+            <div class="track">
+<div class="track_warp">
+	<div class="track-tit"><h3>看了又看</h3><span></span></div>
+    <div class="track-con">
+        <ul>
+    <li>
+                <div class="p-img"><a href="goods.php?id=635" target="_blank" title="韩都衣舍2017韩版女装新款黑白拼接插肩棒球服春季短外套HH5597妠 朴信惠同款 黑白拼接 插肩袖 棒球服"><img src="/static/index/img/0_thumb_G_1489102950633.jpg" width="140" height="140"></a></div>
+                <div class="p-name"><a href="goods.php?id=635" target="_blank" title="韩都衣舍2017韩版女装新款黑白拼接插肩棒球服春季短外套HH5597妠 朴信惠同款 黑白拼接 插肩袖 棒球服">韩都衣舍2017韩版女装新款黑白拼接插肩棒球服春季短外套HH5597妠 朴信惠同款 黑白拼接 插肩袖 棒球服</a></div>
+                <div class="price">
+    <em>¥</em>450.00				
+                </div>
+            </li>
+    <li>
+                <div class="p-img"><a href="goods.php?id=634" target="_blank" title="新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮"><img src="/static/index/img/0_thumb_G_1489102753231.jpg" width="140" height="140"></a></div>
+                <div class="p-name"><a href="goods.php?id=634" target="_blank" title="新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮">新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮</a></div>
+                <div class="price">
+    <em>¥</em>300.00				
+                </div>
+            </li>
+    <li>
+                <div class="p-img"><a href="goods.php?id=864" target="_blank" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品"><img src="/static/index/img/0_thumb_G_1490211620029.jpg" width="140" height="140"></a></div>
+                <div class="p-name"><a href="goods.php?id=864" target="_blank" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品">马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品</a></div>
+                <div class="price">
+    <em>¥</em>128.00				
+                </div>
+            </li>
+    <li>
+                <div class="p-img"><a href="goods.php?id=785" target="_blank" title="森马夹克 2016冬装新款男士飞行夹克贴布绣立领休闲外套韩版潮流"><img src="/static/index/img/0_thumb_G_1490174208112.jpg" width="140" height="140"></a></div>
+                <div class="p-name"><a href="goods.php?id=785" target="_blank" title="森马夹克 2016冬装新款男士飞行夹克贴布绣立领休闲外套韩版潮流">森马夹克 2016冬装新款男士飞行夹克贴布绣立领休闲外套韩版潮流</a></div>
+                <div class="price">
+    <em>¥</em>199.90				
+                </div>
+            </li>
+    <li>
+                <div class="p-img"><a href="goods.php?id=625" target="_blank" title="秋季新款男士套头卫衣印花外套韩版简约百搭潮流男生上衣服"><img src="/static/index/img/0_thumb_G_1489099437211.jpg" width="140" height="140"></a></div>
+                <div class="p-name"><a href="goods.php?id=625" target="_blank" title="秋季新款男士套头卫衣印花外套韩版简约百搭潮流男生上衣服">秋季新款男士套头卫衣印花外套韩版简约百搭潮流男生上衣服</a></div>
+                <div class="price">
+    <em>¥</em>120.00				
+                </div>
+            </li>
+</ul>
+    </div>
+    <div class="track-more">
+        <a href="javascript:void(0);" class="sprite-up"><i class="iconfont icon-up"></i></a>
+        <a href="javascript:void(0);" class="sprite-down"><i class="iconfont icon-down"></i></a>
+    </div>
+</div>
+                </div>
+            <div class="clear"></div>
+            </div>
+            
+ 
+            <div class="goods-main-layout">
+            	<div class="g-m-left">
+<div class="g-main g-store-info" ectype="gm-tabs">
+	<div class="mt">
+		<h3>童攀课堂</h3>
+					<a id="IM" onclick="openWin(this)" href="javascript:;" goods_id="799" class="s-a-kefu"><i class="icon i-kefu"></i></a>
+			</div>
+	<div class="mc">
+		<div class="mc-warp">
+			<div class="g-s-brand">
+		<a href="brand.php?id=160" target="_blank"><img src="/static/index/img/1490074901892372216.jpg" /></a>
+</div>
+		</div>
+	</div>
+</div>
+        <div class="g-main service_list">
+        <div class="mt"><h3>店内客服</h3></div>
+        <div class="mc">
+            <ul>
+                <li class="service_qq"><a href="http://wpa.qq.com/msgrd?v=3&uin=349488953&site=qq&menu=yes" target="_blank"><i class="icon i-kefu"></i><span>客服一</span></a></li>
+                <li class="service_qq"><a href="http://wpa.qq.com/msgrd?v=3&uin=1234567&site=qq&menu=yes" target="_blank"><i class="icon i-kefu"></i><span>客服二</span></a></li>
+        </ul>
+        </div>
+    </div>
+    
+
+<div class="g-main">
+	<div class="mt">
+        <h3>相关分类</h3>
+    </div>
+    <div class="mc">
+        <div class="mc-warp">
+        	<div class="items">
+        <div class="item"><a href="category.php?id=349" target="_blank">连衣裙</a></div>
+    <div class="item"><a href="category.php?id=350" target="_blank">蕾丝/雪纺衫</a></div>
+    <div class="item"><a href="category.php?id=351" target="_blank">衬衫</a></div>
+    <div class="item"><a href="category.php?id=352" target="_blank">T恤</a></div>
+    <div class="item"><a href="category.php?id=354" target="_blank">半身裙</a></div>
+    <div class="item"><a href="category.php?id=356" target="_blank">休闲裤</a></div>
+    <div class="item"><a href="category.php?id=358" target="_blank">短裤</a></div>
+    <div class="item"><a href="category.php?id=361" target="_blank">牛仔裤</a></div>
+    <div class="item"><a href="category.php?id=363" target="_blank">针织衫</a></div>
+    <div class="item"><a href="category.php?id=365" target="_blank">吊带/背心</a></div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<div class="g-main">
+	<div class="mt">
+        <h3>同类其他品牌</h3>
+    </div>
+    <div class="mc">
+        <div class="mc-warp">
+        	<div class="items">
+            <div class="item"><a href="brand.php?id=160" target="_blank">美的</a></div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
 					
-								</ul>
-							</div>
-						</div>
+
+<div class="g-main g-rank">
+    <div class="mc">
+        <ul class="mc-tab" ectype="rankMcTab">
+        	<li class="curr">新品</li>            <li>推荐</li>            <li>热销</li>        </ul>
+    	<div class="mc-content">
+                
+                
+<div class="mc-main" style="display:block;">
+	<div class="mcm-left">
+		<div class="spirit"></div>
+				<div class="rank-number rank-number1">1</div>
+				<div class="rank-number rank-number2">2</div>
+				<div class="rank-number rank-number3">3</div>
+			</div>
+	<div class="mcm-right">
+		<ul>
+<li>
+				<div class="p-img"><a href="goods.php?id=864" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品"><img src="/static/index/img/0_thumb_G_1490211620029.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=864" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品">马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品</a></div>
+				<div class="p-price">
+					<em>¥</em>128.00			</div>
+			</li>
+<li>
+				<div class="p-img"><a href="goods.php?id=863" title="马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98"><img src="/static/index/img/0_thumb_G_1490211575591.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=863" title="马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98">马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98</a></div>
+				<div class="p-price">
+					<em>¥</em>98.00			</div>
+			</li>
+<li>
+				<div class="p-img"><a href="goods.php?id=865" title="美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购"><img src="/static/index/img/0_thumb_G_1490211700709.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=865" title="美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购">美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购</a></div>
+				<div class="p-price">
+					<em>¥</em>89.00			</div>
+			</li>
+					</ul>
+	</div>
+</div>
+                 
+                
+                
+<div class="mc-main" style="display:block;">
+	<div class="mcm-left">
+		<div class="spirit"></div>
+				<div class="rank-number rank-number1">1</div>
+				<div class="rank-number rank-number2">2</div>
+				<div class="rank-number rank-number3">3</div>
+			</div>
+	<div class="mcm-right">
+		<ul>
+<li>
+				<div class="p-img"><a href="goods.php?id=864" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品"><img src="/static/index/img/0_thumb_G_1490211620029.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=864" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品">马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品</a></div>
+				<div class="p-price">
+					<em>¥</em>128.00			</div>
+			</li>
+<li>
+				<div class="p-img"><a href="goods.php?id=863" title="马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98"><img src="/static/index/img/0_thumb_G_1490211575591.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=863" title="马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98">马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98</a></div>
+				<div class="p-price">
+					<em>¥</em>98.00			</div>
+			</li>
+<li>
+				<div class="p-img"><a href="goods.php?id=865" title="美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购"><img src="/static/index/img/0_thumb_G_1490211700709.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=865" title="美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购">美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购</a></div>
+				<div class="p-price">
+					<em>¥</em>89.00			</div>
+			</li>
+					</ul>
+	</div>
+</div>
+                 
+                
+                
+<div class="mc-main" style="display:block;">
+	<div class="mcm-left">
+		<div class="spirit"></div>
+				<div class="rank-number rank-number1">1</div>
+				<div class="rank-number rank-number2">2</div>
+				<div class="rank-number rank-number3">3</div>
+			</div>
+	<div class="mcm-right">
+		<ul>
+<li>
+				<div class="p-img"><a href="goods.php?id=864" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品"><img src="/static/index/img/0_thumb_G_1490211620029.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=864" title="马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品">马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品</a></div>
+				<div class="p-price">
+					<em>¥</em>128.00			</div>
+			</li>
+<li>
+				<div class="p-img"><a href="goods.php?id=863" title="马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98"><img src="/static/index/img/0_thumb_G_1490211575591.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=863" title="马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98">马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98</a></div>
+				<div class="p-price">
+					<em>¥</em>98.00			</div>
+			</li>
+<li>
+				<div class="p-img"><a href="goods.php?id=865" title="美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购"><img src="/static/index/img/0_thumb_G_1490211700709.jpg" width="130" height="130"></a></div>
+				<div class="p-name"><a href="goods.php?id=865" title="美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购">美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购</a></div>
+				<div class="p-price">
+					<em>¥</em>89.00			</div>
+			</li>
+					</ul>
+	</div>
+</div>
+                 
+            </div>
+        </div>
+    </div>
+
+
+<div class="g-main g-history">
+	<div class="mt">
+		<h3>最近浏览</h3>
+		<a onclick="clear_history()" class="clear_history ftx-05 fr mt10 mr10" href="javascript:void(0);">清空</a>
+	</div>
+	<div class="mc">
+		<div class="mc-warp" id="history_list" ectype="history_mian">
+			<ul>
+				                				<li>
+					<div class="p-img"><a href="goods.php?id=799" target="_blank" title="韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10"><img src="/static/index/img/0_thumb_G_1490174858999.jpg" width="170" height="170"></a></div>
+<div class="p-name"><a href="goods.php?id=799" target="_blank">韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10</a></div>
+					<div class="p-lie">
+<div class="p-price">
+			<em>¥</em>68.00	</div>
 					</div>
-					<div class="f-bd clearfix">
-						<div class="bd-left">
-							<div class="l-ad">
-								<ul>
-								    <li><a href="#"><img src="/static/index/img/1489959091429324080.jpg" width="400" height="660"></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="bd-right">
-							<div class="right-top clearfix">
-								<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902198662849705.png" width="399" height="170"></a></div>
-								<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902716880024601.jpg" width="399" height="170"></a></div>
-							</div>
-							<div class="right-bottom" style="position: relative; width: 800px; height: 488px;">
-							<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px;">
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169030833.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩都衣舍2017韩版女装夏装新款时尚修身显瘦圆领条纹T恤OGY7711娋 显瘦版型 舒适面料 条纹元素</a></div>
-									<div class="p-price"><em>¥</em>88.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169216444.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩都衣舍2016新款秋冬款长袖连衣裙宽松学生冬季内搭打底裙子韩版 领券下单立减/单件包邮/先拍先发货！</a></div>
-									<div class="p-price"><em>¥</em>159.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169250846.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩都衣舍秋冬喇叭长袖针织衫毛衣女套头宽松纯色百搭学生韩版打底 领券下单立减/单件包邮/先拍先发货！</a></div>
-									<div class="p-price"><em>¥</em>159.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169151126.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩都衣舍春季韩国ulzzang连帽卫衣女套头宽松百搭学生韩版潮bf风 领券下单立减/单件包邮/先拍先发货！</a></div>
-									<div class="p-price"><em>¥</em>148.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174894779.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">2017韩版女装夏装新款A字宽松松紧腰印花连衣裙DT7039乾 舒适松紧腰 A字版型 时尚印花</a></div>
-									<div class="p-price"><em>¥</em>166.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169281436.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩都衣舍2017韩版女装春装新款条纹显瘦百搭宽松v领七分袖衬衫潮 领券立减/单件包邮/七天无理由退换</a></div>
-									<div class="p-price"><em>¥</em>78.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169186175.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩都衣舍2017春装新款女装春款拼接喇叭长袖连衣裙中长款时尚韩版 领券立减/单件包邮/七天无理由退换</a></div>
-									<div class="p-price"><em>¥</em>118.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169118213.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">小米红米3s手机壳保护套红米3高配版指纹男女款潮版磨砂硬壳防摔 收藏截图 送大礼包</a></div>
-									<div class="p-price"><em>¥</em>15.90</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169074773.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">朴信惠明显同款韩都衣舍2017春装新款高领毛衣女套头宽松纯色韩版 领券下单立减/单件包邮/先拍先发货！</a></div>
-									<div class="p-price"><em>¥</em>259.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490168991044.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩都衣舍2017韩版女装夏装新款纯色镂空露腰短袖T恤OU7163堯 韩版版型 时尚镂空 舒适面料 个性穿搭</a></div>
-									<div class="p-price"><em>¥</em>112.00</div>
-								</li>
-							</ul>
-							<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174858999.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10</a></div>
-									<div class="p-price"><em>¥</em>68.00</div>
-								</li>
-							</ul>
-							<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-							</ul>
-							<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174741051.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">初棉纯色圆领长袖T恤打底衫秋衣女上衣体恤女士修身打底衣春秋 挺拔有型 棉氨材质 柔软舒适 耐洗耐磨</a></div>
-									<div class="p-price"><em>¥</em>65.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489102753231.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮</a></div>
-									<div class="p-price"><em>¥</em>300.00</div>
-								</li>
-							</ul>
-							<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174791219.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">17年春夏新款百搭半身裙蛋糕裙 a字裙 裤裙伞裙大码裙子超短裙女 松紧腰围 带裤边打底衬 涤针织面料</a></div>
-									<div class="p-price"><em>¥</em>49.00</div>
-								</li>
-								<li>
-									<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489102299856.jpg" alt=""></a></div>
-									<div class="p-name"><a href="#">新款学院风韩版时尚太空棉宽松长袖印花圆领卫衣女</a></div>
-									<div class="p-price"><em>¥</em>233.00</div>
-								</li>
-							</ul>
-						</div>
+				</li>
+                				                				<li>
+					<div class="p-img"><a href="goods.php?id=626" target="_blank" title="秋冬新款加绒圆领套头卫衣男青年男生韩版潮流学生休闲外套男"><img src="/static/index/img/0_thumb_G_1489099544749.jpg" width="170" height="170"></a></div>
+<div class="p-name"><a href="goods.php?id=626" target="_blank">秋冬新款加绒圆领套头卫衣男青年男生韩版潮流学生休闲外套男</a></div>
+					<div class="p-lie">
+<div class="p-price">
+			<em>¥</em>168.00	</div>
 					</div>
-					<div class="clear"></div>
-							<ul class="brands">
-								<li><a href="#"><img src="/static/index/img/1490071974970349584.jpg" alt="esprit"></a></li>
-								<li><a href="#"><img src="/static/index/img/1490072756032175204.jpg" alt="喜瑞"></a></li>
-								<li><a href="#"><img src="/static/index/img/1490073577683159021.jpg" alt="华帝"></a></li>
-								<li><a href="#"><img src="/static/index/img/1490073591535005714.jpg" alt="鸿星尔克"></a></li>
-								<li><a href="#"><img src="/static/index/img/1490072860522023692.jpg" alt="乐力"></a></li>
-								<li><a href="#"><img src="/static/index/img/1490074030328949587.jpg" alt="LG"></a></li>
-								<li><a href="#"><img src="/static/index/img/1490228075580091113.jpg" alt="麦斯威尔"></a></li>
-								<li><a href="#"><img src="/static/index/img/1490074901892372216.jpg" alt="美的"></a></li>
-							</ul>
-						</div>
+				</li>
+                				                				<li>
+					<div class="p-img"><a href="goods.php?id=865" target="_blank" title="美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购"><img src="/static/index/img/0_thumb_G_1490211700709.jpg" width="170" height="170"></a></div>
+<div class="p-name"><a href="goods.php?id=865" target="_blank">美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购</a></div>
+					<div class="p-lie">
+<div class="p-price">
+			<em>¥</em>89.00	</div>
 					</div>
+				</li>
+                				                				<li>
+					<div class="p-img"><a href="goods.php?id=775" target="_blank" title="韩都衣舍2017韩版女装春装新款条纹显瘦百搭宽松v领七分袖衬衫潮 领券立减/单件包邮/七天无理由退换"><img src="/static/index/img/0_thumb_G_1490169281436.jpg" width="170" height="170"></a></div>
+<div class="p-name"><a href="goods.php?id=775" target="_blank">韩都衣舍2017韩版女装春装新款条纹显瘦百搭宽松v领七分袖衬衫潮 领券立减/单件包邮/七天无理由退换</a></div>
+					<div class="p-lie">
+<div class="p-price">
+			<em>¥</em>78.00	</div>
+					</div>
+				</li>
+                				                				<li>
+					<div class="p-img"><a href="goods.php?id=768" target="_blank" title="韩都衣舍2017韩版女装夏装新款时尚修身显瘦圆领条纹T恤OGY7711娋 显瘦版型 舒适面料 条纹元素"><img src="/static/index/img/0_thumb_G_1490169030833.jpg" width="170" height="170"></a></div>
+<div class="p-name"><a href="goods.php?id=768" target="_blank">韩都衣舍2017韩版女装夏装新款时尚修身显瘦圆领条纹T恤OGY7711娋 显瘦版型 舒适面料 条纹元素</a></div>
+					<div class="p-lie">
+<div class="p-price">
+			<em>¥</em>88.00	</div>
+					</div>
+				</li>
+                				                				                				                				                				                	</ul>
+		</div>
+	</div>
+</div>
 
 
 
 
+                </div>
+                <div class="g-m-detail">
+                	<div class="gm-tabbox" ectype="gm-tabs">
+	<ul class="gm-tab">
+        <li class="curr" ectype="gm-tab-item">商品详情</li>
+                <li ectype="gm-tab-item">用户评论（<em class="ReviewsCount">0</em>）</li>
+        <li ectype="gm-tab-item">网友讨论圈</li>
+    </ul>
+    <div class="extra">
+    	<div class="item">
+		            <div class="si-phone-code">
+                <div class="qrcode-wrap">
+<div class="qrcode_tit">手机购买<i class="iconfont icon-qr-code"></i></div>
+<div class="qrcode_pop">
+    <div class="mobile-qrcode"><img src="/static/index/img/weixin_code_799.png" alt="商品二维码" title="" width="175"></div>
+</div>
+                </div>
+            </div>
+		        	<div class="inner">
+            	<a href="javascript:void(0)" class="btn sc-redBg-btn" id="btn-anchor" ectype="tb-tab-anchor">加入购物车</a>
+            	<div class="tb-popsku">
+                	<span class="arrow-top"></span>
+<div class="tb-popsku-content">
+	<div class="tb-list">
+    	<div class="tb-label">价格：</div>
+        <div class="tb-value"><strong class="shop-price" ectype="SHOP_PRICE"></strong></div>
+    </div>
+    	<div class="tb-list">
+    	<div class="tb-label">数量：</div>
+<div class="tb-value">
+	<div class="amount-warp">
+		<input class="text buy-num" ectype="quantity" value="1" name="number" defaultnumber="1">
+		<div class="a-btn">
+			<a href="javascript:void(0);" class="btn-add" ectype="btnAdd"><i class="iconfont icon-up"></i></a>
+			<a href="javascript:void(0);" class="btn-reduce btn-disabled" ectype="btnReduce"><i class="iconfont icon-down"></i></a>
+		</div>
+		<input name="confirm_type" id="confirm_type" type="hidden" value="3" />
+	</div>
+	<span class="lh30 ml10">库存&nbsp;<em ectype="goods_attr_num"></em>&nbsp;个</span>
+</div>
+					</div>
+    <div class="tb-list">
+    	<div class="tb-label">&nbsp;</div>
+        <div class="tb-value">
+	<a href="javascript:bool=0;addToCartShowDiv(799)" class="cz-btn cz-btn-true" ectype="btn-append">确定</a>
+            <a href="javascript:void(0);" class="cz-btn cz-btn-false" ectype="tb-cancel">取消</a>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gm-tab-qp-bort" ectype="qp-bort"></div>
+</div>
+<div class="gm-floors" ectype="gm-floors">
+    <div class="gm-f-item gm-f-details" ectype="gm-item">
+        <div class="gm-title">
+            <h3>商品详情</h3>
+        </div>
+        <div class="goods-para-list">
+            <dl class="goods-para">
+                <dd class="column"><span>商品名称：韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10</span></dd>
+                <dd class="column"><span>商品编号：ECS000799</span></dd>
+                <dd class="column"><span>店铺：<a href="" title="童攀课堂" target="_blank">童攀课堂</a></span></dd>
+            <dd class="column"><span>重量：0克</span></dd>
+        <dd class="column"><span>上架时间：2017-03-23 01:27:47</span></dd>
+        </dl>
+        
+    </div>
+        
+            </div>
+        <div class="gm-f-item gm-f-comment" ectype="gm-item">
+        <div class="gm-title">
+            <h3>评论晒单</h3>
+            <ul class="gm-f-tab" ectype="gmf-tab">
+    <li class="curr" rev="0"><a href="javascript:;">全部<em>(0)</em></a></li>
+    <li rev="1"><a href="javascript:;">好评<em>(0)</em></a></li>
+    <li rev="2"><a href="javascript:;">中评<em>(0)</em></a></li>
+    <li rev="3" class="last"><a href="javascript:;">差评<em>(0)</em></a></li>
+</ul>        </div>
+        <div class="gm-warp">
+            <div class="praise-rate-warp">
+                <div class="rate">
+<strong>100</strong>
+<span class="rate-span">
+    <span class="tit">好评率</span>
+    <span class="bf">%</span>
+</span>
+                </div>
+                <div class="actor-new">
+<div class="not_impression">此商品还没有设置买家印象，陪我一起等下嘛~</div>
+                </div>
+            </div>
+            <div class="com-list-main">
+            
+<div id="ECS_COMMENT"> <div class="no_records no_comments_qt">
+    <i class="no_icon no_icon_three"></i>
+    <span class="block">暂无评价</span>
+</div>
 
-					<div class="catetop-floor" id="floor_2" ectype="floorItem">
-						<div class="f-hd">
-							<h2>男装</h2>
-							<h3>2F</h3>
-							<div class="extra">
-								<div class="fgoods-hd">
-									<ul>
-										<li class="on">T恤</li>
-										<li>裤子</li>
-										<li>POLO衫</li>
-										<li>针织衫</li>
-										<li>夹克</li>
-								
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="f-bd clearfix">
-							<div class="bd-left">
-								<div class="l-ad">
-									<ul>
-									    <li><a href="#"><img src="/static/index/img/1490211733278354775.png" width="400" height="660"></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="bd-right">
-								<div class="right-top clearfix">
-									<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902568354711628.jpg" width="399" height="170"></a></div>
-									<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902583818745610.jpg" width="399" height="170"></a></div>
-								</div>
-								<div class="right-bottom" style="position: relative; width: 800px; height: 488px;">
-									<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px;">
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490211620029.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">马克华菲长袖T恤男士圆领修身韩版刺绣纯棉2017春装新款潮t 7002 立体3D绣花 欧美潮流范 17春装新品</a></div>
-											<div class="p-price"><em>¥</em>128.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490211575591.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤   98</a></div>
-											<div class="p-price"><em>¥</em>98.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490211700709.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">美特斯邦威长袖T恤男士2017春装新款时尚印花百搭205064商场同款 1元秒100元优惠券丨限量抢丨立即抢购</a></div>
-											<div class="p-price"><em>¥</em>89.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489099773629.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">2017春装新款男士卫衣套头圆领韩版潮流时尚男生休闲外套</a></div>
-											<div class="p-price"><em>¥</em>200.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489099544749.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">秋冬新款加绒圆领套头卫衣男青年男生韩版潮流学生休闲外套男</a></div>
-											<div class="p-price"><em>¥</em>168.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489099437211.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">秋季新款男士套头卫衣印花外套韩版简约百搭潮流男生上衣服</a></div>
-											<div class="p-price"><em>¥</em>120.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174019725.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">HLA/海澜之家撞色长袖T恤春季热卖圆领修身拼接T恤男 简约圆领 微弹修身 撞色拼接 触感柔软</a></div>
-											<div class="p-price"><em>¥</em>98.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490211843119.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">马克华菲短袖T恤 夏装新款舒适圆领条纹拼接男简约修身短袖上衣</a></div>
-											<div class="p-price"><em>¥</em>128.00</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174208112.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">森马夹克 2016冬装新款男士飞行夹克贴布绣立领休闲外套韩版潮流</a></div>
-											<div class="p-price"><em>¥</em>199.90</div>
-										</li>
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174303715.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购</a></div>
-											<div class="p-price"><em>¥</em>159.00</div>
-										</li>
-									</ul>
-									<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-										<li>
-											<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174241651.jpg" alt=""></a></div>
-											<div class="p-name"><a href="#">裤子男士哈伦裤春季新款2017束脚裤修身韩版潮流小脚裤男裤休闲裤 弹力</a></div>
-											<div class="p-price"><em>¥</em>99.00</div>
-										</li>
-									</ul>
-									<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-									</ul>
-									<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-									</ul>
-									<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-									</ul>
-								</div>
-							</div>
-							<div class="clear"></div>
-								<ul class="brands">
-									<li><a href="#"><img src="/static/index/img/1490073529881448780.jpg" alt="匡威"></a></li>
-									<li><a href="#"><img src="/static/index/img/1490072981305868823.jpg" alt="开普特"></a></li>
-									<li><a href="#"><img src="/static/index/img/1490072373278367315.jpg" alt="金利来"></a></li>
-									<li><a href="#"><img src="/static/index/img/1490072879222701895.jpg" alt="金史密斯"></a></li>
-									<li><a href="#"><img src="/static/index/img/1490073539440462760.jpg" alt="康恩贝"></a></li>
-									<li><a href="#"><img src="/static/index/img/1490072765604121481.jpg" alt="康比特"></a></li>
-									<li><a href="#"><img src="/static/index/img/1490073675778205608.jpg" alt="哥弟"></a></li>
-									<li><a href="#"><img src="/static/index/img/1490073240845049320.jpg" alt="小米"></a></li>
-								</ul>
-							</div>
-						</div>
-
-
-
-
-
-						<div class="catetop-floor" id="floor_3" ectype="floorItem">
-							<div class="f-hd">
-								<h2>服饰配件</h2>
-								<h3>3F</h3>
-								<div class="extra">
-									<div class="fgoods-hd">
-										<ul>
-											<li class="on">配饰</li>
-											<li>光学镜架/镜片</li>
-											<li>防辐射眼镜</li>
-											<li>女士丝巾/围巾/披肩</li>
-											<li>棒球帽</li>
-								
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="f-bd clearfix">
-								<div class="bd-left">
-									<div class="l-ad">
-										<ul>    
-											<li><a href="#"><img src="/static/index/img/1490211940085510775.png" width="400" height="660"></a></li>
-										</ul>
-									</div>
-								</div>
-								<div class="bd-right">
-									<div class="right-top clearfix">
-										<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902595862278495.jpg" width="399" height="170"></a></div>
-										<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902606945055998.jpg" width="399" height="170"></a></div>
-									</div>
-									<div class="right-bottom" style="position: relative; width: 800px; height: 488px;">
-										<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px;">
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173894447.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">红叶伞遮阳伞防紫外线黑胶防晒晴雨两用太阳伞女糖果色折叠雨伞大 黑胶防晒 晴雨两用 糖果色 都市风情</a></div>
-												<div class="p-price"><em>¥</em>38.00</div>
-											</li>
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173663577.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">男女韩版纯棉可爱冬季个性防尘情侣口罩保暖透气黑色时尚潮款春 15元一共2个口罩 防尘个性时尚</a></div>
-												<div class="p-price"><em>¥</em>15.00</div>
-											</li>
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490155369648.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">Apple/苹果 Apple Watch Series 2 智能手表42mm</a></div>
-												<div class="p-price"><em>¥</em>3188.00</div>
-											</li>
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489108087695.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">【新品发售】 Beats Beats Solo3 Wireless 头戴式无线蓝牙耳机 分期免息 全国联保 免费保修一年</a></div>
-												<div class="p-price"><em>¥</em>1888.00</div>
-											</li>
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173626566.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">74超薄非球面镜片高度近视眼镜片近视镜片防蓝光配眼镜镜片加工 套餐价低至359元 6款镜架任您选</a></div>
-												<div class="p-price"><em>¥</em>399.00</div>
-											</li>
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173699371.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">宝石蝶真丝围巾女士春秋季高档丝巾重磅桑蚕丝大方巾披肩丝绸礼品 16姆米重磅真丝丝滑缎面90方巾礼盒包装</a></div>
-												<div class="p-price"><em>¥</em>169.00</div>
-											</li>
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173534127.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">NewEra纽亦华 新款MLB棒球帽男女字母NY洋基LA道奇调节平沿嘻哈帽 官方正品</a></div>
-												<div class="p-price"><em>¥</em>219.00</div>
-											</li>
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173860746.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">6林志玲花样姐姐同款海伦凯勒太阳镜女 偏光蛤蟆镜潮墨镜H8535 花样姐姐同款 林志玲设计 炫彩镂空</a></div>
-												<div class="p-price"><em>¥</em>378.00</div>
-											</li>
-										</ul>
-										<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-										</ul>
-										<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-										</ul>
-										<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-										</ul>
-										<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-											<li>
-												<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173534127.jpg" alt=""></a></div>
-												<div class="p-name"><a href="#">NewEra纽亦华 新款MLB棒球帽男女字母NY洋基LA道奇调节平沿嘻哈帽 官方正品</a></div>
-												<div class="p-price"><em>¥</em>219.00</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-								<div class="clear"></div>
-									<ul class="brands">
-										<li><a href="#"><img src="/static/index/img/1490228100138579787.jpg" alt="杰克琼斯"></a></li>
-										<li><a href="#"><img src="/static/index/img/1490072804442637685.jpg" alt="健安喜"></a></li>
-										<li><a href="#"><img src="/static/index/img/1490171981556005380.jpg" alt="佳沪数码-华为"></a></li>
-										<li><a href="#"><img src="/static/index/img/1490073561018734078.jpg" alt="姬芮"></a></li>
-										<li><a href="#"><img src="/static/index/img/1490072823106532144.jpg" alt="金奥力"></a></li>
-										<li><a href="#"><img src="/static/index/img/1490072677495061584.jpg" alt="justyle"></a></li>
-										<li><a href="#"><img src="/static/index/img/1490074901892372216.jpg" alt="美的"></a></li>
-									</ul>
-								</div>
-							</div>
-
-
-
-
-
-							<div class="catetop-floor" id="floor_4" ectype="floorItem">
-								<div class="f-hd">
-									<h2>内衣</h2>
-									<h3>4F</h3>
-									<div class="extra">
-										<div class="fgoods-hd">
-											<ul>
-												<li class="on">内衣配件</li>
-												<li>文胸</li>
-												<li>睡衣/家居服</li>
-												<li>情侣睡衣</li>
-												<li>文胸套装</li>
-									
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="f-bd clearfix">
-									<div class="bd-left">
-										<div class="l-ad">
-											<ul>
-											    <li><a href="#"><img src="/static/index/img/1490211951765051111.png" width="400" height="660"></a></li>
-											</ul>
-										</div>
-									</div>
-									<div class="bd-right">
-										<div class="right-top clearfix">
-											<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902618861680555.jpg" width="399" height="170"></a></div>
-											<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902628538237349.jpg" width="399" height="170"></a></div>
-										</div>
-										<div class="right-bottom" style="position: relative; width: 800px; height: 488px;">
-											<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px;">
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489099987431.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">爆款 爱慕经典KiKi裤轻薄无痕女士中腰三角内裤多色内衣A</a></div>
-													<div class="p-price"><em>¥</em>88.00</div>
-												</li>
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174547624.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装</a></div>
-													<div class="p-price"><em>¥</em>138.00</div>
-												</li>
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174469373.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">Calvin Klein Underwear/CK 2017春夏新款 男士平角内裤NU8638 初上市价格290元</a></div>
-													<div class="p-price"><em>¥</em>290.00</div>
-												</li>
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489100049187.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">2017新品 加一尚品无痕内衣女 前扣无钢圈薄款交叉美背文胸M37 厚杯+薄杯 无钢圈 前扣 美背 上薄下厚</a></div>
-													<div class="p-price"><em>¥</em>158.00</div>
-												</li>
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489100653308.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">樱尚雅一片式无痕无钢圈文胸聚拢调整型性感小胸罩厚薄款少女内衣 2件减5元 不聚拢包退 送运费险</a></div>
-													<div class="p-price"><em>¥</em>200.00</div>
-												</li>
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489100914563.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">舒适睡眠文胸罩无痕薄款运动内衣无钢圈女士调整型背心式少女聚拢 赠运费险 无痕无钢圈 舒适聚拢</a></div>
-													<div class="p-price"><em>¥</em>211.00</div>
-												</li>
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174663688.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">都市丽人文胸旗舰店 林志玲有钢圈少女小胸文胸 聚拢 调整型内衣V 官方正品 赠运费险 收藏有礼 全国包邮</a></div>
-													<div class="p-price"><em>¥</em>69.00</div>
-												</li>
-												<li>
-													<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174703131.jpg" alt=""></a></div>
-													<div class="p-name"><a href="#">都市丽人一片式无痕文胸厚杯性感聚拢舒适光面胸罩纯色商场同款 2016新品明星同款舒适Q软托无痕体验</a></div>
-													<div class="p-price"><em>¥</em>91.00</div>
-												</li>
-											</ul>
-											<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-											</ul>
-											<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-											</ul>
-											<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-											</ul>
-											<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-											</ul>
-										</div>
-									</div>
-									<div class="clear"></div>
-											<ul class="brands">
-												<li><a href="#"><img src="/static/index/img/1490072950580851309.jpg" alt="Masentek"></a></li>
-												<li><a href="#"><img src="/static/index/img/1490227784119952387.jpg" alt="李医生"></a></li>
-												<li><a href="#"><img src="/static/index/img/1490073518703639070.jpg" alt="兰蔻"></a></li>
-												<li><a href="#"><img src="/static/index/img/1490073982547710498.jpg" alt="Five Plus"></a></li>
-												<li><a href="#"><img src="/static/index/img/1490074308773778697.jpg" alt="新百伦"></a></li>
-												<li><a href="#"><img src="/static/index/img/1490072313895957648.jpg" alt="ELLE HOME"></a></li>
-												<li><a href="#"><img src="/static/index/img/1490073454678614186.jpg" alt="狼爪"></a></li>
-												<li><a href="#"><img src="/static/index/img/1490227986732712711.jpg" alt="立邦"></a></li>
-											</ul>
-										</div>
-									</div>
-
-
-
-
-
-									<div class="catetop-floor" id="floor_5" ectype="floorItem">
-										<div class="f-hd">
-											<h2>运动户外</h2>
-											<h3>5F</h3>
-											<div class="extra">
-												<div class="fgoods-hd">
-													<ul>
-														<li class="on">跑步运动</li>
-														<li>室内健身</li>
-														<li>自行车运动</li>
-														<li>轮滑运动</li>
-														<li>羽毛球/网球/乒乓球</li>
-													
-													</ul>
-												</div>
-											</div>
-										</div>
-										<div class="f-bd clearfix">
-											<div class="bd-left">
-												<div class="l-ad">
-													<ul>
-													    <li><a href="#"><img src="/static/index/img/1490211964186681053.png" width="400" height="660"></a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="bd-right">
-												<div class="right-top clearfix">
-													<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902637953027856.jpg" width="399" height="170"></a></div>
-													<div class="rt-ad"><a href="#"><img src="/static/index/img/1490902646240694917.jpg" width="399" height="170"></a></div>
-												</div>
-												<div class="right-bottom" style="position: relative; width: 800px; height: 488px;">
-													<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px;">
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218873837.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">Nike 耐克官方 PRO COOL COMP LONG-SLEEVE 男子训练紧身衣703088</a></div>
-															<div class="p-price"><em>¥</em>249.00</div>
-														</li>
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218667022.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤</a></div>
-															<div class="p-price"><em>¥</em>98.00</div>
-														</li>
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218800612.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">洽福 转椅轮子万向轮 老板椅办公椅子滑轮电脑椅配件滚轮脚轮轱辘 静音灵活不伤地板质保三年下单备注安装方式</a></div>
-															<div class="p-price"><em>¥</em>23.80</div>
-														</li>
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218770962.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">哑铃男士钢制家用电镀哑铃杠铃25 40公斤 纯钢哑铃盒装 健身器材 纯钢哑铃杠铃送哑铃架</a></div>
-															<div class="p-price"><em>¥</em>360.00</div>
-														</li>
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218732576.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">T1多功能健身器材家用仰卧板收腹机哑铃凳仰卧起坐板折叠 健身椅 进口格子皮八档调节 承重500斤</a></div>
-															<div class="p-price"><em>¥</em>260.00</div>
-														</li>
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218701469.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">迪卡侬健身手套 力量训练哑铃护掌防滑 DOMYOS QS 轻盈透气 重量训练</a></div>
-															<div class="p-price"><em>¥</em>39.90</div>
-														</li>
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218905472.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">专业瑜伽服双线美背瑜伽背心吊带含胸垫一体式弹力修身运动健身服</a></div>
-															<div class="p-price"><em>¥</em>159.00</div>
-														</li>
-														<li>
-															<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218835060.jpg" alt=""></a></div>
-															<div class="p-name"><a href="#">马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤</a></div>
-															<div class="p-price"><em>¥</em>98.00</div>
-														</li>
-													</ul>
-													<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-													</ul>
-													<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-													</ul>
-													<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-													</ul>
-													<ul class="fgoods-list" style="position: absolute; width: 804px; left: 0px; top: 0px; display: none;">
-													</ul>
-												</div>
-											</div>
-											<div class="clear"></div>
-													<ul class="brands">
-														<li><a href="#"><img src="/static/index/img/1490072850306019115.jpg" alt="同庆和堂"></a></li>
-														<li><a href="#"><img src="/static/index/img/1490072931218635674.jpg" alt="皮克朋"></a></li>
-														<li><a href="#"><img src="/static/index/img/1490072898345358625.jpg" alt="皮尔瑜伽"></a></li>
-														<li><a href="#"><img src="/static/index/img/1490073009638652059.jpg" alt="苹果"></a></li>
-														<li><a href="#"><img src="/static/index/img/1490073324022460149.jpg" alt="七匹狼"></a></li>
-														<li><a href="#"><img src="/static/index/img/1490072918339853569.jpg" alt="乔山"></a></li>
-														<li><a href="#"><img src="/static/index/img/1490072889090025069.jpg" alt="斯伯丁"></a></li>
-														<li><a href="#"><img src="/static/index/img/1490072993409028193.jpg" alt="三星"></a></li>
-													</ul>
-												</div>
-											</div>
-
-
-
-
-										</div>
-										
-									    <div class="atwillgo" id="atwillgo">
-								            <div class="awg-hd">
-												<h2>随手购</h2>
-								            </div>
-								            <div class="awg-bd">
-												<div class="atwillgo-slide">
-												    <a href="#"><i class="iconfont icon-left"></i></a>
-												    <a href="#"><i class="iconfont icon-right"></i></a>
-												    <div class="hd">
-												        <ul><li class="on"></li><li></li><li></li></ul>
-												    </div>
-												    <div class="bd">
-												        <div class="tempWrap" style="overflow:hidden; position:relative; width:1200px">
-												        	<ul style="width: 3600px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489102753231.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>300.00</div>
-																	<div class="p-name"><a href="#">新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174208112.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>199.90</div>
-																	<div class="p-name"><a href="#">森马夹克 2016冬装新款男士飞行夹克贴布绣立领休闲外套韩版潮流</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490173534127.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>219.00</div>
-																	<div class="p-name"><a href="#">NewEra纽亦华 新款MLB棒球帽男女字母NY洋基LA道奇调节平沿嘻哈帽 官方正品</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218873837.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>249.00</div>
-																	<div class="p-name"><a href="#">Nike 耐克官方 PRO COOL COMP LONG-SLEEVE 男子训练紧身衣703088</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169216444.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>159.00</div>
-																	<div class="p-name"><a href="#">韩都衣舍2016新款秋冬款长袖连衣裙宽松学生冬季内搭打底裙子韩版 领券下单立减/单件包邮/先拍先发货！</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489099544749.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>168.00</div>
-																	<div class="p-name"><a href="#">秋冬新款加绒圆领套头卫衣男青年男生韩版潮流学生休闲外套男</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169030833.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>88.00</div>
-																	<div class="p-name"><a href="#">韩都衣舍2017韩版女装夏装新款时尚修身显瘦圆领条纹T恤OGY7711娋 显瘦版型 舒适面料 条纹元素</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169281436.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>78.00</div>
-																	<div class="p-name"><a href="#">韩都衣舍2017韩版女装春装新款条纹显瘦百搭宽松v领七分袖衬衫潮 领券立减/单件包邮/七天无理由退换</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174508974.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>44.50</div>
-																	<div class="p-name"><a href="#">迷瞳盒装女士内裤莫代尔透气少女三角裤夏季性感低腰无痕大码裤头 5条盒装 莫代尔面料 小内裤 窄边三角裤</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218835060.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>98.00</div>
-																	<div class="p-name"><a href="#">马克华菲长袖T恤男 冬季新品纯棉圆领黑白潮款印花休闲t恤</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174791219.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>49.00</div>
-																	<div class="p-name"><a href="#">17年春夏新款百搭半身裙蛋糕裙 a字裙 裤裙伞裙大码裙子超短裙女 松紧腰围 带裤边打底衬 涤针织面料</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489100914563.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>211.00</div>
-																	<div class="p-name"><a href="#">舒适睡眠文胸罩无痕薄款运动内衣无钢圈女士调整型背心式少女聚拢 赠运费险 无痕无钢圈 舒适聚拢</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490218800612.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>23.80</div>
-																	<div class="p-name"><a href="#">洽福 转椅轮子万向轮 老板椅办公椅子滑轮电脑椅配件滚轮脚轮轱辘 静音灵活不伤地板质保三年下单备注安装方式</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174303715.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>130.00</div>
-																	<div class="p-name"><a href="#">YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490174547624.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>124.00</div>
-																	<div class="p-name"><a href="#">贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489099437211.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>120.00</div>
-																	<div class="p-name"><a href="#">秋季新款男士套头卫衣印花外套韩版简约百搭潮流男生上衣服</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1489100550574.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>258.00</div>
-																	<div class="p-name"><a href="#">法国DK正品文胸套装女内衣性感蕾丝聚拢深V调整型小胸品牌收副乳 法国正品 蕾丝性感 原装包装 送女神必备</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														        <li style="float: left; width: 158px;">
-																	<div class="p-img"><a href="#"><img src="/static/index/img/0_thumb_G_1490169151126.jpg" alt=""></a></div>
-																	<div class="p-price"><em>¥</em>148.00</div>
-																	<div class="p-name"><a href="#">韩都衣舍春季韩国ulzzang连帽卫衣女套头宽松百搭学生韩版潮bf风 领券下单立减/单件包邮/先拍先发货！</a></div>
-																	<div class="p-btn"><a href="#">加入购物车</a></div>
-														        </li>
-														    </ul>
-														</div>
-												    </div>
-												</div>
-								            </div>
-								        </div>
-		    
+<script type="text/javascript">
+	$(function(){
+		$("*[ectype='replySubmit']").click(function(){
+			var T = $(this);
+			var comment_id = T.data("value");
+			var reply_content = $("#reply_content" + comment_id).val();
+			var user_id = $("#comment_user" + comment_id).val();
+			var goods_id = $("#comment_goods" + comment_id).val();
 			
-										<div class="catetop-lift lift-hide" ectype="lift" style="left: 261.5px; top: 50%;">
-									    	<div class="lift-list" ectype="liftList">
-									        	<div class="catetop-lift-item" ectype="liftItem" data-target="#limitime"><span>限时抢购</span></div>
-									            <div class="catetop-lift-item lift-floor-item" ectype="liftItem"><span>女装</span></div>
-										        <div class="catetop-lift-item lift-floor-item" ectype="liftItem"><span>男装</span></div>
-										        <div class="catetop-lift-item lift-floor-item" ectype="liftItem"><span>服饰配件</span></div>
-										        <div class="catetop-lift-item lift-floor-item" ectype="liftItem"><span>内衣</span></div>
-										        <div class="catetop-lift-item lift-floor-item" ectype="liftItem"><span>运动户外</span></div>
-										        <div class="catetop-lift-item" ectype="liftItem" data-target="#atwillgo"><span>随手购</span></div>
-									        	<div class="catetop-lift-item lift-item-top" ectype="liftItem"><span><i class="iconfont icon-up"></i></span></div>
-									        </div>
-									    </div>
-									    <input name="region_id" value="1" type="hidden">
-									    <input name="area_id" value="7" type="hidden">
-									    <input name="cat_id" value="6" type="hidden">
-									    <input name="tpl" value="1" type="hidden">
-									    <script type="text/javascript">
-											//楼层以后加载后使用js
-											function loadCategoryTop(key){
-												var Floor = $("#floor_"+key);
-												Floor.slide({mainCell:".right-bottom",titCell:".fgoods-hd ul li",effect:"fold"});
-											}
-										</script>
-									</div>
+			if(reply_content == ''){
+				$("#reply-error" + comment_id).html(json_languages.please_message_input);
+				return false;
+			}
+
+			Ajax.call('comment.php', 'act=comment_reply&comment_id=' + comment_id + '&reply_content=' + reply_content + '&goods_id=' + goods_id + '&user_id=' + user_id, commentReplyResponse, 'POST', 'JSON');
+		});
+		
+		$('.comment_nice').click(function(){
+			var T = $(this);
+			var comment_id = T.data('commentid');
+			var goods_id = T.data('idvalue');
+			var type = 'comment';
+			
+			Ajax.call('comment.php', 'act=add_useful&id=' + comment_id + '&goods_id=' + goods_id + '&type=' + type, niceResponse, 'GET', 'JSON');
+		});
+	});
+	
+	function commentReplyResponse(res){
+		if(res.err_no == 1){
+			var back_url = res.url;
+			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+			return false;
+		}else if(res.err_no == 2){
+			$("#reply-error" + res.comment_id).html(json_languages.been_evaluated);
+		}else{
+			$("#reply-error" + res.comment_id).html(json_languages.Add_success);
+			$("#reply_content" + res.comment_id).val('');
+			$("#reply-textarea" + res.comment_id).addClass('hide');
+            $(".reply-count").addClass('red');
+		}
+		$(".comment-reply" + res.comment_id).html(res.content);
+		$(".reply-count" + res.comment_id).html(res.reply_count);
+	}
+	
+	function niceResponse(res){
+		if(res.err_no == 1){
+			var back_url = res.url;
+			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+			return false;
+		}else if(res.err_no == 0){
+			$(".reply-nice" + res.id).html(res.useful);
+            $(".comment_nice").addClass("selected");
+		}
+	}
+</script></div>            </div>
+        </div>
+    </div>
+    <div class="gm-f-item gm-f-tiezi" ectype="gm-item">
+        <div class="gm-title">
+    <h3>网友讨论圈</h3>
+    <div class="gm-f-tab">
+        <a href="javascript:void(0);" class="dis_type curr" rev="0" revType="1">全部帖子(0)</a>
+        <a href="javascript:void(0);" class="dis_type" rev="4" revType="1">晒单帖(0)</a>
+        <a href="javascript:void(0);" class="dis_type" rev="1" revType="1">讨论帖(0)</a>
+        <a href="javascript:void(0);" class="dis_type" rev="2" revType="1">问答帖(0)</a>
+        <a href="javascript:void(0);" class="dis_type" rev="3" revType="1">圈子帖(0)</a>
+    </div>
+</div>        <div class="table" id='discuss_list_ECS_COMMENT'>
+                <div class="thead">
+        <div class="th td1">主题</div>
+        <div class="th td2">回复</div>
+        <div class="th td3">浏览</div>
+        <div class="th td4">作者</div> 
+        <div class="th td5">时间</div>
+    </div>
+    <div class="tbody">
+    	        <div class="no_records no_comments_qt">
+            <i class="no_icon no_icon_three"></i>
+            <span class="block">暂无讨论帖</span>
+        </div>
+            </div>
+    <div class="clear"></div>
+    <div class="s-more">
+        <a href="category_discuss.php?id=799" target="_blank"><span class="sm-wrap">点击浏览全部<i class="iconfont icon-right"></i></span></a>
+    </div>        </div>
+    </div>
+</div>
+                </div>
+                <div class="clear"></div>
+                <div class="rection">
+                	<div class="ftit"><h3>猜你喜欢</h3></div>
+<ul>
+            <li>
+        <div class="p-img"><a href="goods.php?id=684" target="_blank"><img src="/static/index/img/0_thumb_G_1489109583798.jpg" width="134" height="134"></a></div>
+        <div class="p-name"><a href="goods.php?id=684" target="_blank">【情侣款】Camel骆驼男靴 时尚潮流英伦风马丁靴高帮皮靴 爆卖1万双！ 情侣马丁靴 好评如潮</a></div>
+        <div class="p-price"><em>¥</em>555.00</div>
+    </li>
+                <li>
+        <div class="p-img"><a href="goods.php?id=685" target="_blank"><img src="/static/index/img/0_thumb_G_1489109633806.jpg" width="134" height="134"></a></div>
+        <div class="p-name"><a href="goods.php?id=685" target="_blank">春季马丁靴男真皮男靴黄靴工装军靴韩版短靴沙漠靴高帮男鞋大黄靴 头层牛皮</a></div>
+        <div class="p-price"><em>¥</em>1000.00</div>
+    </li>
+                <li>
+        <div class="p-img"><a href="goods.php?id=679" target="_blank"><img src="/static/index/img/0_thumb_G_1489108999364.jpg" width="134" height="134"></a></div>
+        <div class="p-name"><a href="goods.php?id=679" target="_blank">特步女鞋2017春季新款运动鞋休闲鞋女慢跑步鞋旅游鞋轻便舒适时尚 早春特惠 爆款休闲女鞋 赠运费险</a></div>
+        <div class="p-price"><em>¥</em>200.00</div>
+    </li>
+                <li>
+        <div class="p-img"><a href="goods.php?id=634" target="_blank"><img src="/static/index/img/0_thumb_G_1489102753231.jpg" width="134" height="134"></a></div>
+        <div class="p-name"><a href="goods.php?id=634" target="_blank">新款韩版chic学生宽松短款外套上衣字母长袖连帽套头卫衣女潮</a></div>
+        <div class="p-price"><em>¥</em>300.00</div>
+    </li>
+                <li>
+        <div class="p-img"><a href="goods.php?id=683" target="_blank"><img src="/static/index/img/0_thumb_G_1489109337889.jpg" width="134" height="134"></a></div>
+        <div class="p-name"><a href="goods.php?id=683" target="_blank">igtt铝框行李箱拉杆箱旅行箱万向轮男女20/24/26寸密码箱登机箱子 铝合金框 加强密码锁 万向轮 终身保修</a></div>
+        <div class="p-price"><em>¥</em>330.00</div>
+    </li>
+    </ul>                </div>
+            </div>
+        </div>
+        
+        <div class="hidden">
+            
+            <div id="notify_box" class="hide">
+                <div class="sale-notice">
+<div class="prompt">一旦商品在30日内降价，您将收到邮件、短信和手机推送消息！通过手机客户端消息提醒，购买更便捷~</div>
+<div class="user-form foreg-form">
+    <div class="form-row">
+        <div class="form-label"><em class="red">*</em>价格低于：</div>
+        <div class="form-value">
+            <input type="text" id="price-notice" name="price-notice" class="form-input w120 fl">
+            <div class="notic">时，通知我</div>
+            <div class="error"></div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-label"><em class="red">*</em>手机号码：</div>
+        <div class="form-value">
+            <input type="text" class="form-input" id="cellphone" name="cellphone">
+            <div class="error"></div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-label"><em class="red">*</em>邮箱地址：</div>
+        <div class="form-value">
+            <input type="text" class="form-input" id="user_email_notice" name="email">
+            <div class="error"></div>
+        </div>
+    </div>
+</div>
+                </div>
+            </div>
+            
+            
+            <div class="ecsc-cart-popup" id="addtocartdialog">
+                <div class="loading-mask"></div>
+                <div class="loading">
+<div class="center_pop_txt">
+    <div class="title"><h3>提示</h3><a href="javascript:loadingClose();" title="关闭" class="loading-x">X</a></div>
+</div>
+<div class="btns">
+    <a href="flow.php" class="ecsc-btn-mini ecsc-btn-orange">去付款</a>
+    <a href="javascript:loadingClose();" class="ecsc-btn-mini">继续购物</a>
+</div>
+                </div>
+            </div>
+        </div>
+        
+        	 
+		
+<div class="duibi_box" id="slideTxtBox">
+    <div class="parWarp">
+        <div class="parTit">对比栏</div>
+        <div class="parBd">
+            <div class="slideBox5" id="duibilan">
+                <div id="diff-items" class="diff-items clearfix">
+<dl class="hasItem" id="compare_goods1">  
+    <dt><h1>1</h1></dt>
+    <dd><span class="ts">您还可以继续添加</span></dd>
+</dl>
+<dl class="hasItem" id="compare_goods2">  
+    <dt><h1>2</h1></dt>
+    <dd><span class="ts">您还可以继续添加</span></dd>
+</dl>
+<dl class="hasItem" id="compare_goods3">  
+    <dt><h1>3</h1></dt>
+    <dd><span class="ts">您还可以继续添加</span></dd>
+</dl>
+<dl class="hasItem" id="compare_goods4">  
+    <dt><h1>4</h1></dt>
+    <dd><span class="ts">您还可以继续添加</span></dd>
+</dl>
+                </div>
+                <div class="diff-operate">
+                	<a id="compare_button" class="compare-active"></a>
+					<a id="qingkong" class="del-items">清空对比栏</a>
+<a href="javascript:;" class="hide-me" ectype="db_hide">隐藏</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+        
+        
+  
+<div class="tm-dl-overlay tm-dl-overlay-hidden">
+	<a href="javascript:void('close')" class="tm-dl-overlay-close"><b></b><i></i></a>
+  	<div class="tm-dl-overlay-content"></div>
+</div>
+<div class="tm-dl-overlay-mask"></div>
+     </div>
+
+
+
+
 
 
 
@@ -2137,6 +2215,7 @@
 </div>
    
 
+    
     <!-- 首页以及其他页面 -->
 <div class="footer-new">
     <div class="footer-new-top">
@@ -2361,6 +2440,7 @@ $(function () {
 
 </script>   
 
+
     	<script type="text/javascript" src="/static/index/js/suggest.js"></script>
 	<script type="text/javascript" src="/static/index/js/scroll_city.js"></script>
 	<script type="text/javascript" src="/static/index/js/utils.js"></script>
@@ -2373,75 +2453,311 @@ $(function () {
     <script type="text/javascript" src="/static/index/js/cart_quick_links.js"></script>
     <script type="text/javascript" src="/static/index/js/dsc-common.js"></script>
 	<script type="text/javascript" src="/static/index/js/jquery.purebox.js"></script>    
-    
 
-    <script type="text/javascript" src="/static/index/js/parabola.js"></script>
-    <script type="text/javascript" src="/static/index/js/asyLoadfloor.js"></script>
-    
-    <script type="text/javascript">
+
+    <script type="text/javascript" src="/static/index/js/common.js"></script>
+    <script type="text/javascript" src="/static/index/js/compare.js"></script>
+    <script type="text/javascript" src="/static/index/js/magiczoomplus.js"></script>
+    <script type="text/javascript" src="/static/index/js/calendar.php?lang="></script>
+	<script type="text/javascript" src="/static/index/js/perfect-scrollbar.min.js"></script>
+    <script type="text/javascript" src="/static/index/js/goodsFittings.js"></script>
+   
+	<script type="text/javascript">
+	//商品详情
+	goods_desc_floor();
+	
+	//商品相册小图滚动
+	$(".spec-list").slide({mainCell:".spec-items ul",effect:"left",trigger:"click",pnLoop:false,autoPage:true,scroll:1,vis:5,prevCell:".spec-prev",nextCell:".spec-next"});
+	
+	//右侧看了又看上下滚动
+	$(".track_warp").slide({mainCell:".track-con ul",effect:"top",pnLoop:false,autoPlay:false,autoPage:true,prevCell:".sprite-up",nextCell:".sprite-down",vis:3});
+	
+	//商品搭配切换
+	$(".combo-inner").slide({titCell:".tab-nav li",mainCell:".tab-content",titOnClassName:"curr",trigger:"click"});
+	
+	//商品搭配 多个商品滚动切换
+	$(".combo-items").slide({mainCell:".combo-items-warp ul",effect:"left",pnLoop:false,autoPlay:false,autoPage:true,prevCell:".o-prev",nextCell:".o-next",vis:4});
+	
+	//左侧新品 热销 推荐排行切换
+	$(".g-rank").slide({titCell:".mc-tab li",mainCell:".mc-content",titOnClassName:"curr",trigger:"click"});
+	
+		
+	//全局变量
+	var seller_id = 0;
+	var goods_id = 799;
+	var goodsId = 799;
+	var goodsattr_style = 1;
+	var gmt_end_time = 0;
+	var now_time = 1507503012;
+	var isReturn = false;
 	$(function(){
-
-
-
-
-
-
-
-		//顶级分类页模板id
-		//tpl==0 默认模板、tpl==1 女装模板、tpl==2 家电模板、tpl==3 食品模板
-		var tpl = $("input[name='tpl']").val();
-		var length = $(".catetop-banner .bd").find("li").length;
 		
-		//轮播图
-		if(length>1){
-			if(tpl == 1){
-				$(".catetop-banner").slide({titCell:".cloth-hd ul",mainCell:".bd ul",effect:"fold",interTime:3500,delayTime:500,autoPlay:true,autoPage:true,trigger:"mouseover"});
-			}else if(tpl == 3){
-				$(".catetop-banner").slide({titCell:".food-hd ul",mainCell:".bd ul",effect:"fold",interTime:3500,delayTime:500,autoPlay:true,autoPage:true,trigger:"mouseover"});
-			}else{
-				$(".catetop-banner").slide({titCell:".hd ul",mainCell:".bd ul",effect:"fold",interTime:3500,delayTime:500,autoPlay:true,autoPage:true,trigger:"mouseover"});
-			}
-		}else{
-			$(".catetop-banner .hd").hide();
+		if(seller_id > 0){
+			goods_collect_store(seller_id);
 		}
 		
-		if(tpl == 1){
-			//女装模板 精品大牌
-			var length2 = $(".selectbrand-slide .bd").find("li").length;
-			if(length2>5){
-				$(".selectbrand-slide").slide({mainCell:".bd ul",titCell:".hd ul",effect:"left",pnLoop: false,vis: 5,scroll: 5,autoPage:"<li></li>"});
-				$(".selectbrand-slide .prev,.selectbrand-slide .next").show();
-			}else{
-				$(".selectbrand-slide .prev,.selectbrand-slide .next").hide();
-			}
-		}else if(tpl == 2){
-			$(".hotrecommend").slide({hd:".hr-slide-hd ul",effect:"fold"});
-		}else if(tpl == 0){
-			$(".toprank").slide({effect:"fold",titCell:".hd ul li"});
-			$(".catetop-brand .brand-slide").slide({mainCell: '.bs-bd ul',effect: 'left',vis: 10,scroll: 10,autoPage: true});
-			$.catetopLift();
-			
-			if($("input[name='history']").val() == 0){
-				$(".lift-history").hide();
-			}else{
-				$(".lift-history").show();
-			}
-		}
-		
-		//随手购
-		if($(".atwillgo-slide .bd").find("li").length > 6){
-			$(".atwillgo-slide").slide({mainCell:".bd ul",titCell:".hd ul",effect:"left",pnLoop:false,vis: 6,scroll: 6,autoPage:"<li></li>"});
-		}else{
-			$(".atwillgo-slide").find(".prev,.next").hide();
-		}
-		
-		//楼层异步加载封装函数调用
-		if(tpl != 0){
-			$.catTopLoad(tpl);
-		}
+		//对比默认加载
+		Compare.init();
 	});
-    </script>
+	
+	/******************************************* js方法 start***********************************************/
+	
+	var add_shop_price = $("*[ectype='add_shop_price']").val();
+	
+	/* 点击可选属性或改变数量时修改商品价格的函数 */
+	function changePrice(onload){
+		var qty = $("*[ectype='quantity']").val();
+		var goods_attr_id = '';
+		var goods_attr = '';
+		var attr_id = '';
+		var attr = '';
+		
+		goods_attr_id = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+		
+		if(onload != 'onload'){
+			if(add_shop_price == 0){
+				attr_id = getSelectedAttributesGroup(document.forms['ECS_FORMBUY']);
+				goods_attr = '&goods_attr=' + attr_id;
+			}
+			Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + goods_attr_id + goods_attr + '&number=' + qty + '&warehouse_id=' + 2 + '&area_id=' + 16, changePriceResponse, 'GET', 'JSON');
+		}else{
+			if(add_shop_price == 1){
+				attr = '&attr=' + goods_attr_id;
+			}
+			Ajax.call('goods.php', 'act=price&id=' + goodsId + attr + '&number=' + qty + '&warehouse_id=' + 2 + '&area_id=' + 16 + '&onload=' + onload, changePriceResponse, 'GET', 'JSON');
+		}
+	}
+	/* 接收返回的信息 回调函数 */
+	function changePriceResponse(res){
+		if(res.err_msg.length > 0){
+			pbDialog(res.err_msg," ",0,450,80,50);
+		}else{
+			//商品条形码
+			if($("#bar_code").length > 0){
+				if(res.bar_code){
+					$("#bar_code").html(res.bar_code);
+					$("#bar_code").parents(".bar_code").removeClass("hide");
+				}else{
+					$("#bar_code").parents(".bar_code").addClass("hide");
+				}
+			}
+			
+			$("#cost-price").html(res.marketPrice_amount);
+			
+			//更新库存
+			if($("*[ectype='goods_attr_num']").length > 0){
+				$("*[ectype='goods_attr_num']").html(res.attr_number);
+				$("*[ectype='perNumber']").val(res.attr_number);
+			}
+			
+			//更新已购买数量
+			if($("#orderG_number").length > 0){
+				$("#orderG_number").html(res.orderG_number);
+			}
+    
+			if($("#ECS_SHOPPRICE").length > 0){
+				//市场价
+				if($("#ECS_MARKETPRICE").length > 0){
+					$("#ECS_MARKETPRICE").html(res.result_market);
+				}
+				
+				//商品价格
+				if(res.onload == 'onload'){
+					$("*[ectype='SHOP_PRICE']").html(res.result);
+				}else{
+					if(add_shop_price == 1){
+$("*[ectype='SHOP_PRICE']").html(res.result);
+					}else{
+if(res.show_goods == 1){
+	$("*[ectype='SHOP_PRICE']").html(res.spec_price);
+}else{
+	$("*[ectype='SHOP_PRICE']").html(res.result);
+}
+					}
+				}
+				
+				//搭配 套餐价
+				var combo_shop = document.getElementsByName('combo_shopPrice[]');
+				var combo_mark = document.getElementsByName('combo_markPrice[]');
+				
+				for(var i=0; i<combo_shop.length; i++){
+					combo_shop[i].innerHTML = res.shop_price;
+				}
+				
+				for(var i=0; i<combo_mark.length; i++){
+					combo_mark[i].innerHTML = res.market_price;
+				}
+			}
+			
+			if(res.err_no == 2){
+				$("#isHas_warehouse_num").html(json_languages.shiping_prompt);
+			}else{
+				var isHas;
+				var is_shipping = Number($("#is_shipping").val());
+				
+				if($("#isHas_warehouse_num").length > 0){
+					if((res.attr_number > 0 || add_shop_price == 0) && (res.attr_number > 0 || res.original_spec_price == res.original_shop_price) && (1 != 0 || is_shipping == 1)){
+$("a[ectype='btn-append']").attr('href','javascript:addToCartShowDiv(799)').removeClass('btn_disabled');
+$("a[ectype='btn-buynow']").attr('href','javascript:addToCart(799)').removeClass('btn_disabled');
+$("a[ectype='byStages']").removeClass('btn_disabled');
+$('a').remove('#quehuo');
+isHas = '<strong>'+json_languages.Have_goods+'</strong>，'+json_languages.Deliver_back_order;
+
+$("a[ectype='btn-buynow']").show();
+$("a[ectype='btn-append']").show();
+$("a[ectype='byStages']").show();
+					}else{
+isHas = '<strong>'+json_languages.No_goods+'</strong>，'+json_languages.goods_over;
+
+$("a[ectype='btn-buynow']").attr('href','javascript:void(0)').addClass('btn_disabled');
+$("a[ectype='btn-append']").attr('href','javascript:void(0)').addClass('btn_disabled');
+$("a[ectype='byStages']").addClass('btn_disabled');
+
+	if(!document.getElementById('quehuo')){
+		if(1 != 0 || is_shipping == 1){
+			$("a[ectype='btn-buynow']").hide();
+			$("a[ectype='btn-append']").hide();
+			$("a[ectype='byStages']").hide();
+			$('.choose-btns').append('<a id="quehuo" class="btn-buynow" href="javascript:addToCart(799);">暂时缺货</a>');
+		}
+	}
+					}
+  
+					if(res.store_type == 1){
+$("[ectype='btn-store-pick']").show();
+$("[ectype='list-store-pick']").show();
+					}else{
+$("[ectype='btn-store-pick']").hide();
+$("[ectype='list-store-pick']").hide();
+					}
+					if(is_shipping == 0){
+isHas = '<strong>'+json_languages.Have_goods+'</strong>，' + json_languages.shiping_prompt;
+					}
+					
+					$("#isHas_warehouse_num").html(isHas);
+				}
+			}
+		
+			if(res.fittings_interval){
+				for(var i=0; i<res.fittings_interval.length; i++){
+					$("#m_goods_" + res.fittings_interval[i].groupId).html(res.fittings_interval[i].fittings_minMax);
+					$("#m_goods_save_" + res.fittings_interval[i].groupId).html(res.fittings_interval[i].save_minMaxPrice);
+					$("#m_goods_reference_" + res.fittings_interval[i].groupId).html(res.fittings_interval[i].market_minMax);
+				}
+			}
+		
+			if(res.onload == 'onload'){
+				$("*[ectype='SHOP_PRICE']").html(res.result);
+			}
+		
+			if(add_shop_price == 1){
+				$(".ECS_fittings_interval").html(res.shop_price);
+			}else{
+				if(res.show_goods == 1){
+					$(".ECS_fittings_interval").html(res.spec_price);
+				}else{
+					$(".ECS_fittings_interval").html(res.shop_price);
+				}
+			}
+			//更新白条分期购每期的价格 start
+			if(res.stages){
+				var i = 0;
+				$.each(res.stages,function(k,v){
+					if(k!=1) {
+$('#chooseStages dd strong').eq(i).html('￥' + v + '×' + k + qi);
+$('#chooseStages dd strong').eq(i).next('span').html(free_desc+'0.00%，￥' + v + '×' + k + qi);
+					}
+					i++;
+				});
+			}
+		}
+		
+		isReturn = true;
+		
+		if(res.onload == "onload"){
+			quantity();
+		}
+	}
+	/******************************************* js方法 end***********************************************/	
+	</script>
+    <script type="text/javascript">
+$(function(){
+	/* 检测配送地区 */
+	seller_shipping_area('0');
+	
+	//配送区域
+	goods_delivery_area();
+});
+
+/* 获取配送区域 start*/
+function goods_delivery_area(){
+	var area = new Object();
+	
+	area.province_id = '3';
+	area.city_id = '37';
+	area.district_id = '410';
+	area.street_id = '0';
+	area.street_list = '0';
+	area.goods_id = '799';
+	area.user_id = '62';
+	area.region_id = '2';
+	area.area_id = '16';
+	area.merchant_id = '0';
+
+	Ajax.call('ajax_dialog.php?act=goods_delivery_area', 'area=' + $.toJSON(area), goods_delivery_areaResponse, 'POST', 'JSON'); 
+	
+}
+
+function goods_delivery_areaResponse(result){
+	$("#area_address").html(result.content);
+	$(".store-warehouse-info").html(result.warehouse_content);
+	
+	if(result.is_theme == 1){
+		get_user_area_shipping(result.goods_id, result.area.region_id, result.area.province_id, result.area.city_id, result.area.district_id, result.area.street_id, result.area.street_list);
+	}
+}
+/* 获取配送区域 end*/
+
+/* 查询用户所在地区是否支持配送 */
+function get_user_area_shipping(goods_id, region_id, province_id, city_id, district_id, street_id, street_list){
+	
+	var area = new Object();
+	
+	area.goods_id = goods_id;
+	area.region_id = region_id;
+	area.province_id = province_id;
+	area.city_id = city_id;
+	area.district_id = district_id;
+	area.street_id = street_id;
+	area.street_list = street_list;
+	
+	Ajax.call('ajax_dialog.php?act=user_area_shipping', 'area=' + $.toJSON(area), user_area_shippingResponse, 'POST', 'JSON'); 
+}
+
+function user_area_shippingResponse(result){
+	$("#user_area_shipping").html(result.content);
+	
+	changePrice('onload');
+}
+
+/* 检测配送地区 */
+function seller_shipping_area(merchant_id){
+	Ajax.call('ajax_dialog.php?act=seller_shipping_area','merchant_id=' + merchant_id, ajaxShippingAreaResponse, 'GET', 'JSON');
+}
+
+function ajaxShippingAreaResponse(result){}
 
 
-</body>
+/* 配送地区 常用地址选择 start*/
+function get_region_change(goods_id, province_id, city_id, district_id){
+	Ajax.call("ajax_dialog.php", 'id=' + goods_id + '&act=in_stock' + '&province=' + province_id + "&city=" + city_id + "&district=" + district_id, ajax_is_inStock, "GET", "JSON");
+}
+
+function ajax_is_inStock(res){
+	var t = '&t=' + parseInt(Math.random()*1000);
+	var str_new = window.location.href.replace(/\&t\=\d+/g,t);
+	location.href = str_new;
+}
+/* 配送地区 常用地址选择 end*/
+</script></body>
 </html>

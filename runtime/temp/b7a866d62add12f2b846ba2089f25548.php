@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"B:\aaaweb\shop\public/../application/admin\view\data\importlist.html";i:1556930864;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556944068;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"B:\aaaweb\shop\public/../application/admin\view\cates_words\list.html";i:1556948555;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556944068;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,11 +42,8 @@
     
 </head>
 
-<script type="text/javascript" src="/static/admin/layui/layui.js"></script>
-
-
 <body>
-    <!-- 头部 -->
+	<!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -105,12 +102,12 @@
     </div>
 </div>
 
-    <!-- /头部 -->
-    
-    <div class="main-container container-fluid">
-        <div class="page-container">
-                        <!-- Page Sidebar -->
-        <div class="page-sidebar" id="sidebar">
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+                <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -390,133 +387,68 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li>
-                            <a href="">商品管理</a>
-                        </li>
-                        <li class="active">数据恢复</li>
+                        <li class="active">用户管理</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-
-
-
-<!-- <div class="layui-form">
- -->   
-    <a class="btn btn-sm btn-azure btn-addon" href="javascript:;" autocomplete="off"> 数据库还原  </a>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="widget">
-                <div class="widget-body">
-                    <div class="flip-scroll">
-                        <table class="table table-bordered table-hover">
-                            <thead>
+                    
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('cates_words/add'); ?>'"> <i class="fa fa-plus"></i> 添加链接
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">词汇</th>
+                                <th class="text-center">链接地址</th>
+                                <th class="text-center">关联的顶级栏目</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        <?php if(is_array($cwList) || $cwList instanceof \think\Collection || $cwList instanceof \think\Paginator): $i = 0; $__LIST__ = $cwList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cwLists): $mod = ($i % 2 );++$i;?>
+                        <tbody>
                                 <tr>
-
-                                    <th class="text-center">数据库名称</th>
-                                    <th class="text-center">卷数</th>
-                                    <th class="text-center">压缩</th>
-                                    <th class="text-center">数据大小</th>
-                                    <th class="text-center">备份时间</th>
-                                    <th class="text-center">状态</th>
-                                    <th class="text-center">操作</th>
-                                </tr> 
-                            </thead>
-                            <tbody>
-                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): if( count($list)==0 ) : echo "" ;else: foreach($list as $key=>$data): ?>   
-                                <tr>
-                                    <td class="text-center"><?php echo date('Ymd-His',$data['time']); ?></td>
-                                    <td class="text-center"><?php echo $data['part']; ?></td>
-                                    <td class="text-center"><?php echo $data['compress']; ?></td>
-                                    <td class="text-center"><?php echo format_bytes($data['size']); ?></td>
-                                    <td class="text-center"><?php echo $key; ?></td>
-                                    <td class="status text-center" style="width: 200px;">-</td>
-                                    <td class="action text-center">
-                                        <a class="btn btn-primary btn-sm shiny db-import" href="<?php echo url('data/import',['time'=>$data['time']]); ?>">还原</a>&nbsp;
-                                        <a class="btn btn-danger btn-sm shiny" href="<?php echo url('data/del',['time'=>$data['time']]); ?>">删除</a>
-                                    </td>
-                                </tr>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                            </tbody>
-                            <script>
-                                layui.use(['jquery','layer'],function(){
-                                      window.$ = layui.$;
-                                      var layer = layui.layer;
-
-
-                                      $(".db-import").click(function(){
-                                            var self = this, status = ".";
-
-                                            $(this).parent().prevAll('.status').html("").html('等待还原');
-
-                                            $.get(self.href, success, "json");
-                                            window.onbeforeunload = function(){ return "正在还原数据库，请不要关闭！" }
-                                            return false;
-                                        
-                                            function success(data){
-
-                                                if(data.code==1){
-
-                                                    $(self).parent().prev().text(data.msg);
-
-                                                    if(data.data.part){
-                                                        $.get(self.href, 
-                                                            {"part" : data.data.part, "start" : data.data.start}, 
-                                                            success, 
-                                                            "json"
-                                                        );
-                                                        
-                                                    }  else {
-                                                        layer.alert(data.msg);
-                                                        //window.onbeforeunload = function(){ return null; }
-                                                    }
-                                                } else {
-                                                    layer.alert(data.msg);
-                                                }
-                                            }
-                                        });
-
-                                    //   $(".db-import").click(function(){
-                                    //     // console.log($(this).parents().find(".status").html() );//正常
-                                    //     // console.log($(this).parent().prevAll('.status').html() );
-                                    //     var statusem=$(this).parent().prevAll('.status');
-                                    //     $(this).parent().prevAll('.status').html("").html('等待还原');
-                                    //     thisobj=this;
-                                    //     $.post(this.href, function(data){
-                                         
-                                    //       if(data.code==1){
-                                    //         // statusem.text(""); // 清空数据
-                                    //         // statusem.append('data'); 
-                                    //         // statusem.text("").append('132');
-                                    //         // $(this).parent().prevAll('.status').html("").html(data.msg);//error ：异常原因无法获取当前节点
-                                    //         statusem.html(data.msg);
-                                    //         getdbimport(thisobj,data.data);
-                                    //       }
-                                    //     }, "json");
-                                    //     return false;
-                                    // });
-
-                                    });
-
-                                </script>
-
-                        </table>
-
-                    </div>
+                                <td align="center"><?php echo $cwLists['cw_id']; ?></td>
+                                <td align="center"><?php echo $cwLists['cw_word']; ?></td>
+                                <td align="center"><?php echo $cwLists['cw_linkurl']; ?></td>
+                                <td align="center"><?php echo $cwLists['cates_name']; ?></td>
+                                <td align="center">
+                                    <a href="<?php echo url('edit',array('cw_id'=>$cwLists['cw_id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('cw_id'=>$cwLists['cw_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </table>
                 </div>
+                <div> 
+                    <?php echo $cwList->render(); ?>
+              	</div>
             </div>
         </div>
     </div>
-                  </div>
+</div>
+
+                </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-        </div>  
-    </div>
+		</div>	
+	</div>
 
-        <!--Basic Scripts-->
+	    <!--Basic Scripts-->
     
 	<script type="text/javascript">
 
@@ -526,7 +458,7 @@
     
 
 
-	</script>
-    
+	</script>    
+
 
 </body></html>

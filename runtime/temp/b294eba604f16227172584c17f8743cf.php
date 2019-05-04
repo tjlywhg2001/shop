@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"B:\aaaweb\shop\public/../application/admin\view\data\importlist.html";i:1556930864;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556944068;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"B:\aaaweb\shop\public/../application/admin\view\cates_words\add.html";i:1556948580;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556944068;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,11 +42,8 @@
     
 </head>
 
-<script type="text/javascript" src="/static/admin/layui/layui.js"></script>
-
-
 <body>
-    <!-- 头部 -->
+	<!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -105,11 +102,11 @@
     </div>
 </div>
 
-    <!-- /头部 -->
-    
-    <div class="main-container container-fluid">
-        <div class="page-container">
-                        <!-- Page Sidebar -->
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
         <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
@@ -390,133 +387,87 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li>
-                            <a href="">商品管理</a>
+                                            <li>
+                            <a href="<?php echo url('cates_words/lst'); ?>">链接管理</a>
                         </li>
-                        <li class="active">数据恢复</li>
+                        <li class="active">添加链接</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">添加链接</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">词汇</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cw_word" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">所属栏目</label>
+                            <div class="col-sm-6">
+                                <select name="cw_cates_id">
+                                    <option value="">请选择</option>
+                                    <?php if(is_array($cateslist) || $cateslist instanceof \think\Collection || $cateslist instanceof \think\Paginator): $i = 0; $__LIST__ = $cateslist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catess): $mod = ($i % 2 );++$i;?>
+                                    <option <?php if($catess['cates_id'] == $catess['cates_pid']): ?> disabled="disabled" <?php endif; ?> value="<?php echo $catess['cates_id']; ?>"
+                                    >
+                                    
+                                     <?php if($catess['cates_pid'] != 0): ?>
+                                     |
+                                     <?php endif; ?>
+                                     <?php echo str_repeat('-',$catess['lever']*5); ?><?php echo $catess['cates_name']; ?>
+                                    </option>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
 
 
 
-<!-- <div class="layui-form">
- -->   
-    <a class="btn btn-sm btn-azure btn-addon" href="javascript:;" autocomplete="off"> 数据库还原  </a>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="widget">
-                <div class="widget-body">
-                    <div class="flip-scroll">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-
-                                    <th class="text-center">数据库名称</th>
-                                    <th class="text-center">卷数</th>
-                                    <th class="text-center">压缩</th>
-                                    <th class="text-center">数据大小</th>
-                                    <th class="text-center">备份时间</th>
-                                    <th class="text-center">状态</th>
-                                    <th class="text-center">操作</th>
-                                </tr> 
-                            </thead>
-                            <tbody>
-                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): if( count($list)==0 ) : echo "" ;else: foreach($list as $key=>$data): ?>   
-                                <tr>
-                                    <td class="text-center"><?php echo date('Ymd-His',$data['time']); ?></td>
-                                    <td class="text-center"><?php echo $data['part']; ?></td>
-                                    <td class="text-center"><?php echo $data['compress']; ?></td>
-                                    <td class="text-center"><?php echo format_bytes($data['size']); ?></td>
-                                    <td class="text-center"><?php echo $key; ?></td>
-                                    <td class="status text-center" style="width: 200px;">-</td>
-                                    <td class="action text-center">
-                                        <a class="btn btn-primary btn-sm shiny db-import" href="<?php echo url('data/import',['time'=>$data['time']]); ?>">还原</a>&nbsp;
-                                        <a class="btn btn-danger btn-sm shiny" href="<?php echo url('data/del',['time'=>$data['time']]); ?>">删除</a>
-                                    </td>
-                                </tr>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                            </tbody>
-                            <script>
-                                layui.use(['jquery','layer'],function(){
-                                      window.$ = layui.$;
-                                      var layer = layui.layer;
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接地址</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cw_linkurl" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
 
 
-                                      $(".db-import").click(function(){
-                                            var self = this, status = ".";
 
-                                            $(this).parent().prevAll('.status').html("").html('等待还原');
-
-                                            $.get(self.href, success, "json");
-                                            window.onbeforeunload = function(){ return "正在还原数据库，请不要关闭！" }
-                                            return false;
-                                        
-                                            function success(data){
-
-                                                if(data.code==1){
-
-                                                    $(self).parent().prev().text(data.msg);
-
-                                                    if(data.data.part){
-                                                        $.get(self.href, 
-                                                            {"part" : data.data.part, "start" : data.data.start}, 
-                                                            success, 
-                                                            "json"
-                                                        );
-                                                        
-                                                    }  else {
-                                                        layer.alert(data.msg);
-                                                        //window.onbeforeunload = function(){ return null; }
-                                                    }
-                                                } else {
-                                                    layer.alert(data.msg);
-                                                }
-                                            }
-                                        });
-
-                                    //   $(".db-import").click(function(){
-                                    //     // console.log($(this).parents().find(".status").html() );//正常
-                                    //     // console.log($(this).parent().prevAll('.status').html() );
-                                    //     var statusem=$(this).parent().prevAll('.status');
-                                    //     $(this).parent().prevAll('.status').html("").html('等待还原');
-                                    //     thisobj=this;
-                                    //     $.post(this.href, function(data){
-                                         
-                                    //       if(data.code==1){
-                                    //         // statusem.text(""); // 清空数据
-                                    //         // statusem.append('data'); 
-                                    //         // statusem.text("").append('132');
-                                    //         // $(this).parent().prevAll('.status').html("").html(data.msg);//error ：异常原因无法获取当前节点
-                                    //         statusem.html(data.msg);
-                                    //         getdbimport(thisobj,data.data);
-                                    //       }
-                                    //     }, "json");
-                                    //     return false;
-                                    // });
-
-                                    });
-
-                                </script>
-
-                        </table>
-
-                    </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-                  </div>
+</div>
+
+                </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-        </div>  
-    </div>
+		</div>	
+	</div>
 
-        <!--Basic Scripts-->
+	    <!--Basic Scripts-->
     
 	<script type="text/javascript">
 
