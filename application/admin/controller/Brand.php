@@ -8,7 +8,7 @@
 	{
 		public function lst(){
 
-			$brandlist = db('brand')->order('brand_id desc')->paginate(5);
+			$brandlist = db('brand')->order('brand_id desc')->paginate(25);
 			$this -> assign('brandlist',$brandlist);
 
 			return view('list');
