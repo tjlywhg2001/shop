@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"B:\aaaweb\shop\public/../application/admin\view\commodity\list.html";i:1556846466;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556846466;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556846466;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556846466;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556846466;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"F:\www\shop\public/../application/admin\view\cates_brands\list.html";i:1557155921;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -284,6 +284,27 @@
     <li>
         <a href="#" class="menu-dropdown">
             <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">关联商品分类模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('catesWords/lst'); ?>">
+                    <span class="menu-text">关联管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('catesBrands/lst'); ?>">
+                    <span class="menu-text">推广图管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
             <span class="menu-text">链接模块</span>
             <i class="menu-expand"></i>
         </a>
@@ -372,7 +393,7 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">商品管理</li>
+                        <li class="active">用户管理</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -380,7 +401,7 @@
                 <!-- Page Body -->
                 <div class="page-body">
                     
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('commodity/add'); ?>'"> <i class="fa fa-plus"></i> 添加商品
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('catesBrands/add'); ?>'"> <i class="fa fa-plus"></i> 添加推广图
 </button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -389,80 +410,35 @@
                 <div class="flip-scroll">
                     <table class="table table-bordered table-hover">
                         <thead class="">
-                            <tr>
-                                <th class="text-center" width="10%">ID</th>
-                                <th class="text-center">名称</th>
-                                <th class="text-center" width="10%">编号</th>
-                                <th class="text-center" width="6%">缩略图</th>
-                                <th class="text-center" width="6%">市场价</th>
-                                <th class="text-center" width="6%">本店价</th>
-                                <th class="text-center" width="6%">上架</th>
-                                <th class="text-center" width="6%">栏目</th>
-                                <th class="text-center" width="6%">品牌</th>
-                                <th class="text-center" width="6%">类型</th>
-                                <th class="text-center" width="6%">重量</th>
-                                <th class="text-center" width="4%">单位</th>
-                                <th class="text-center" width="4%">库存</th>
-                                <th class="text-center" width="14%">操作</th>
+                            <tr styl>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">关联的商品分类</th>
+                                <th class="text-center">关联的品牌</th>
+                                <th class="text-center">推广图</th>
+                                <th class="text-center">推广图链接</th>
+                                <th class="text-center">操作</th>
                             </tr>
                         </thead>
                         
-                        <?php if(is_array($commRes) || $commRes instanceof \think\Collection || $commRes instanceof \think\Paginator): $i = 0; $__LIST__ = $commRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$comms): $mod = ($i % 2 );++$i;?>
+                        <?php if(is_array($cbList) || $cbList instanceof \think\Collection || $cbList instanceof \think\Paginator): $i = 0; $__LIST__ = $cbList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catesbrands): $mod = ($i % 2 );++$i;?>
                         <tbody>
-                            <tr>
-                                <td align="center"><?php echo $comms['commodity_id']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_name']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_code']; ?></td>
+                                <tr>
+                                <td align="center"><?php echo $catesbrands['cb_id']; ?></td>
+                                <td align="center"><?php echo $catesbrands['cates_name']; ?></td>
+                                <td align="center"><?php echo $catesbrands['cb_brands_id']; ?></td>
                                 <td align="center">
-                                    <?php if($comms['commodity_ogthumb'] != ''): ?>
-                                        <img src="/static/uploadss/<?php echo $comms['commodity_ogthumb']; ?>" alt="" style="width: 100%" />
-                                    <?php else: ?>
-                                        无缩略图
-                                    <?php endif; ?>
+                                <?php if($catesbrands['cb_proimg'] != ''): ?>
+                                    <img style="height: 30px" src="/static/uploadss/<?php echo $catesbrands['cb_proimg']; ?>" />
+                                <?php else: ?>
+                                    暂无图片
+                                <?php endif; ?>
                                 </td>
-                                <td align="center"><?php echo $comms['commodity_market_price']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_shop_price']; ?></td>
+                                <td align="center"><?php echo $catesbrands['cb_prourl']; ?></td>
                                 <td align="center">
-                                    <?php if($comms['commodity_on_sale'] == 1): ?>
-                                        上架
-                                    <?php else: ?>
-                                        下架
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <?php if($comms['cates_name'] != ''): ?>
-                                        <?php echo $comms['cates_name']; else: ?>
-                                        未设置
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <?php if($comms['brand_name'] != ''): ?>
-                                        <?php echo $comms['brand_name']; else: ?>
-                                        未设置
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <?php if($comms['type_name'] != ''): ?>
-                                        <?php echo $comms['type_name']; else: ?>
-                                        未设置
-                                    <?php endif; ?>
-                               </td>
-                                <td align="center"><?php echo $comms['commodity_weight']; ?></td>
-                                <td align="center"><?php echo $comms['commodity_weight_unit']; ?></td>
-                                <td align="center">
-                                    <?php if($comms['produ'] != ''): ?>
-                                        <?php echo $comms['produ']; else: ?>
-                                        0
-                                    <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                    <a href="<?php echo url('commodity/product',array('commodity_id'=>$comms['commodity_id'])); ?>" class="btn btn-sm btn-warning shiny">
-                                        <i class="fa fa-check-square-o"></i> 库存
-                                    </a>
-                                    <a href="<?php echo url('edit',array('commodity_id'=>$comms['commodity_id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                    <a href="<?php echo url('edit',array('cb_id'=>$catesbrands['cb_id'])); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
                                     </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('commodity_id'=>$comms['commodity_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('cb_id'=>$catesbrands['cb_id'])); ?>')" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>
@@ -472,7 +448,7 @@
                     </table>
                 </div>
                 <div> 
-                    <?php echo $commRes->render(); ?>
+                    <?php echo $cbList->render(); ?>
               	</div>
             </div>
         </div>

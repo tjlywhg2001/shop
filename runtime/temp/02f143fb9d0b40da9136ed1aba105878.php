@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1556930864;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556930864;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:61:"F:\www\shop\public/../application/admin\view\index\index.html";i:1557059757;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -279,6 +279,27 @@
                     <i class="menu-expand"></i>
                 </a>
             </li> -->
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">关联商品分类模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('catesWords/lst'); ?>">
+                    <span class="menu-text">关联管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('catesBrands/lst'); ?>">
+                    <span class="menu-text">推广图管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
         </ul>
     </li>
     <li>

@@ -27,6 +27,7 @@
 
 			// 二级和三级子分类
 			$CommCates = model('cates') -> getCommCates($CommCateid);
+			// dump($CommCates);die;
 			$subitems = '';
 			foreach ($CommCates as $k => $v) {
 				$subitems .= '<dl class="dl_fore"><dt>';
@@ -39,19 +40,20 @@
 			}
 
 			// brand图片
-			// $BrandCate = model('') -> getBrandCate($CommCateid);
-			// $brands = '';
-			// foreach ($BrandCate as $k => $v) {
-			// 	$brands .= '<div class="cate-brand">';
-			// 	foreach ($v['children'] as $k1 => $v1) {
-			// 		$brands .= '<div class="img"><a href="'.$v1[+-+-+-+-+-+].'" target="_blank" title="'.$v1['+-+-+-+-+-+'].'">';
-			// 		$brands .= '<img src="'.$v1['+-+-+-+-+-+-+-+'].'}"></a></div>'
-			// 	}
-			// 	$brands .= '<div class="cate-promotion">';
-			// 	$brands .= '<a href="https://www.dscmall.cn/" target="_blank">';
-			// 	$brands .= '<img src="'.$v['+++++++++++'].'" width="199" height="97"></a>';
-			// 	$brands .= '</div></div>';
-			// }
+			$BrandCate = model('cates_brands') -> getCommBrand($CommCateid);
+			// dump($BrandCate);die;
+			$brands = '';
+			foreach ($BrandCate as $k => $v) {
+				$brands .= '<div class="cate-brand">';
+				foreach ($v['children'] as $k1 => $v1) {
+					$brands .= '<div class="img"><a href="#" target="_blank" title="'.$v1['brand_name'].'">';
+					$brands .= '<img src="\static\uploadss\\'.$v1['brand_img'].'"></a></div>';
+				}
+				$brands .= '</div><div class="cate-promotion">';
+				$brands .= '<a href="'.$v['cb_prourl'].'" target="_blank">';
+				$brands .= '<img src="\static\uploadss\\'.$v['cb_proimg'].'" width="199" height="97"></a>';
+				$brands .= '</div></div>';
+			}
 
 
 			// 关联的商品分类
@@ -61,7 +63,7 @@
 			$data['cat_content'] = $subitems;
 
 			// brand图片
-			$data['brands_ad_content'] = '$brands';
+			$data['brands_ad_content'] = $brands;
 			// dump($catesList);die;
 			return json($data);
 

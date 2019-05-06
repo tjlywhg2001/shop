@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\brand\list.html";i:1556930864;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556944068;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"F:\www\shop\public/../application/admin\view\cates_brands\edit.html";i:1557159635;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +43,7 @@
 </head>
 
 <body>
-	<!-- 头部 -->
+    <!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -102,12 +102,12 @@
     </div>
 </div>
 
-	<!-- /头部 -->
-	
-	<div class="main-container container-fluid">
-		<div class="page-container">
-			            <!-- Page Sidebar -->
-                <div class="page-sidebar" id="sidebar">
+    <!-- /头部 -->
+    
+    <div class="main-container container-fluid">
+        <div class="page-container">
+                        <!-- Page Sidebar -->
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -294,6 +294,12 @@
                     <i class="menu-expand"></i>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo url('catesBrands/lst'); ?>">
+                    <span class="menu-text">推广图管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
         </ul>
     </li>
     <li>
@@ -387,7 +393,10 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">品牌管理</li>
+                                            <li>
+                            <a href="<?php echo url('cates_brands/lst'); ?>">推广图管理</a>
+                        </li>
+                        <li class="active">修改推广图</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -395,65 +404,86 @@
                 <!-- Page Body -->
                 <div class="page-body">
                     
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('brand/add'); ?>'"> <i class="fa fa-plus"></i> 添加品牌
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">修改推广图</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr styl>
-                                <th class="text-center">ID</th>
-                                <th class="text-center">品牌名称</th>
-                                <th class="text-center">品牌地址</th>
-                                <th class="text-center">品牌描述</th>
-                                <th class="text-center">品牌logo</th>
-                                <th class="text-center">状态</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                        </thead>
-                        
-                        <?php if(is_array($brandlist) || $brandlist instanceof \think\Collection || $brandlist instanceof \think\Paginator): $i = 0; $__LIST__ = $brandlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brand): $mod = ($i % 2 );++$i;?>
-                        <tbody>
-                                <tr>
-                                <td align="center"><?php echo $brand['brand_id']; ?></td>
-                                <td align="center"><?php echo $brand['brand_name']; ?></td>
-                                <td align="center"><?php echo $brand['brand_url']; ?></td>
-                                <td align="+center"><?php echo cut_str($brand['brand_description'] ,30); ?></td>
-                                <td align="center">
-                                <?php if($brand['brand_img'] != ''): ?>
-                                    <img style="height: 30px" src="/static/uploadss/<?php echo $brand['brand_img']; ?>" />
-                                <?php else: ?>
-                                    暂无图片
-                                <?php endif; ?>
-                                </td>
-                                <td align="center">
-                                
-                                <?php if($brand['brand_status'] != 0): ?>
-                                    显示
-                                <?php else: ?>
-                                    隐藏
-                                <?php endif; ?>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="cb_id" value="<?php echo $cbList['cb_id']; ?>">
 
-                                </td>
-                                <td align="center">
-                                    <a href="<?php echo url('edit',array('brand_id'=>$brand['brand_id'])); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('brand_id'=>$brand['brand_id'])); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
+
+
+                        <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label no-padding-right">关联的商品分类</label>
+                                <div class="col-sm-6">
+                                    <select name="cb_catesid">
+                                        <?php if(is_array($cates) || $cates instanceof \think\Collection || $cates instanceof \think\Paginator): $i = 0; $__LIST__ = $cates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catesa): $mod = ($i % 2 );++$i;?>
+                                        <option value="<?php echo $catesa['cates_id']; ?>" <?php if($catesa['cates_id'] == $cbList['cb_catesid']): ?> selected="selected" <?php endif; ?>><?php echo $catesa['cates_name']; ?></option>
+                                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                                    </select>
+                                </div>
+                                <p class="help-block col-sm-4 red">* 必填</p>
+                            </div>
+    
+    
+    
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label no-padding-right">品牌选择</label>
+                                <div class="col-sm-6">
+                                    <?php if(is_array($brands) || $brands instanceof \think\Collection || $brands instanceof \think\Paginator): $i = 0; $__LIST__ = $brands;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brands): $mod = ($i % 2 );++$i;
+                                        $brandsArray = explode(',',$cbList['cb_brands_id']);
+                                        if (in_array($brands['brand_id'],$brandsArray)){
+                                            $checked = 'checked="checked"';
+                                        } else {
+                                            $checked = '';
+                                        }
+                                    ?>
+                                    <div class="radio" style="float:left; padding-right: 10px;">
+                                        <label>
+                                            <input class="inverted colored-blue" value="<?php echo $brands['brand_id']; ?>" name="cb_brands_id[]" type="checkbox" <?php echo $checked; ?> />
+                                            <span class="text"><?php echo $brands['brand_name']; ?></span>
+                                        </label>
+                                    </div>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                                </div>
+                            </div>
+    
+    
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label no-padding-right">推广图</label>
+                                <div class="col-sm-6">
+                                    <input class="" id="username" name="cb_proimg" type="file" value="<?php echo $cbList['cb_proimg']; ?>" />
+                                    <?php if($cbList['cb_proimg'] != ''): ?>
+                                    <img src="/static/uploadss/<?php echo $cbList['cb_proimg']; ?>" alt="" style="padding: 5px; width: 50px;" />
+                                    <?php else: ?>
+                                    无此图
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+    
+    
+                            <div class="form-group">
+                                <label for="username" class="col-sm-2 control-label no-padding-right">推广图链接</label>
+                                <div class="col-sm-6">
+                                    <input class="form-control" id="username" placeholder="" name="cb_prourl" type="text" value="<?php echo $cbList['cb_prourl']; ?>">
+                                </div>
+                                <p class="help-block col-sm-4 red"></p>
+                            </div>
+
+    
+    
+    
+                            <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div> 
-                    <?php echo $brandlist->render(); ?>
-              	</div>
             </div>
         </div>
     </div>
@@ -463,10 +493,10 @@
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-		</div>	
-	</div>
+        </div>  
+    </div>
 
-	    <!--Basic Scripts-->
+        <!--Basic Scripts-->
     
 	<script type="text/javascript">
 
@@ -476,7 +506,7 @@
     
 
 
-	</script>    
-
+	</script>
+    
 
 </body></html>

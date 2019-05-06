@@ -1,8 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:70:"B:\aaaweb\shop\public/../application/index\view\category\category.html";i:1556930864;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1556930864;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1556930864;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1556934607;s:54:"B:\aaaweb\shop\application\index\view\common\left.html";i:1556930864;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:7:{s:65:"F:\www\shop\public/../application/index\view\article\article.html";i:1557059757;s:52:"F:\www\shop\application\index\view\common\_meta.html";i:1557059757;s:56:"F:\www\shop\application\index\view\common\heads_top.html";i:1557059757;s:57:"F:\www\shop\application\index\view\common\heads_logo.html";i:1557059757;s:57:"F:\www\shop\application\index\view\common\heads_navs.html";i:1557059757;s:51:"F:\www\shop\application\index\view\common\left.html";i:1557059757;s:53:"F:\www\shop\application\index\view\common\footer.html";i:1557059757;}*/ ?>
 <!doctype html>
 <html>
 
-	<head>
+<head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title><?php echo $configArr['webname']; ?></title>
@@ -146,8 +146,7 @@
 	</script>
 </head>
 
-<body class="bg-ligtGary" data-type="category1">
-
+<body class="bg-ligtGary" data-type="article1">
 
 	<div class="site-nav" id="site-nav">
     <div class="w w1200">
@@ -1186,12 +1185,12 @@
 						    <i class="iconfont icon-ele"></i>
 						    <div class="categorys-title">
 				                <strong>
-						            <a href="#" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
+						            <a href="" target="_blank"><?php echo $CommCates['cates_name']; ?></a>
 					            </strong>
 				            	<?php if($CommCates['children']): ?>
 					            <span>
 					            	<?php if(is_array($CommCates['children']) || $CommCates['children'] instanceof \think\Collection || $CommCates['children'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CommCates['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesChildren): $mod = ($i % 2 );++$i;if($i < 3): ?>
-									<a href="category.php?id=1105" target="_blank"><?php echo $CatesChildren['cates_name']; ?></a>
+									<a href="" target="_blank"><?php echo $CatesChildren['cates_name']; ?></a>
 									<?php endif; endforeach; endif; else: echo "" ;endif; ?>
 				                </span>
 								<?php endif; ?>
@@ -1232,8 +1231,6 @@
         </div>
 	</div>
 </div>
-
-
 
 
 
@@ -1288,48 +1285,23 @@
 
         <div class="article-main">
             <div class="am-hd">
-                <h2><?php echo $cateName['cate_name']; ?></h2>
-                <div class="mod-list-sort fr mt10">
-                    <form action="" name="search_form" method="post" class="article_search">
-                        <div class="f-search">
-                            <input name="keywords" type="text" id="requirement" value="" class="text" placeholder="请填写搜索内容" />
-                            <input name="id" type="hidden" value="5" />
-                            <input name="cur_url" id="cur_url" type="hidden" value="" />
-                            <input type="submit" value="立即搜索" class="btn sc-redBg-btn ui-btn-submit" />
-                        </div>
-                    </form>
-                </div>
+                <h2><?php echo $articleContent['ar_title']; ?></h2>
+                <div class="extra">
+                	<?php if(is_array($cateNav) || $cateNav instanceof \think\Collection || $cateNav instanceof \think\Paginator): $i = 0; $__LIST__ = $cateNav;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cateNavs): $mod = ($i % 2 );++$i;?>
+				    <a href="<?php echo url('index/category/index',array('cate_id'=> $cateNavs['cate_id'])); ?>"><?php echo $cateNavs['cate_name']; ?></a>
+				    <i>&gt;</i>
+				    <?php endforeach; endif; else: echo "" ;endif; ?>
+		            <span><?php echo $articleContent['ar_title']; ?></span>
+			    </div>
             </div>
-            
             <div class="am-bd">
-                <ul class="artilce-list">
-<!--                     <li>
-                        <h3><a href="#" title="隐私声明">隐私声明</a></h3>
-                        <p></p>
-                    </li> -->
-                    <?php if(is_array($artiRes) || $artiRes instanceof \think\Collection || $artiRes instanceof \think\Paginator): $i = 0; $__LIST__ = $artiRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$artiResList): $mod = ($i % 2 );++$i;?>
-                    <li>
-                        <h3><a href="<?php if($artiResList['ar_linkurl']): ?> <?php echo $artiResList['ar_linkurl']; ?>" target="_balck" <?php else: ?> <?php echo url('index/article/index',array('ar_id'=>$artiResList['ar_id'])); ?>" <?php endif; ?> title="<?php echo $artiResList['ar_title']; ?>"><?php echo $artiResList['ar_title']; ?></a></h3>
-                        <p></p>
-                    </li>
-                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
+				<?php echo $articleContent['ar_content']; ?>
             </div>
-            
-<script type="Text/Javascript" language="JavaScript">
-<!--
-function selectPage(sel)
-{
-  sel.form.submit();
-}
-//-->
-</script>
         </div>
-        
     </div>
 </div>
 
-
+	
     <!-- 首页以及其他页面 -->
 <div class="footer-new">
     <div class="footer-new-top">
@@ -1562,16 +1534,126 @@ $(function () {
 <script type="text/javascript" src="/static/index/js/warehouse.js"></script>
 <script type="text/javascript" src="/static/index/js/warehouse_area.js"></script>
 <script type="text/javascript" src="/static/index/js/jquery.SuperSlide.2.1.1.js"></script>
-<script type="text/javascript" src="/static/index/js/dsc-common.js"></script>
+<script type="text/javascript" src="/static/index/img/js/dsc-common.js"></script>
 <script type="text/javascript">
-	document.getElementById('cur_url').value = window.location.href;
-</script>
-<script type="text/javascript">
-	$(function(){
-		$(".article-side .side-goods").slide({
-			effect: 'leftLoop'
-		});
-	});
+$(function(){
+    $(".article-side .side-goods").slide({
+        effect: 'leftLoop'
+    });
+});
 </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                 <div class="article-words">
+					<p>&nbsp;<strong style="font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif; line-height: 24px; margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">隐私政策</strong></p><div class="content_list border_none list_top_txt" style="margin: 0px; padding: 25px 0px 15px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网以此声明对本站用户隐私保护的许诺。随着本站服务范围的扩大，会随时更新隐私声明。我们欢迎您随时查看隐私声明。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网非常重视对用户隐私权的保护，用户的邮件及手机号等个人资料为用户重要隐私，本站承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下擅自将用户的个人资料信息出租或出售给任何第三方，但以下情况除外：</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">A、用户同意让第三方共享资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">B、用户为享受产品和服务同意公开其个人资料；</p><p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">C、本站发现用户违反了本站服务条款或本站其它使用规定。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">使用说明</strong>
+					 &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">商创网用户可以通过设定的密码来保护账户和资料安全。用户应当对其密码的保密负全部责任。请不要和他人分享此信息。如果您使用的是公共电脑，请在离开电脑时退出商创网、以保证您的信息不被后来的使用者获取。</p></div><div class="content_list border_none" style="margin: 0px; padding: 15px 0px; width: 733px; border: none; line-height: 24px; float: left; color: rgb(102, 102, 102); font-family: 微软雅黑, 宋体, Arial, Helvetica, sans-serif;"><strong style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(33, 33, 33);">服务条款说明</strong>
+					 &nbsp; &nbsp;<p style="margin: 0px; padding: 0px; font-size: 14px; color: rgb(76, 76, 76);">接受商创网的用户同时受本站用户协议的约束。</p></div>                </div>
+				
+<div class="no_records no_comments_qt">
+    <i class="no_icon no_icon_three"></i>
+    <span class="block">暂无评价</span>
+</div>
+<div class="discuss-left">
+	<form method="post" action="article.php" id="theFrom">
+	<div class="review-form" id="doPost" name="doPost">
+		<div class="r-u-name">
+			<div class="u-ico"><img src="/static/index/img/avatar.png"></div>
+			<span>发表评论</span>
+		</div>
+		<div class="item">
+			<div class="item-label"><em class="red">*</em>&nbsp;内容：</div>
+			<div class="item-value">
+				<textarea class="textarea" id="test_content" name="content"></textarea>
+				<div class="form_prompt"></div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="item-label">&nbsp;</div>
+			<div class="item-value">
+				<input type="hidden" name="act" value="add_comment" />
+				<input type="hidden" name="article_id" value="36" />	
+				<input type="hidden" name="user_id" value="0" />				
+				<input type="button" class="btn sc-redBg-btn" ectype="submit" value="发表">
+			</div>
+		</div>
+	</div>
+	</form>
+</div>
+<script type="text/javascript" src="/static/index/img/js/jquery.purebox.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.comment_nice').click(function(){
+			var T = $(this);
+			var comment_id = T.data('commentid');
+			var goods_id = T.data('idvalue');
+			var type = 'comment';
+			
+			Ajax.call('comment.php', 'act=add_useful&id=' + comment_id + '&goods_id=' + goods_id + '&type=' + type, niceResponse, 'GET', 'JSON');
+		});
+	});
+	function niceResponse(res){
+		if(res.err_no == 1){
+			var back_url = res.url;
+			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+			return false;
+		}else if(res.err_no == 0){
+			$(".reply-nice" + res.id).html(res.useful);
+            $(".comment_nice").addClass("selected");
+		}
+	}
+	
+	$(document).on("click","[ectype='submit']",function(){		
+		var user_id = $("input[name='user_id']").val();
+		var article_id = $("input[name='article_id']").val();
+		//判断是否登录
+		if(user_id == 0){
+			var back_url = "article.php?id=" + article_id;
+			$.notLogin("get_ajax_content.php?act=get_login_dialog",back_url);
+			return false;
+		}
+			
+		var content = $("#test_content").val();
+		if(!content){
+			var message = "评论内容不能为空！";
+			pbDialog(message,"",0);
+			return false;
+		}else{
+			Ajax.call('article.php', 'act=add_comment&content=' + content + '&article_id=' + article_id, function(data){
+				if(data.error){
+					pbDialog(data.message,"",0);
+				}else{
+					pbDialog(data.message,"",1,'','','',true,function(){location.reload();});					
+				}
+			}, 'GET', 'JSON');
+		}		
+	})
+</script>
+                <div class="more_article">
+					<span class="art_prev">
+				        上一篇：<a href="#" >订购方式</a>
+				    </span>
+					<span class="art_next">
+				    </span>
+                </div>
+ -->

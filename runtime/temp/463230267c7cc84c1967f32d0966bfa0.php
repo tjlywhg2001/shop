@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"B:\aaaweb\shop\public/../application/admin\view\cates_words\edit.html";i:1556948607;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556944068;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:58:"F:\www\shop\public/../application/admin\view\link\add.html";i:1557059757;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,7 +43,7 @@
 </head>
 
 <body>
-    <!-- 头部 -->
+	<!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -102,11 +102,11 @@
     </div>
 </div>
 
-    <!-- /头部 -->
-    
-    <div class="main-container container-fluid">
-        <div class="page-container">
-                        <!-- Page Sidebar -->
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
         <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
@@ -294,6 +294,12 @@
                     <i class="menu-expand"></i>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo url('catesBrands/lst'); ?>">
+                    <span class="menu-text">推广图管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
         </ul>
     </li>
     <li>
@@ -388,9 +394,9 @@
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
                                             <li>
-                            <a href="<?php echo url('cates_words/lst'); ?>">链接管理</a>
+                            <a href="<?php echo url('link/lst'); ?>">链接管理</a>
                         </li>
-                        <li class="active">修改链接</li>
+                        <li class="active">添加链接</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -402,55 +408,82 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">修改链接</span>
+                <span class="widget-caption">添加链接</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
-                        <input type="hidden" name="cw_id" value="<?php echo $cwList['cw_id']; ?>">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">词汇</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接标题</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="cw_word" type="text" value="<?php echo $cwList['cw_word']; ?>">
+                                <input class="form-control" id="username" placeholder="" name="links_title" type="text">
                             </div>
                             <p class="help-block col-sm-4 red">* 必填</p>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">所属栏目</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接URL</label>
                             <div class="col-sm-6">
-                                <select name="cw_cates_id">
-                                    <option value="">请选择</option>
-                                    <?php if(is_array($cateslist) || $cateslist instanceof \think\Collection || $cateslist instanceof \think\Paginator): $i = 0; $__LIST__ = $cateslist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catess): $mod = ($i % 2 );++$i;?>
-                                    <option <?php if($catess['cates_id'] == $catess['cates_pid']): ?> disabled="disabled" <?php endif; ?> value="<?php echo $catess['cates_id']; ?>"
-                                    <?php if($cwList['cw_cates_id'] == $catess['cates_id']): ?>
-                                        selected="selected"
-                                    <?php endif; ?>
-                                    >
-                                    
-                                     <?php if($catess['cates_pid'] != 0): ?>
-                                     |
-                                     <?php endif; ?>
-                                     <?php echo str_repeat('-',$catess['lever']*5); ?><?php echo $catess['cates_name']; ?>
-                                    </option>
-                                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                                </select>
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">链接地址</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="cw_linkurl" type="text" value="<?php echo $cwList['cw_linkurl']; ?>">
+                                <input class="form-control" id="username" placeholder="" name="links_url" type="text">
                             </div>
                             <p class="help-block col-sm-4 red"></p>
                         </div>
 
 
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接LOGO</label>
+                            <div class="col-sm-6">
+                                <input class="" id="username" name="links_logo" type="file">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接描述</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="username" placeholder="" name="links_description" type="text"></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">连接类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="links_type" type="radio" checked="checked">
+                                        <span class="text">文字</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="links_type" type="radio">
+                                        <span class="text">图片</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接状态</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="links_status" type="radio" checked="checked">
+                                        <span class="text">显示</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="links_status" type="radio">
+                                        <span class="text">隐藏</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
@@ -468,10 +501,10 @@
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-        </div>  
-    </div>
+		</div>	
+	</div>
 
-        <!--Basic Scripts-->
+	    <!--Basic Scripts-->
     
 	<script type="text/javascript">
 

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:62:"B:\aaaweb\shop\public/../application/admin\view\cates\add.html";i:1556930864;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556930864;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556930864;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556944068;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556930864;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:66:"F:\www\shop\public/../application/admin\view\cates_brands\add.html";i:1557157380;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -294,6 +294,12 @@
                     <i class="menu-expand"></i>
                 </a>
             </li>
+            <li>
+                <a href="<?php echo url('catesBrands/lst'); ?>">
+                    <span class="menu-text">推广图管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
         </ul>
     </li>
     <li>
@@ -388,9 +394,9 @@
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
                                             <li>
-                            <a href="<?php echo url('cates/lst'); ?>">商品分类管理</a>
+                            <a href="<?php echo url('cates_brands/lst'); ?>">推广图管理</a>
                         </li>
-                        <li class="active">添加商品分类</li>
+                        <li class="active">添加推广图</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -402,25 +408,17 @@
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
             <div class="widget-header bordered-bottom bordered-blue">
-                <span class="widget-caption">添加商品分类</span>
+                <span class="widget-caption">添加推广图</span>
             </div>
             <div class="widget-body">
                 <div id="horizontal-form">
                     <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">上级分类</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">关联的商品分类</label>
                             <div class="col-sm-6">
-                                <select name="cates_pid">
-                                    <option value="">顶级分类</option>
-                                    <?php if(is_array($cateslist) || $cateslist instanceof \think\Collection || $cateslist instanceof \think\Paginator): $i = 0; $__LIST__ = $cateslist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cates): $mod = ($i % 2 );++$i;?>
-                                    <option value="<?php echo $cates['cates_id']; ?>">
-                                    
-                                    <?php if($cates['cates_pid'] != 0): ?>
-                                     |
-                                    <?php endif; ?>
-                                        <?php echo str_repeat('♥',$cates['lever']*5) ?>
-                                        <?php echo $cates['cates_name']; ?>
-                                    </option>
+                                <select name="cb_catesid">
+                                    <?php if(is_array($cates) || $cates instanceof \think\Collection || $cates instanceof \think\Paginator): $i = 0; $__LIST__ = $cates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catesa): $mod = ($i % 2 );++$i;?>
+                                    <option value="<?php echo $catesa['cates_id']; ?>"><?php echo $catesa['cates_name']; ?></option>
                                     <?php endforeach; endif; else: echo "" ;endif; ?>
                                 </select>
                             </div>
@@ -428,71 +426,36 @@
                         </div>
 
 
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类名称</label>
-                            <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="cates_name" type="text" required="">
-                            </div>
-                            <p class="help-block col-sm-4 red">* 必填</p>
-                        </div>
-
 
                         <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类关键词</label>
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌选择</label>
                             <div class="col-sm-6">
-                                <input class="form-control" id="username" placeholder="" name="cates_keywords" type="text" >
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类描述</label>
-                            <div class="col-sm-6">
-                                <textarea class="form-control" id="username" placeholder="" name="cates_description" type="text" ></textarea>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类图片</label>
-                            <div class="col-sm-6">
-                                <input class="" id="username" name="cates_img" type="file">
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right">显示导航</label>
-                            <div class="col-sm-6">
+                                <?php if(is_array($brands) || $brands instanceof \think\Collection || $brands instanceof \think\Paginator): $i = 0; $__LIST__ = $brands;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brands): $mod = ($i % 2 );++$i;?>
                                 <div class="radio" style="float:left; padding-right: 10px;">
                                     <label>
-                                        <input class="inverted colored-blue" checked="checked" value="1" name="cates_shownav" type="radio">
-                                        <span class="text">是</span>
+                                        <input class="inverted colored-blue" value="<?php echo $brands['brand_id']; ?>" name="cb_brands_id[]" type="checkbox">
+                                        <span class="text"><?php echo $brands['brand_name']; ?></span>
                                     </label>
                                 </div>
-                                <div class="radio" style="float:left">
-                                    <label>
-                                        <input class="inverted colored-blue" value="0" name="cates_shownav" type="radio">
-                                        <span class="text">否</span>
-                                    </label>
-                                </div>
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
                             </div>
                         </div>
 
-                        <!-- 推荐位 -->
-                        <div class="form-group">
-                            <label for="username" class="col-sm-2 control-label no-padding-right" style="padding: 0;">推荐位</label>
-                            <div class="col-sm-6">
 
-                                <?php if(is_array($reclist) || $reclist instanceof \think\Collection || $reclist instanceof \think\Paginator): $i = 0; $__LIST__ = $reclist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$recpos): $mod = ($i % 2 );++$i;?>
-                                    <div class="" style="float:left; padding-right: 30px;">
-                                        <label>
-                                            <input class="colored-blue" value="<?php echo $recpos['rec_id']; ?>" name="recposs[]" type="checkbox">
-                                            <span class="text"><?php echo $recpos['rec_name']; ?></span>
-                                        </label>
-                                    </div>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">推广图</label>
+                            <div class="col-sm-6">
+                                <input class="" id="username" name="cb_proimg" type="file">
                             </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">推广图链接</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cb_prourl" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
                         </div>
 
 

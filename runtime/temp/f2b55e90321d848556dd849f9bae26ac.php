@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:66:"B:\aaaweb\shop\public/../application/admin\view\category\list.html";i:1556846466;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1556846466;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1556846466;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1556846466;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1556846466;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:59:"F:\www\shop\public/../application/admin\view\brand\add.html";i:1557059757;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557059757;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-                <div class="page-sidebar" id="sidebar">
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -284,6 +284,21 @@
     <li>
         <a href="#" class="menu-dropdown">
             <i class="menu-icon fa fa-gear"></i>
+            <span class="menu-text">关联商品分类模块</span>
+            <i class="menu-expand"></i>
+        </a>
+        <ul class="submenu"  style="display: block;">
+            <li>
+                <a href="<?php echo url('catesWords/lst'); ?>">
+                    <span class="menu-text">关联管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="#" class="menu-dropdown">
+            <i class="menu-icon fa fa-gear"></i>
             <span class="menu-text">链接模块</span>
             <i class="menu-expand"></i>
         </a>
@@ -372,104 +387,91 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">用户管理</li>
+                                            <li>
+                            <a href="<?php echo url('Brand/lst'); ?>">品牌管理</a>
+                        </li>
+                        <li class="active">添加品牌</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-
-<form action="" method="post">                    
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('Category/add'); ?>'"> <i class="fa fa-plus"></i> 添加分类
-</button>
-<button type="submit" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"> <i class="fa fa-plus"></i> 分类排序
-</button>
+                    
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增品牌</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr styl>
-                                <th class="text-center">栏目ID</th>
-                                <th class="text-center">栏目名称</th>
-                                <th class="text-center">栏目分类</th>
-                                <th class="text-center">栏目关键词</th>
-                                <th class="text-center">栏目描述</th>
-                                <th class="text-center">排序</th>
-                                <th class="text-center">显示导航</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                        </thead>
-                        
-                        <?php if(is_array($catelist) || $catelist instanceof \think\Collection || $catelist instanceof \think\Paginator): $i = 0; $__LIST__ = $catelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
-                        <tbody>
-                                <tr>
-                                <td align="center" width="5%"><?php echo $category['cate_id']; ?></td>
-                                <td align="+center" width="12%">
-<!--                                     <?php if($category['cate_pid'] != 0): ?>
-                                     |
-                                    <?php endif; ?>
- -->                                    <?php echo str_repeat('◆',$category['lever']*4).'&nbsp;' ?>
-                                    <?php echo $category['cate_name']; ?>
-                                    
-                                </td>
-                                <td align="center" width="5%">
-                                <?php if($category['cate_type'] == 1): ?>
-                                    系统分类
-                                <?php elseif($category['cate_type'] == 2): ?>
-                                    帮助分类
-                                <?php elseif($category['cate_type'] == 3): ?>
-                                    网店帮助
-                                <?php elseif($category['cate_type'] == 4): ?>
-                                    网店信息
-                                <?php elseif($category['cate_type'] == 5): ?>
-                                    普通分类
-                                <?php endif; ?>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="brand_name" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
 
-                                </td>
-                                <td align="center" width="10%"><?php echo $category['cate_keywords']; ?></td>
-                                <td align="+center" width="42%"><?php echo cut_str($category['cate_description'] ,30); ?></td>
-                                <td align="center" width="4%">
-                                    <input type="text" name="cate_sort[<?php echo $category['cate_id']; ?>]" value="<?php echo $category['cate_sort']; ?>" style="width: 30px; text-align: center;" />
-                                </td>
-                               <td align="center" width="10%">
-                                
-                                <?php if($category['cate_shownav'] != 0): ?>
-                                    显示
-                                <?php else: ?>
-                                    隐藏
-                                <?php endif; ?>
 
-                                </td>
-                                <td align="center" width="12%">
-                                    <a href="<?php echo url('edit',array('cate_id'=>$category['cate_id'])); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <?php if(!in_array(($category['cate_id']), explode(',',"1,2,3"))): ?>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('cate_id'=>$category['cate_id'])); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                    <?php else: ?>
-                                    <a href="#" disabled="disabled" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌地址</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="brand_url" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
 
-                                    <?php endif; ?>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌描述</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="username" placeholder="" name="brand_description" type="text"></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌LOGO</label>
+                            <div class="col-sm-6">
+                                <input class="" id="username" name="brand_img" type="file">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌状态</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="brand_status" type="radio" checked="checked">
+                                        <span class="text">显示</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="brand_status" type="radio">
+                                        <span class="text">隐藏</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-</form>
+
                 </div>
                 <!-- /Page Body -->
             </div>
@@ -487,7 +489,7 @@
     
 
 
-	</script>    
-
+	</script>
+    
 
 </body></html>
