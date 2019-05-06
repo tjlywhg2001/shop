@@ -6,11 +6,115 @@
 -- Database : tested
 -- 
 -- Part : #1
--- Date : 2019-05-04 19:59:37
+-- Date : 2019-05-07 00:30:38
 -- -----------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
 
+
+-- -----------------------------
+-- Table structure for `sheet2`
+-- -----------------------------
+DROP TABLE IF EXISTS `sheet2`;
+CREATE TABLE `sheet2` (
+  `品牌日` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -----------------------------
+-- Records of `sheet2`
+-- -----------------------------
+INSERT INTO `sheet2` VALUES ('品牌日');
+INSERT INTO `sheet2` VALUES ('家电城');
+INSERT INTO `sheet2` VALUES ('智能生活馆');
+INSERT INTO `sheet2` VALUES ('京东净化馆');
+INSERT INTO `sheet2` VALUES ('京东帮服务店');
+INSERT INTO `sheet2` VALUES ('值得买精选');
+INSERT INTO `sheet2` VALUES ('手机频道');
+INSERT INTO `sheet2` VALUES ('网上营业厅');
+INSERT INTO `sheet2` VALUES ('配件城');
+INSERT INTO `sheet2` VALUES ('影像Club');
+INSERT INTO `sheet2` VALUES ('手机社区');
+INSERT INTO `sheet2` VALUES ('以旧换新');
+INSERT INTO `sheet2` VALUES ('本周热卖');
+INSERT INTO `sheet2` VALUES ('游戏部落');
+INSERT INTO `sheet2` VALUES ('智能社区');
+INSERT INTO `sheet2` VALUES ('GAME+');
+INSERT INTO `sheet2` VALUES ('装机大师');
+INSERT INTO `sheet2` VALUES ('办公生活馆');
+INSERT INTO `sheet2` VALUES ('家装城');
+INSERT INTO `sheet2` VALUES ('居家日用');
+INSERT INTO `sheet2` VALUES ('精品家具');
+INSERT INTO `sheet2` VALUES ('家装建材');
+INSERT INTO `sheet2` VALUES ('厨房达人');
+INSERT INTO `sheet2` VALUES ('猫猫狗狗');
+INSERT INTO `sheet2` VALUES ('男装');
+INSERT INTO `sheet2` VALUES ('女装');
+INSERT INTO `sheet2` VALUES ('内衣');
+INSERT INTO `sheet2` VALUES ('国际品牌');
+INSERT INTO `sheet2` VALUES ('男鞋');
+INSERT INTO `sheet2` VALUES ('女鞋');
+INSERT INTO `sheet2` VALUES ('箱包');
+INSERT INTO `sheet2` VALUES ('钟表');
+INSERT INTO `sheet2` VALUES ('奢侈品');
+INSERT INTO `sheet2` VALUES ('女包');
+INSERT INTO `sheet2` VALUES ('清洁用品');
+INSERT INTO `sheet2` VALUES ('美妆商城');
+INSERT INTO `sheet2` VALUES ('官方旗舰店');
+INSERT INTO `sheet2` VALUES ('美妆特卖');
+INSERT INTO `sheet2` VALUES ('妆比社');
+INSERT INTO `sheet2` VALUES ('全球购美妆');
+
+-- -----------------------------
+-- Table structure for `sheet3`
+-- -----------------------------
+DROP TABLE IF EXISTS `sheet3`;
+CREATE TABLE `sheet3` (
+  `1` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- -----------------------------
+-- Records of `sheet3`
+-- -----------------------------
+INSERT INTO `sheet3` VALUES ('1');
+INSERT INTO `sheet3` VALUES ('1');
+INSERT INTO `sheet3` VALUES ('1');
+INSERT INTO `sheet3` VALUES ('1');
+INSERT INTO `sheet3` VALUES ('1');
+INSERT INTO `sheet3` VALUES ('1');
+INSERT INTO `sheet3` VALUES ('2');
+INSERT INTO `sheet3` VALUES ('2');
+INSERT INTO `sheet3` VALUES ('2');
+INSERT INTO `sheet3` VALUES ('2');
+INSERT INTO `sheet3` VALUES ('2');
+INSERT INTO `sheet3` VALUES ('2');
+INSERT INTO `sheet3` VALUES ('3');
+INSERT INTO `sheet3` VALUES ('3');
+INSERT INTO `sheet3` VALUES ('3');
+INSERT INTO `sheet3` VALUES ('3');
+INSERT INTO `sheet3` VALUES ('3');
+INSERT INTO `sheet3` VALUES ('3');
+INSERT INTO `sheet3` VALUES ('4');
+INSERT INTO `sheet3` VALUES ('4');
+INSERT INTO `sheet3` VALUES ('4');
+INSERT INTO `sheet3` VALUES ('4');
+INSERT INTO `sheet3` VALUES ('4');
+INSERT INTO `sheet3` VALUES ('4');
+INSERT INTO `sheet3` VALUES ('5');
+INSERT INTO `sheet3` VALUES ('5');
+INSERT INTO `sheet3` VALUES ('5');
+INSERT INTO `sheet3` VALUES ('5');
+INSERT INTO `sheet3` VALUES ('6');
+INSERT INTO `sheet3` VALUES ('6');
+INSERT INTO `sheet3` VALUES ('6');
+INSERT INTO `sheet3` VALUES ('6');
+INSERT INTO `sheet3` VALUES ('6');
+INSERT INTO `sheet3` VALUES ('6');
+INSERT INTO `sheet3` VALUES ('7');
+INSERT INTO `sheet3` VALUES ('7');
+INSERT INTO `sheet3` VALUES ('7');
+INSERT INTO `sheet3` VALUES ('7');
+INSERT INTO `sheet3` VALUES ('7');
+INSERT INTO `sheet3` VALUES ('7');
 
 -- -----------------------------
 -- Table structure for `tp_article`
@@ -98,7 +202,7 @@ CREATE TABLE `tp_brand` (
   `brand_sort` smallint(6) NOT NULL DEFAULT '50',
   `brand_status` tinyint(4) NOT NULL DEFAULT '1',
   PRIMARY KEY (`brand_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=116 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=117 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_brand`
@@ -786,12 +890,12 @@ INSERT INTO `tp_cates` VALUES ('519', '皮具护理', '', '', '', '127', '50', '
 DROP TABLE IF EXISTS `tp_cates_brands`;
 CREATE TABLE `tp_cates_brands` (
   `cb_id` smallint(6) NOT NULL AUTO_INCREMENT,
-  `cb_barnds_id` varchar(100) NOT NULL COMMENT '关联的品牌id列表',
+  `cb_brands_id` varchar(100) NOT NULL COMMENT '关联的品牌id列表',
   `cb_proimg` varchar(60) NOT NULL COMMENT '推广图地址',
   `cb_prourl` varchar(60) NOT NULL COMMENT '推广图链接',
   `cb_catesid` mediumint(9) NOT NULL COMMENT '对应主栏目id',
   PRIMARY KEY (`cb_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_cates_brands`
@@ -815,51 +919,51 @@ CREATE TABLE `tp_cates_words` (
   `cw_linkurl` varchar(60) NOT NULL COMMENT '链接地址',
   PRIMARY KEY (`cw_id`),
   KEY `cw_cates_id` (`cw_cates_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=334 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_cates_words`
 -- -----------------------------
 INSERT INTO `tp_cates_words` VALUES ('1', '1', '品牌日', '');
-INSERT INTO `tp_cates_words` VALUES ('2', '2', '手机频道', '');
-INSERT INTO `tp_cates_words` VALUES ('4', '4', '家装城', '');
-INSERT INTO `tp_cates_words` VALUES ('3', '3', '本周热卖', '');
-INSERT INTO `tp_cates_words` VALUES ('5', '5', '男装', '');
-INSERT INTO `tp_cates_words` VALUES ('6', '6', '男鞋', '');
-INSERT INTO `tp_cates_words` VALUES ('7', '7', '清洁用品', '');
-INSERT INTO `tp_cates_words` VALUES ('8', '8', '家电城', '');
-INSERT INTO `tp_cates_words` VALUES ('9', '9', '智能生活馆', '');
-INSERT INTO `tp_cates_words` VALUES ('10', '10', '京东净化馆', '');
-INSERT INTO `tp_cates_words` VALUES ('11', '11', '京东帮服务店', '');
-INSERT INTO `tp_cates_words` VALUES ('12', '12', '值得买精选', '');
-INSERT INTO `tp_cates_words` VALUES ('13', '13', '网上营业厅', '');
-INSERT INTO `tp_cates_words` VALUES ('14', '14', '配件城', '');
-INSERT INTO `tp_cates_words` VALUES ('15', '15', '影像Club', '');
-INSERT INTO `tp_cates_words` VALUES ('16', '16', '手机社区', '');
-INSERT INTO `tp_cates_words` VALUES ('17', '17', '以旧换新', '');
-INSERT INTO `tp_cates_words` VALUES ('18', '18', '游戏部落', '');
-INSERT INTO `tp_cates_words` VALUES ('19', '19', '智能社区', '');
-INSERT INTO `tp_cates_words` VALUES ('20', '20', 'GAME+', '');
-INSERT INTO `tp_cates_words` VALUES ('21', '21', '装机大师', '');
-INSERT INTO `tp_cates_words` VALUES ('22', '22', '办公生活馆', '');
-INSERT INTO `tp_cates_words` VALUES ('23', '23', '居家日用', '');
-INSERT INTO `tp_cates_words` VALUES ('24', '24', '精品家具', '');
-INSERT INTO `tp_cates_words` VALUES ('25', '25', '家装建材', '');
-INSERT INTO `tp_cates_words` VALUES ('26', '26', '厨房达人', '');
-INSERT INTO `tp_cates_words` VALUES ('27', '27', '猫猫狗狗', '');
-INSERT INTO `tp_cates_words` VALUES ('28', '28', '女装', '');
-INSERT INTO `tp_cates_words` VALUES ('29', '29', '内衣', '');
-INSERT INTO `tp_cates_words` VALUES ('30', '30', '国际品牌', '');
-INSERT INTO `tp_cates_words` VALUES ('31', '31', '女鞋', '');
-INSERT INTO `tp_cates_words` VALUES ('32', '32', '箱包', '');
-INSERT INTO `tp_cates_words` VALUES ('33', '33', '钟表', '');
-INSERT INTO `tp_cates_words` VALUES ('34', '34', '奢侈品', '');
-INSERT INTO `tp_cates_words` VALUES ('35', '35', '女包', '');
-INSERT INTO `tp_cates_words` VALUES ('36', '36', '美妆商城', '');
-INSERT INTO `tp_cates_words` VALUES ('37', '37', '官方旗舰店', '');
-INSERT INTO `tp_cates_words` VALUES ('38', '38', '美妆特卖', '');
-INSERT INTO `tp_cates_words` VALUES ('39', '39', '妆比社', '');
-INSERT INTO `tp_cates_words` VALUES ('40', '40', '全球购美妆', '');
+INSERT INTO `tp_cates_words` VALUES ('2', '1', '家电城', '');
+INSERT INTO `tp_cates_words` VALUES ('3', '1', '智能生活馆', '');
+INSERT INTO `tp_cates_words` VALUES ('4', '1', '京东净化馆', '');
+INSERT INTO `tp_cates_words` VALUES ('5', '1', '京东帮服务店', '');
+INSERT INTO `tp_cates_words` VALUES ('6', '1', '值得买精选', '');
+INSERT INTO `tp_cates_words` VALUES ('7', '2', '手机频道', '');
+INSERT INTO `tp_cates_words` VALUES ('8', '2', '网上营业厅', '');
+INSERT INTO `tp_cates_words` VALUES ('9', '2', '配件城', '');
+INSERT INTO `tp_cates_words` VALUES ('10', '2', '影像Club', '');
+INSERT INTO `tp_cates_words` VALUES ('11', '2', '手机社区', '');
+INSERT INTO `tp_cates_words` VALUES ('12', '2', '以旧换新', '');
+INSERT INTO `tp_cates_words` VALUES ('13', '3', '本周热卖', '');
+INSERT INTO `tp_cates_words` VALUES ('14', '3', '游戏部落', '');
+INSERT INTO `tp_cates_words` VALUES ('15', '3', '智能社区', '');
+INSERT INTO `tp_cates_words` VALUES ('16', '3', 'GAME+', '');
+INSERT INTO `tp_cates_words` VALUES ('17', '3', '装机大师', '');
+INSERT INTO `tp_cates_words` VALUES ('18', '3', '办公生活馆', '');
+INSERT INTO `tp_cates_words` VALUES ('19', '4', '家装城', '');
+INSERT INTO `tp_cates_words` VALUES ('20', '4', '居家日用', '');
+INSERT INTO `tp_cates_words` VALUES ('21', '4', '精品家具', '');
+INSERT INTO `tp_cates_words` VALUES ('22', '4', '家装建材', '');
+INSERT INTO `tp_cates_words` VALUES ('23', '4', '厨房达人', '');
+INSERT INTO `tp_cates_words` VALUES ('24', '4', '猫猫狗狗', '');
+INSERT INTO `tp_cates_words` VALUES ('25', '5', '男装', '');
+INSERT INTO `tp_cates_words` VALUES ('26', '5', '女装', '');
+INSERT INTO `tp_cates_words` VALUES ('27', '5', '内衣', '');
+INSERT INTO `tp_cates_words` VALUES ('28', '5', '国际品牌', '');
+INSERT INTO `tp_cates_words` VALUES ('29', '6', '男鞋', '');
+INSERT INTO `tp_cates_words` VALUES ('30', '6', '女鞋', '');
+INSERT INTO `tp_cates_words` VALUES ('31', '6', '箱包', '');
+INSERT INTO `tp_cates_words` VALUES ('32', '6', '钟表', '');
+INSERT INTO `tp_cates_words` VALUES ('33', '6', '奢侈品', '');
+INSERT INTO `tp_cates_words` VALUES ('34', '6', '女包', '');
+INSERT INTO `tp_cates_words` VALUES ('35', '7', '清洁用品', '');
+INSERT INTO `tp_cates_words` VALUES ('36', '7', '美妆商城', '');
+INSERT INTO `tp_cates_words` VALUES ('37', '7', '官方旗舰店', '');
+INSERT INTO `tp_cates_words` VALUES ('38', '7', '美妆特卖', '');
+INSERT INTO `tp_cates_words` VALUES ('39', '7', '妆比社', '');
+INSERT INTO `tp_cates_words` VALUES ('40', '7', '全球购美妆', '');
 
 -- -----------------------------
 -- Table structure for `tp_comm_attr`
