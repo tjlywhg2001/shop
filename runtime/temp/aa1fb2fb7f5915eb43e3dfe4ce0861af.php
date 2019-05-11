@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"F:\www\shop\public/../application/admin\view\cates_brands\list.html";i:1557567487;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:59:"F:\www\shop\public/../application/admin\view\type\list.html";i:1557059757;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -393,7 +393,7 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">用户管理</li>
+                        <li class="active">商品类型管理</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -401,7 +401,7 @@
                 <!-- Page Body -->
                 <div class="page-body">
                     
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('catesBrands/add'); ?>'"> <i class="fa fa-plus"></i> 添加推广图
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('type/add'); ?>'"> <i class="fa fa-plus"></i> 添加商品类型
 </button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -410,43 +410,26 @@
                 <div class="flip-scroll">
                     <table class="table table-bordered table-hover">
                         <thead class="">
-                            <tr styl>
-                                <th class="text-center">ID</th>
-                                <th class="text-center">关联的商品分类</th>
-                                <th class="text-center">关联的品牌</th>
-                                <th class="text-center">推广图</th>
-                                <th class="text-center">推广图链接</th>
-                                <th class="text-center">操作</th>
+                            <tr>
+                                <th class="text-center" width="10%">ID</th>
+                                <th class="text-center">商品类型名称</th>
+                                <th class="text-center" width="300">操作</th>
                             </tr>
                         </thead>
                         
-                        <?php if(is_array($cbList) || $cbList instanceof \think\Collection || $cbList instanceof \think\Paginator): $i = 0; $__LIST__ = $cbList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catesbrands): $mod = ($i % 2 );++$i;?>
+                        <?php if(is_array($typelist) || $typelist instanceof \think\Collection || $typelist instanceof \think\Paginator): $i = 0; $__LIST__ = $typelist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$type): $mod = ($i % 2 );++$i;?>
                         <tbody>
                                 <tr>
-                                <td align="center"><?php echo $catesbrands['cb_id']; ?></td>
-                                <td align="center"><?php echo $catesbrands['cates_name']; ?></td>
+                                <td align="center"><?php echo $type['type_id']; ?></td>
+                                <td align="center"><?php echo $type['type_name']; ?></td>
                                 <td align="center">
-                                    <?php
-                                        foreach($cbBrandStr as $k => $v){
-                                            if ($v['cb_id'] == $catesbrands['cb_id'] ){
-                                                echo $v['cb_brand_name'];
-                                            }
-                                        }
-                                    ?>
-                                </td>
-                                <td align="center">
-                                <?php if($catesbrands['cb_proimg'] != ''): ?>
-                                    <img style="height: 30px" src="/static/uploadss/<?php echo $catesbrands['cb_proimg']; ?>" />
-                                <?php else: ?>
-                                    暂无图片
-                                <?php endif; ?>
-                                </td>
-                                <td align="center"><?php echo $catesbrands['cb_prourl']; ?></td>
-                                <td align="center">
-                                    <a href="<?php echo url('edit',array('cb_id'=>$catesbrands['cb_id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                    <a href="<?php echo url('attr/lst',array('type_id'=>$type['type_id'])); ?>" class="btn btn-sm btn-warning shiny">
+                                        <i class="fa fa-check-square-o"></i> 属性列表
+                                    </a>
+                                    <a href="<?php echo url('edit',array('type_id'=>$type['type_id'])); ?>" class="btn btn-primary btn-sm shiny">
                                         <i class="fa fa-edit"></i> 编辑
                                     </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('cb_id'=>$catesbrands['cb_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('type_id'=>$type['type_id'])); ?>')" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>
@@ -456,7 +439,7 @@
                     </table>
                 </div>
                 <div> 
-                    <?php echo $cbList->render(); ?>
+                    <?php echo $typelist->render(); ?>
               	</div>
             </div>
         </div>

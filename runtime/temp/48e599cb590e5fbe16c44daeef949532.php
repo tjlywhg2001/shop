@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"F:\www\shop\public/../application/admin\view\cates_brands\list.html";i:1557567487;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:62:"F:\www\shop\public/../application/admin\view\arti\imglist.html";i:1557059757;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -393,7 +393,7 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">用户管理</li>
+                        <li class="active">图片管理</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -401,7 +401,7 @@
                 <!-- Page Body -->
                 <div class="page-body">
                     
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('catesBrands/add'); ?>'"> <i class="fa fa-plus"></i> 添加推广图
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('arti/add'); ?>'"> <i class="fa fa-plus"></i> 添加图片
 </button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -411,58 +411,58 @@
                     <table class="table table-bordered table-hover">
                         <thead class="">
                             <tr styl>
-                                <th class="text-center">ID</th>
-                                <th class="text-center">关联的商品分类</th>
-                                <th class="text-center">关联的品牌</th>
-                                <th class="text-center">推广图</th>
-                                <th class="text-center">推广图链接</th>
-                                <th class="text-center">操作</th>
+                                <th class="text-center" >图片</th>
+                                <th class="text-center" width="12%">操作</th>
                             </tr>
                         </thead>
-                        
-                        <?php if(is_array($cbList) || $cbList instanceof \think\Collection || $cbList instanceof \think\Paginator): $i = 0; $__LIST__ = $cbList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catesbrands): $mod = ($i % 2 );++$i;?>
                         <tbody>
+                                <?php if(is_array($imglist) || $imglist instanceof \think\Collection || $imglist instanceof \think\Paginator): $i = 0; $__LIST__ = $imglist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$haha): $mod = ($i % 2 );++$i;?>
                                 <tr>
-                                <td align="center"><?php echo $catesbrands['cb_id']; ?></td>
-                                <td align="center"><?php echo $catesbrands['cates_name']; ?></td>
-                                <td align="center">
-                                    <?php
-                                        foreach($cbBrandStr as $k => $v){
-                                            if ($v['cb_id'] == $catesbrands['cb_id'] ){
-                                                echo $v['cb_brand_name'];
-                                            }
-                                        }
-                                    ?>
-                                </td>
-                                <td align="center">
-                                <?php if($catesbrands['cb_proimg'] != ''): ?>
-                                    <img style="height: 30px" src="/static/uploadss/<?php echo $catesbrands['cb_proimg']; ?>" />
-                                <?php else: ?>
-                                    暂无图片
-                                <?php endif; ?>
-                                </td>
-                                <td align="center"><?php echo $catesbrands['cb_prourl']; ?></td>
-                                <td align="center">
-                                    <a href="<?php echo url('edit',array('cb_id'=>$catesbrands['cb_id'])); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('cb_id'=>$catesbrands['cb_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                    <td><img height="50" src="<?php echo $haha; ?>">
+                                    </td>
+                                  <td align="center">
+                                    <a href="#" onclick=" return delimg(this)" id="<?php echo $haha; ?>" class="btn btn-danger btn-sm shiny">
                                         <i class="fa fa-trash-o"></i> 删除
                                     </a>
                                 </td>
                             </tr>
-                        </tbody>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
+                                 <?php endforeach; endif; else: echo "" ;endif; ?>
+                       </tbody>
+                   </table>
+                        <script>
+                            function delimg(i){
+                                // if ( !confirm('确定删除吗？')){
+                                //     return false;
+                                // }
+                                var url = "<?php echo url('delimg'); ?>";
+                                var imgscr = $(i).attr('id');
+                                $.ajax({
+                                    url : url,
+                                    type : "post",
+                                    dataType:"json",
+                                    data: {imgscr:imgscr},
+                                    success : function(data){
+                                        if ( data == 1 ){
+                                            $(i).parent().parent().remove();
+                                            alert('删除成功');
+                                        }else if( data == 2){
+                                            alert('删除失败');
+                                        }else{
+                                            alert('图片不存在');
+                                        }
+                                    }
+                                });
+
+                            }
+                            
+                        </script>
                 </div>
                 <div> 
-                    <?php echo $cbList->render(); ?>
               	</div>
             </div>
         </div>
     </div>
 </div>
-
                 </div>
                 <!-- /Page Body -->
             </div>

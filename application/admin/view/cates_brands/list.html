@@ -51,7 +51,15 @@
                                 <tr>
                                 <td align="center">{$catesbrands.cb_id}</td>
                                 <td align="center">{$catesbrands.cates_name}</td>
-                                <td align="center">{$catesbrands.cb_brands_id}</td>
+                                <td align="center">
+                                    <?php
+                                        foreach($cbBrandStr as $k => $v){
+                                            if ($v['cb_id'] == $catesbrands['cb_id'] ){
+                                                echo $v['cb_brand_name'];
+                                            }
+                                        }
+                                    ?>
+                                </td>
                                 <td align="center">
                                 {if condition="$catesbrands['cb_proimg'] neq ''"}
                                     <img style="height: 30px" src="__upload__/{$catesbrands.cb_proimg}" />

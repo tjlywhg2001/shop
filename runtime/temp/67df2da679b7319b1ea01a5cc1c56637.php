@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"F:\www\shop\public/../application/admin\view\cates_brands\list.html";i:1557567487;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:60:"F:\www\shop\public/../application/admin\view\member\add.html";i:1557059757;s:52:"F:\www\shop\application\admin\view\common\_meta.html";i:1557059757;s:50:"F:\www\shop\application\admin\view\common\top.html";i:1557059757;s:51:"F:\www\shop\application\admin\view\common\left.html";i:1557148780;s:53:"F:\www\shop\application\admin\view\common\footer.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-                <div class="page-sidebar" id="sidebar">
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -393,7 +393,10 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">用户管理</li>
+                                            <li>
+                            <a href="<?php echo url('member/lst'); ?>">会员级别管理</a>
+                        </li>
+                        <li class="active">添加会员级别</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -401,63 +404,56 @@
                 <!-- Page Body -->
                 <div class="page-body">
                     
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('catesBrands/add'); ?>'"> <i class="fa fa-plus"></i> 添加推广图
-</button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">
         <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">添加会员级别</span>
+            </div>
             <div class="widget-body">
-                <div class="flip-scroll">
-                    <table class="table table-bordered table-hover">
-                        <thead class="">
-                            <tr styl>
-                                <th class="text-center">ID</th>
-                                <th class="text-center">关联的商品分类</th>
-                                <th class="text-center">关联的品牌</th>
-                                <th class="text-center">推广图</th>
-                                <th class="text-center">推广图链接</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                        </thead>
-                        
-                        <?php if(is_array($cbList) || $cbList instanceof \think\Collection || $cbList instanceof \think\Paginator): $i = 0; $__LIST__ = $cbList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catesbrands): $mod = ($i % 2 );++$i;?>
-                        <tbody>
-                                <tr>
-                                <td align="center"><?php echo $catesbrands['cb_id']; ?></td>
-                                <td align="center"><?php echo $catesbrands['cates_name']; ?></td>
-                                <td align="center">
-                                    <?php
-                                        foreach($cbBrandStr as $k => $v){
-                                            if ($v['cb_id'] == $catesbrands['cb_id'] ){
-                                                echo $v['cb_brand_name'];
-                                            }
-                                        }
-                                    ?>
-                                </td>
-                                <td align="center">
-                                <?php if($catesbrands['cb_proimg'] != ''): ?>
-                                    <img style="height: 30px" src="/static/uploadss/<?php echo $catesbrands['cb_proimg']; ?>" />
-                                <?php else: ?>
-                                    暂无图片
-                                <?php endif; ?>
-                                </td>
-                                <td align="center"><?php echo $catesbrands['cb_prourl']; ?></td>
-                                <td align="center">
-                                    <a href="<?php echo url('edit',array('cb_id'=>$catesbrands['cb_id'])); ?>" class="btn btn-primary btn-sm shiny">
-                                        <i class="fa fa-edit"></i> 编辑
-                                    </a>
-                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('cb_id'=>$catesbrands['cb_id'])); ?>')" class="btn btn-danger btn-sm shiny">
-                                        <i class="fa fa-trash-o"></i> 删除
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <?php endforeach; endif; else: echo "" ;endif; ?>
-                    </table>
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">会员级别名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="level_name" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">级别积分下限</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="level_bom_point" type="text">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">级别积分上限</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="level_top_point" type="text">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">级别折扣率</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="level_rate" type="text">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                <div> 
-                    <?php echo $cbList->render(); ?>
-              	</div>
             </div>
         </div>
     </div>
@@ -480,7 +476,7 @@
     
 
 
-	</script>    
-
+	</script>
+    
 
 </body></html>

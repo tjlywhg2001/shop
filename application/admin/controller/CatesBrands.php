@@ -9,7 +9,24 @@
 		public function lst(){
 
 			$cbList = db('cates_brands') -> alias('cb') -> field('cb.*,c.cates_id,c.cates_name') -> join('cates c','c.cates_id = cb.cb_catesid','LEFT') ->order('cb_id desc')->paginate(5);
-			$this -> assign('cbList',$cbList);
+			$cbBrandStr = array();
+			foreach ($cbList as $k => $v) {
+				$cbBrandIds = explode(',',$v['cb_brands_id']);
+				$cbBrand = array();
+				foreach ($cbBrandIds as $k1 => $v1) {
+					$cbBrand[] = db('brand') -> where('brand_id','=',$v1) -> find();
+				}
+				$cbBrandName = array();
+				foreach ($cbBrand as $k1 => $v1) {
+					$cbBrandName[] = $v1['brand_name'];
+				}
+				$cbBrandStr[$k]['cb_brand_name'] = implode(',',$cbBrandName);
+				$cbBrandStr[$k]['cb_id'] = $v['cb_id'];
+			}
+			$this -> assign([
+				'cbList'=>$cbList,
+				'cbBrandStr'=>$cbBrandStr,
+			]);
 
 			return view('list');
 
