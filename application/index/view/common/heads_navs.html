@@ -273,11 +273,11 @@
 		</div>
 
 
-        <div class="categorys site-mast">
+        <div class="categorys <?php if( !isset($show_nav)){ echo 'site-mast';} ?>">
             <div class="categorys-type">
             	<a href="categoryall.php" target="_blank">全部商品分类</a>
             </div>
-		    <div class="categorys-tab-content">
+		    <div class="categorys-tab-content" >
 		    	<div class="categorys-items" id="cata-nav">
 		    		{volist name="CommCates" id="CommCates"}
 		            <div class="categorys-item" ectype="cateItem" data-id="{$CommCates.cates_id}" data-eveval="0">
@@ -331,6 +331,10 @@
 	            {/volist}
         	</ul>
         </div>
+
+
+
+
 	</div>
 </div>
 

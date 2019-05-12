@@ -15,6 +15,10 @@ class Index extends Base
         // $CommRecpos = model('commodity') -> HomeShowGoods(2,1);
         // dump($CommRecpos);die;
 
+    	$this -> assign([
+    		'show_nav' => 1,
+    	]);
+
         return view();
     }
 

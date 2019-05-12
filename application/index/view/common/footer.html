@@ -168,6 +168,7 @@
 $(function () {
 	var dataType = $('body').data('type');
 	var indexType = 'index1', 
+		index2Type = 'index2', 
 		loginType = 'login1', 
 		regType = 'reg1', 
 		cartListType = 'cart_list1', 
@@ -212,6 +213,9 @@ $(function () {
 			// 首页颜色
 			$('body').addClass('catetop-cloth');
 			$('.site-mast').remove();
+		} else if ( dataType === index2Type ){
+			// 首页颜色
+			$('.site-masts').remove();
 		} else {
 			$('.site-masts').remove();
 			if ( dataType === goodsListType ) {

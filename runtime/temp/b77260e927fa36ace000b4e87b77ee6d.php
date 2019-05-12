@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\cates\cates.html";i:1557621091;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1557621091;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1557621091;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1557621091;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1557621091;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1557621091;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1557621091;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:8:{s:64:"B:\aaaweb\shop\public/../application/index\view\cates\cates.html";i:1557621091;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1557641977;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1557621091;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1557621091;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1557649772;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1557621091;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1557646703;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1557621091;}*/ ?>
 <!doctype html>
 <html>
 
@@ -18,6 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="/static/index/css/select.css" />
 	<link rel="stylesheet" type="text/css" href="/static/index/css/perfect-scrollbar.min.css" />
 	<script type="text/javascript" src="/static/index/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/static/index/js/jquery_004.js"></script>
 	<script type="text/javascript" src="/static/index/js/jquery.json.js"></script>
 	<script type="text/javascript" src="/static/index/js/transport_jquery.js"></script>
 	<script type="text/javascript">
@@ -1173,11 +1174,11 @@
 		</div>
 
 
-        <div class="categorys site-mast">
+        <div class="categorys <?php if( !isset($show_nav)){ echo 'site-mast';} ?>">
             <div class="categorys-type">
             	<a href="categoryall.php" target="_blank">全部商品分类</a>
             </div>
-		    <div class="categorys-tab-content">
+		    <div class="categorys-tab-content" >
 		    	<div class="categorys-items" id="cata-nav">
 		    		<?php if(is_array($CommCates) || $CommCates instanceof \think\Collection || $CommCates instanceof \think\Paginator): $i = 0; $__LIST__ = $CommCates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CommCates): $mod = ($i % 2 );++$i;?>
 		            <div class="categorys-item" ectype="cateItem" data-id="<?php echo $CommCates['cates_id']; ?>" data-eveval="0">
@@ -1229,6 +1230,10 @@
 	            <?php endforeach; endif; else: echo "" ;endif; ?>
         	</ul>
         </div>
+
+
+
+
 	</div>
 </div>
 
@@ -3811,6 +3816,7 @@
 $(function () {
 	var dataType = $('body').data('type');
 	var indexType = 'index1', 
+		index2Type = 'index2', 
 		loginType = 'login1', 
 		regType = 'reg1', 
 		cartListType = 'cart_list1', 
@@ -3855,6 +3861,9 @@ $(function () {
 			// 首页颜色
 			$('body').addClass('catetop-cloth');
 			$('.site-mast').remove();
+		} else if ( dataType === index2Type ){
+			// 首页颜色
+			$('.site-masts').remove();
 		} else {
 			$('.site-masts').remove();
 			if ( dataType === goodsListType ) {

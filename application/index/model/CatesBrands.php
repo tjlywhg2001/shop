@@ -38,7 +38,7 @@ class CatesBrands extends Model
 		foreach ($BrandIdArray as $k => $v) {
 			$CommBrandList['children'][] = $Brand -> find($v);
 		}
-		
+		$CommBrandList['pross']['proimg'] = $CommBrandsID['cb_proimg'];
 		$CommBrandList['pross']['prourl'] = $CommBrandsID['cb_prourl'];
 		
 		// dump($CommBrandList);die;
