@@ -43,17 +43,31 @@
 			$BrandCate = model('cates_brands') -> getCommBrand($CommCateid);
 			// dump($BrandCate);die;
 			$brands = '';
-			foreach ($BrandCate as $k => $v) {
-				$brands .= '<div class="cate-brand">';
-				foreach ($v['children'] as $k1 => $v1) {
-					$brands .= '<div class="img"><a href="#" target="_blank" title="'.$v1['brand_name'].'">';
-					$brands .= '<img src="\static\uploadss\\'.$v1['brand_img'].'"></a></div>';
-				}
-				$brands .= '</div><div class="cate-promotion">';
-				$brands .= '<a href="'.$v['cb_prourl'].'" target="_blank">';
-				$brands .= '<img src="\static\uploadss\\'.$v['cb_proimg'].'" width="199" height="97"></a>';
-				$brands .= '</div></div>';
+
+			// 第一种方法
+			// foreach ($BrandCate as $k => $v) {
+			// 	$brands .= '<div class="cate-brand">';
+			// 	foreach ($v['children'] as $k1 => $v1) {
+			// 		$brands .= '<div class="img"><a href="#" target="_blank" title="'.$v1['brand_name'].'">';
+			// 		$brands .= '<img src="\static\uploadss\\'.$v1['brand_img'].'"></a></div>';
+			// 	}
+			// 	$brands .= '</div><div class="cate-promotion">';
+			// 	$brands .= '<a href="'.$v['cb_prourl'].'" target="_blank">';
+			// 	$brands .= '<img src="\static\uploadss\\'.$v['cb_proimg'].'" width="199" height="97"></a>';
+			// 	$brands .= '</div></div>';
+			// }
+
+			// 第二种方法
+			$brands .= '<div class="cate-brand">';
+			foreach ($BrandCate['children'] as $k => $v) {
+					$brands .= '<div class="img"><a href="#" target="_blank" title="'.$v['brand_name'].'">';
+					$brands .= '<img src="'.config('view_replace_str.__upload__').'/'.$v['brand_img'].'"></a></div>';
 			}
+			$brands .= '</div><div class="cate-promotion">';
+			$brands .= '<a href="'.$BrandCate['pross']['prourl'].'" target="_blank">';
+			$brands .= '<img src="'.config('view_replace_str.__upload__').'/'.$BrandCate['pross']['proimg'].'" width="199" height="97"></a>';
+			$brands .= '</div></div>';
+
 
 
 			// 关联的商品分类
