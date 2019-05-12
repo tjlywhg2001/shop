@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\brand\list.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557621091;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\brand\list.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -197,7 +197,7 @@
             </li>
             <li>
                 <a href="<?php echo url('Category/lst'); ?>">
-                    <span class="menu-text">会员留言</span>
+                    <span class="menu-text">会员留言******</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
@@ -290,7 +290,7 @@
         <ul class="submenu"  style="display: block;">
             <li>
                 <a href="<?php echo url('catesWords/lst'); ?>">
-                    <span class="menu-text">关联管理</span>
+                    <span class="menu-text">关联词汇管理</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>

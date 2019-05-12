@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:69:"B:\aaaweb\shop\public/../application/admin\view\cates_brands\add.html";i:1557627184;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557621091;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 
 <body>
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -197,7 +197,7 @@
             </li>
             <li>
                 <a href="<?php echo url('Category/lst'); ?>">
-                    <span class="menu-text">会员留言******</span>
+                    <span class="menu-text">会员留言</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
@@ -290,7 +290,7 @@
         <ul class="submenu"  style="display: block;">
             <li>
                 <a href="<?php echo url('catesWords/lst'); ?>">
-                    <span class="menu-text">关联词汇管理</span>
+                    <span class="menu-text">关联管理</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
@@ -390,18 +390,86 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                                            <li>
+                            <a href="<?php echo url('cates_brands/lst'); ?>">推广图管理</a>
+                        </li>
+                        <li class="active">添加推广图</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
                     
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">添加推广图</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">关联的商品分类</label>
+                            <div class="col-sm-6">
+                                <select name="cb_catesid">
+                                    <?php if(is_array($cates) || $cates instanceof \think\Collection || $cates instanceof \think\Paginator): $i = 0; $__LIST__ = $cates;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$catesa): $mod = ($i % 2 );++$i;?>
+                                    <option value="<?php echo $catesa['cates_id']; ?>"><?php echo $catesa['cates_name']; ?></option>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌选择</label>
+                            <div class="col-sm-6">
+                                <?php if(is_array($brands) || $brands instanceof \think\Collection || $brands instanceof \think\Paginator): $i = 0; $__LIST__ = $brands;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$brands): $mod = ($i % 2 );++$i;?>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="colored-blue" value="<?php echo $brands['brand_id']; ?>" name="cb_brands_id[]" type="checkbox">
+                                        <span class="text"><?php echo $brands['brand_name']; ?></span>
+                                    </label>
+                                </div>
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">推广图</label>
+                            <div class="col-sm-6">
+                                <input class="" id="username" name="cb_proimg" type="file">
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">推广图链接</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cb_prourl" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -411,7 +479,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器
@@ -420,7 +488,7 @@
     
 
 
-	</script>    
-
+	</script>
+    
 
 </body></html>

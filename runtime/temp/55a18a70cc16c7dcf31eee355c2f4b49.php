@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\brand\edit.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 
 <body>
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -390,18 +390,99 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                                            <li>
+                            <a href="<?php echo url('Brand/lst'); ?>">品牌管理</a>
+                        </li>
+                        <li class="active">修改品牌</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
                     
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">修改品牌</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="brand_id" value="<?php echo $brands['brand_id']; ?>">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="brand_name" rtype="text" value="<?php echo $brands['brand_name']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌地址</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="brand_url" type="text" value="<?php echo $brands['brand_url']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌描述</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="brand_description" type="text" value="<?php echo $brands['brand_description']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌LOGO</label>
+                            <div class="col-sm-6">
+                                <input class="" id="username" name="brand_img" type="file" value="<?php echo $brands['brand_img']; ?>">
+                                <?php if($brands['brand_img'] != ''): ?>
+                                    <img src="/static/uploadss/<?php echo $brands['brand_img']; ?>" style="height: 30px">
+                                <?php else: ?>
+                                    暂无图片
+                                <?php endif; ?>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">品牌状态</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="brand_status" type="radio" <?php if($brands['brand_status'] == 1): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">显示</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="brand_status" type="radio" <?php if($brands['brand_status'] == 0): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">隐藏</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -411,7 +492,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器
@@ -420,7 +501,7 @@
     
 
 
-	</script>    
-
+	</script>
+    
 
 </body></html>

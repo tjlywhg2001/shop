@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\config\add.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557628856;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,9 +42,9 @@
     
 </head>
 
-<body>
+<body onload="myfunction()">
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -197,7 +197,7 @@
             </li>
             <li>
                 <a href="<?php echo url('Category/lst'); ?>">
-                    <span class="menu-text">会员留言******</span>
+                    <span class="menu-text">会员留言</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
@@ -390,18 +390,141 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                                            <li>
+                            <a href="<?php echo url('config/lst'); ?>">配置管理</a>
+                        </li>
+                        <li class="active">添加配置</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
                     
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">新增配置</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">英文名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_ename" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">中文名称</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_cname" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">表单类型</label>
+                            <div class="col-sm-6 radiooption">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="input" name="config_formtype" type="radio" checked="checked">
+                                        <span class="text">input</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="radio" name="config_formtype" type="radio">
+                                        <span class="text">radio</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="checked" name="config_formtype" type="radio">
+                                        <span class="text">checked</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="textarea" name="config_formtype" type="radio">
+                                        <span class="text">textarea</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="select" name="config_formtype" type="radio">
+                                        <span class="text">select</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="file" name="config_formtype" type="radio">
+                                        <span class="text">file</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">配置类型</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="config_type" type="radio" checked="checked">
+                                        <span class="text">店铺配置</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="config_type" type="radio">
+                                        <span class="text">商品配置</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group radionone"style="display: none">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">配置可选值</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_values" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group radionone"style="display: none">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">默认值</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="config_default" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -411,7 +534,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器
@@ -420,7 +543,38 @@
     
 
 
-	</script>    
+	</script>
+    
+    <script>
+        function myfun(){
+            $('.radiooption').each(function(){
+                $('label').children('input').on('input propertychange',function(){
+                    var type = $(this).val();
+                    alert(type);
+                    switch(type)
+                    {
+                        case ('input'):
+                        $('.radionone').fadeOut();
+                        break;                
+                        case ('radio'):
+                        $('.radionone').fadeIn();
+                        break;                
+                        case ('checked'):
+                        $('.radionone').fadeIn();
+                        break;                
+                        case ('textarea'):
+                        $('.radionone').fadeOut();
+                        break;                
+                        case ('select'):
+                        $('.radionone').fadeIn();
+                        break;                
+                        case ('file'):
+                        $('.radionone').fadeOut();
+                        break;                
+                    }            
+                })
+            })
+        }
+    </script>
 
-
-</body></html>
+</body></html>x

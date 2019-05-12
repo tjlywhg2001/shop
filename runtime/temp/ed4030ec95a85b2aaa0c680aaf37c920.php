@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\recpos\list.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557621091;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\recpos\list.html";i:1557628667;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557621091;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -393,7 +393,7 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li class="active">商品类型管理</li>
+                        <li class="active">推荐位管理</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
@@ -401,7 +401,7 @@
                 <!-- Page Body -->
                 <div class="page-body">
 
-<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('recpos/add'); ?>'"> <i class="fa fa-plus"></i> 添加商品属性
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('recpos/add'); ?>'"> <i class="fa fa-plus"></i> 添加推荐位
 </button>
 <div class="row">
     <div class="col-lg-12 col-sm-12 col-xs-12">

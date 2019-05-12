@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\config\list.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557628856;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 
 <body>
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+                <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -197,7 +197,7 @@
             </li>
             <li>
                 <a href="<?php echo url('Category/lst'); ?>">
-                    <span class="menu-text">会员留言******</span>
+                    <span class="menu-text">会员留言</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
@@ -390,19 +390,96 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                        <li class="active">配置管理</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-                    
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
-                </div>
-                
 
+<form action="" method="post">                    
+<button type="button" tooltip="添加配置" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('config/add'); ?>'"> <i class="fa fa-plus"></i> 添加配置
+</button>
+<button type="submit" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon"> <i class="fa fa-plus"></i> 分类排序
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">配置英文</th>
+                                <th class="text-center">配置中文</th>
+                                <th class="text-center">表单类型</th>
+                                <th class="text-center">配置类型</th>
+                                <th class="text-center">配置可选值</th>
+                                <th class="text-center">默认值</th>
+                                <th class="text-center">排序</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        <?php if(is_array($configlist) || $configlist instanceof \think\Collection || $configlist instanceof \think\Paginator): $i = 0; $__LIST__ = $configlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$config): $mod = ($i % 2 );++$i;?>
+                        <tbody>
+                                <tr>
+                                <td align="center"><?php echo $config['config_id']; ?></td>
+                                <td align="center"><?php echo $config['config_ename']; ?></td>
+                                <td align="center"><?php echo $config['config_cname']; ?></td>
+                                <td align="center">                                
+                                <?php if($config['config_formtype'] == 'input'): ?>
+                                    input
+                                <?php elseif($config['config_formtype'] == 'radio'): ?>
+                                    radio
+                                <?php elseif($config['config_formtype'] == 'checked'): ?>
+                                    checked
+                                <?php elseif($config['config_formtype'] == 'textarea'): ?>
+                                    textarea
+                                <?php elseif($config['config_formtype'] == 'select'): ?>
+                                    select
+                                <?php elseif($config['config_formtype'] == 'file'): ?>
+                                    file
+                                <?php endif; ?>
+                                </td>
+                                <td align="center">
+                                <?php if($config['config_type'] != 0): ?>
+                                    店铺配置
+                                <?php else: ?>
+                                    商品配置
+                                <?php endif; ?>
+                                </td>
+                                <td align="center"><?php echo $config['config_values']; ?></td>
+                                <td align="center"><?php echo $config['config_default']; ?></td>
+                                <td align="center" width="4%">
+                                    <input type="text" name="config_sort[<?php echo $config['config_id']; ?>]" value="<?php echo $config['config_sort']; ?>" style="width: 30px; text-align: center;" />
+                                </td>
+                                <td align="center">
+                                    <a href="<?php echo url('edit',array('config_id'=>$config['config_id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('config_id'=>$config['config_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </table>
+                </div>
+                <div> 
+                    <?php echo $configlist->render(); ?>
+              	</div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
                 </div>
                 <!-- /Page Body -->
             </div>
@@ -411,7 +488,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器

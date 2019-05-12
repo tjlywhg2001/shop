@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:62:"B:\aaaweb\shop\public/../application/admin\view\attr\list.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557628856;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 
 <body>
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+                <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -197,7 +197,7 @@
             </li>
             <li>
                 <a href="<?php echo url('Category/lst'); ?>">
-                    <span class="menu-text">会员留言******</span>
+                    <span class="menu-text">会员留言</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
@@ -390,19 +390,73 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                        <li class="active">商品类型管理</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-                    
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
-                </div>
-                
 
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('attr/add'); ?>'"> <i class="fa fa-plus"></i> 添加商品属性
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">商品属性ID</th>
+                                <th class="text-center">商品属性名称</th>
+                                <th class="text-center">商品属性类型</th>
+                                <th class="text-center">所属类型</th>
+                                <th class="text-center">商品属性值</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        <?php if(is_array($attrlist) || $attrlist instanceof \think\Collection || $attrlist instanceof \think\Paginator): $i = 0; $__LIST__ = $attrlist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$attr): $mod = ($i % 2 );++$i;?>
+                        <tbody>
+                                <tr>
+                                <td align="center" width="5%"><?php echo $attr['attr_id']; ?></td>
+                                <td align="+center" width="12%">
+                                    <?php echo $attr['attr_name']; ?>
+                                    
+                                </td>
+                                <td align="center" width="5%">
+                                <?php if($attr['attr_type'] == 1): ?>
+                                    单选
+                                <?php else: ?>
+                                    唯一
+                                <?php endif; ?>
+                                </td>
+                                <td align="center" width="10%"><?php echo $attr['type_name']; ?></td>
+                                <td align="center" width="10%"><?php echo $attr['attr_values']; ?></td>
+                                <td align="center" width="12%">
+                                    <a href="<?php echo url('edit',array('attr_id'=>$attr['attr_id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('attr_id'=>$attr['attr_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </table>
+                </div>
+                <div>
+                    <?php echo $attrlist->render(); ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
                 </div>
                 <!-- /Page Body -->
             </div>
@@ -411,7 +465,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器

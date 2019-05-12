@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:62:"B:\aaaweb\shop\public/../application/admin\view\arti\edit.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557628856;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 
 <body>
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -107,7 +107,7 @@
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+        <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -197,7 +197,7 @@
             </li>
             <li>
                 <a href="<?php echo url('Category/lst'); ?>">
-                    <span class="menu-text">会员留言******</span>
+                    <span class="menu-text">会员留言</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>
@@ -390,18 +390,188 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                                            <li>
+                            <a href="<?php echo url('arti/lst'); ?>">文章管理</a>
+                        </li>
+                        <li class="active">编辑文章</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
                     
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">编辑文章</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+
+                        <input type="hidden" name="ar_id" value="<?php echo $categorys['ar_id']; ?>">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">上级分类</label>
+                            <div class="col-sm-6">
+                                <select name="ar_cateid">
+                                    <?php if(is_array($artilist) || $artilist instanceof \think\Collection || $artilist instanceof \think\Paginator): $i = 0; $__LIST__ = $artilist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
+                                    <option <?php if($categorys['ar_cateid'] == $category['cate_id']): ?> selected="selected" <?php endif; ?> value="<?php echo $category['cate_id']; ?>"
+                                >
+                                    
+                                     <?php if($category['cate_pid'] != 0): ?>
+                                     |
+                                     <?php endif; ?>
+                                     <?php echo str_repeat('-',$category['lever']*5); ?><?php echo $category['cate_name']; ?>
+                                    </option>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章标题</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_title" type="text" value="<?php echo $categorys['ar_title']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章关键词</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_keywords" type="text" value="<?php echo $categorys['ar_keywords']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章描述</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="username" name="ar_description"><?php echo $categorys['ar_description']; ?></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">发布人</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_autor" type="text" value="<?php echo $categorys['ar_autor']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">电子邮件</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_email" type="text" value="<?php echo $categorys['ar_email']; ?>">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">友情链接</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_linkurl" type="text" value="<?php echo $categorys['ar_linkurl']; ?>">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章图片</label>
+                            <div class="col-sm-6">
+                                <input id="username" name="ar_thumbnail" type="file" value="<?php echo $categorys['ar_thumbnail']; ?>">
+                                <?php if($categorys['ar_thumbnail'] != ''): ?>
+                                    <img class="imgss" src="/static/uploadss/<?php echo $categorys['ar_thumbnail']; ?>" style="height: 30px">
+                                    <input type="button" id='dell' value="删除">
+                                    <?php else: ?>
+
+                                    暂无图片
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">内容</label>
+                            <div class="col-sm-6">
+                                <textarea id="content" name="ar_content"><?php echo $categorys['ar_content']; ?></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否置顶</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="ar_top" type="radio" <?php if($categorys['ar_top'] == 1): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">是</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" <?php if($categorys['ar_top'] == 0): ?> checked="checked" <?php endif; ?> name="ar_top" type="radio">
+                                        <span class="text">否</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否显示</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" <?php if($categorys['ar_status'] == 1): ?> checked="checked" <?php endif; ?> name="ar_status" type="radio">
+                                        <span class="text">是</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" <?php if($categorys['ar_status'] == 0): ?> checked="checked" <?php endif; ?> name="ar_status" type="radio">
+                                        <span class="text">否</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">发布时间</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" value="<?php echo $categorys['ar_addtime']; ?>" name="ar_addtime" type="text">
+                            </div>
+
+                        </div>
+ 
+
+                        
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -411,7 +581,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器
@@ -420,7 +590,14 @@
     
 
 
-	</script>    
+	</script>
+    <script>
+        $("#dell").click(function(){
+            $(this).remove();
+            $(".imgss").remove();
+        });
+
+    </script>                               
 
 
-</body></html>
+</body></html> 

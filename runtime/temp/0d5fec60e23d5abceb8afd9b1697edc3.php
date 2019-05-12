@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:70:"B:\aaaweb\shop\public/../application/admin\view\commodity\product.html";i:1557621091;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1557621091;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1557621091;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1557629004;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1557621091;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +44,7 @@
 
 <body>
 	<!-- 头部 -->
-    	<div class="navbar">
+	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
             <!-- Navbar Barnd -->
@@ -103,11 +103,18 @@
 </div>
 
 	<!-- /头部 -->
-	
+<style>
+    input{
+        padding:3px 5px;
+        border: none;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+    }
+</style>
 	<div class="main-container container-fluid">
 		<div class="page-container">
 			            <!-- Page Sidebar -->
-            <div class="page-sidebar" id="sidebar">
+                <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -390,18 +397,95 @@
                 <!-- Page Breadcrumb -->
                 <div class="page-breadcrumbs">
                     <ul class="breadcrumb">
-                                        <li class="active">控制面板</li>
-                                        </ul>
+                        <li>
+                            <a href="<?php echo url('Index/index'); ?>">系统</a>
+                        </li>
+                        <li class="active">商品管理</li>
+                    </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
                     
-				<div style="text-align:center; line-height:1000%; font-size:24px;">
-                童老师THinkPHP5第四季 实战开发大型B2C商城项目<br /><p style="color:#f00;">ThinkPHP交流群⑯：383432579</p></div>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <form action="" method="post" >
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <?php if(is_array($attrContent) || $attrContent instanceof \think\Collection || $attrContent instanceof \think\Paginator): $i = 0; $__LIST__ = $attrContent;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$attrContents): $mod = ($i % 2 );++$i;?>
+                                    <th class="text-center" width="10%"><?php echo $key; ?></th>
+                                <?php endforeach; endif; else: echo "" ;endif; ?>
+                                <th class="text-center" width="14%">库存量</th>
+                                <th class="text-center" width="14%">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <?php if ($productRes):foreach($productRes as $k2=>$v2):?>
+                                <tr>
+                                    <?php foreach($attrContent as $k=>$v):?>
+                                        <td align="center">
+                                            <select name="product_attr_type[<?php echo $k; ?>][]" id="">
+                                                <option value="">请选择</option>
+                                                <?php foreach($v as $k1=>$v1):?>
+                                                    <option value="<?php echo $v1['commattr_id'];?>"
+
+                                                        <?php $attrValue = explode(',',$v2['product_commodity_attr_type']); if (in_array($v1['commattr_id'],$attrValue)):?>
+                                                                selected="selected"
+                                                            <?php endif;?>
+
+                                                    ><?php echo $v1['commattr_value'];?></option>
+                                                <?php endforeach;?>
+                                            </select>
+                                        </td>
+                                    <?php endforeach;?>
+                                    <td align="center">
+                                        <input type="text" name="product_number[]" id="" value="<?php echo $v2['product_commodity_number']; ?>" />
+                                    </td>
+                                    <td align="center">
+                                        
+                                        <?php if ($k2 == 0) { echo '<button type="button" class="btn btn-sm btn-azure btn-addon" onClick="addtrlist(this);">+</button>'; }else{ echo '<button type="button" class="btn btn-sm btn-azure btn-addon" onClick="addtrlist(this);">-</button>'; }?>
+                                        
+                                    </td>
+                                </tr>
+                                <?php endforeach;else:?>
+                                <tr>
+                                    <?php foreach($attrContent as $k=>$v):?>
+                                        <td align="center">
+                                            <select name="product_attr_type[<?php echo $k; ?>][]" id="">
+                                                <option value="">请选择</option>
+                                                <?php foreach($v as $k1=>$v1):?>
+                                                    <option value="<?php echo $v1['commattr_id'];?>"><?php echo $v1['commattr_value'];?></option>
+                                                <?php endforeach;?>
+                                            </select>
+                                        </td>
+                                    <?php endforeach;?>
+                                    <td align="center">
+                                        <input type="text" name="product_number[]" id="" />
+                                    </td>
+                                    <td align="center">
+                                        <button type="button" class="btn btn-sm btn-azure btn-addon" onClick="addtrlist(this);">+</button>
+                                    </td>
+                                </tr>
+                                 <?php endif;?>
+                       </tbody>
+                    </table>
+                    <div class="flip-scroll" style="margin: 30px 5%; text-align: left;">
+                        <button type="submit" class="btn btn-default">保存信息</button>
+                    </div>
                 </div>
-                
+                </form>
+                <div> 
+              	</div>
+            </div>
+        </div>
+    </div>
+</div>
 
                 </div>
                 <!-- /Page Body -->
@@ -411,7 +495,7 @@
 	</div>
 
 	    <!--Basic Scripts-->
-
+    
 	<script type="text/javascript">
 
 	    //实例化编辑器
@@ -421,6 +505,18 @@
 
 
 	</script>    
-
-
-</body></html>
+    <script src="/static/admin/style/jquery.js"></script>
+    <script type="text/javascript">
+        function addtrlist(tr){
+            var trs = $(tr).parent().parent();
+            newtr = trs.clone();
+            if ( $(tr).html() === '+' ){
+                trs.find('button').html('-');
+                trs.before( newtr );
+            } else {
+                trs.remove();
+            }
+        }
+    </script>
+</body>
+</html>

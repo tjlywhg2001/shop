@@ -7,13 +7,23 @@
 	class CatesBrands extends Controller
 	{
 		public function lst(){
-			$join =[
+
+			// 商品分类 | 品牌
+			$field = '
+				cb.*, c.cates_id, c.cates_name,
+				group_concat(b.brand_name order by brand_id desc separator " + ") brand_names';
+
+
+			$join = [
 				['cates c','c.cates_id = cb.cb_catesid','LEFT'],
 				['brand b','find_in_set(b.brand_id,cb.cb_brands_id)','LEFT'],
 			];
+			
 
-			$cbList = db('cates_brands') -> alias('cb') -> field('cb.*,c.cates_id,c.cates_name,GROUP_CONCAT(b.brand_name order by brand_id desc separator " + ") brand_names') -> join($join) -> order('cb_id desc')-> group('cb.cb_id') -> paginate(25);
+			$cbList = db('cates_brands') -> alias('cb') -> field($field) -> join($join) -> order('cb_id desc')-> group('cb.cb_id') -> paginate(25);
 			// dump($cbList);die;
+			
+			// 关联品牌名字的第二种方法
 			$cbBrandStr = array();
 			foreach ($cbList as $k => $v) {
 				$cbBrandIds = explode(',',$v['cb_brands_id']);
@@ -28,6 +38,7 @@
 				$cbBrandStr[$k]['cb_brand_name'] = implode(',',$cbBrandName);
 				$cbBrandStr[$k]['cb_id'] = $v['cb_id'];
 			}
+
 			$this -> assign([
 				'cbList'=>$cbList,
 				'cbBrandStr'=>$cbBrandStr,
@@ -44,7 +55,7 @@
 			$cates = db('cates') -> where(array('cates_pid' => 0)) -> select();
 
 			// 品牌
-			$brands = db('brand') -> where('brand_img','NEQ','') -> select();
+			$brands = db('brand') -> where('brand_img','neq','') -> select();
 			$this -> assign([
 				'brands' => $brands,
 				'cates' => $cates,
@@ -108,8 +119,8 @@
 			$cates = db('cates') -> where(array('cates_pid' => 0)) -> select();
 
 			// 品牌
-			$brands = db('brand') -> where('brand_img','NEQ','') -> select();
-			dump($brands);die;
+			$brands = db('brand') -> where('brand_img','neq','') -> select();
+			// dump($brands);die;
 			$this -> assign([
 				'cbList' => $cbList,
 				'brands' => $brands,
