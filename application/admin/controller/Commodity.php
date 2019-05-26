@@ -11,17 +11,33 @@
 
 		public function lst() {
 
+				// rc.*,rc.recpos_type,
+			$field = '
+				g.*,
+				c.cates_name,
+				b.brand_name,
+				t.type_name,
+				SUM(p.product_commodity_number) produ
+			';
+
 			$join = [
+				// ['recpos_comm rc','g.cates_id=rc.commodity_id','LEFT'],
+				// ['recpos r','rc.commodity_id=r.rec_name'],
 				['cates c','g.cates_id=c.cates_id'],
 				['brand b','g.brand_id=b.brand_id','LEFT'],
 				['type t','g.type_id=t.type_id','LEFT'],
 				['product p','g.commodity_id=p.product_commodity_id','LEFT'],
 			];
 
-			$commRes = db('commodity') -> alias('g') -> field('g.*,c.cates_name, b.brand_name, t.type_name, SUM(p.product_commodity_number) produ') -> join($join) -> group('g.commodity_id') -> order('g.commodity_id DESC') -> paginate(10);
+			$commRes = db('commodity') -> alias('g') -> field($field) -> join($join) -> group('g.commodity_id') -> order('g.commodity_id DESC') -> paginate(10);
+
+
+			$recpos = db('recpos_comm') -> alias('rc') -> field('rc.*,r.rec_id,r.rec_name') -> join('recpos r','rc.recpos_id=r.rec_id','LEFT') -> where(array('rc.recpos_type' => 1)) -> select();
+
 			// dump($commRes);die;
 			$this -> assign( [
 				'commRes' => $commRes,
+				'recpos' => $recpos,
 			] );
 			return view('list');
 		}

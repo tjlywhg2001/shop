@@ -18,10 +18,17 @@ class Index extends Base
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-        // 商品分类
+        // 获取热卖商品
+
+
+
+        // 获取商品的推荐分类
         $CatesRecpos = model('cates') -> getRecpos(5,0);
         foreach ($CatesRecpos as $k => $v) {
+            // 获取当前商品顶级分类的二级分类
             $CatesRecpos[$k]['children'] = model('cates') -> getRecpos(5,$v['cates_id']);
+            // 获取新品推荐
+
         }
         // dump($CatesRecpos);die;
 

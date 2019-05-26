@@ -37,9 +37,10 @@
                     <table class="table table-bordered table-hover">
                         <thead class="">
                             <tr>
-                                <th class="text-center" width="10%">ID</th>
+                                <th class="text-center" width="6%">ID</th>
                                 <th class="text-center">名称</th>
                                 <th class="text-center" width="10%">编号</th>
+                                <th class="text-center" width="8%">推荐位</th>
                                 <th class="text-center" width="6%">缩略图</th>
                                 <th class="text-center" width="6%">市场价</th>
                                 <th class="text-center" width="6%">本店价</th>
@@ -60,6 +61,17 @@
                                 <td align="center">{$comms.commodity_id}</td>
                                 <td align="center">{$comms.commodity_name}</td>
                                 <td align="center">{$comms.commodity_code}</td>
+                                <td align="center">
+                                    <?php
+                                        $recposArr = array();
+                                        foreach ( $recpos as $k => $v ){
+                                            if ($v['commodity_id'] == $comms['commodity_id']){
+                                                $recposArr[] = $v['rec_name'];
+                                            }
+                                        }
+                                        echo implode(' , ',$recposArr);
+                                    ?>
+                                </td>
                                 <td align="center">
                                     {if condition="$comms.commodity_ogthumb neq ''"}
                                         <img src="__upload__/{$comms.commodity_ogthumb}" alt="" style="width: 100%" />
