@@ -166,6 +166,17 @@
 
 <script type="text/javascript">
 $(function () {
+
+	var navshow = $('.navshow').length;
+	if ( navshow > 1){ 
+		$('.navshow').eq(1).css('display','none');
+		$('.nav-main').eq(1).remove();
+		$('.dsc-zoom').eq(1).removeClass('dsc-zoom');
+		$('.topShows').eq(0).remove();
+	} else {
+		$('.topShows').eq(0).remove();
+	}
+
 	var dataType = $('body').data('type');
 	var indexType = 'index1', 
 		index2Type = 'index2', 

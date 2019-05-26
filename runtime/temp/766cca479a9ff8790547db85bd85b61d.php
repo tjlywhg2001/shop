@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:63:"B:\aaaweb\shop\public/../application/admin\view\data\index.html";i:1558838661;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1558860813;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1558838661;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1558838661;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1558838661;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:67:"B:\aaaweb\shop\public/../application/admin\view\commodity\list.html";i:1558838661;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1558860813;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1558838661;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1558838661;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1558838661;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,11 +46,8 @@
     
 </head>
 
-
-<script type="text/javascript" src="/static/admin/layui/layui.js"></script>
-
 <body>
-    <!-- 头部-->
+	<!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -109,12 +106,12 @@
     </div>
 </div>
 
-    <!-- /头部 -->
-    
-    <div class="main-container container-fluid">
-        <div class="page-container">
-                        <!-- Page Sidebar -->
-        <div class="page-sidebar" id="sidebar">
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+                <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
     <input class="searchinput" type="text">
@@ -400,169 +397,121 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                                            <li>
-                            <a href="">商品管理</a>
-                        </li>
-                        <li class="active">数据备份</li>
+                        <li class="active">商品管理</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
-
-<script>
-    layui.use(['jquery','layer'],function(){
-      window.$ = layui.$;
-      var layer = layui.layer;
-      //备份表方法
-      $("#export").click(function(){
-          $(this).html("正在发送备份请求...");
-          $.post(
-            $("#export-form").attr("action"),
-            $("#export-form").serialize(), 
-            function(data){
-               
-              if(data.code==1){
-                $("#export").html( "开始备份，请不要关闭本页面！");
-                backup(data.data.tab);
-                window.onbeforeunload = function(){ return "正在备份数据库，请不要关闭！" }
-              }else{
-                 layer.tips(data.msg, "#export", {
-                  tips: [1, '#3595CC'],
-                  time: 4000
-                });
-                $("#export").html("立即备份");
-              }
-              
-            }, "json");
-            return false;  
-      }); 
-      //递归备份表
-      function backup(tab,status){
-        status && showmsg(tab.id, "开始备份...(0%)");
-        $.get( $("#export-form").attr("action"), tab, function(data){
-          // console.log(data)
-                if(data.code==1){
-                  showmsg(tab, data.msg);
-
-                  if(!$.isPlainObject(data.data.tab)){
-                    $("#export").html("备份完成");
-                    window.onbeforeunload = function(){ return null }
-                    return;
-                  } 
-
-                  backup(data.data.tab, tab.id != data.data.tab.id);
-                } else {
-                  $("#export").html("立即备份");
-                }
-            }, "json");
-
-      }
-    //修改备份状态
-    function showmsg(tab, msg){
-       $("table tbody tr").eq(tab.id).find(".infos").html(msg)
-    }
-   
-     //优化表
-      $("#optimize").click(function(){
-           $.post(this.href, $("#export-form").serialize(), function(data){
-           
-            layer.tips(data.msg, "#optimize", {
-              tips: [1, '#3595CC'],
-              time: 4000
-            });
-    
-            }, "json");
-            return false;    
-      });
-
-      //修复表
-      $("#repair").on("click",function(e){
-         
-          $.post(this.href, $("#export-form").serialize(), function(data){
-            layer.tips(data.msg, "#repair", {
-              tips: [1, '#3595CC'],
-              time: 4000
-            });
-            }, "json");
-            return false; 
-      });
-    });
-
-  </script>
-
-    <a id="export" class="btn btn-sm btn-azure btn-addon" href="javascript:;" autocomplete="off">立即备份</a>
-
-    <a id="optimize" href="<?php echo url('data/optimize'); ?>" class="btn btn-sm btn-azure btn-addon">优化表</a>
-    <a id="repair" href="<?php echo url('data/repair'); ?>" class="btn btn-sm btn-azure btn-addon">修复表</a>
-    <a  href="<?php echo url('data/importlist'); ?>" class="btn btn-sm btn-azure btn-addon">还原数据库</a>
-    <div class="row">
-    <form id="export-form" method="post" action="<?php echo url('data/export'); ?>">
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="widget">
-                <div class="widget-body">
-                    <div class="flip-scroll">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th width="48" class="text-center">
-                                        <label style="padding-right: 10px;">
-                                            <input class="layuiss form-control" id="username" name="" checked="checked" value="" type="checkbox">
-                                            <span class="text"></span>
-                                        </label>
-                                    </th>
-                                    <th class="text-center">表名</th>
-                                    <th class="text-center">数据量</th>
-                                    <th class="text-center">数据大小</th>
-                                    <th class="text-center">创建时间</th>
-                                    <th class="text-center">备份状态</th>
-                                    <th class="text-center">操作</th>
-                                </tr> 
-                            </thead>
-    
-
-
-                            <tbody>
-                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): if( count($list)==0 ) : echo "" ;else: foreach($list as $key=>$table): ?>   
-                                <tr>
-                                    <td class="text-center">
-                                        <label style="padding-right: 10px;">
-                                            <input class="ids form-control" id="username" name="tables[]" checked="checked" value="<?php echo $table['name']; ?>" type="checkbox">
-                                            <span class="text"></span>
-                                        </label>
-                                    </td>
-                                    <td class="text-center"><?php echo $table['name']; ?></td>
-                                    <td class="text-center"><?php echo $table['rows']; ?></td>
-                                    <td class="text-center"><?php echo format_bytes($table['data_length']); ?></td>
-                                    <td class="text-center"><?php echo $table['create_time']; ?></td>
-                                    <td class="infos text-center" width='200' style="color:#09f">未备份</td>
-                                    <td class="text-center">
-                                        <a  href="<?php echo url('data/optimize',['tables'=>$table['name']]); ?>" class="btn btn-sm btn-warning shiny">优化表</a>&nbsp;
-                                        <a  href="<?php echo url('data/repair',['tables'=>$table['name']]); ?>" class="btn btn-primary btn-sm shiny">修复表</a>
-                                    </td>
-                                </tr>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                            </tbody>
-
-
-                        </table>
-                    </div>
+                    
+<button type="button" tooltip="添加用户" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '<?php echo url('commodity/add'); ?>'"> <i class="fa fa-plus"></i> 添加商品
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr>
+                                <th class="text-center" width="10%">ID</th>
+                                <th class="text-center">名称</th>
+                                <th class="text-center" width="10%">编号</th>
+                                <th class="text-center" width="6%">缩略图</th>
+                                <th class="text-center" width="6%">市场价</th>
+                                <th class="text-center" width="6%">本店价</th>
+                                <th class="text-center" width="6%">上架</th>
+                                <th class="text-center" width="6%">栏目</th>
+                                <th class="text-center" width="6%">品牌</th>
+                                <th class="text-center" width="6%">类型</th>
+                                <th class="text-center" width="6%">重量</th>
+                                <th class="text-center" width="4%">单位</th>
+                                <th class="text-center" width="4%">库存</th>
+                                <th class="text-center" width="14%">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        <?php if(is_array($commRes) || $commRes instanceof \think\Collection || $commRes instanceof \think\Paginator): $i = 0; $__LIST__ = $commRes;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$comms): $mod = ($i % 2 );++$i;?>
+                        <tbody>
+                            <tr>
+                                <td align="center"><?php echo $comms['commodity_id']; ?></td>
+                                <td align="center"><?php echo $comms['commodity_name']; ?></td>
+                                <td align="center"><?php echo $comms['commodity_code']; ?></td>
+                                <td align="center">
+                                    <?php if($comms['commodity_ogthumb'] != ''): ?>
+                                        <img src="/static/uploadss/<?php echo $comms['commodity_ogthumb']; ?>" alt="" style="width: 100%" />
+                                    <?php else: ?>
+                                        无缩略图
+                                    <?php endif; ?>
+                                </td>
+                                <td align="center"><?php echo $comms['commodity_market_price']; ?></td>
+                                <td align="center"><?php echo $comms['commodity_shop_price']; ?></td>
+                                <td align="center">
+                                    <?php if($comms['commodity_on_sale'] == 1): ?>
+                                        上架
+                                    <?php else: ?>
+                                        下架
+                                    <?php endif; ?>
+                                </td>
+                                <td align="center">
+                                    <?php if($comms['cates_name'] != ''): ?>
+                                        <?php echo $comms['cates_name']; else: ?>
+                                        未设置
+                                    <?php endif; ?>
+                                </td>
+                                <td align="center">
+                                    <?php if($comms['brand_name'] != ''): ?>
+                                        <?php echo $comms['brand_name']; else: ?>
+                                        未设置
+                                    <?php endif; ?>
+                                </td>
+                                <td align="center">
+                                    <?php if($comms['type_name'] != ''): ?>
+                                        <?php echo $comms['type_name']; else: ?>
+                                        未设置
+                                    <?php endif; ?>
+                               </td>
+                                <td align="center"><?php echo $comms['commodity_weight']; ?></td>
+                                <td align="center"><?php echo $comms['commodity_weight_unit']; ?></td>
+                                <td align="center">
+                                    <?php if($comms['produ'] != ''): ?>
+                                        <?php echo $comms['produ']; else: ?>
+                                        0
+                                    <?php endif; ?>
+                                </td>
+                                <td align="center">
+                                    <a href="<?php echo url('commodity/product',array('commodity_id'=>$comms['commodity_id'])); ?>" class="btn btn-sm btn-warning shiny">
+                                        <i class="fa fa-check-square-o"></i> 库存
+                                    </a>
+                                    <a href="<?php echo url('edit',array('commodity_id'=>$comms['commodity_id'])); ?>" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '<?php echo url('del',array('commodity_id'=>$comms['commodity_id'])); ?>')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                    </table>
                 </div>
+                <div> 
+                    <?php echo $commRes->render(); ?>
+              	</div>
             </div>
         </div>
-        </form>
     </div>
-
+</div>
 
                 </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-        </div>  
-    </div>
+		</div>	
+	</div>
 
-        <!--Basic Scripts-->
+	    <!--Basic Scripts-->
     
 	<script type="text/javascript">
 
@@ -572,19 +521,7 @@
     
 
 
-	</script>
-    
+	</script>    
 
-    <script>
-
-        $(".layuiss").click(function(){
-            if($(this).is(':checked')){
-                $('.ids').prop('checked','checked');             
-            } else {
-                $('.ids').prop('checked',false);             
-            }
-        })
-
-    </script>
 
 </body></html>

@@ -21,14 +21,30 @@
 
 
     <div class="homeindex" ectype="homeWrap">
-    	
+   
+
+
+
+
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+
+
+
+
+
+        <div class="attached-search-container" ectype="suspColumn">
+            <div class="w w1200">
+
+                {include file='/common/heads_navs'}
+    
+            </div>            
+        </div>            
                                     
                                     
                                     
                                     
-                                    
-                                    
-                                    
+<!-- *********************************************************************** -->
                                     
                                     
                                         
@@ -305,7 +321,14 @@
 </div>
 <div class="spec" data-spec="" data-title="undefined"></div></div>
                                     </div>
-                                </div><div class="visual-item w1200" data-mode="homeFloor" data-purebox="homeFloor" data-li="1" ectype="visualItme" data-diff="0" style="display: block;">
+                                </div>
+
+
+
+<!-- +++++++++++++++++++++++++++   商品分类 start  ++++++++++++++++++++++++++++++ -->
+
+                                {volist name="CatesRecpos" id="CatesRecpos"}
+                                <div class="visual-item w1200" data-mode="homeFloor" data-purebox="homeFloor" data-li="1" ectype="visualItme" data-diff="0" style="display: block;">
                                     
                                     <div class="view">
                                         <div class="floor-content" data-type="range" id="homeFloor_0" data-lift="女装">
@@ -314,30 +337,20 @@
     <div class="floor-hd" ectype="floorTit">
     	<i class="box_hd_arrow"></i>
     	<i class="box_hd_dec"></i>
-        <div class="hd-tit">男装、女装、内衣</div>
+        <div class="hd-tit">{$CatesRecpos.cates_name}</div>
         <div class="hd-tags">
             <ul>
                 <li class="first">
                     <span>新品推荐</span>
                     <i class="arrowImg"></i>
                 </li>
-                                                                <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="347">
-                    <span>女装</span>
+                {volist name="CatesRecpos['children']" id='CatesRecposChildren'}
+                <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="347">
+                    <span>{$CatesRecposChildren.cates_name}</span>
                     <i class="arrowImg"></i>
                 </li>
-                                                                <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="630">
-                    <span>服饰配件</span>
-                    <i class="arrowImg"></i>
-                </li>
-                                                                <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="547">
-                    <span>内衣</span>
-                    <i class="arrowImg"></i>
-                </li>
-                                                                <li data-catgoods="" class="first current" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="463">
-                    <span>男装</span>
-                    <i class="arrowImg"></i>
-                </li>
-                                                            </ul>
+                {/volist}
+            </ul>
         </div>
     </div>
     <div class="floor-bd bd-mode-01">
@@ -362,8 +375,7 @@
         <div class="bd-right">
             <div class="floor-tabs-content clearfix">
                 <div class="f-r-main f-r-m-adv" style="display: none;">
-                                        <div class="f-r-m-item
-                                        	                    ">
+                    <div class="f-r-m-item">
                         <a href="" target="_blank">
                             <div class="title">
                                 <h3>毛衣</h3>
@@ -372,8 +384,7 @@
                             <img src="__index__/img/1494984997173604814.jpg">
                         </a>
                     </div>
-                                        <div class="f-r-m-item
-                                        	                    ">
+                    <div class="f-r-m-item">
                         <a href="" target="_blank">
                             <div class="title">
                                 <h3>随意搭</h3>
@@ -382,8 +393,7 @@
                             <img src="__index__/img/1494985255611006354.png">
                         </a>
                     </div>
-                                        <div class="f-r-m-item
-                                        	                    ">
+                    <div class="f-r-m-item">
                         <a href="" target="_blank">
                             <div class="title">
                                 <h3>外套</h3>
@@ -392,8 +402,7 @@
                             <img src="__index__/img/1494985257076782520.png">
                         </a>
                     </div>
-                                        <div class="f-r-m-item
-                                        	                    ">
+                    <div class="f-r-m-item">
                         <a href="" target="_blank">
                             <div class="title">
                                 <h3>连衣裙</h3>
@@ -402,8 +411,7 @@
                             <img src="__index__/img/1494985261416235695.jpg">
                         </a>
                     </div>
-                                        <div class="f-r-m-item
-                                        	 f-r-m-i-double                    ">
+                    <div class="f-r-m-item f-r-m-i-double">
                         <a href="" target="_blank">
                             <div class="title">
                                 <h3>女士套装</h3>
@@ -773,7 +781,19 @@
     </div>
 <div class="spec" data-spec="" data-title="undefined"></div></div>
                                     </div>
-                                </div><div class="visual-item w1200" data-mode="homeFloor" data-purebox="homeFloor" data-li="1" ectype="visualItme" data-diff="1" style="display: block; position: relative; opacity: 1; z-index: 0; left: 0px; top: 0px;">
+                                </div>
+
+
+
+{/volist}
+
+
+
+<!-- +++++++++++++++++++++++++++   商品分类end  ++++++++++++++++++++++++++++++ -->
+
+
+
+                                <div class="visual-item w1200" data-mode="homeFloor" data-purebox="homeFloor" data-li="1" ectype="visualItme" data-diff="1" style="display: block; position: relative; opacity: 1; z-index: 0; left: 0px; top: 0px;">
                                     
                                     <div class="view">
                                         <div class="floor-content" data-type="range" id="homeFloor_1" data-lift="鞋靴">
@@ -2545,7 +2565,7 @@
     	</div>
         <div class="lift lift-mode-one" ectype="lift" data-type="one" style="z-index: 100001; left: 265.5px; top: 50%;">
             <div class="lift-list" ectype="liftList">
-            <div class="lift-item" ectype="liftItem" data-target="#h-need_0" title="推荐"><span>推荐</span><i class="lift-arrow"></i></div><div class="lift-item" ectype="liftItem" data-target="#h-brand_0" title="品牌"><span>品牌</span><i class="lift-arrow"></i></div><div class="lift-item lift-item-current" ectype="liftItem" data-target="#homeFloor_0" title="女装"><span>女装</span><i class="lift-arrow"></i></div><div class="lift-item" ectype="liftItem" data-target="#homeFloor_1" title="鞋靴"><span>鞋靴</span><i class="lift-arrow"></i></div><div class="lift-item" ectype="liftItem" data-target="#homeFloor_2" title="食品"><span>食品</span><i class="lift-arrow"></i></div><div class="lift-item" ectype="liftItem" data-target="#homeFloor_3" title="家用"><span>家用</span><i class="lift-arrow"></i></div><div class="lift-item" ectype="liftItem" data-target="#h-master_0" title="达人"><span>达人</span><i class="lift-arrow"></i></div><div class="lift-item" ectype="liftItem" data-target="#h-storeRec_0" title="店铺"><span>店铺</span><i class="lift-arrow"></i></div><div class="lift-item" ectype="liftItem" data-target="#guessYouLike" title="商品"><span>商品</span><i class="lift-arrow"></i></div><div class="lift-item lift-item-top" ectype="liftItem"><i class="iconfont icon-returntop"></i></div></div>
+            </div>
         </div>
         
         <input name="warehouse_id" type="hidden" value="2">
@@ -2644,7 +2664,7 @@
 					success: homeAjax
 				});
             }else{
-                Ajax.call('ajax_dialog.php?act=getUserInfo', 'brand_id=' + brand_id + "&seckillid=" + seckillid + "&temp=" + temp, homeAjax , 'POST', 'JSON');
+                Ajax.call('', 'brand_id=' + brand_id + "&seckillid=" + seckillid + "&temp=" + temp, homeAjax , 'POST', 'JSON');
             }
 			
 			function ajax_Homeindex_Bonusadv(){
@@ -2652,7 +2672,7 @@
 				var suffix = "backup_tpl_1";
 				
 				if(cfg_bonus_adv == 1 && suffix){
-					Ajax.call('ajax_dialog.php?act=ajax_Homeindex_Bonusadv', 'suffix=' + suffix, function(data){
+					Ajax.call('', 'suffix=' + suffix, function(data){
 						if(data.error != 1){
 							$("[ectype='bonusadv_box']").html(data.content);
 						}
@@ -2706,7 +2726,7 @@
 				var area_id = $("input[name='area_id']").val();
 				var area_city = $("input[name='area_city']").val();
 				if(goods_ids){
-					Ajax.call('ajax_dialog.php?act=getguessYouLike', 'goods_ids=' + goods_ids + "&warehouse_id=" + warehouse_id + "&area_id=" + area_id + "&area_city=" + area_city, function(data){
+					Ajax.call('', 'goods_ids=' + goods_ids + "&warehouse_id=" + warehouse_id + "&area_id=" + area_id + "&area_city=" + area_city, function(data){
 						if(data.content){
 							_this.find(".view .lift-channel ul").html(data.content);
 						}
@@ -2735,7 +2755,7 @@
 				});
 				
 				if(cat_ids){
-					Ajax.call('ajax_dialog.php?act=checked_article_cat', 'cat_ids=' + cat_ids, function(data){
+					Ajax.call('', 'cat_ids=' + cat_ids, function(data){
 						$('[data-mode="insertVipEdit"] .vip_article_cat').html(data.content);
 						
 						//首页信息栏 新闻文章切换 
@@ -2752,7 +2772,7 @@
                                  var warehouse_id = $("input[name='warehouse_id']").val();
 				var area_id = $("input[name='area_id']").val();
                                 
-                Ajax.call('ajax_dialog.php?act=checked_home_rank', 'goodsids=' + goodsids + "&activitytype=" + activitytype + "&warehouse_id=" + warehouse_id + "&area_id=" + area_id, function(data){
+                Ajax.call('', 'goodsids=' + goodsids + "&activitytype=" + activitytype + "&warehouse_id=" + warehouse_id + "&area_id=" + area_id, function(data){
 						_this.html(data.content);
 				} , 'POST', 'JSON');
 			});
@@ -2780,7 +2800,7 @@
 		$(".attached-search-container .shopCart-con a span").text("");
 		
 		/*首页可视化 第八套模板 楼层左侧前后轮播 */
-		aroundSilder(".floor_silder")
+		aroundSilder(".floor_silder");
     </script>
 
 

@@ -38,6 +38,26 @@ class Cates extends Model
 	}
 
 
+	public function getRecpos($recposid,$pid=0){
+
+		$recposids = db('recpos_comm') -> where( array( 'recpos_id' => $recposid , 'recpos_type' => 2 ) ) -> select();
+
+		// dump($recposid);die;
+
+		$CatesArr = array();
+		foreach ($recposids as $k => $v) {
+			$CatesArrs = $this -> where( array( 'cates_id' => $v['commodity_id'], 'cates_pid' => $pid ) ) -> find();
+			if ( $CatesArrs ){
+				$CatesArr[] = $CatesArrs;
+			}
+		}
+		// dump($CatesArr);die;
+		return $CatesArr;
+
+
+	}
+
+
 
 
 }

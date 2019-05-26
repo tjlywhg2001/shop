@@ -277,7 +277,7 @@
             <div class="categorys-type">
             	<a href="categoryall.php" target="_blank">全部商品分类</a>
             </div>
-		    <div class="categorys-tab-content" >
+		    <div class="categorys-tab-content navshow" >
 		    	<div class="categorys-items" id="cata-nav">
 		    		{volist name="CommCates" id="CommCates"}
 		            <div class="categorys-item" ectype="cateItem" data-id="{$CommCates.cates_id}" data-eveval="0">
@@ -331,6 +331,134 @@
 	            {/volist}
         	</ul>
         </div>
+
+
+
+		<div class='topShows'>
+	        <div class="mall-search">
+	            <div class="dsc-search">
+	                <div class="form">
+	                    <form id="searchForm" name="searchForm" method="get" action="search.php" onsubmit="return checkSearchForm(this)" class="search-form">
+	                        <input autocomplete="off" name="keywords" type="text" id="keyword2" value="手机" class="search-text">
+	                        <input type="hidden" name="store_search_cmt" value="0">
+	                        <button type="submit" class="button button-goods" onclick="checkstore_search_cmt(0)">搜商品</button>
+	                        <button type="submit" class="button button-store" onclick="checkstore_search_cmt(1)">搜店铺</button>
+	                    </form>
+	                </div>
+	            </div>
+	        </div>
+	        <div class="suspend-login">
+	            <a href="user.php">登录</a> |
+	            <a href="user.php?act=register">注册</a>
+	        </div>
+	        <div class="shopCart" id="ECS_CARTINFO">
+	            <div class="shopCart-con dsc-cm">
+	                <a href="flow.php">
+	                    <i class="iconfont icon-carts"></i>
+	                    <span></span>
+	                    <em class="count cart_num">0</em>
+	                </a>
+	            </div>
+	            <div class="dorpdown-layer" ectype="dorpdownLayer">
+	                <div class="prompt">
+	                    <div class="nogoods">
+	                    	<b></b>
+	                    	<span>购物车中还没有商品，赶紧选购吧！</span>
+	                    </div>
+	                </div>
+	            </div>
+	            <script type="text/javascript">
+	            function changenum(rec_id, diff, warehouse_id, area_id)
+	            {
+	                var cValue = $('#cart_value').val();
+	                var goods_number =Number($('#goods_number_' + rec_id).text()) + Number(diff);
+	             
+	                if(goods_number < 1)
+	                {
+	                    return false;   
+	                }
+	                else
+	                {
+	                    change_goods_number(rec_id,goods_number, warehouse_id, area_id, cValue);
+	                }
+	            }
+	            function change_goods_number(rec_id, goods_number, warehouse_id, area_id, cValue)
+	            {
+	                if(cValue != '' || cValue == 'undefined'){
+	                   var cValue = $('#cart_value').val(); 
+	                }   
+	                Ajax.call('flow.php?step=ajax_update_cart', 'rec_id=' + rec_id +'&goods_number=' + goods_number +'&cValue=' + cValue +'&warehouse_id=' + warehouse_id +'&area_id=' + area_id, change_goods_number_response, 'POST','JSON');                
+	            }
+	            function change_goods_number_response(result)
+	            {    
+	                var rec_id = result.rec_id;           
+	                if (result.error == 0)
+	                {
+	                   $('#goods_number_' +rec_id).val(result.goods_number);//更新数量
+	                   $('#goods_subtotal_' +rec_id).html(result.goods_subtotal);//更新小计
+	                   if (result.goods_number <= 0)
+	                    {
+	                        //数量为零则隐藏所在行
+	                        $('#tr_goods_' +rec_id).style.display = 'none';
+	                        $('#tr_goods_' +rec_id).innerHTML = '';
+	                    }
+	                    $('#total_desc').html(result.flow_info);//更新合计
+	                    if($('ECS_CARTINFO'))
+	                    {//更新购物车数量
+	                        $('#ECS_CARTINFO').html(result.cart_info);
+	                    }
+
+	                    if(result.group.length > 0){
+	                        for(var i=0; i<result.group.length; i++){
+	                            $("#" + result.group[i].rec_group).html(result.group[i].rec_group_number);//配件商品数量
+	                            $("#" + result.group[i].rec_group_talId).html(result.group[i].rec_group_subtotal);//配件商品金额
+	                        }
+	                    }
+
+	                    $("#goods_price_" + rec_id).html(result.goods_price);
+	                    $(".cart_num").html(result.subtotal_number);
+	                }
+	                else if (result.message != '')
+	                {
+	                    $('#goods_number_' +rec_id).val(result.cart_Num);//更新数量
+	                    alert(result.message);
+	                }                
+	            }
+
+	            function deleteCartGoods(rec_id,index)
+	            {
+	                Ajax.call('delete_cart_goods.php', 'id='+rec_id+'&index='+index, deleteCartGoodsResponse, 'POST', 'JSON');
+	            }
+
+	            /**
+	             * 接收返回的信息
+	             */
+	            function deleteCartGoodsResponse(res)
+	            {
+	              if (res.error)
+	              {
+	                alert(res.err_msg);
+	              }
+	              else if(res.index==1)
+	              {
+	                    Ajax.call('get_ajax_content.php?act=get_content', 'data_type=cart_list', return_cart_list, 'POST', 'JSON');
+	              }
+	              else
+	              {
+	                  $("#ECS_CARTINFO").html(res.content);
+	                  $(".cart_num").html(res.cart_num);
+	              }
+	            }
+
+	            function return_cart_list(result)
+	            {
+	                $(".cart_num").html(result.cart_num);
+	                $(".pop_panel").html(result.content);
+	                tbplHeigth();
+	            }
+	            </script>
+	        </div>
+	    </div>
 
 
 

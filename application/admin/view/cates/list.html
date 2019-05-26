@@ -51,10 +51,10 @@
                             </tr>
                         </thead>
                         
-                        {volist name="cateslist" id="cates"}
                         <tbody>
+                        {volist name="cateslist" id="cates"}
                                 <tr>
-                                <td align="center" width="5%">{$cates.cates_id}</td>
+                                <td align="center" width="5%" data-type="{$cates.cates_pid}" class="datalist">{$cates.cates_id}</td>
                                 <td align="+center" width="12%">
                                     {if condition="$cates['cates_pid'] neq 0"}
                                      |
@@ -93,8 +93,8 @@
                                     </a>
                                 </td>
                             </tr>
-                        </tbody>
                         {/volist}
+                        </tbody>
                     </table>
                 </div>
 

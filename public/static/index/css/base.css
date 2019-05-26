@@ -89,7 +89,7 @@ input[disabled],input[disabled="disabled"],input[readonly],input[readonly="reado
 .dsc-loadding p{ font-size:14px; text-align:center; color:#888888;}
 
 /*三角形*/
-.arrowImg{ background:url(../images/arrowImg.png) no-repeat; display:block; width:100px; height:6px;}
+.arrowImg{ background:url(../img/arrowImg.png) no-repeat; display:block; width:100px; height:6px;}
 .arrowXt,.arrowXt:after{
     position: relative;
     display: inline-block;
