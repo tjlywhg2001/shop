@@ -12,13 +12,13 @@
 		public function lst() {
 
 				// rc.*,rc.recpos_type,
-			$field = '
+			$field = ['
 				g.*,
 				c.cates_name,
 				b.brand_name,
 				t.type_name,
 				SUM(p.product_commodity_number) produ
-			';
+			'];
 
 			$join = [
 				// ['recpos_comm rc','g.cates_id=rc.commodity_id','LEFT'],

@@ -6,7 +6,7 @@
 -- Database : tested
 -- 
 -- Part : #1
--- Date : 2019-05-12 17:44:36
+-- Date : 2019-05-26 22:07:18
 -- -----------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
@@ -368,26 +368,26 @@ INSERT INTO `tp_cates` VALUES ('1', '家用电器', '', '', '', '1', '50', '0');
 INSERT INTO `tp_cates` VALUES ('2', '手机 数码 通信', '', '', '', '2', '50', '0');
 INSERT INTO `tp_cates` VALUES ('3', '电脑、办公', '', '', '', '3', '50', '0');
 INSERT INTO `tp_cates` VALUES ('4', '家居、家具、家装、厨具', '', '', '', '4', '50', '0');
-INSERT INTO `tp_cates` VALUES ('5', '男装、女装、内衣', '', '', '', '5', '50', '0');
-INSERT INTO `tp_cates` VALUES ('6', '鞋靴、箱包、钟表、奢侈品', '', '', '', '6', '50', '0');
+INSERT INTO `tp_cates` VALUES ('5', '男装、女装、内衣', '', '', '', '1', '50', '0');
+INSERT INTO `tp_cates` VALUES ('6', '鞋靴、箱包、钟表、奢侈品', '', '', '', '1', '50', '0');
 INSERT INTO `tp_cates` VALUES ('7', '个人化妆、清洁用品', '', '', '', '7', '50', '0');
 INSERT INTO `tp_cates` VALUES ('8', '大家电', '', '', '', '8', '50', '1');
-INSERT INTO `tp_cates` VALUES ('9', '生活电器', '', '', '', '9', '50', '1');
+INSERT INTO `tp_cates` VALUES ('9', '生活电器', '', '', '', '1', '50', '1');
 INSERT INTO `tp_cates` VALUES ('10', '智能设备', '', '', '', '10', '50', '2');
 INSERT INTO `tp_cates` VALUES ('11', '数码配件', '', '', '', '11', '50', '2');
 INSERT INTO `tp_cates` VALUES ('12', '服务产品', '', '', '', '12', '50', '3');
 INSERT INTO `tp_cates` VALUES ('13', '电脑整机', '', '', '', '13', '50', '3');
 INSERT INTO `tp_cates` VALUES ('14', '厨具', '', '', '', '14', '50', '4');
 INSERT INTO `tp_cates` VALUES ('15', '家装建材', '', '', '', '15', '50', '4');
-INSERT INTO `tp_cates` VALUES ('16', '女装', '', '', '', '16', '50', '5');
-INSERT INTO `tp_cates` VALUES ('17', '男装', '', '', '', '17', '50', '5');
-INSERT INTO `tp_cates` VALUES ('18', '奢侈品', '', '', '', '18', '50', '6');
-INSERT INTO `tp_cates` VALUES ('19', '功能箱包', '', '', '', '19', '50', '6');
+INSERT INTO `tp_cates` VALUES ('16', '女装', '', '', '', '1', '50', '5');
+INSERT INTO `tp_cates` VALUES ('17', '男装', '', '', '', '1', '50', '5');
+INSERT INTO `tp_cates` VALUES ('18', '奢侈品', '', '', '', '1', '50', '6');
+INSERT INTO `tp_cates` VALUES ('19', '功能箱包', '', '', '', '1', '50', '6');
 INSERT INTO `tp_cates` VALUES ('20', '面部护肤', '', '', '', '20', '50', '7');
 INSERT INTO `tp_cates` VALUES ('21', '洗发护发', '', '', '', '21', '50', '7');
-INSERT INTO `tp_cates` VALUES ('22', '厨房电器', '', '', '', '22', '50', '1');
-INSERT INTO `tp_cates` VALUES ('23', '个护健康', '', '', '', '23', '50', '1');
-INSERT INTO `tp_cates` VALUES ('24', '五金家装', '', '', '', '24', '50', '1');
+INSERT INTO `tp_cates` VALUES ('22', '厨房电器', '', '', '', '1', '50', '1');
+INSERT INTO `tp_cates` VALUES ('23', '个护健康', '', '', '', '1', '50', '1');
+INSERT INTO `tp_cates` VALUES ('24', '五金家装', '', '', '', '1', '50', '1');
 INSERT INTO `tp_cates` VALUES ('25', '平板电视', '', '', '', '25', '50', '8');
 INSERT INTO `tp_cates` VALUES ('26', '电风扇', '', '', '', '26', '50', '9');
 INSERT INTO `tp_cates` VALUES ('27', '电饭煲', '', '', '', '27', '50', '22');
@@ -425,16 +425,16 @@ INSERT INTO `tp_cates` VALUES ('58', '床品套件', '', '', '', '58', '50', '52
 INSERT INTO `tp_cates` VALUES ('59', '卧室家具', '', '', '', '59', '50', '53');
 INSERT INTO `tp_cates` VALUES ('60', '台灯', '', '', '', '60', '50', '54');
 INSERT INTO `tp_cates` VALUES ('61', '收纳用品', '', '', '', '61', '50', '55');
-INSERT INTO `tp_cates` VALUES ('62', '服饰配件', '', '', '', '62', '50', '5');
-INSERT INTO `tp_cates` VALUES ('63', '内衣', '', '', '', '63', '50', '5');
+INSERT INTO `tp_cates` VALUES ('62', '服饰配件', '', '', '', '1', '50', '5');
+INSERT INTO `tp_cates` VALUES ('63', '内衣', '', '', '', '1', '50', '5');
 INSERT INTO `tp_cates` VALUES ('64', '运动户外', '', '', '', '64', '50', '5');
 INSERT INTO `tp_cates` VALUES ('65', '连衣裙', '', '', '', '65', '50', '16');
 INSERT INTO `tp_cates` VALUES ('66', 'T恤', '', '', '', '66', '50', '17');
 INSERT INTO `tp_cates` VALUES ('67', '配饰', '', '', '', '67', '50', '62');
 INSERT INTO `tp_cates` VALUES ('68', '内衣配件', '', '', '', '68', '50', '63');
 INSERT INTO `tp_cates` VALUES ('69', '跑步运动', '', '', '', '69', '50', '64');
-INSERT INTO `tp_cates` VALUES ('70', '流行男鞋', '', '', '', '70', '50', '6');
-INSERT INTO `tp_cates` VALUES ('71', '时尚女鞋', '', '', '', '71', '50', '6');
+INSERT INTO `tp_cates` VALUES ('70', '流行男鞋', '', '', '', '1', '50', '6');
+INSERT INTO `tp_cates` VALUES ('71', '时尚女鞋', '', '', '', '1', '50', '6');
 INSERT INTO `tp_cates` VALUES ('72', '潮流女包', '', '', '', '72', '50', '6');
 INSERT INTO `tp_cates` VALUES ('73', '精品男包', '', '', '', '73', '50', '6');
 INSERT INTO `tp_cates` VALUES ('74', '钟表', '', '', '', '74', '50', '6');
@@ -1103,7 +1103,7 @@ INSERT INTO `tp_commodity` VALUES ('163', '3245aaa', '1553417781325764', '', '',
 INSERT INTO `tp_commodity` VALUES ('164', 'zxcv', '1553420010718261', '', '', '', '', '0.00', '0.00', '1', '2', '113', '1', '', '0.00', 'kg');
 INSERT INTO `tp_commodity` VALUES ('165', 'adfdfasfd', '1556775849983344', '', '', '', '', '0.00', '0.00', '1', '1', '112', '0', '', '0.00', 'kg');
 INSERT INTO `tp_commodity` VALUES ('166', 'adfdfasfd', '1556775975524820', '', '', '', '', '0.00', '0.00', '1', '1', '112', '0', '', '0.00', 'kg');
-INSERT INTO `tp_commodity` VALUES ('167', 'adfdfasfd', '1556776057476942', '', '', '', '', '0.00', '0.00', '1', '1', '112', '0', '', '0.00', 'kg');
+INSERT INTO `tp_commodity` VALUES ('167', 'adfdfasfd', '1556776057476942', '', '', '', '', '0.00', '0.00', '1', '1', '0', '0', '', '0.00', 'kg');
 INSERT INTO `tp_commodity` VALUES ('168', 'adfdfasfd', '1556776090142171', '', '', '', '', '0.00', '0.00', '1', '1', '112', '0', '', '0.00', 'kg');
 INSERT INTO `tp_commodity` VALUES ('169', 'zxcv', '1556776161383517', '', '', '', '', '0.00', '0.00', '1', '2', '114', '0', '', '0.00', 'kg');
 INSERT INTO `tp_commodity` VALUES ('170', '', '1556786568649061', '', '', '', '', '0.00', '0.00', '1', '0', '0', '0', '', '0.00', 'kg');
@@ -1373,7 +1373,7 @@ INSERT INTO `tp_recpos` VALUES ('6', '推荐分类', '2');
 DROP TABLE IF EXISTS `tp_recpos_comm`;
 CREATE TABLE `tp_recpos_comm` (
   `recpos_id` smallint(6) unsigned NOT NULL,
-  `commodity_id` smallint(6) unsigned NOT NULL,
+  `commodity_id` smallint(6) unsigned NOT NULL COMMENT '商品ID或分类ID',
   `recpos_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '商品类型：1.商品 2.商品分类'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1388,6 +1388,21 @@ INSERT INTO `tp_recpos_comm` VALUES ('1', '169', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('5', '22', '2');
 INSERT INTO `tp_recpos_comm` VALUES ('2', '169', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '168', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '16', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '62', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '63', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '17', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '19', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '70', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '18', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '71', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '9', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '23', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '24', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '1', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '5', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('5', '6', '2');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '167', '1');
 
 -- -----------------------------
 -- Table structure for `tp_type`
