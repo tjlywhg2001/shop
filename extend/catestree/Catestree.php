@@ -28,12 +28,15 @@
 		public function childrenids($dataid,$catec){
 			$data = $catec->field('cates_id,cates_pid')->select();
 
-			return $this -> _childrenids($data,$dataid);
+			return $this -> _childrenids($data,$dataid,TRUE);
 		}
 
-		private function _childrenids($data,$dataid){
+		private function _childrenids($data,$dataid,$clear=FALSE){
 
 			static $arr = array();
+			if ( $clear ){
+				$arr = array();
+			}
 			foreach ($data as $k => $v) {
 				if($v['cates_pid'] == $dataid){
 					$arr[] =$v['cates_id'];
