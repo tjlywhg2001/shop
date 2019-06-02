@@ -29,7 +29,7 @@
 				['product p','g.commodity_id=p.product_commodity_id','LEFT'],
 			];
 
-			$commRes = db('commodity') -> alias('g') -> field($field) -> join($join) -> group('g.commodity_id') -> order('g.commodity_id DESC') -> paginate(10);
+			$commRes = db('commodity') -> alias('g') -> field($field) -> join($join) -> group('g.commodity_id') -> order('g.commodity_id DESC') -> paginate(20);
 
 
 			$recpos = db('recpos_comm') -> alias('rc') -> field('rc.*,r.rec_id,r.rec_name') -> join('recpos r','rc.recpos_id=r.rec_id','LEFT') -> where(array('rc.recpos_type' => 1)) -> select();

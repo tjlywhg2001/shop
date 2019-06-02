@@ -345,7 +345,7 @@
                     <i class="arrowImg"></i>
                 </li>
                 {volist name="CatesRecpos['children']" id='CatesRecposChildren'}
-                <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="347">
+                <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="{$CatesRecposChildren.cates_id}">
                     <span>{$CatesRecposChildren.cates_name}</span>
                     <i class="arrowImg"></i>
                 </li>
@@ -355,24 +355,37 @@
     </div>
     <div class="floor-bd bd-mode-01">
         <div class="bd-left">
-                        <div class="floor-left-slide">
+            <div class="floor-left-slide">
                 <div class="bd">
-                    <div class="tempWrap" style="overflow:hidden; position:relative; width:232px"><ul style="width: 696px; left: -464px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                                                                        <li style="float: left; width: 232px;"><a href=""><img src="__index__/img/1494985255003388359.jpg"></a></li>
-                                                                                                <li style="float: left; width: 232px;"><a href=""><img src="__index__/img/1494985255671031591.jpg"></a></li>
-                                                                                                <li style="float: left; width: 232px;"><a href=""><img src="__index__/img/1494985255859372374.jpg"></a></li>
-                                                                    </ul></div>
-                </div>
-                <div class="hd"><ul><li class="">1</li><li class="">2</li><li class="on">3</li></ul></div>
-            </div>
-                        
-            <div class="floor-left-adv">
-                                                <a href="" target="_blank"><img src="__index__/img/1494984993812175408.jpg"></a>
-                                                                <a href="" target="_blank"><img src="__index__/img/1494984993892207941.jpg"></a>
-                                            </div>
-            
+                    <div class="tempWrap" style="overflow:hidden; position:relative; width:232px">
+                        <ul style="width: 696px; left: -464px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                            <li style="float: left; width: 232px;"><a href=""><img src="__index__/img/1494985255003388359.jpg"></a></li>
+                            <li style="float: left; width: 232px;"><a href=""><img src="__index__/img/1494985255671031591.jpg"></a></li>
+                            <li style="float: left; width: 232px;"><a href=""><img src="__index__/img/1494985255859372374.jpg"></a></li>
+                        </ul>
                     </div>
+                </div>
+                <div class="hd">
+                    <ul>
+                        <li class="">1</li>
+                        <li class="">2</li>
+                        <li class="on">3</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="floor-left-adv">
+                <a href="" target="_blank"><img src="__index__/img/1494984993812175408.jpg"></a>
+                <a href="" target="_blank"><img src="__index__/img/1494984993892207941.jpg"></a>
+            </div>
+        </div>
         <div class="bd-right">
+
+
+            <!-- ============================ 推荐商品内容 start ============================ -->
+
+
+            <!-- ============================ **** 所属子栏目的新品内容 start ***** ============================ -->
+
             <div class="floor-tabs-content clearfix">
                 <div class="f-r-main f-r-m-adv" style="display: none;">
                     <div class="f-r-m-item">
@@ -420,288 +433,41 @@
                             <img src="__index__/img/1494984998972685382.jpg">
                         </a>
                     </div>
+                </div>
+
+                <!-- ============================ **** 所属子栏目的新品内容 end ***** ============================ -->
+
+                
+                <!-- ============================ **** 所属子栏目的精品内容 start ***** ============================ -->
+                
+                {volist name="CatesRecpos['children']" id="childrens"}
+                <div class="f-r-main" ectype="floor_cat_347" style="display: none;">
+                    <ul class="p-list">
+                        {volist name="CatesRecpos['childrenComm']" id="childrenComm"}
+                            <li class="opacity_img">
+                                <div class="product">
+                                    <div class="p-img"><a href="" target="_blank"><img src="__upload__/{$childrenComm.commodity_midthumb}" width="140" height="140"></a></div>
+                                    <div class="p-name"><a href="" title="{$childrenComm.commodity_name}">{$childrenComm.commodity_name}</a></div>
+                                    <div class="p-price">
+                                        <span class="shop-price">
+                                            <em>¥</em>{$childrenComm.commodity_shop_price}
+                                        </span>
+                                        <span class="original-price">
+                                            <em>¥</em>{$childrenComm.commodity_market_price}
+                                        </span>
                                     </div>
-                                <div class="f-r-main" ectype="floor_cat_347" style="display: none;">
-<ul class="p-list">
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=801" target="_blank"><img src="__index__/img/0_thumb_G_1490174925807.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=801" title="逸阳女裤春装新款韩版休闲裤女九分裤黑色弹力微喇叭裤子显瘦0032 浓郁复古风 修饰腿型 生而优雅">逸阳女裤春装新款韩版休闲裤女九分裤黑色弹力微喇叭裤子显瘦0032 浓郁复古风 修饰腿型 生而优雅</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>158.00                            </span>
-            <span class="original-price"><em>¥</em>189.60</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=800" target="_blank"><img src="__index__/img/0_thumb_G_1490174894779.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=800" title="2017韩版女装夏装新款A字宽松松紧腰印花连衣裙DT7039乾 舒适松紧腰 A字版型 时尚印花">2017韩版女装夏装新款A字宽松松紧腰印花连衣裙DT7039乾 舒适松紧腰 A字版型 时尚印花</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>130.00                            </span>
-            <span class="original-price"><em>¥</em>199.20</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=799" target="_blank"><img src="__index__/img/0_thumb_G_1490174858999.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=799" title="韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10">韩美格2017春秋新款修身大码蕾丝网纱打底衫女长袖薄款圆领女T恤 全店商品 二件减5元 三件减10</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>68.00                            </span>
-            <span class="original-price"><em>¥</em>81.60</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=798" target="_blank"><img src="__index__/img/0_thumb_G_1490174824075.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=798" title="逸阳女裤2017夏修身白色牛仔裤超短裤三分裤mm热裤女夏宽松大码潮">逸阳女裤2017夏修身白色牛仔裤超短裤三分裤mm热裤女夏宽松大码潮</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>149.00                            </span>
-            <span class="original-price"><em>¥</em>178.79</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=797" target="_blank"><img src="__index__/img/0_thumb_G_1490174791219.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=797" title="17年春夏新款百搭半身裙蛋糕裙 a字裙 裤裙伞裙大码裙子超短裙女 松紧腰围 带裤边打底衬 涤针织面料">17年春夏新款百搭半身裙蛋糕裙 a字裙 裤裙伞裙大码裙子超短裙女 松紧腰围 带裤边打底衬 涤针织面料</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>49.00                            </span>
-            <span class="original-price"><em>¥</em>58.80</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=796" target="_blank"><img src="__index__/img/0_thumb_G_1490174741051.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=796" title="初棉纯色圆领长袖T恤打底衫秋衣女上衣体恤女士修身打底衣春秋 挺拔有型 棉氨材质 柔软舒适 耐洗耐磨">初棉纯色圆领长袖T恤打底衫秋衣女上衣体恤女士修身打底衣春秋 挺拔有型 棉氨材质 柔软舒适 耐洗耐磨</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>40.00                            </span>
-            <span class="original-price"><em>¥</em>78.00</span>
-        </div>
-    </div>
-</li>
-</ul>
-</div>
-                                <div class="f-r-main" ectype="floor_cat_630" style="display: none;">
-<ul class="p-list">
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=783" target="_blank"><img src="__index__/img/0_thumb_G_1490173894447.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=783" title="红叶伞遮阳伞防紫外线黑胶防晒晴雨两用太阳伞女糖果色折叠雨伞大 黑胶防晒 晴雨两用 糖果色 都市风情">红叶伞遮阳伞防紫外线黑胶防晒晴雨两用太阳伞女糖果色折叠雨伞大 黑胶防晒 晴雨两用 糖果色 都市风情</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>38.00                            </span>
-            <span class="original-price"><em>¥</em>45.60</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=782" target="_blank"><img src="__index__/img/0_thumb_G_1490173860746.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=782" title="6林志玲花样姐姐同款海伦凯勒太阳镜女 偏光蛤蟆镜潮墨镜H8535 花样姐姐同款 林志玲设计 炫彩镂空">6林志玲花样姐姐同款海伦凯勒太阳镜女 偏光蛤蟆镜潮墨镜H8535 花样姐姐同款 林志玲设计 炫彩镂空</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>378.00                            </span>
-            <span class="original-price"><em>¥</em>453.59</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=781" target="_blank"><img src="__index__/img/0_thumb_G_1490173699371.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=781" title="宝石蝶真丝围巾女士春秋季高档丝巾重磅桑蚕丝大方巾披肩丝绸礼品 16姆米重磅真丝丝滑缎面90方巾礼盒包装">宝石蝶真丝围巾女士春秋季高档丝巾重磅桑蚕丝大方巾披肩丝绸礼品 16姆米重磅真丝丝滑缎面90方巾礼盒包装</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>169.00                            </span>
-            <span class="original-price"><em>¥</em>202.79</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=780" target="_blank"><img src="__index__/img/0_thumb_G_1490173663577.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=780" title="男女韩版纯棉可爱冬季个性防尘情侣口罩保暖透气黑色时尚潮款春 15元一共2个口罩 防尘个性时尚">男女韩版纯棉可爱冬季个性防尘情侣口罩保暖透气黑色时尚潮款春 15元一共2个口罩 防尘个性时尚</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>15.00                            </span>
-            <span class="original-price"><em>¥</em>18.00</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=779" target="_blank"><img src="__index__/img/0_thumb_G_1490173626566.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=779" title="74超薄非球面镜片高度近视眼镜片近视镜片防蓝光配眼镜镜片加工 套餐价低至359元 6款镜架任您选">74超薄非球面镜片高度近视眼镜片近视镜片防蓝光配眼镜镜片加工 套餐价低至359元 6款镜架任您选</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>399.00                            </span>
-            <span class="original-price"><em>¥</em>478.79</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=778" target="_blank"><img src="__index__/img/0_thumb_G_1490173534127.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=778" title="NewEra纽亦华 新款MLB棒球帽男女字母NY洋基LA道奇调节平沿嘻哈帽 官方正品">NewEra纽亦华 新款MLB棒球帽男女字母NY洋基LA道奇调节平沿嘻哈帽 官方正品</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>219.00                            </span>
-            <span class="original-price"><em>¥</em>262.80</span>
-        </div>
-    </div>
-</li>
-</ul>
-</div>
-                                <div class="f-r-main" ectype="floor_cat_547" style="display: none;">
-<ul class="p-list">
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=795" target="_blank"><img src="__index__/img/0_thumb_G_1490174703131.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=795" title="都市丽人一片式无痕文胸厚杯性感聚拢舒适光面胸罩纯色商场同款 2016新品明星同款舒适Q软托无痕体验">都市丽人一片式无痕文胸厚杯性感聚拢舒适光面胸罩纯色商场同款 2016新品明星同款舒适Q软托无痕体验</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>91.00                            </span>
-            <span class="original-price"><em>¥</em>109.20</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=794" target="_blank"><img src="__index__/img/0_thumb_G_1490174663688.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=794" title="都市丽人文胸旗舰店 林志玲有钢圈少女小胸文胸 聚拢 调整型内衣V 官方正品 赠运费险 收藏有礼 全国包邮">都市丽人文胸旗舰店 林志玲有钢圈少女小胸文胸 聚拢 调整型内衣V 官方正品 赠运费险 收藏有礼 全国包邮</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>69.00                            </span>
-            <span class="original-price"><em>¥</em>82.80</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=793" target="_blank"><img src="__index__/img/0_thumb_G_1490174631015.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=793" title="久慕雅黛诱惑情趣内衣诱惑女蕾丝吊带袜性感长筒吊袜丝袜吊袜带 性感显瘦 舒适防滑 细腻滑弹 纤长有型">久慕雅黛诱惑情趣内衣诱惑女蕾丝吊带袜性感长筒吊袜丝袜吊袜带 性感显瘦 舒适防滑 细腻滑弹 纤长有型</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>68.00                            </span>
-            <span class="original-price"><em>¥</em>81.60</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=792" target="_blank"><img src="__index__/img/0_thumb_G_1490174547624.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=792" title="贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装">贝妍夏季薄款女士睡衣性感V领女南韩丝家居服运动可外穿中袖套装</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>124.00                            </span>
-            <span class="original-price"><em>¥</em>165.60</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=791" target="_blank"><img src="__index__/img/0_thumb_G_1490174508974.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=791" title="迷瞳盒装女士内裤莫代尔透气少女三角裤夏季性感低腰无痕大码裤头 5条盒装 莫代尔面料 小内裤 窄边三角裤">迷瞳盒装女士内裤莫代尔透气少女三角裤夏季性感低腰无痕大码裤头 5条盒装 莫代尔面料 小内裤 窄边三角裤</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>44.50                            </span>
-            <span class="original-price"><em>¥</em>53.40</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=790" target="_blank"><img src="__index__/img/0_thumb_G_1490174469373.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=790" title="Calvin Klein Underwear/CK 2017春夏新款 男士平角内裤NU8638 初上市价格290元">Calvin Klein Underwear/CK 2017春夏新款 男士平角内裤NU8638 初上市价格290元</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>290.00                            </span>
-            <span class="original-price"><em>¥</em>348.00</span>
-        </div>
-    </div>
-</li>
-</ul>
-</div>
-                                <div class="f-r-main" ectype="floor_cat_463" style="display: block;">
-<ul class="p-list">
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=789" target="_blank"><img src="__index__/img/0_thumb_G_1490174414186.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=789" title="森马针织衫 冬季男圆领套头青年毛衣小清新线衫毛衫纯色韩版学生">森马针织衫 冬季男圆领套头青年毛衣小清新线衫毛衫纯色韩版学生</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>79.00                            </span>
-            <span class="original-price"><em>¥</em>94.80</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=788" target="_blank"><img src="__index__/img/0_thumb_G_1490174342632.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=788" title="HLA/海澜之家休闲西服2017春季新品平驳领时尚西装男单西外套 平驳领型 胸针装饰 青春休闲 舒适手感">HLA/海澜之家休闲西服2017春季新品平驳领时尚西装男单西外套 平驳领型 胸针装饰 青春休闲 舒适手感</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>498.00                            </span>
-            <span class="original-price"><em>¥</em>597.60</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=787" target="_blank"><img src="__index__/img/0_thumb_G_1490174303715.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=787" title="YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购">YOHO有货潮牌LAL/数字贴布连帽套头卫衣男女通用 吴亦凡亲着同款 春夏焕新季，3.21日00:00开始抢购</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>130.00                            </span>
-            <span class="original-price"><em>¥</em>190.79</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=786" target="_blank"><img src="__index__/img/0_thumb_G_1490174241651.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=786" title="裤子男士哈伦裤春季新款2017束脚裤修身韩版潮流小脚裤男裤休闲裤 弹力">裤子男士哈伦裤春季新款2017束脚裤修身韩版潮流小脚裤男裤休闲裤 弹力</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>99.00                            </span>
-            <span class="original-price"><em>¥</em>118.80</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=785" target="_blank"><img src="__index__/img/0_thumb_G_1490174208112.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=785" title="森马夹克 2016冬装新款男士飞行夹克贴布绣立领休闲外套韩版潮流">森马夹克 2016冬装新款男士飞行夹克贴布绣立领休闲外套韩版潮流</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>199.90                            </span>
-            <span class="original-price"><em>¥</em>239.88</span>
-        </div>
-    </div>
-</li>
-<li class="opacity_img">
-    <div class="product">
-        <div class="p-img"><a href="https://demo.dscmall.cn/goods.php?id=866" target="_blank"><img src="__index__/img/0_thumb_G_1490211843119.jpg" width="140" height="140"></a></div>
-        <div class="p-name"><a href="https://demo.dscmall.cn/goods.php?id=866" title="马克华菲短袖T恤 夏装新款舒适圆领条纹拼接男简约修身短袖上衣">马克华菲短袖T恤 夏装新款舒适圆领条纹拼接男简约修身短袖上衣</a></div>
-        <div class="p-price">
-            <span class="shop-price">
-                                    <em>¥</em>128.00                            </span>
-            <span class="original-price"><em>¥</em>153.60</span>
-        </div>
-    </div>
-</li>
-</ul>
-</div>
-                            </div>
+                                </div>
+                            </li>
+                        {/volist}
+                    </ul>
+                </div>
+                {/volist}
+
+                <!-- ============================ **** 所属子栏目的精品内容 end ***** ============================ -->
+
+
+            <!-- ============================ 推荐商品内容 end ============================ -->
+
         </div>
     </div>
         <div class="floor-fd">
