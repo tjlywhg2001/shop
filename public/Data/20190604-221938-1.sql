@@ -6,115 +6,11 @@
 -- Database : tested
 -- 
 -- Part : #1
--- Date : 2019-06-02 18:38:27
+-- Date : 2019-06-04 22:19:38
 -- -----------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
 
-
--- -----------------------------
--- Table structure for `sheet2`
--- -----------------------------
-DROP TABLE IF EXISTS `sheet2`;
-CREATE TABLE `sheet2` (
-  `品牌日` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- -----------------------------
--- Records of `sheet2`
--- -----------------------------
-INSERT INTO `sheet2` VALUES ('品牌日');
-INSERT INTO `sheet2` VALUES ('家电城');
-INSERT INTO `sheet2` VALUES ('智能生活馆');
-INSERT INTO `sheet2` VALUES ('京东净化馆');
-INSERT INTO `sheet2` VALUES ('京东帮服务店');
-INSERT INTO `sheet2` VALUES ('值得买精选');
-INSERT INTO `sheet2` VALUES ('手机频道');
-INSERT INTO `sheet2` VALUES ('网上营业厅');
-INSERT INTO `sheet2` VALUES ('配件城');
-INSERT INTO `sheet2` VALUES ('影像Club');
-INSERT INTO `sheet2` VALUES ('手机社区');
-INSERT INTO `sheet2` VALUES ('以旧换新');
-INSERT INTO `sheet2` VALUES ('本周热卖');
-INSERT INTO `sheet2` VALUES ('游戏部落');
-INSERT INTO `sheet2` VALUES ('智能社区');
-INSERT INTO `sheet2` VALUES ('GAME+');
-INSERT INTO `sheet2` VALUES ('装机大师');
-INSERT INTO `sheet2` VALUES ('办公生活馆');
-INSERT INTO `sheet2` VALUES ('家装城');
-INSERT INTO `sheet2` VALUES ('居家日用');
-INSERT INTO `sheet2` VALUES ('精品家具');
-INSERT INTO `sheet2` VALUES ('家装建材');
-INSERT INTO `sheet2` VALUES ('厨房达人');
-INSERT INTO `sheet2` VALUES ('猫猫狗狗');
-INSERT INTO `sheet2` VALUES ('男装');
-INSERT INTO `sheet2` VALUES ('女装');
-INSERT INTO `sheet2` VALUES ('内衣');
-INSERT INTO `sheet2` VALUES ('国际品牌');
-INSERT INTO `sheet2` VALUES ('男鞋');
-INSERT INTO `sheet2` VALUES ('女鞋');
-INSERT INTO `sheet2` VALUES ('箱包');
-INSERT INTO `sheet2` VALUES ('钟表');
-INSERT INTO `sheet2` VALUES ('奢侈品');
-INSERT INTO `sheet2` VALUES ('女包');
-INSERT INTO `sheet2` VALUES ('清洁用品');
-INSERT INTO `sheet2` VALUES ('美妆商城');
-INSERT INTO `sheet2` VALUES ('官方旗舰店');
-INSERT INTO `sheet2` VALUES ('美妆特卖');
-INSERT INTO `sheet2` VALUES ('妆比社');
-INSERT INTO `sheet2` VALUES ('全球购美妆');
-
--- -----------------------------
--- Table structure for `sheet3`
--- -----------------------------
-DROP TABLE IF EXISTS `sheet3`;
-CREATE TABLE `sheet3` (
-  `1` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- -----------------------------
--- Records of `sheet3`
--- -----------------------------
-INSERT INTO `sheet3` VALUES ('1');
-INSERT INTO `sheet3` VALUES ('1');
-INSERT INTO `sheet3` VALUES ('1');
-INSERT INTO `sheet3` VALUES ('1');
-INSERT INTO `sheet3` VALUES ('1');
-INSERT INTO `sheet3` VALUES ('1');
-INSERT INTO `sheet3` VALUES ('2');
-INSERT INTO `sheet3` VALUES ('2');
-INSERT INTO `sheet3` VALUES ('2');
-INSERT INTO `sheet3` VALUES ('2');
-INSERT INTO `sheet3` VALUES ('2');
-INSERT INTO `sheet3` VALUES ('2');
-INSERT INTO `sheet3` VALUES ('3');
-INSERT INTO `sheet3` VALUES ('3');
-INSERT INTO `sheet3` VALUES ('3');
-INSERT INTO `sheet3` VALUES ('3');
-INSERT INTO `sheet3` VALUES ('3');
-INSERT INTO `sheet3` VALUES ('3');
-INSERT INTO `sheet3` VALUES ('4');
-INSERT INTO `sheet3` VALUES ('4');
-INSERT INTO `sheet3` VALUES ('4');
-INSERT INTO `sheet3` VALUES ('4');
-INSERT INTO `sheet3` VALUES ('4');
-INSERT INTO `sheet3` VALUES ('4');
-INSERT INTO `sheet3` VALUES ('5');
-INSERT INTO `sheet3` VALUES ('5');
-INSERT INTO `sheet3` VALUES ('5');
-INSERT INTO `sheet3` VALUES ('5');
-INSERT INTO `sheet3` VALUES ('6');
-INSERT INTO `sheet3` VALUES ('6');
-INSERT INTO `sheet3` VALUES ('6');
-INSERT INTO `sheet3` VALUES ('6');
-INSERT INTO `sheet3` VALUES ('6');
-INSERT INTO `sheet3` VALUES ('6');
-INSERT INTO `sheet3` VALUES ('7');
-INSERT INTO `sheet3` VALUES ('7');
-INSERT INTO `sheet3` VALUES ('7');
-INSERT INTO `sheet3` VALUES ('7');
-INSERT INTO `sheet3` VALUES ('7');
-INSERT INTO `sheet3` VALUES ('7');
 
 -- -----------------------------
 -- Table structure for `tp_article`
@@ -1097,13 +993,13 @@ INSERT INTO `tp_commodity` VALUES ('8', '2017新品 加一尚品无痕内衣女 
 INSERT INTO `tp_commodity` VALUES ('9', '2016秋冬季新款尖头粗跟短靴女高跟真皮加绒中跟马丁靴女靴子女鞋 优质全头层牛皮，品质女鞋', 'ECS000681', '20190511/_P_1489109137127.jpg', '', '20190511/_thumb_P_1489109137169.jpg', '', '108.10', '93.22', '1', '71', '0', '77', '', '0.00', 'g');
 INSERT INTO `tp_commodity` VALUES ('10', '樱尚雅一片式无痕无钢圈文胸聚拢调整型性感小胸罩厚薄款少女内衣 2件减5元 不聚拢包退 送运费险', 'ECS000631', '20190511/_P_1489100659034.jpg', '', '20190511/_thumb_P_1489100659432.jpg', '', '109.10', '94.22', '1', '5', '0', '68', '', '0.00', 'g');
 INSERT INTO `tp_commodity` VALUES ('11', '皮尔卡丹正品男士钱包长款真皮软 头层牛皮钱包男青年钱夹皮夹男 立即抢购 领券购物 享折上折', 'ECS000833', '20190511/_P_1490208839006.jpg', '', '20190511/_thumb_P_1490208839270.jpg', '', '110.10', '95.22', '1', '6', '0', '467', '', '0.00', 'g');
-INSERT INTO `tp_commodity` VALUES ('12', 'AIPU艾谱豪雅高端电子指纹家用办公奢侈品保险箱保险柜88cm', 'ECS000841', '20190511/_P_1490209167717.jpg', '', '20190511/_thumb_P_1490209167850.jpg', '', '111.10', '96.22', '1', '80', '0', '411', '', '0.00', 'g');
-INSERT INTO `tp_commodity` VALUES ('13', 'LUGAV奢侈品男鞋商务休闲皮鞋固特异男士尖头手工定制鞋进口牛皮 固特异工艺 顺丰包邮 经典手工皮鞋', 'ECS000836', '20190511/0_P_1490208973643.jpg', '', '20190511/0_thumb_P_1490208973750.jpg', '', '112.10', '97.22', '1', '80', '0', '411', '', '0.00', 'g');
+INSERT INTO `tp_commodity` VALUES ('12', 'AIPU艾谱豪雅高端电子指纹家用办公奢侈品保险箱保险柜88cm', 'ECS000841', '20190511/_P_1490209167717.jpg', '', '20190511/_thumb_P_1490209167850.jpg', '', '111.10', '96.22', '1', '18', '0', '411', '', '0.00', 'g');
+INSERT INTO `tp_commodity` VALUES ('13', 'LUGAV奢侈品男鞋商务休闲皮鞋固特异男士尖头手工定制鞋进口牛皮 固特异工艺 顺丰包邮 经典手工皮鞋', 'ECS000836', '20190511/0_P_1490208973643.jpg', '', '20190511/0_thumb_P_1490208973750.jpg', '', '112.10', '97.22', '1', '18', '0', '411', '', '0.00', 'g');
 INSERT INTO `tp_commodity` VALUES ('14', '波米铝框拉杆箱万向轮密码旅行箱子20/24寸行李箱女登机箱男26/28 顺丰速运赠运费险赠十礼品终身', 'ECS000682', '20190511/_P_1489109293514.jpg', '', '20190511/_thumb_P_1489109293604.jpg', '', '113.10', '98.22', '1', '19', '0', '424', '', '0.00', 'g');
-INSERT INTO `tp_commodity` VALUES ('15', 'KooDao2016新款奢侈蛇纹真皮女士手提包百搭精品休闲斜挎手拎包 悦享生活 品质追求 满减领券 ', 'ECS000837', '20190511/_P_1490209036698.jpg', '', '20190511/_thumb_P_1490209036667.jpg', '', '114.10', '99.22', '1', '80', '0', '411', '', '0.00', 'g');
-INSERT INTO `tp_commodity` VALUES ('16', 'BOSSsunwen头层牛皮真皮针扣皮带男士编织时尚腰带奢侈品个性青年 自动扣 头层牛皮 赠运费险 ', 'ECS000839', '20190511/_P_1490209095494.jpg', '', '20190511/_thumb_P_1490209095013.jpg', '', '115.10', '100.22', '1', '80', '0', '411', '', '0.00', 'g');
-INSERT INTO `tp_commodity` VALUES ('17', 'perhomme/帛欧尼男士手提包横款潮流精品男包奢侈品时尚真皮包 领券购物更 优惠', 'ECS000838', '20190511/_P_1490209064513.jpg', '', '20190511/_thumb_P_1490209064534.jpg', '', '116.10', '101.22', '1', '80', '0', '411', '', '0.00', 'g');
-INSERT INTO `tp_commodity` VALUES ('18', 'COVHERlab男士职业正装商务领带 紫方块奢侈领带男韩版 礼品领带 奢侈品牌 商务必备 简约大气', 'ECS000840', '20190511/_P_1490209134080.jpg', '', '20190511/_thumb_P_1490209134006.jpg', '', '117.10', '102.22', '1', '80', '0', '411', '', '0.00', 'g');
+INSERT INTO `tp_commodity` VALUES ('15', 'KooDao2016新款奢侈蛇纹真皮女士手提包百搭精品休闲斜挎手拎包 悦享生活 品质追求 满减领券 ', 'ECS000837', '20190511/_P_1490209036698.jpg', '', '20190511/_thumb_P_1490209036667.jpg', '', '114.10', '99.22', '1', '18', '0', '411', '', '0.00', 'g');
+INSERT INTO `tp_commodity` VALUES ('16', 'BOSSsunwen头层牛皮真皮针扣皮带男士编织时尚腰带奢侈品个性青年 自动扣 头层牛皮 赠运费险 ', 'ECS000839', '20190511/_P_1490209095494.jpg', '', '20190511/_thumb_P_1490209095013.jpg', '', '115.10', '100.22', '1', '18', '0', '411', '', '0.00', 'g');
+INSERT INTO `tp_commodity` VALUES ('17', 'perhomme/帛欧尼男士手提包横款潮流精品男包奢侈品时尚真皮包 领券购物更 优惠', 'ECS000838', '20190511/_P_1490209064513.jpg', '', '20190511/_thumb_P_1490209064534.jpg', '', '116.10', '101.22', '1', '18', '0', '411', '', '0.00', 'g');
+INSERT INTO `tp_commodity` VALUES ('18', 'COVHERlab男士职业正装商务领带 紫方块奢侈领带男韩版 礼品领带 奢侈品牌 商务必备 简约大气', 'ECS000840', '20190511/_P_1490209134080.jpg', '', '20190511/_thumb_P_1490209134006.jpg', '', '117.10', '102.22', '1', '18', '0', '411', '', '0.00', 'g');
 INSERT INTO `tp_commodity` VALUES ('19', 'igtt铝框行李箱拉杆箱旅行箱万向轮男女20/24/26寸密码箱登机箱子 铝合金框 加强密码锁 万向', 'ECS000683', '20190511/_P_1489109349384.jpg', '', '20190511/_thumb_P_1489109349428.jpg', '', '118.10', '103.22', '1', '19', '0', '76', '', '0.00', 'g');
 INSERT INTO `tp_commodity` VALUES ('20', 'DELSEY法国大使拉杆箱旅行箱25寸400密码箱箱子万向轮男女行李箱 可扩充容量 全球联保', 'ECS000832', '20190511/_P_1490208761146.jpg', '', '20190511/_thumb_P_1490208761264.jpg', '', '119.10', '104.22', '1', '19', '0', '76', '', '0.00', 'g');
 INSERT INTO `tp_commodity` VALUES ('21', 'Apple/苹果 iPhone 6s Plus', 'ECS000668', '20190511/_P_1489107766735.jpg', '', '20190511/_thumb_P_1489107766573.jpg', '', '120.10', '105.22', '1', '2', '0', '184', '', '0.00', 'g');
@@ -1496,7 +1392,7 @@ CREATE TABLE `tp_recpos` (
   `rec_name` mediumtext NOT NULL COMMENT '推荐位名称',
   `rec_type` tinyint(1) NOT NULL COMMENT '推荐位类型：1.商品2.分类',
   PRIMARY KEY (`rec_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 
 -- -----------------------------
 -- Records of `tp_recpos`
@@ -1536,67 +1432,17 @@ INSERT INTO `tp_recpos_comm` VALUES ('5', '24', '2');
 INSERT INTO `tp_recpos_comm` VALUES ('5', '1', '2');
 INSERT INTO `tp_recpos_comm` VALUES ('5', '5', '2');
 INSERT INTO `tp_recpos_comm` VALUES ('5', '6', '2');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '9', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '2', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '6', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '7', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '9', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '12', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '13', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '14', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '15', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '16', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '17', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '18', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '14', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '19', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '20', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '33', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '35', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '36', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '37', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '38', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '40', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '41', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '42', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '43', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '45', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '46', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '47', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '48', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '52', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '72', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '73', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '74', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '83', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '84', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '85', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '86', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '95', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '97', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '98', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '99', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '100', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '111', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '112', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '113', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '114', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '116', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '117', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '124', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '125', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '126', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '128', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '129', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '132', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '133', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '135', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '136', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '137', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('4', '138', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '9', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '12', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '13', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '15', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '16', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '17', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '18', '1');
-INSERT INTO `tp_recpos_comm` VALUES ('3', '14', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '19', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '20', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '33', '1');
@@ -1625,6 +1471,7 @@ INSERT INTO `tp_recpos_comm` VALUES ('3', '97', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '98', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '99', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '100', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '110', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '111', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '112', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '113', '1');
@@ -1642,6 +1489,63 @@ INSERT INTO `tp_recpos_comm` VALUES ('3', '135', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '136', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '137', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('3', '138', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '2', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '6', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '7', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '9', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '12', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '13', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '14', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '15', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '16', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '17', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('3', '18', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '19', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '20', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '33', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '35', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '36', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '37', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '38', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '40', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '41', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '42', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '43', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '45', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '46', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '47', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '48', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '52', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '72', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '73', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '74', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '83', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '84', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '85', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '86', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '95', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '97', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '98', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '99', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '100', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '110', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '111', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '112', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '113', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '114', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '116', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '117', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '124', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '125', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '126', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '128', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '129', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '132', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '133', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '135', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '136', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '137', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('4', '138', '1');
 
 -- -----------------------------
 -- Table structure for `tp_type`

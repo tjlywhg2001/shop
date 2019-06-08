@@ -52,9 +52,6 @@
 			if (request()->isPost()){
 				$data=input('post.');
 
-
-
-
 				$add= model('commodity') ->save($data);
 				// dump($_FILES);
 				// dump($data);die;
@@ -88,12 +85,13 @@
 			$brandlist = db('brand') -> field( 'brand_id,brand_name') -> select();
 
 
-			$this -> assign([	'cateslist' => $cateslist,
-								'brandlist' => $brandlist,
-								'mblevellist' => $mblevellist,
-								'attrlists' => $attrlists,
-								'recposlist' => $recposlist
-							]);
+			$this -> assign([
+				'cateslist' => $cateslist,
+				'brandlist' => $brandlist,
+				'mblevellist' => $mblevellist,
+				'attrlists' => $attrlists,
+				'recposlist' => $recposlist
+			]);
 
 
 
@@ -180,18 +178,19 @@
 			$photoedit = db('comm_photo') -> where('comm_commodity_id','=', $commodityId ) -> select();
 
 			// dump($photoedit);die;
-			$this -> assign([	'cateslist' => $cateslist,
-								'brandlist' => $brandlist,
-								'mblevellist' => $mblevellist,
-								'attrlists' => $attrlists,
-								'commedit' => $commedit,
-								'mblevelarr' => $mblevelarr,
-								'photoedit' => $photoedit,
-								'typeedit' => $typeedit,
-								'commattreditArr' => $commattreditArr,
-								'recposlist' => $recposlist,
-								'recposCommlist' => $recposCommlist,
-							]);
+			$this -> assign([
+				'cateslist' => $cateslist,
+				'brandlist' => $brandlist,
+				'mblevellist' => $mblevellist,
+				'attrlists' => $attrlists,
+				'commedit' => $commedit,
+				'mblevelarr' => $mblevelarr,
+				'photoedit' => $photoedit,
+				'typeedit' => $typeedit,
+				'commattreditArr' => $commattreditArr,
+				'recposlist' => $recposlist,
+				'recposCommlist' => $recposCommlist,
+			]);
 
 
 

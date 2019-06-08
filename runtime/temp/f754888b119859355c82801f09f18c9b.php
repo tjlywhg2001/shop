@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:9:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1559468526;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1559452130;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1559452130;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1559452130;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1559452130;s:59:"B:\aaaweb\shop\application\index\view\common\title_top.html";i:1559452130;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1559452130;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1559452130;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1559452130;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:9:{s:61:"F:\www\shop\public/../application/index\view\index\index.html";i:1559656077;s:52:"F:\www\shop\application\index\view\common\_meta.html";i:1557656226;s:56:"F:\www\shop\application\index\view\common\heads_top.html";i:1557059757;s:57:"F:\www\shop\application\index\view\common\heads_logo.html";i:1557059757;s:57:"F:\www\shop\application\index\view\common\heads_navs.html";i:1558966399;s:56:"F:\www\shop\application\index\view\common\title_top.html";i:1557656226;s:52:"F:\www\shop\application\index\view\common\right.html";i:1557059757;s:53:"F:\www\shop\application\index\view\common\footer.html";i:1558966399;s:60:"F:\www\shop\application\index\view\common\footer_script.html";i:1557059757;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -1380,7 +1380,7 @@
 
 
 
-<!-- ++++++++++++++++++++++++++++ scroll滑到一定高度显示导航顶部 start +++++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++ scroll滑到一定高度显示导航顶部 start ++++++++++++++++++++++++++++++++++ -->
 
 
         <div class="attached-search-container" ectype="suspColumn">
@@ -2143,237 +2143,257 @@
 
 
 
-<!-- +++++++++++++++++++++++++++   商品分类 start  ++++++++++++++++++++++++++++++ -->
+        <!-- +++++++++++++++++++++++++++   商品分类 start  ++++++++++++++++++++++++++++++ -->
 
-                                <?php if(is_array($CatesRecpos) || $CatesRecpos instanceof \think\Collection || $CatesRecpos instanceof \think\Paginator): $i = 0; $__LIST__ = $CatesRecpos;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesRecpos): $mod = ($i % 2 );++$i;?>
-                                <div class="visual-item w1200" data-mode="homeFloor" data-purebox="homeFloor" data-li="1" ectype="visualItme" data-diff="0" style="display: block;">
-                                    
-                                    <div class="view">
-                                        <div class="floor-content" data-type="range" id="homeFloor_0" data-lift="女装">
- 
-<div class="floor-line-con floorOne floor-color-type-1" data-title="男装女装" data-idx="1" id="floor_1" ectype="floorItem">
-    <div class="floor-hd" ectype="floorTit">
-    	<i class="box_hd_arrow"></i>
-    	<i class="box_hd_dec"></i>
-        <div class="hd-tit"><?php echo $CatesRecpos['cates_name']; ?></div>
-        <div class="hd-tags">
-            <ul>
-                <li class="first">
-                    <span>新品推荐</span>
-                    <i class="arrowImg"></i>
-                </li>
-                <?php if(is_array($CatesRecpos['children']) || $CatesRecpos['children'] instanceof \think\Collection || $CatesRecpos['children'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CatesRecpos['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesRecposChildren): $mod = ($i % 2 );++$i;?>
-                <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="<?php echo $CatesRecposChildren['cates_id']; ?>">
-                    <span><?php echo $CatesRecposChildren['cates_name']; ?></span>
-                    <i class="arrowImg"></i>
-                </li>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-            </ul>
-        </div>
-    </div>
-    <div class="floor-bd bd-mode-01">
-        <div class="bd-left">
-            <div class="floor-left-slide">
-                <div class="bd">
-                    <div class="tempWrap" style="overflow:hidden; position:relative; width:232px">
-                        <ul style="width: 696px; left: -464px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                            <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255003388359.jpg"></a></li>
-                            <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255671031591.jpg"></a></li>
-                            <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255859372374.jpg"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="hd">
-                    <ul>
-                        <li class="">1</li>
-                        <li class="">2</li>
-                        <li class="on">3</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="floor-left-adv">
-                <a href="" target="_blank"><img src="/static/index/img/1494984993812175408.jpg"></a>
-                <a href="" target="_blank"><img src="/static/index/img/1494984993892207941.jpg"></a>
-            </div>
-        </div>
-        <div class="bd-right">
+        <?php if(is_array($CatesRecpos) || $CatesRecpos instanceof \think\Collection || $CatesRecpos instanceof \think\Paginator): $i = 0; $__LIST__ = $CatesRecpos;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesRecpos): $mod = ($i % 2 );++$i;?>
+        <div class="visual-item w1200" data-mode="homeFloor" data-purebox="homeFloor" data-li="1" ectype="visualItme" data-diff="0" style="display: block;">
+            <div class="view">
+                <div class="floor-content" data-type="range" id="homeFloor_0" data-lift="女装">
 
-
-            <!-- ============================ 推荐商品内容 start ============================ -->
-
-
-            <!-- ============================ **** 所属子栏目的新品内容 start ***** ============================ -->
-
-            <div class="floor-tabs-content clearfix">
-                <div class="f-r-main f-r-m-adv" style="display: none;">
-                    <div class="f-r-m-item">
-                        <a href="" target="_blank">
-                            <div class="title">
-                                <h3>毛衣</h3>
-                                <span>满100减10</span>
+                    <div class="floor-line-con floorOne floor-color-type-1" data-title="男装女装" data-idx="1" id="floor_1" ectype="floorItem">
+                        <div class="floor-hd" ectype="floorTit">
+                            <i class="box_hd_arrow"></i>
+                            <i class="box_hd_dec"></i>
+                            <div class="hd-tit"><?php echo $CatesRecpos['cates_name']; ?></div>
+                            <div class="hd-tags">
+                                <ul>
+                                    <li class="first">
+                                        <span>新品推荐</span>
+                                        <i class="arrowImg"></i>
+                                    </li>
+                                    <?php if(is_array($CatesRecpos['children']) || $CatesRecpos['children'] instanceof \think\Collection || $CatesRecpos['children'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CatesRecpos['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$CatesRecposChildren): $mod = ($i % 2 );++$i;?>
+                                    <li data-catgoods="" class="first" ectype="floor_cat_content" data-flooreveval="0" data-visualhome="1" data-floornum="6" data-id="<?php echo $CatesRecposChildren['cates_id']; ?>">
+                                        <span><?php echo $CatesRecposChildren['cates_name']; ?></span>
+                                        <i class="arrowImg"></i>
+                                    </li>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                                </ul>
                             </div>
-                            <img src="/static/index/img/1494984997173604814.jpg">
-                        </a>
-                    </div>
-                    <div class="f-r-m-item">
-                        <a href="" target="_blank">
-                            <div class="title">
-                                <h3>随意搭</h3>
-                                <span>来潮我看</span>
-                            </div>
-                            <img src="/static/index/img/1494985255611006354.png">
-                        </a>
-                    </div>
-                    <div class="f-r-m-item">
-                        <a href="" target="_blank">
-                            <div class="title">
-                                <h3>外套</h3>
-                                <span>大牌抢好货</span>
-                            </div>
-                            <img src="/static/index/img/1494985257076782520.png">
-                        </a>
-                    </div>
-                    <div class="f-r-m-item">
-                        <a href="" target="_blank">
-                            <div class="title">
-                                <h3>连衣裙</h3>
-                                <span>春季流行款抢购</span>
-                            </div>
-                            <img src="/static/index/img/1494985261416235695.jpg">
-                        </a>
-                    </div>
-                    <div class="f-r-m-item f-r-m-i-double">
-                        <a href="" target="_blank">
-                            <div class="title">
-                                <h3>女士套装</h3>
-                                <span>新品低至5折</span>
-                            </div>
-                            <img src="/static/index/img/1494984998972685382.jpg">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- ============================ **** 所属子栏目的新品内容 end ***** ============================ -->
-
-                
-                <!-- ============================ **** 所属子栏目的精品内容 start ***** ============================ -->
-                
-                <?php if(is_array($CatesRecpos['children']) || $CatesRecpos['children'] instanceof \think\Collection || $CatesRecpos['children'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CatesRecpos['children'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$childrens): $mod = ($i % 2 );++$i;?>
-                <div class="f-r-main" ectype="floor_cat_347" style="display: none;">
-                    <ul class="p-list">
-                        <?php if(is_array($CatesRecpos['childrenComm']) || $CatesRecpos['childrenComm'] instanceof \think\Collection || $CatesRecpos['childrenComm'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CatesRecpos['childrenComm'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$childrenComm): $mod = ($i % 2 );++$i;if($childrenComm["cates_id"] == $childrens["cates_id"]): ?>
-                                <li class="opacity_img">
-                                    <div class="product">
-                                        <div class="p-img"><a href="" target="_blank"><img src="/static/uploadss/<?php echo $childrenComm['commodity_midthumb']; ?>" width="140" height="140"></a></div>
-                                        <div class="p-name"><a href="" title="<?php echo $childrenComm['commodity_name']; ?>"><?php echo $childrenComm['commodity_name']; ?></a></div>
-                                        <div class="p-price">
-                                            <span class="shop-price">
-                                                <em>¥</em><?php echo $childrenComm['commodity_shop_price']; ?>
-                                            </span>
-                                            <span class="original-price">
-                                                <em>¥</em><?php echo $childrenComm['commodity_market_price']; ?>
-                                            </span>
+                        </div>
+                        <div class="floor-bd bd-mode-01">
+                            <div class="bd-left">
+                                <div class="floor-left-slide">
+                                    <div class="bd">
+                                        <div class="tempWrap" style="overflow:hidden; position:relative; width:232px">
+                                            <ul style="width: 696px; left: -464px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                                <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255003388359.jpg"></a></li>
+                                                <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255671031591.jpg"></a></li>
+                                                <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255859372374.jpg"></a></li>
+                                            </ul>
                                         </div>
                                     </div>
-                                </li>
-                            <?php endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </ul>
-                </div>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-
-                <!-- ============================ **** 所属子栏目的精品内容 end ***** ============================ -->
-
-
-            <!-- ============================ 推荐商品内容 end ============================ -->
-
-        </div>
-    </div>
-        <div class="floor-fd">
-        <div class="floor-fd-brand clearfix">
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=72" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490072313895957648.jpg" title="ELLE HOME"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=76" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490072373278367315.jpg" title="金利来"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=79" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490072677495061584.jpg" title="justyle"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=82" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490072694695600078.jpg" title="李宁"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=86" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490072765604121481.jpg" title="康比特"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=106" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490072981305868823.jpg" title="开普特"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=122" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490073982547710498.jpg" title="Five Plus"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=149" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490073591535005714.jpg" title="鸿星尔克"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=152" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490228100138579787.jpg" title="杰克琼斯"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                        <div class="item">
-                <a href="https://demo.dscmall.cn/brandn.php?id=154" target="_blank">
-                    <div class="link-l"></div>
-                    <div class="img"><img src="/static/index/img/1490073529881448780.jpg" title="匡威"></div>
-                    <div class="link"></div>
-                </a>
-            </div>
-                    </div>
-    </div>
-    </div>
-<div class="spec" data-spec="" data-title="undefined"></div></div>
+                                    <div class="hd">
+                                        <ul>
+                                            <li class="">1</li>
+                                            <li class="">2</li>
+                                            <li class="on">3</li>
+                                        </ul>
                                     </div>
                                 </div>
+                                <div class="floor-left-adv">
+                                    <a href="" target="_blank"><img src="/static/index/img/1494984993812175408.jpg"></a>
+                                    <a href="" target="_blank"><img src="/static/index/img/1494984993892207941.jpg"></a>
+                                </div>
+                            </div>
 
 
 
-<?php endforeach; endif; else: echo "" ;endif; ?>
+                            <!-- ============================ 推荐商品内容 start ============================ -->
+
+                            <div class="bd-right">
+
+                                <div class="floor-tabs-content clearfix">
+
+                                    <!-- ============================ **** 所属子栏目的新品内容 start ***** ============================ -->
+                                    <div class="f-r-main f-r-m-adv" style="display: none;">
+                                        <?php if(is_array($CatesRecpos['newComm']) || $CatesRecpos['newComm'] instanceof \think\Collection || $CatesRecpos['newComm'] instanceof \think\Paginator): $i = 0; $__LIST__ = $CatesRecpos['newComm'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$newComm): $mod = ($i % 2 );++$i;?>
+                                        <div class="f-r-m-item">
+                                            <a href="" target="_blank">
+                                                <div class="title">
+                                                    <h3><?php echo $newComm['commodity_name']; ?></h3>
+                                                    <span>满100减10</span>
+                                                </div>
+                                                <img src="/static/uploadss/<?php echo $newComm['commodity_midthumb']; ?>">
+                                            </a>
+                                        </div>
+                                        <?php endforeach; endif; else: echo "" ;endif; ?>
+                                        <!-- <div class="f-r-m-item">
+                                            <a href="" target="_blank">
+                                                <div class="title">
+                                                    <h3>毛衣</h3>
+                                                    <span>满100减10</span>
+                                                </div>
+                                                <img src="/static/index/img/1494984997173604814.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="f-r-m-item">
+                                            <a href="" target="_blank">
+                                                <div class="title">
+                                                    <h3>随意搭</h3>
+                                                    <span>来潮我看</span>
+                                                </div>
+                                                <img src="/static/index/img/1494985255611006354.png">
+                                            </a>
+                                        </div>
+                                        <div class="f-r-m-item">
+                                            <a href="" target="_blank">
+                                                <div class="title">
+                                                    <h3>外套</h3>
+                                                    <span>大牌抢好货</span>
+                                                </div>
+                                                <img src="/static/index/img/1494985257076782520.png">
+                                            </a>
+                                        </div>
+                                        <div class="f-r-m-item">
+                                            <a href="" target="_blank">
+                                                <div class="title">
+                                                    <h3>连衣裙</h3>
+                                                    <span>春季流行款抢购</span>
+                                                </div>
+                                                <img src="/static/index/img/1494985261416235695.jpg">
+                                            </a>
+                                        </div>
+                                        <div class="f-r-m-item f-r-m-i-double">
+                                            <a href="" target="_blank">
+                                                <div class="title">
+                                                    <h3>女士套装</h3>
+                                                    <span>新品低至5折</span>
+                                                </div>
+                                                <img src="/static/index/img/1494984998972685382.jpg">
+                                            </a>
+                                        </div> -->
+                                    </div>
+                                    <!-- ============================ **** 所属子栏目的新品内容 end ***** ============================ -->
+
+                                        
+                                    <!-- ============================ **** 所属子栏目的精品内容 start ***** ============================ -->
+                                    <?php foreach( $CatesRecpos['children'] as $k => $v ): ?>
+                                    <div class="f-r-main" ectype="floor_cat_347" style="display: block;">
+                                        <ul class="p-list">
+                                            <?php foreach( $v['childComm'] as $k1 => $v1 ): ?>
+                                                <li class="opacity_img">
+                                                    <div class="product">
+                                                        <div class="p-img">
+                                                            <a href="" target="_blank">
+                                                                <img src="/static/uploadss/<?php echo $v1['commodity_midthumb']; ?>" width="140" height="140">
+                                                            </a>
+                                                        </div>
+                                                        <div class="p-name">
+                                                            <a href="" title="<?php echo $v1['commodity_name']; ?>"><?php echo $v1['commodity_name']; ?></a>
+                                                        </div>
+                                                        <div class="p-price">
+                                                            <span class="shop-price">
+                                                                <em>¥</em><?php echo $v1['commodity_shop_price']; ?>
+                                                            </span>
+                                                            <span class="original-price">
+                                                                <em>¥</em><?php echo $v1['commodity_market_price']; ?>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    </div>
+                                    <?php endforeach; ?>
+
+                                    <!-- ============================ **** 所属子栏目的精品内容 end ***** ============================ -->
+
+                                <!-- ============================ 推荐商品内容 end ============================ -->
+
+                                
+                                </div>
+                            </div>
+                        </div>
 
 
+                        <!-- ============================ **** 所属子栏目的品牌内容 start ***** ============================ -->
+                        <div class="floor-fd">
+                            <div class="floor-fd-brand clearfix">
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=72" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490072313895957648.jpg" title="ELLE HOME"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=76" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490072373278367315.jpg" title="金利来"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=79" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490072677495061584.jpg" title="justyle"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=82" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490072694695600078.jpg" title="李宁"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=86" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490072765604121481.jpg" title="康比特"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=106" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490072981305868823.jpg" title="开普特"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=122" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490073982547710498.jpg" title="Five Plus"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=149" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490073591535005714.jpg" title="鸿星尔克"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=152" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490228100138579787.jpg" title="杰克琼斯"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                                <div class="item">
+                                    <a href="https://demo.dscmall.cn/brandn.php?id=154" target="_blank">
+                                        <div class="link-l"></div>
+                                        <div class="img"><img src="/static/index/img/1490073529881448780.jpg" title="匡威"></div>
+                                        <div class="link"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ============================ **** 所属子栏目的品牌内容 end ***** ============================ -->
 
-<!-- +++++++++++++++++++++++++++   商品分类end  ++++++++++++++++++++++++++++++ -->
+                    
+                    <div class="spec" data-spec="" data-title="undefined"></div>
+                </div>
+            </div>
+        </div>
+
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+        <!-- +++++++++++++++++++++++++++   商品分类end  ++++++++++++++++++++++++++++++ -->
+
+
 
 
 

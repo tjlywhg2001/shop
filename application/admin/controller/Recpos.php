@@ -37,7 +37,7 @@
 					$this->error('添加失败');
 				}
 
-				return;
+				return view('list');
 			}
 
 
@@ -66,7 +66,7 @@
 					$this->error('修改失败');
 				}
 
-				return;
+				return view('list');
 			}
 
 

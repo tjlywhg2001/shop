@@ -10,8 +10,8 @@ use think\Model;
 class Commodity extends Model
 {
 
+    
     public function HomeShowGoods($recposid,$limit=''){
-    // public function HomeShowGoods(){
 
         $recpos = db('recpos_comm');
         $_recposlist = $recpos -> where(array('recpos_type' => 1,'recpos_id' => $recposid )) -> select();
@@ -28,7 +28,7 @@ class Commodity extends Model
 
     }
 
-
+    // 首页的推荐商品（新品和精品）
     public function GetCommRecpos( $cateID, $recposID ){
 
             // 获取顶级栏目的所有子栏目

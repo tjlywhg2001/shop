@@ -24,29 +24,32 @@ class Index extends Base
 
 
         // 获取商品的推荐分类
-        $CatesRecpos = model('cates') -> getRecpos(5,0);
+        $_CatesRecpos = model('cates') -> getRecpos(5,0);
+
+        // 将对象转为数组
+        $CatesRecpos = json_decode( json_encode( $_CatesRecpos ), true );
+
         foreach ($CatesRecpos as $k => $v) {
+
             // 获取当前商品顶级分类的二级分类
             $CatesRecpos[$k]['children'] = model('cates') -> getRecpos(5,$v['cates_id']);
-            // dump($CatesRecpos[$k]['children']);die;
+            // dump($CatesRecpos['children']);die;
 
             // 获取新品推荐
             $CatesRecpos[$k]['newComm'] = model('commodity') -> GetCommRecpos( $v['cates_id'], 3 );
 
-            $CtateRecposChild = $CatesRecpos[$k]['children'];
 
             // 获取精品推荐
-            // $childrenComm = array();
-            foreach ( $CtateRecposChild as $k1 => $v1) {
+            foreach ( $CatesRecpos[$k]['children'] as $k1 => $v1) {
 
-                $childComm = model('commodity') -> GetCommRecpos( $v1['cates_id'], 4 );
+                $CatesRecpos[$k]['children'][$k1]['childComm'] = model('commodity') -> GetCommRecpos( $v1['cates_id'], 4 );
+                // dump($CatesRecpos[$k]['children'][$k1]['childComm']);die;
 
-                $CtateRecposChild[$k1]['childComm'] = $childComm;
             }
-
         }
 
-        dump($CatesRecpos);die;
+        // dump($CatesRecpos);die;
+        
 
     	$this -> assign([
     		'show_nav' => 1,
