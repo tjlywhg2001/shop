@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:9:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1560053847;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1560041588;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1560041588;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1560041588;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1560041588;s:59:"B:\aaaweb\shop\application\index\view\common\title_top.html";i:1560041588;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1560041588;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1560041588;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1560041588;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:9:{s:64:"B:\aaaweb\shop\public/../application/index\view\index\index.html";i:1560066107;s:55:"B:\aaaweb\shop\application\index\view\common\_meta.html";i:1560041588;s:59:"B:\aaaweb\shop\application\index\view\common\heads_top.html";i:1560041588;s:60:"B:\aaaweb\shop\application\index\view\common\heads_logo.html";i:1560041588;s:60:"B:\aaaweb\shop\application\index\view\common\heads_navs.html";i:1560041588;s:59:"B:\aaaweb\shop\application\index\view\common\title_top.html";i:1560041588;s:55:"B:\aaaweb\shop\application\index\view\common\right.html";i:1560041588;s:56:"B:\aaaweb\shop\application\index\view\common\footer.html";i:1560041588;s:63:"B:\aaaweb\shop\application\index\view\common\footer_script.html";i:1560041588;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -2170,15 +2170,40 @@
                                 </ul>
                             </div>
                         </div>
+
+
+                        <!-- ==========================  广告轮播图 start ========================== -->
+                        <?php if($CatesRecpos['cates_id'] == 1): ?>
+                        <div class="floor-bd bd-mode-04">
+                            <div class="bd-left">
+                                <div class="floor-left-adv">
+                                    <a href="<?php echo $CatesRecpos['newCatesAd'][1][0]['catesAd_url']; ?>" target="_blank"><img src="/static/uploadss/<?php echo $CatesRecpos['newCatesAd'][1][0]['catesAd_img']; ?>"></a>
+                                    <a href="<?php echo $CatesRecpos['newCatesAd'][2][0]['catesAd_url']; ?>" target="_blank"><img src="/static/uploadss/<?php echo $CatesRecpos['newCatesAd'][2][0]['catesAd_img']; ?>"></a>
+                                </div>
+                        
+                                <div class="floor-left-slide">
+                                    <div class="bd">
+                                        <div class="tempWrap" style="overflow:hidden; position:relative; width:474px">
+                                            <ul style="width: 1422px; left: -474px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                                <?php foreach ( $CatesRecpos['newCatesAd'][0] as $k1 => $v1 ): ?>
+                                                <li style="float: left; width: 474px;"><a href="<?php echo $v1['catesAd_url']; ?>"><img src="/static/uploadss/<?php echo $v1['catesAd_img']; ?>"></a></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="hd"><ul><li class="">1</li><li class="on">2</li><li class="">3</li></ul></div>
+                                </div>
+                            </div>
+                        <?php elseif($CatesRecpos['cates_id'] == 5): ?>
                         <div class="floor-bd bd-mode-01">
                             <div class="bd-left">
                                 <div class="floor-left-slide">
                                     <div class="bd">
                                         <div class="tempWrap" style="overflow:hidden; position:relative; width:232px">
                                             <ul style="width: 696px; left: -464px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                                                <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255003388359.jpg"></a></li>
-                                                <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255671031591.jpg"></a></li>
-                                                <li style="float: left; width: 232px;"><a href=""><img src="/static/index/img/1494985255859372374.jpg"></a></li>
+                                                <?php foreach ( $CatesRecpos['newCatesAd'][0] as $k1 => $v1 ): ?>
+                                                <li style="float: left; width: 232px;"><a href="<?php echo $v1['catesAd_url']; ?>"><img src="/static/uploadss/<?php echo $v1['catesAd_img']; ?>"></a></li>
+                                                <?php endforeach; ?>
                                             </ul>
                                         </div>
                                     </div>
@@ -2191,10 +2216,102 @@
                                     </div>
                                 </div>
                                 <div class="floor-left-adv">
-                                    <a href="" target="_blank"><img src="/static/index/img/1494984993812175408.jpg"></a>
-                                    <a href="" target="_blank"><img src="/static/index/img/1494984993892207941.jpg"></a>
+                                    <a href="<?php echo $CatesRecpos['newCatesAd'][1][0]['catesAd_url']; ?>" target="_blank"><img src="/static/uploadss/<?php echo $CatesRecpos['newCatesAd'][1][0]['catesAd_img']; ?>"></a>
+                                    <a href="<?php echo $CatesRecpos['newCatesAd'][2][0]['catesAd_url']; ?>" target="_blank"><img src="/static/uploadss/<?php echo $CatesRecpos['newCatesAd'][2][0]['catesAd_img']; ?>"></a>
                                 </div>
                             </div>
+                        <?php elseif($CatesRecpos['cates_id'] == 6): ?>
+                        <div class="floor-bd bd-mode-02">
+                            <div class="bd-left">
+                                <div class="floor-left-slide">
+                                    <div class="bd">
+                                        <div class="tempWrap" style="overflow:hidden; position:relative; width:474px">
+                                            <ul style="width: 1422px; left: -474px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                                <?php foreach ( $CatesRecpos['newCatesAd'][0] as $k1 => $v1 ): ?>
+                                                <li style="float: left; width: 474px;"><a href="<?php echo $v1['catesAd_url']; ?>"><img src="/static/uploadss/<?php echo $v1['catesAd_img']; ?>"></a></li>
+                                                <?php endforeach; ?>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="hd"><ul><li class="">1</li><li class="on">2</li><li class="">3</li></ul></div>
+                                </div>
+                                            
+                                <div class="floor-left-adv">
+                                    <a href="<?php echo $CatesRecpos['newCatesAd'][1][0]['catesAd_url']; ?>" target="_blank"><img src="/static/uploadss/<?php echo $CatesRecpos['newCatesAd'][1][0]['catesAd_img']; ?>"></a>
+                                    <a href="<?php echo $CatesRecpos['newCatesAd'][2][0]['catesAd_url']; ?>" target="_blank"><img src="/static/uploadss/<?php echo $CatesRecpos['newCatesAd'][2][0]['catesAd_img']; ?>"></a>
+                                </div>
+                            </div>
+                        <?php endif; ?>
+
+
+
+                            <!-- *********************************** -->
+
+                            <!-- 1 -->
+<!--                             <div class="bd-left">
+                                <div class="floor-left-slide">
+                                    <div class="bd">
+                                        <div class="tempWrap" style="overflow:hidden; position:relative; width:474px">
+                                            <ul style="width: 1422px; left: -474px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494984993525657918.jpg"></a></li>
+                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985258163076122.jpg"></a></li>
+                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985258841930385.jpg"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="hd"><ul><li class="">1</li><li class="on">2</li><li class="">3</li></ul></div>
+                                </div>
+                                            
+                                <div class="floor-left-adv">
+                                    <a href="" target="_blank"><img src="/static/index/img/1494984994714366758.jpg"></a>
+                                    <a href="" target="_blank"><img src="/static/index/img/1494984994759822929.jpg"></a>
+                                </div>
+                                
+                            </div>
+ -->
+                            <!-- 2
+                            <div class="bd-left">
+                                <div class="floor-left-adv">
+                                    <a href="" target="_blank"><img src="/static/index/img/1494984995376315298.jpg"></a>
+                                    <a href="" target="_blank"><img src="/static/index/img/1494984995451465490.jpg"></a>
+                                </div>
+                            </div>
+ -->
+                            
+                            <!-- 3 -->
+<!--                             <div class="bd-left">
+                                <div class="floor-left-adv">
+                                    <a href="" target="_blank"><img src="/static/index/img/1494985252213529452.jpg"></a>
+                                    <a href="" target="_blank"><img src="/static/index/img/1494985263907218565.jpg"></a>
+                                </div>
+                        
+                                <div class="floor-left-slide">
+                                    <div class="bd">
+                                        <div class="tempWrap" style="overflow:hidden; position:relative; width:474px">
+                                            <ul style="width: 1422px; left: -474px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985258768732496.jpg"></a></li>
+                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985266144681478.png"></a></li>
+                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985266980557091.png"></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="hd"><ul><li class="">1</li><li class="on">2</li><li class="">3</li></ul></div>
+                                </div>
+                            </div>
+ -->
+
+<!--  -->
+
+
+
+                            <!-- *********************************** -->
+
+
+
+
+
+
+                            <!-- ==========================  广告轮播图 end ========================== -->
 
 
 
@@ -2373,24 +2490,12 @@
         </div>
     </div>
     <div class="floor-bd bd-mode-02">
-        <div class="bd-left">
-                        <div class="floor-left-slide">
-                <div class="bd">
-                    <div class="tempWrap" style="overflow:hidden; position:relative; width:474px"><ul style="width: 1422px; left: -474px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                                                                        <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494984993525657918.jpg"></a></li>
-                                                                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985258163076122.jpg"></a></li>
-                                                                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985258841930385.jpg"></a></li>
-                                                                    </ul></div>
-                </div>
-                <div class="hd"><ul><li class="">1</li><li class="on">2</li><li class="">3</li></ul></div>
-            </div>
-                        
-            <div class="floor-left-adv">
-                                                <a href="" target="_blank"><img src="/static/index/img/1494984994714366758.jpg"></a>
-                                                                <a href="" target="_blank"><img src="/static/index/img/1494984994759822929.jpg"></a>
-                                            </div>
-            
-                    </div>
+
+
+
+
+
+
         <div class="bd-right">
             <div class="floor-tabs-content clearfix">
                 <div class="f-r-main f-r-m-adv" style="display: none;">
@@ -2790,14 +2895,16 @@
         </div>
     </div>
     <div class="floor-bd bd-mode-03">
+
+
         <div class="bd-left">
-                        
             <div class="floor-left-adv">
-                                                <a href="" target="_blank"><img src="/static/index/img/1494984995376315298.jpg"></a>
-                                                                <a href="" target="_blank"><img src="/static/index/img/1494984995451465490.jpg"></a>
-                                            </div>
-            
-                    </div>
+                <a href="" target="_blank"><img src="/static/index/img/1494984995376315298.jpg"></a>
+                <a href="" target="_blank"><img src="/static/index/img/1494984995451465490.jpg"></a>
+            </div>
+        </div>
+
+
         <div class="bd-right">
             <div class="floor-tabs-content clearfix">
                 <div class="f-r-main f-r-m-adv" style="display: none;">
@@ -3318,23 +3425,28 @@
     </div>
     <div class="floor-bd bd-mode-04">
         <div class="bd-left">
-                        
             <div class="floor-left-adv">
-                                                <a href="" target="_blank"><img src="/static/index/img/1494985252213529452.jpg"></a>
-                                                                <a href="" target="_blank"><img src="/static/index/img/1494985263907218565.jpg"></a>
-                                            </div>
-            
-                        <div class="floor-left-slide">
+                <a href="" target="_blank"><img src="/static/index/img/1494985252213529452.jpg"></a>
+                <a href="" target="_blank"><img src="/static/index/img/1494985263907218565.jpg"></a>
+            </div>
+    
+            <div class="floor-left-slide">
                 <div class="bd">
-                    <div class="tempWrap" style="overflow:hidden; position:relative; width:474px"><ul style="width: 1422px; left: -474px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
-                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985258768732496.jpg"></a></li>
-                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985266144681478.png"></a></li>
-                                                <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985266980557091.png"></a></li>
-                                            </ul></div>
+                    <div class="tempWrap" style="overflow:hidden; position:relative; width:474px">
+                        <ul style="width: 1422px; left: -474px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                            <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985258768732496.jpg"></a></li>
+                            <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985266144681478.png"></a></li>
+                            <li style="float: left; width: 474px;"><a href=""><img src="/static/index/img/1494985266980557091.png"></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="hd"><ul><li class="">1</li><li class="on">2</li><li class="">3</li></ul></div>
             </div>
-                    </div>
+        </div>
+
+
+
+
         <div class="bd-right">
             <div class="floor-tabs-content clearfix">
                 <div class="f-r-main f-r-m-adv" style="display: none;">

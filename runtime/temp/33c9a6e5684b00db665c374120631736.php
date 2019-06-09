@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1560041588;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1560041588;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1560041588;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1560041588;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1560041588;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:64:"B:\aaaweb\shop\public/../application/admin\view\index\index.html";i:1560041588;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1560041588;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1560041588;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1560047205;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1560041588;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -301,6 +301,12 @@
             <li>
                 <a href="<?php echo url('catesBrands/lst'); ?>">
                     <span class="menu-text">推广图管理</span>
+                    <i class="menu-expand"></i>
+                </a>
+            </li>
+            <li>
+                <a href="<?php echo url('catesAd/lst'); ?>">
+                    <span class="menu-text">广告图片管理</span>
                     <i class="menu-expand"></i>
                 </a>
             </li>

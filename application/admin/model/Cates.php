@@ -15,11 +15,11 @@ class Cates extends Model
 
 
         Cates::beforeUpdate(function ($cates) {
+            // dump($cates);die;
 	        // 定义商品Id
-	     	$catesid = $cates -> cates_id;
+	     	$catesid = $cates ->cates_id;
 	     	// 处理商品属性
         	$goodsData = input('post.');
-        	// dump($catesid);die;
 
         	// 处理商品推荐位
         	$recposComm = db('recpos_comm');
@@ -27,10 +27,14 @@ class Cates extends Model
         	$recposComm -> where(array('recpos_type' => 2, 'commodity_id' => $catesid)) -> delete();
 
         	if ( isset( $goodsData['recposs'] )){
-        	// dump($recposData['recposs']);die;
+        	dump($recposData['recposs']);die;
 	        	foreach ($goodsData['recposs'] as $k => $v) {
 	        		// 存入数据信息
-		        	$recposComm -> insert(['recpos_id' => $v, 'commodity_id' => $catesid, 'recpos_type' => 2]);
+		        	$recposComm -> insert([
+                        'recpos_id' => $v, 
+                        'commodity_id' => $catesid, 
+                        'recpos_type' => 2,
+                    ]);
 	        	}
         	}
 
@@ -38,8 +42,9 @@ class Cates extends Model
 
 
         Cates::afterInsert(function($cates){
+            dump($cates);die;
 
-        	$catesid = $cates -> cates_id;
+        	$catesid = $cates ->cates_id;
         	$goodsData = input('post.');
         	// dump($catesid);die;
 
@@ -50,7 +55,11 @@ class Cates extends Model
         	// dump($recposData['recposs']);die;
 	        	foreach ($goodsData['recposs'] as $k => $v) {
 	        		// 存入数据信息
-		        	$recposComm -> insert(['recpos_id' => $v, 'commodity_id' => $catesid, 'recpos_type' => 2]);
+		        	$recposComm -> insert([
+                        'recpos_id' => $v, 
+                        'commodity_id' => $catesid, 
+                        'recpos_type' => 2,
+                    ]);
 	        	}
         	}
 

@@ -27,6 +27,13 @@
 
 			if (request()->isPost()){
 				$data=input('post.');
+
+				if ( $data['catesAd_position'] == 1 || $data['catesAd_position'] == 2) {
+					$CateAdPos = db('catesAd') -> where( array( 'catesAd_position'=> $data['catesAd_position'], 'catesAd_catesId'=> $data['catesAd_catesId'] ) ) -> select();
+					if ( $CateAdPos ) {
+						$this->error('当前位置只能添加一个记录');
+					}
+				}
 				
 				if ($data['catesAd_url']  && stripos($data['catesAd_url'],'http://') === false){
 					$data['catesAd_url'] = 'http://'.$data['catesAd_url'];

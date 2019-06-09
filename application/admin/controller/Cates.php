@@ -26,43 +26,54 @@
 
 
 		public function add(){
-			$cates =db('cates');
+			// 定义商品分类栏目
 			$catest = new catestree();
-			$cateslist = $cates -> select();
-			$cateslist = $catest ->catestree($cateslist);
+			// cates信息
+			$catesd = model('cates');
+			// post信息
 			if (request()->isPost()){
+				// 当保存的信息内容
 				$data=input('post.');
 			
+				dump($data);die;
+
+
+				// 处理图片
 				if ($_FILES['cates_img']['tmp_name']){
-					$data['cates_img']=$this -> upload();
+					$data['cates_img']= $this -> upload();
 				}
 
-
-				$add=model('cates')->save($data);
+				// 处理推荐位
+				$add = $catesd->save($data);
 				if($add){
 					$this->success('添加成功','lst');
 				}else{
 					$this->error('添加失败');
 				}
 
-				$cateslist = $cates->order('cates_sort desc')->select();
-				$cateslist = $catest ->catestree($cateslist);
-
-				return;
 			}
 
-			$cates_id=input('cates_id');
+			// $cates_id=input('cates_id');
+
+			// $catess = $cates ->find($cates_id);
+
+			// 获取cates信息
+			$cateslist = $catesd -> select();
+
+			// 获取商品分类栏目信息
+			$cateslist = $catest ->catestree($cateslist);
 
 			// 推荐位
 			$recpos = db('recpos');
 			$reclist = $recpos -> where('rec_type','=',2) -> select();
 			// dump($reclist);die;
+			
+
 			$this -> assign([
 				'cateslist'=>$cateslist,
 				'reclist' => $reclist,
+				// 'catess' => $catess,
 			]);
-			$catess = $cates ->find($cates_id);
-			$this->assign('catess',$catess);
 
 
 			return view();

@@ -52,7 +52,10 @@ class Index extends Base
 
             // dump($CatesRecpos[$k]['newBrand']);die;
 
+            // 获取广告图片
+            $CatesRecpos[$k]['newCatesAd'] = model('CatesAd') -> getCatesAd( $v['cates_id']);
 
+            // dump($CatesRecpos[$k]['newCatesAd']);die;
 
 
         }
