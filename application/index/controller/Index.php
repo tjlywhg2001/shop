@@ -46,6 +46,15 @@ class Index extends Base
                 // dump($CatesRecpos[$k]['children'][$k1]['childComm']);die;
 
             }
+
+            // 获取品牌推荐
+            $CatesRecpos[$k]['newBrand'] = model('CatesBrands') -> getCommBrand( $v['cates_id'], TRUE );
+
+            // dump($CatesRecpos[$k]['newBrand']);die;
+
+
+
+
         }
 
         // dump($CatesRecpos);die;

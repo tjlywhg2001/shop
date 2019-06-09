@@ -52,17 +52,6 @@
 				return view('list');
 			}
 
-			// 提取推荐位数据
-			// $recpos = db('recpos');
-			// $recposlist = $recpos -> where('rec_type','=',1) -> select();
-
-			// dump($recposlist);die;
-
-			// $this -> assign([
-			// 	'recposlist' => $recposlist,
-			// ]);
-
-
 			return view();
 
 		}
@@ -107,17 +96,10 @@
 			}
 
 
-			// 提取推荐位数据
-			// $recpos = db('recpos');
-			// $recposlist = $recpos -> where('rec_type','=',1) -> select();
-
-			// dump($recposlist);die;
-
 			$brand_id=input('brand_id');
 			$brands = db('brand')->find($brand_id);
 			$this->assign([
 				'brands' => $brands,
-				// 'recposlist' => $recposlist,
 			]);
 			return view();
 

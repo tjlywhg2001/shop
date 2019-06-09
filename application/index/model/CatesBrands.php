@@ -9,7 +9,7 @@ class CatesBrands extends Model
 {
 	
 
-	public function getCommBrand($id){
+	public function getCommBrand($id, $loop=FALSE){
 
 		// 第一种方法
 		// $CommBrandList = $this -> where(array('cb_catesid' => $id)) -> select();
@@ -32,11 +32,19 @@ class CatesBrands extends Model
 
 		// 第二种方法
 		$CommBrandsID = $this -> where(array('cb_catesid' => $id)) -> find();
-		$BrandIdArray = explode(',',$CommBrandsID['cb_brands_id']);
+		if ( $loop ){
+			$BrandIdArray = array_slice( explode(',',$CommBrandsID['cb_brands_id']), 0, 10 );
+		} else {
+			$BrandIdArray = explode(',',$CommBrandsID['cb_brands_id']);
+		}
+
+		// dump( $BrandIdArray );die;
 		$CommBrandList = array();
 		$Brand = db('brand');
 		foreach ($BrandIdArray as $k => $v) {
+
 			$CommBrandList['children'][] = $Brand -> find($v);
+
 		}
 		$CommBrandList['pross']['proimg'] = $CommBrandsID['cb_proimg'];
 		$CommBrandList['pross']['prourl'] = $CommBrandsID['cb_prourl'];
