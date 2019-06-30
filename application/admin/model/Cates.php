@@ -70,9 +70,6 @@ class Cates extends Model
 
 
 
-
-
-
     }
 
 

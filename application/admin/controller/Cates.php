@@ -160,7 +160,14 @@
 			$commodity =db('commodity');
 			foreach ($al as $k => $v) {
 				db('recpos_comm') -> where( array( 'commodity_id' => $v, 'recpos_type' => 2 ) ) -> delete();
+				
+				$commodityInfo = $commodity -> where( array( 'cates_id' => $v ) ) -> select();
+				foreach ($commodityInfo as $k1 => $v1) {
+					// dump($v1);die;
+					db('recpos_comm') -> where( array( 'commodity_id' => $v1['commodity_id'], 'recpos_type' => 1 ) ) ->delete();
+				}
 				$commodity -> where( array( 'cates_id' => $v ) ) -> delete();
+				
 			}
 
 			foreach ($al as $k => $v) {

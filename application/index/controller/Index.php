@@ -60,6 +60,9 @@ class Index extends Base
 
         }
 
+        // 获得首页商品
+        $CommRecpos = model('') -> GetCommRecpos(  );
+
         // dump($CatesRecpos);die;
         
 
