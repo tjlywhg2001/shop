@@ -61,14 +61,15 @@ class Index extends Base
         }
 
         // 获得首页商品
-        $CommRecpos = model('') -> GetCommRecpos(  );
+        $CommRecpos = model('commodity') -> HomeShowGoods( 7,20 );
 
-        // dump($CatesRecpos);die;
+        // dump($CommRecpos);die;
         
 
     	$this -> assign([
     		'show_nav' => 1,
             'CatesRecpos' => $CatesRecpos,
+            'CommRecpos' => $CommRecpos,
     	]);
 
         return view();

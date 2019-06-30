@@ -1,6 +1,6 @@
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:36+08:00 ] 127.0.0.1 GET c.com/admin/data/index.html
-[运行时间：0.043000s] [吞吐率：23.26req/s] [内存消耗：1,922.35kb] [文件加载：51]
+[ 2019-06-30T18:45:23+08:00 ] 127.0.0.1 GET c.com/admin/data/index.html
+[运行时间：0.046000s] [吞吐率：21.74req/s] [内存消耗：1,922.38kb] [文件加载：51]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -14,7 +14,7 @@
 [ info ] [ HEADER ] array (
   'upgrade-insecure-requests' => '1',
   'cookie' => 'PHPSESSID=v3vic9uo81fm2gaaqvlt2a4715',
-  'referer' => 'http://c.com/admin/commodity/lst.html',
+  'referer' => 'http://c.com/admin/commodity/edit/commodity_id/160.html',
   'connection' => 'close',
   'accept-encoding' => 'gzip, deflate',
   'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
@@ -32,11 +32,11 @@
 ) ]
 [ info ] [ LOG ] INIT File
 [ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW TABLE STATUS [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SHOW TABLE STATUS [ RunTime:0.005000s ]
 [ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:36+08:00 ] 127.0.0.1 GET c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
-[运行时间：0.016000s] [吞吐率：62.50req/s] [内存消耗：1,110.69kb] [文件加载：35]
+[ 2019-06-30T18:45:23+08:00 ] 127.0.0.1 GET c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[运行时间：0.017000s] [吞吐率：58.82req/s] [内存消耗：1,110.69kb] [文件加载：35]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -63,7 +63,7 @@
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 POST c.com/admin/data/export.html
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 POST c.com/admin/data/export.html
 [运行时间：0.017000s] [吞吐率：58.82req/s] [内存消耗：1,398.04kb] [文件加载：42]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
@@ -124,8 +124,8 @@
 )
 [ info ] [ LOG ] INIT File
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=0&start=0
-[运行时间：0.033000s] [吞吐率：30.30req/s] [内存消耗：1,595.00kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=0&start=0
+[运行时间：0.032000s] [吞吐率：31.25req/s] [内存消耗：1,595.00kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -162,13 +162,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_article` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_article` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_article` LIMIT 0, 1000 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_article` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=1&start=0
-[运行时间：0.032000s] [吞吐率：31.25req/s] [内存消耗：1,580.36kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=1&start=0
+[运行时间：0.031000s] [吞吐率：32.26req/s] [内存消耗：1,580.36kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -210,8 +210,8 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_attr` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_attr` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=2&start=0
-[运行时间：0.033000s] [吞吐率：30.30req/s] [内存消耗：1,611.84kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=2&start=0
+[运行时间：0.032000s] [吞吐率：31.25req/s] [内存消耗：1,611.84kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -253,8 +253,8 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_brand` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_brand` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=3&start=0
-[运行时间：0.030000s] [吞吐率：33.33req/s] [内存消耗：1,588.21kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=3&start=0
+[运行时间：0.033000s] [吞吐率：30.30req/s] [内存消耗：1,588.21kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -296,7 +296,7 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_category` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_category` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=4&start=0
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=4&start=0
 [运行时间：0.039000s] [吞吐率：25.64req/s] [内存消耗：1,763.27kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
@@ -334,13 +334,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_cates` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_cates` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_cates` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=5&start=0
-[运行时间：0.024000s] [吞吐率：41.67req/s] [内存消耗：1,582.44kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=5&start=0
+[运行时间：0.031000s] [吞吐率：32.26req/s] [内存消耗：1,582.44kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -377,12 +377,12 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW CREATE TABLE `tp_cates_ad` [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_cates_ad` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_cates_ad` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_cates_ad` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=6&start=0
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=6&start=0
 [运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,580.18kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
@@ -420,13 +420,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW CREATE TABLE `tp_cates_brands` [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_cates_brands` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_cates_brands` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_cates_brands` LIMIT 0, 1000 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_cates_brands` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=7&start=0
-[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,584.84kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=7&start=0
+[运行时间：0.031000s] [吞吐率：32.26req/s] [内存消耗：1,584.84kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -463,13 +463,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_cates_words` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_cates_words` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_cates_words` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=8&start=0
-[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,589.31kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=8&start=0
+[运行时间：0.021000s] [吞吐率：47.62req/s] [内存消耗：1,589.31kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -506,13 +506,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_comm_attr` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_comm_attr` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_comm_attr` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_comm_attr` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=9&start=0
-[运行时间：0.032000s] [吞吐率：31.25req/s] [内存消耗：1,579.55kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=9&start=0
+[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,579.55kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -549,13 +549,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW CREATE TABLE `tp_comm_photo` [ RunTime:0.001000s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_comm_photo` [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_comm_photo` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_comm_photo` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_comm_photo` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=10&start=0
-[运行时间：0.023000s] [吞吐率：43.48req/s] [内存消耗：1,730.66kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=10&start=0
+[运行时间：0.025000s] [吞吐率：40.00req/s] [内存消耗：1,730.66kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -592,13 +592,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW CREATE TABLE `tp_commodity` [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_commodity` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_commodity` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_commodity` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=11&start=0
-[运行时间：0.021000s] [吞吐率：47.62req/s] [内存消耗：1,587.95kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=11&start=0
+[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,587.95kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -636,12 +636,12 @@
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
 [ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW CREATE TABLE `tp_config` [ RunTime:0.001000s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_config` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_config` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_config` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=12&start=0
-[运行时间：0.020000s] [吞吐率：50.00req/s] [内存消耗：1,579.30kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=12&start=0
+[运行时间：0.021000s] [吞吐率：47.62req/s] [内存消耗：1,579.30kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -683,8 +683,8 @@
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_links` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_links` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=13&start=0
-[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,578.91kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=13&start=0
+[运行时间：0.032000s] [吞吐率：31.25req/s] [内存消耗：1,578.91kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -721,13 +721,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW CREATE TABLE `tp_member_level` [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_member_level` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_member_level` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_member_level` LIMIT 0, 1000 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_level` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=14&start=0
-[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,591.56kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=14&start=0
+[运行时间：0.035000s] [吞吐率：28.57req/s] [内存消耗：1,591.56kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -764,13 +764,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_member_price` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_member_price` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_member_price` LIMIT 0, 1000 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_member_price` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_member_price` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=15&start=0
-[运行时间：0.021000s] [吞吐率：47.62req/s] [内存消耗：1,582.45kb] [文件加载：46]
+[ 2019-06-30T18:45:25+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=15&start=0
+[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,582.45kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -807,13 +807,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_nav` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_nav` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_nav` LIMIT 0, 1000 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_nav` LIMIT 0, 1000 [ RunTime:0.001000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=16&start=0
-[运行时间：0.021000s] [吞吐率：47.62req/s] [内存消耗：1,578.45kb] [文件加载：46]
+[ 2019-06-30T18:45:26+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=16&start=0
+[运行时间：0.031000s] [吞吐率：32.26req/s] [内存消耗：1,578.45kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -850,13 +850,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_product` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_product` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_product` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=17&start=0
-[运行时间：0.031000s] [吞吐率：32.26req/s] [内存消耗：1,577.64kb] [文件加载：46]
+[ 2019-06-30T18:45:26+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=17&start=0
+[运行时间：0.021000s] [吞吐率：47.62req/s] [内存消耗：1,577.78kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -893,13 +893,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
-[ sql ] [ SQL ] SHOW CREATE TABLE `tp_recpos` [ RunTime:0.001000s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_recpos` [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW CREATE TABLE `tp_recpos` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_recpos` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_recpos` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=18&start=0
-[运行时间：0.023000s] [吞吐率：43.48req/s] [内存消耗：1,591.16kb] [文件加载：46]
+[ 2019-06-30T18:45:26+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=18&start=0
+[运行时间：0.030000s] [吞吐率：33.33req/s] [内存消耗：1,591.38kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -936,13 +936,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_recpos_comm` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_recpos_comm` [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_recpos_comm` [ RunTime:0.000000s ]
 [ sql ] [ SQL ] SELECT * FROM `tp_recpos_comm` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:39+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=19&start=0
-[运行时间：0.032000s] [吞吐率：31.25req/s] [内存消耗：1,574.27kb] [文件加载：46]
+[ 2019-06-30T18:45:26+08:00 ] 127.0.0.1 GET c.com/admin/data/export.html?id=19&start=0
+[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,574.27kb] [文件加载：46]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -979,13 +979,13 @@
 )
 [ info ] [ DB ] INIT mysql
 [ info ] [ LOG ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
 [ sql ] [ SQL ] SHOW CREATE TABLE `tp_type` [ RunTime:0.001000s ]
 [ sql ] [ SQL ] SELECT COUNT(*) AS count FROM `tp_type` [ RunTime:0.000000s ]
-[ sql ] [ SQL ] SELECT * FROM `tp_type` LIMIT 0, 1000 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `tp_type` LIMIT 0, 1000 [ RunTime:0.000000s ]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:43+08:00 ] 127.0.0.1 GET c.com/admin/data/importlist.html
-[运行时间：0.024000s] [吞吐率：41.67req/s] [内存消耗：1,638.81kb] [文件加载：47]
+[ 2019-06-30T18:45:28+08:00 ] 127.0.0.1 GET c.com/admin/data/importlist.html
+[运行时间：0.023000s] [吞吐率：43.48req/s] [内存消耗：1,638.81kb] [文件加载：47]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',
@@ -1017,107 +1017,8 @@
 [ info ] [ LOG ] INIT File
 [ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]
 ---------------------------------------------------------------
-[ 2019-06-30T17:01:43+08:00 ] 127.0.0.1 GET c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
-[运行时间：0.015000s] [吞吐率：66.67req/s] [内存消耗：1,110.69kb] [文件加载：35]
-[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'static',
-    1 => 'admin',
-    2 => 'fonts',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'cookie' => 'PHPSESSID=v3vic9uo81fm2gaaqvlt2a4715',
-  'connection' => 'close',
-  'referer' => 'http://c.com/static/admin/style/font-awesome.css',
-  'accept-encoding' => 'identity',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'application/font-woff2;q=1.0,application/font-woff;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0',
-  'host' => 'c.com',
-)
-[ info ] [ PARAM ] array (
-  '/static/admin/fonts/fontawesome-webfont_woff2' => '',
-  'v' => '4.3.0',
-)
-[ info ] [ LOG ] INIT File
----------------------------------------------------------------
-[ 2019-06-30T17:01:47+08:00 ] 127.0.0.1 GET c.com/admin/data/del/time/1561883258.html
-[运行时间：0.019000s] [吞吐率：52.63req/s] [内存消耗：1,550.01kb] [文件加载：47]
-[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'admin',
-    1 => 'data',
-    2 => 'del',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'upgrade-insecure-requests' => '1',
-  'cookie' => 'PHPSESSID=v3vic9uo81fm2gaaqvlt2a4715',
-  'referer' => 'http://c.com/admin/data/importlist.html',
-  'connection' => 'close',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0',
-  'host' => 'c.com',
-)
-[ info ] [ PARAM ] array (
-  '/admin/data/del/time/1561883258_html' => '',
-  'time' => '1561883258',
-)
-[ info ] [ RUN ] app\admin\controller\Data->del[ B:\aaaweb\shop\application\admin\controller\Data.php ]
-[ info ] [ VIEW ] B:\aaaweb\shop\thinkphp\tpl\dispatch_jump.tpl [ array (
-  0 => 'code',
-  1 => 'msg',
-  2 => 'data',
-  3 => 'url',
-  4 => 'wait',
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]
----------------------------------------------------------------
-[ 2019-06-30T17:01:50+08:00 ] 127.0.0.1 GET c.com/admin/data/importlist.html
-[运行时间：0.020000s] [吞吐率：50.00req/s] [内存消耗：1,492.35kb] [文件加载：45]
-[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
-[ info ] [ ROUTE ] array (
-  'type' => 'module',
-  'module' => 
-  array (
-    0 => 'admin',
-    1 => 'data',
-    2 => 'importlist',
-  ),
-)
-[ info ] [ HEADER ] array (
-  'upgrade-insecure-requests' => '1',
-  'cookie' => 'PHPSESSID=v3vic9uo81fm2gaaqvlt2a4715',
-  'referer' => 'http://c.com/admin/data/del/time/1561883258.html',
-  'connection' => 'close',
-  'accept-encoding' => 'gzip, deflate',
-  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
-  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0',
-  'host' => 'c.com',
-)
-[ info ] [ PARAM ] array (
-  '/admin/data/importlist_html' => '',
-)
-[ info ] [ RUN ] app\admin\controller\Data->importlist[ B:\aaaweb\shop\application\admin\controller\Data.php ]
-[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/admin\view\data\importlist.html [ array (
-  0 => 'list',
-) ]
-[ info ] [ LOG ] INIT File
-[ error ] [2]fclose() expects parameter 1 to be resource, null given[B:\aaaweb\shop\extend\tp5er\Backup.php:428]
----------------------------------------------------------------
-[ 2019-06-30T17:01:50+08:00 ] 127.0.0.1 GET c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
-[运行时间：0.014000s] [吞吐率：71.43req/s] [内存消耗：1,110.69kb] [文件加载：35]
+[ 2019-06-30T18:45:28+08:00 ] 127.0.0.1 GET c.com/static/admin/fonts/fontawesome-webfont.woff2?v=4.3.0
+[运行时间：0.016000s] [吞吐率：62.50req/s] [内存消耗：1,110.69kb] [文件加载：35]
 [ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
 [ info ] [ ROUTE ] array (
   'type' => 'module',

@@ -20,7 +20,8 @@ class Commodity extends Model
             $recposlist[] = $v['commodity_id'];
         }
         $map['commodity_id'] = array('IN',$recposlist);
-        $recposList = $this -> field('commodity_id,commodity_name,commodity_smthumb') -> where($map) -> limit($limit) -> select();
+        $fields = 'commodity_id,commodity_name,commodity_smthumb,commodity_ogthumb,commodity_market_price,commodity_shop_price';
+        $recposList = $this -> field( $fields ) -> where($map) -> limit($limit) -> select();
 
         // dump($recposList);die;
         

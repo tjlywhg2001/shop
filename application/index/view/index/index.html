@@ -69,14 +69,15 @@
                                                             </div>
                                                             <input type="hidden" name="user_id" ectype="user_id" value="0">
                                                         </div>   
-                                                        <div class="vip-item">
+                                                        <div class="vip-item viptitle">
                                                             <div class="tit">
                                                                 <a href="javascript:void(0);" class="tab_head_item">公告</a>
                                                                 <a href="javascript:void(0);" class="tab_head_item">促销</a>
                                                             </div>
                                                             <div class="con">
                                                                 <ul>
-                                                                        <li><a href="article.php?id=63" target="_blank">服务店突破2000多家</a></li>
+
+                                                                        <li><a href="{:url('index/article/index',array('ar_id'=>$**['']))}" target="_blank">服务店突破2000多家</a></li>
                                                                         <li><a href="article.php?id=62" target="_blank">我们成为中国最大家电零售B2B2C系统</a></li>
                                                                         <li><a href="article.php?id=61" target="_blank">三大国际腕表品牌签约</a></li>
                                                                     </ul>
@@ -2175,18 +2176,21 @@
                                             <div data-goodstitle="title"><div class="ftit"><h3>还没逛够</h3></div></div>
                                             <ul>
  
-<li class="opacity_img">
-    <a href="https://demo.dscmall.cn/goods.php?id=620" target="_blank">
-        <div class="p-img"><img src="__index__/img/0_thumb_G_1489098265067.jpg"></div>
-        <div class="p-name" title="新品HYC 2k显示器32寸电脑显示器无边框HDMI液晶显示器IPS显示屏 2K高清屏IPS 超薄 厚6mm 无边框">新品HYC 2k显示器32寸电脑显示器无边框HDMI液晶显示器IPS显示屏 2K高清屏IPS 超薄 厚6mm 无边框</div>
-        <div class="p-price">
-            <div class="shop-price">
-                                <em>¥</em>1500.00                            </div>
-            <div class="original-price"></div>
-        </div>
-    </a>
-</li>
-<li class="opacity_img">
+
+     {volist name="CommRecpos" id="CommRecpos"}
+    <li class="opacity_img">
+        <a href="https://demo.dscmall.cn/goods.php?id=620" target="_blank">
+            <div class="p-img"><img src="__upload__/{$CommRecpos.commodity_ogthumb}"></div>
+            <div class="p-name" title="{$CommRecpos.commodity_name}">{$CommRecpos.commodity_name}</div>
+            <div class="p-price">
+                <div class="shop-price">
+                                    <em>¥</em>{$CommRecpos.commodity_shop_price}                           </div>
+                <div class="original-price"></div>
+            </div>
+        </a>
+    </li>
+    {/volist}
+<!-- <li class="opacity_img">
     <a href="https://demo.dscmall.cn/goods.php?id=621" target="_blank">
         <div class="p-img"><img src="__index__/img/0_thumb_G_1489098360804.jpg"></div>
         <div class="p-name" title="三星C24F396FH曲面显示器23.5英寸电脑显示器24液晶显示屏幕超22">三星C24F396FH曲面显示器23.5英寸电脑显示器24液晶显示屏幕超22</div>
@@ -2395,7 +2399,7 @@
         </div>
     </a>
 </li>
-</ul>
+ --></ul>
                                         <div class="spec" data-spec=""></div></div>
                                     </div>
                                 </div></div>                            
@@ -2509,7 +2513,8 @@
 					success: homeAjax
 				});
             }else{
-                Ajax.call('', 'brand_id=' + brand_id + "&seckillid=" + seckillid + "&temp=" + temp, homeAjax , 'POST', 'JSON');
+                return;
+                // Ajax.call('', 'brand_id=' + brand_id + "&seckillid=" + seckillid + "&temp=" + temp, homeAjax , 'POST', 'JSON');
             }
 			
 			function ajax_Homeindex_Bonusadv(){
@@ -2609,12 +2614,12 @@
 				}
 			}
 			checked_article_cat();
-                        //异步新品排行
-                        $("[ectype='h-phb3']").each(function(){
-				 var _this = $(this);
-                                 var activitytype = _this.data('activitytype');
-                                 var goodsids = _this.data('goodsids');
-                                 var warehouse_id = $("input[name='warehouse_id']").val();
+            //异步新品排行
+            $("[ectype='h-phb3']").each(function(){
+                var _this = $(this);
+                var activitytype = _this.data('activitytype');
+                var goodsids = _this.data('goodsids');
+                var warehouse_id = $("input[name='warehouse_id']").val();
 				var area_id = $("input[name='area_id']").val();
                                 
                 Ajax.call('', 'goodsids=' + goodsids + "&activitytype=" + activitytype + "&warehouse_id=" + warehouse_id + "&area_id=" + area_id, function(data){
