@@ -27,7 +27,7 @@ class Cates extends Model
         	$recposComm -> where(array('recpos_type' => 2, 'commodity_id' => $catesid)) -> delete();
 
         	if ( isset( $goodsData['recposs'] )){
-        	dump($recposData['recposs']);die;
+        	// dump($recposData['recposs']);die;
 	        	foreach ($goodsData['recposs'] as $k => $v) {
 	        		// 存入数据信息
 		        	$recposComm -> insert([
@@ -42,7 +42,7 @@ class Cates extends Model
 
 
         Cates::afterInsert(function($cates){
-            dump($cates);die;
+            // dump($cates);die;
 
         	$catesid = $cates ->cates_id;
         	$goodsData = input('post.');

@@ -51,9 +51,9 @@
 
 			if (request()->isPost()){
 				$data=input('post.');
-
-				$add= model('commodity') ->save($data);
 				// dump($_FILES);
+				// dump($data);die;
+				$add= model('commodity') ->save($data);
 				// dump($data);die;
 				if($add){
 					$this->success('添加成功');

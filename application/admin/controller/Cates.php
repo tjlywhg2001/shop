@@ -35,9 +35,6 @@
 				// 当保存的信息内容
 				$data=input('post.');
 			
-				dump($data);die;
-
-
 				// 处理图片
 				if ($_FILES['cates_img']['tmp_name']){
 					$data['cates_img']= $this -> upload();
@@ -160,7 +157,11 @@
 			$catesdel = new catestree();
 			$al = $catesdel -> childrenids($cates_id,$cates);  //获取子栏目ID:4,5
 			$al[] = intval($cates_id);  //获取栏目ID：2
-
+			$commodity =db('commodity');
+			foreach ($al as $k => $v) {
+				db('recpos_comm') -> where( array( 'commodity_id' => $v, 'recpos_type' => 2 ) ) -> delete();
+				$commodity -> where( array( 'cates_id' => $v ) ) -> delete();
+			}
 
 			foreach ($al as $k => $v) {
 				$art = $cates -> field('cates_id,cates_img') ->where(array('cates_id'=>$v)) ->select();

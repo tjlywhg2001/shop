@@ -303,6 +303,7 @@ class Commodity extends Model
 		commodity::beforeDelete(function($commodity){
 
 			$commodityid = $commodity->commodity_id;
+			db('recpos_comm') -> where( array( 'commodity_id' => $commodityid, 'recpos_type' => 1 ) ) -> delete();
 			// 删除相册
 			if ( $commodity->commodity_ogthumb ){
 				$thumb = [];

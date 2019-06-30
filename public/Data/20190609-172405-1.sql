@@ -792,7 +792,7 @@ CREATE TABLE `tp_cates_ad` (
   `catesAd_url` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '栏目广告链接',
   `catesAd_catesId` smallint(6) NOT NULL COMMENT '广告图片所属的栏目ID',
   PRIMARY KEY (`catesAd_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_cates_ad`
@@ -826,7 +826,7 @@ CREATE TABLE `tp_cates_brands` (
   `cb_prourl` varchar(60) CHARACTER SET utf8 NOT NULL COMMENT '推广图链接',
   `cb_catesid` mediumint(9) NOT NULL COMMENT '对应主栏目id',
   PRIMARY KEY (`cb_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_cates_brands`
@@ -1427,7 +1427,7 @@ CREATE TABLE `tp_recpos` (
   `rec_name` mediumtext NOT NULL COMMENT '推荐位名称',
   `rec_type` tinyint(1) NOT NULL COMMENT '推荐位类型：1.商品2.分类',
   PRIMARY KEY (`rec_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_recpos`
