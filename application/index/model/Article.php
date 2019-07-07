@@ -29,6 +29,14 @@ class Article extends Model
 
 
 	}
+
+
+	public function getloginArts( $cateid, $limit )
+	{
+		$loginArt = $this -> where( array( 'ar_cateid' => $cateid ) ) -> limit($limit) -> select();
+		return $loginArt;
+	}
+
 }
 
 

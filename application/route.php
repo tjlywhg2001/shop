@@ -96,6 +96,10 @@ Route::rule('index','index/Index/index','GET',['ext'=>'html']);
 
 // 文章和分类列表
 Route::rule([
+	'goods/:commodity_id'=>[
+		'index/goods/index',
+		['commodity_id'=>'\d{1,4}']
+	],
 	'category/:cate_id'=>[
 		'index/category/index',
 		['cate_id'=>'\d{1,4}']

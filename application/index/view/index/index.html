@@ -76,15 +76,14 @@
                                                             </div>
                                                             <div class="con">
                                                                 <ul>
-
-                                                                        <li><a href="{:url('index/article/index',array('ar_id'=>$**['']))}" target="_blank">服务店突破2000多家</a></li>
-                                                                        <li><a href="article.php?id=62" target="_blank">我们成为中国最大家电零售B2B2C系统</a></li>
-                                                                        <li><a href="article.php?id=61" target="_blank">三大国际腕表品牌签约</a></li>
+                                                                        {volist name="loginList1" id="loginList1"}
+                                                                        <li><a href="{:url('index/article/index',array('ar_id'=>$loginList1['ar_id']))}" target="_blank">{$loginList1.ar_title}</a></li>
+                                                                        {/volist}
                                                                     </ul>
                                                                 <ul style="display:none;">
-                                                                        <li><a href="article.php?id=60" target="_blank">春季家装季，家电买一送一</a></li>
-                                                                        <li><a href="article.php?id=59" target="_blank">抢百元优惠券，享4.22%活期</a></li>
-                                                                        <li><a href="article.php?id=58" target="_blank">Macbook最高返50000消费豆！</a></li>
+                                                                        {volist name="loginList2" id="loginList2"}
+                                                                        <li><a href="{:url('index/article/index',array('ar_id'=>$loginList2['ar_id']))}" target="_blank">{$loginList2.ar_title}</a></li>
+                                                                        {/volist}
                                                                     </ul>
                                                                 </div>
                                                             </div>
@@ -2177,15 +2176,16 @@
                                             <ul>
  
 
-     {volist name="CommRecpos" id="CommRecpos"}
+    {volist name="CommRecpos" id="CommRecpos"}
     <li class="opacity_img">
-        <a href="https://demo.dscmall.cn/goods.php?id=620" target="_blank">
+        <a href="{:url('index/goods/index',array('commodity_id'=>$CommRecpos['commodity_id']))}" target="_blank">
             <div class="p-img"><img src="__upload__/{$CommRecpos.commodity_ogthumb}"></div>
             <div class="p-name" title="{$CommRecpos.commodity_name}">{$CommRecpos.commodity_name}</div>
             <div class="p-price">
                 <div class="shop-price">
-                                    <em>¥</em>{$CommRecpos.commodity_shop_price}                           </div>
-                <div class="original-price"></div>
+                    <em>¥</em>{$CommRecpos.commodity_shop_price}
+                </div>
+                <div class="original-price"><em>¥</em>{$CommRecpos.commodity_market_price}</div>
             </div>
         </a>
     </li>

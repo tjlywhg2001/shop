@@ -20,6 +20,9 @@ class Index extends Base
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+        $loginList1 = model('article') -> getloginArts(23,3);
+        $loginList2 = model('article') -> getloginArts(24,3);
+
         // 获取热卖商品
 
 
@@ -28,6 +31,7 @@ class Index extends Base
 
         // 将对象转为数组
         $CatesRecpos = json_decode( json_encode( $_CatesRecpos ), true );
+        // $loginList = json_decode( json_encode( $_loginList ), true );
 
         foreach ($CatesRecpos as $k => $v) {
 
@@ -63,13 +67,15 @@ class Index extends Base
         // 获得首页商品
         $CommRecpos = model('commodity') -> HomeShowGoods( 7,20 );
 
-        // dump($CommRecpos);die;
+        // dump($loginList1);die;
         
 
     	$this -> assign([
     		'show_nav' => 1,
             'CatesRecpos' => $CatesRecpos,
             'CommRecpos' => $CommRecpos,
+            'loginList1' => $loginList1,
+            'loginList2' => $loginList2,
     	]);
 
         return view();

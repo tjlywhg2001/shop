@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:68:"B:\aaaweb\shop\public/../application/admin\view\data\importlist.html";i:1562460434;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1562460434;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1562460434;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1562460434;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1562460434;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:62:"B:\aaaweb\shop\public/../application/admin\view\arti\edit.html";i:1562460434;s:55:"B:\aaaweb\shop\application\admin\view\common\_meta.html";i:1562460434;s:53:"B:\aaaweb\shop\application\admin\view\common\top.html";i:1562460434;s:54:"B:\aaaweb\shop\application\admin\view\common\left.html";i:1562460434;s:56:"B:\aaaweb\shop\application\admin\view\common\footer.html";i:1562460434;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,11 +46,8 @@
     
 </head>
 
-<script type="text/javascript" src="/static/admin/layui/layui.js"></script>
-
-
 <body>
-    <!-- 头部 -->
+	<!-- 头部 -->
 	<div class="navbar">
     <div class="navbar-inner">
         <div class="navbar-container">
@@ -109,11 +106,11 @@
     </div>
 </div>
 
-    <!-- /头部 -->
-    
-    <div class="main-container container-fluid">
-        <div class="page-container">
-                        <!-- Page Sidebar -->
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
         <div class="page-sidebar" id="sidebar">
 <!-- Page Sidebar Header-->
 <div class="sidebar-header-wrapper">
@@ -406,133 +403,194 @@
                         <li>
                             <a href="<?php echo url('Index/index'); ?>">系统</a>
                         </li>
-                        <li>
-                            <a href="">商品管理</a>
+                                            <li>
+                            <a href="<?php echo url('arti/lst'); ?>">文章管理</a>
                         </li>
-                        <li class="active">数据恢复</li>
+                        <li class="active">编辑文章</li>
                     </ul>
                 </div>
                 <!-- /Page Breadcrumb -->
 
                 <!-- Page Body -->
                 <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">编辑文章</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+
+                        <input type="hidden" name="ar_id" value="<?php echo $categorys['ar_id']; ?>">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">上级分类</label>
+                            <div class="col-sm-6">
+                                <select name="ar_cateid">
+                                    <?php if(is_array($artilist) || $artilist instanceof \think\Collection || $artilist instanceof \think\Paginator): $i = 0; $__LIST__ = $artilist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$category): $mod = ($i % 2 );++$i;?>
+                                    <option <?php if($categorys['ar_cateid'] == $category['cate_id']): ?> selected="selected" <?php endif; ?> value="<?php echo $category['cate_id']; ?>"
+                                >
+                                    
+                                     <?php if($category['cate_pid'] != 0): ?>
+                                     |
+                                     <?php endif; ?>
+                                     <?php echo str_repeat('-',$category['lever']*5); ?><?php echo $category['cate_name']; ?>
+                                    </option>
+                                    <?php endforeach; endif; else: echo "" ;endif; ?>
+                                </select>
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
 
 
-
-<!-- <div class="layui-form">
- -->   
-    <a class="btn btn-sm btn-azure btn-addon" href="javascript:;" autocomplete="off"> 数据库还原  </a>
-    <div class="row">
-        <div class="col-lg-12 col-sm-12 col-xs-12">
-            <div class="widget">
-                <div class="widget-body">
-                    <div class="flip-scroll">
-                        <table class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-
-                                    <th class="text-center">数据库名称</th>
-                                    <th class="text-center">卷数</th>
-                                    <th class="text-center">压缩</th>
-                                    <th class="text-center">数据大小</th>
-                                    <th class="text-center">备份时间</th>
-                                    <th class="text-center">状态</th>
-                                    <th class="text-center">操作</th>
-                                </tr> 
-                            </thead>
-                            <tbody>
-                                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): if( count($list)==0 ) : echo "" ;else: foreach($list as $key=>$data): ?>   
-                                <tr>
-                                    <td class="text-center"><?php echo date('Ymd-His',$data['time']); ?></td>
-                                    <td class="text-center"><?php echo $data['part']; ?></td>
-                                    <td class="text-center"><?php echo $data['compress']; ?></td>
-                                    <td class="text-center"><?php echo format_bytes($data['size']); ?></td>
-                                    <td class="text-center"><?php echo $key; ?></td>
-                                    <td class="status text-center" style="width: 200px;">-</td>
-                                    <td class="action text-center">
-                                        <a class="btn btn-primary btn-sm shiny db-import" href="<?php echo url('data/import',['time'=>$data['time']]); ?>">还原</a>&nbsp;
-                                        <a class="btn btn-danger btn-sm shiny" href="<?php echo url('data/del',['time'=>$data['time']]); ?>">删除</a>
-                                    </td>
-                                </tr>
-                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                            </tbody>
-                            <script>
-                                layui.use(['jquery','layer'],function(){
-                                      window.$ = layui.$;
-                                      var layer = layui.layer;
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章标题</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_title" type="text" value="<?php echo $categorys['ar_title']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
 
 
-                                      $(".db-import").click(function(){
-                                            var self = this, status = ".";
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章关键词</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_keywords" type="text" value="<?php echo $categorys['ar_keywords']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
 
-                                            $(this).parent().prevAll('.status').html("").html('等待还原');
 
-                                            $.get(self.href, success, "json");
-                                            window.onbeforeunload = function(){ return "正在还原数据库，请不要关闭！" }
-                                            return false;
-                                        
-                                            function success(data){
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章描述</label>
+                            <div class="col-sm-6">
+                                <textarea class="form-control" id="username" name="ar_description"><?php echo $categorys['ar_description']; ?></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
 
-                                                if(data.code==1){
 
-                                                    $(self).parent().prev().text(data.msg);
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">发布人</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_autor" type="text" value="<?php echo $categorys['ar_autor']; ?>">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
 
-                                                    if(data.data.part){
-                                                        $.get(self.href, 
-                                                            {"part" : data.data.part, "start" : data.data.start}, 
-                                                            success, 
-                                                            "json"
-                                                        );
-                                                        
-                                                    }  else {
-                                                        layer.alert(data.msg);
-                                                        //window.onbeforeunload = function(){ return null; }
-                                                    }
-                                                } else {
-                                                    layer.alert(data.msg);
-                                                }
-                                            }
-                                        });
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">电子邮件</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_email" type="text" value="<?php echo $categorys['ar_email']; ?>">
+                            </div>
 
-                                    //   $(".db-import").click(function(){
-                                    //     // console.log($(this).parents().find(".status").html() );//正常
-                                    //     // console.log($(this).parent().prevAll('.status').html() );
-                                    //     var statusem=$(this).parent().prevAll('.status');
-                                    //     $(this).parent().prevAll('.status').html("").html('等待还原');
-                                    //     thisobj=this;
-                                    //     $.post(this.href, function(data){
-                                         
-                                    //       if(data.code==1){
-                                    //         // statusem.text(""); // 清空数据
-                                    //         // statusem.append('data'); 
-                                    //         // statusem.text("").append('132');
-                                    //         // $(this).parent().prevAll('.status').html("").html(data.msg);//error ：异常原因无法获取当前节点
-                                    //         statusem.html(data.msg);
-                                    //         getdbimport(thisobj,data.data);
-                                    //       }
-                                    //     }, "json");
-                                    //     return false;
-                                    // });
+                        </div>
 
-                                    });
 
-                                </script>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">友情链接</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="ar_linkurl" type="text" value="<?php echo $categorys['ar_linkurl']; ?>">
+                            </div>
 
-                        </table>
+                        </div>
 
-                    </div>
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">文章图片</label>
+                            <div class="col-sm-6">
+                                <input id="username" name="ar_thumbnail" type="file" value="<?php echo $categorys['ar_thumbnail']; ?>">
+                                <?php if($categorys['ar_thumbnail'] != ''): ?>
+                                    <img class="imgss" src="/static/uploadss/<?php echo $categorys['ar_thumbnail']; ?>" style="height: 30px">
+                                    <input type="button" id='dell' value="删除">
+                                    <?php else: ?>
+
+                                    暂无图片
+                                <?php endif; ?>
+
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">内容</label>
+                            <div class="col-sm-6">
+                                <textarea id="content" name="ar_content"><?php echo $categorys['ar_content']; ?></textarea>
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否置顶</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="ar_top" type="radio" <?php if($categorys['ar_top'] == 1): ?> checked="checked" <?php endif; ?>>
+                                        <span class="text">是</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" <?php if($categorys['ar_top'] == 0): ?> checked="checked" <?php endif; ?> name="ar_top" type="radio">
+                                        <span class="text">否</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">是否显示</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" <?php if($categorys['ar_status'] == 1): ?> checked="checked" <?php endif; ?> name="ar_status" type="radio">
+                                        <span class="text">是</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" <?php if($categorys['ar_status'] == 0): ?> checked="checked" <?php endif; ?> name="ar_status" type="radio">
+                                        <span class="text">否</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">发布时间</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" value="<?php echo $categorys['ar_addtime']; ?>" name="ar_addtime" type="text">
+                            </div>
+
+                        </div>
+ 
+
+                        
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-                  </div>
+</div>
+
+                </div>
                 <!-- /Page Body -->
             </div>
             <!-- /Page Content -->
-        </div>  
-    </div>
+		</div>	
+	</div>
 
-        <!--Basic Scripts-->
+	    <!--Basic Scripts-->
     
 	<script type="text/javascript">
 
@@ -543,6 +601,13 @@
 
 
 	</script>
-    
+    <script>
+        $("#dell").click(function(){
+            $(this).remove();
+            $(".imgss").remove();
+        });
 
-</body></html>
+    </script>                               
+
+
+</body></html> 
