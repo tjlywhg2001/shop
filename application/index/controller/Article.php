@@ -29,9 +29,13 @@
 			return view();
 		}
 
-
-
-
+		public function IndexShowLogin( $cateid, $limit){
+			$LoginArr = array();
+			foreach ($cateid as $key => $v) {
+		        $LoginArr[] = model('article') -> getloginArts( $v, $limit );
+			}
+	        return $LoginArr;
+		}
 	}
 
 

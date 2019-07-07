@@ -20,9 +20,6 @@ class Index extends Base
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-        $loginList1 = model('article') -> getloginArts(23,3);
-        $loginList2 = model('article') -> getloginArts(24,3);
-
         // 获取热卖商品
 
 
@@ -74,8 +71,6 @@ class Index extends Base
     		'show_nav' => 1,
             'CatesRecpos' => $CatesRecpos,
             'CommRecpos' => $CommRecpos,
-            'loginList1' => $loginList1,
-            'loginList2' => $loginList2,
     	]);
 
         return view();

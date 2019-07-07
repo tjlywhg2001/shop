@@ -71,21 +71,9 @@
                                                         </div>   
                                                         <div class="vip-item viptitle">
                                                             <div class="tit">
-                                                                <a href="javascript:void(0);" class="tab_head_item">公告</a>
-                                                                <a href="javascript:void(0);" class="tab_head_item">促销</a>
                                                             </div>
                                                             <div class="con">
-                                                                <ul>
-                                                                        {volist name="loginList1" id="loginList1"}
-                                                                        <li><a href="{:url('index/article/index',array('ar_id'=>$loginList1['ar_id']))}" target="_blank">{$loginList1.ar_title}</a></li>
-                                                                        {/volist}
-                                                                    </ul>
-                                                                <ul style="display:none;">
-                                                                        {volist name="loginList2" id="loginList2"}
-                                                                        <li><a href="{:url('index/article/index',array('ar_id'=>$loginList2['ar_id']))}" target="_blank">{$loginList2.ar_title}</a></li>
-                                                                        {/volist}
-                                                                    </ul>
-                                                                </div>
+                                                            </div>
                                                             </div>
                                                             <div class="vip-item">
                                                                 <div class="tit">快捷入口</div>

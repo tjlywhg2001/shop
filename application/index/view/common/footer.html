@@ -194,7 +194,7 @@ $(function () {
 		$('.shopCart').remove();
 		$('.footer-new').remove();
 		// 购物车
-		$('.tit').remove();
+		// $('.tit').remove();
 		$('.button-icon').remove();
 		// 注册
 		if ( dataType === regType ){
@@ -213,7 +213,7 @@ $(function () {
 		$('.user-footer').remove();
 	} else {
 		// 购物车
-		$('.tit').remove();
+		// $('.tit').remove();
 		$('.button-icon').remove();
 		// 登录
 		$('.logo-span').remove();
@@ -236,12 +236,51 @@ $(function () {
 			}
 		}
 	}
-	$('.viptitle').children('.con').before('<div class="tit"><a href="javascript:void(0);" class="tab_head_item">公告</a><a href="javascript:void(0);" class="tab_head_item">促销</a></div>');
+	LoginArti();
 	$('.viptitle>.tit').on('mouseover','a',function(){
 		var aa = $('.viptitle>.tit>a').index(this);
 		$('.viptitle>.con>ul').eq(aa).css('display','block');
 		$('.viptitle>.con>ul').eq(aa).siblings().css('display','none');
 	});
-})
+});
+
+function LoginArti() {
+	$.ajax({
+		url: "{:url('Article/IndexShowLogin')}",
+		data: {
+			'cateid': [23,24],	//
+			'limit': 3,
+		},
+		dataType: 'json',
+		type: 'POST',
+		success: function (datas) {
+			console.log(datas);
+			$('.viptitle').children('.tit').empty();
+			$('.viptitle').children('.con').empty();
+			var list = datas;
+			for ( i=0; i<list.length; i++ ) {
+				// 登录上的那个父级栏目
+				var div = '';
+				div += '<a href="javascript:void(0);" class="tab_head_item">' + list[i].name.cate_name + '</a>';
+				$('.viptitle').children('.tit').append(div);
+				// 登录上的那个子所属栏目的标题
+				var listChild = list[i].child, uls = '';
+				if ( i==0 ){
+					uls += '<ul>';
+				} else {
+					uls += '<ul style="display:none;">';
+				};
+				for ( j=0; j<listChild.length; j++ ) {
+					uls += '<li><a href="/article/' + listChild[j].ar_id + '.html" target="_blank">' + listChild[j].ar_title + '</a></li>';
+				};
+				uls += '</ul>'; 
+				$('.viptitle').children('.con').append(uls);
+			}
+		},
+		error: function() {
+			alert('由于网络问题，加载失败');
+		}
+	});
+}
 
 </script>
