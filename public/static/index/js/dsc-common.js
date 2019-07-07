@@ -16,6 +16,11 @@ var user_id = $("input[name='user_id']").val(), //会员ID
 	
 $(function(){
 	/************************************** 通用内容start ****************************************/
+	
+	// 加载页面
+	ChangeBatches(1);
+
+
 	// 顶部快捷栏 地区切换 and 网站导航
 	$("*[data-ectype='dorpdown']").hover(function(){
 		$(this).addClass("hover");
@@ -546,13 +551,33 @@ $(function(){
 	
 	//首页品牌 换一批切换
 	doc.on('click',"*[ectype='changeBrand']",function(){
-		var temp = '';
-		if($("input[name='temp']").length > 0){
-			temp = $("input[name='temp']").val();
-		}
-		
-		Ajax.call("get_ajax_content.php","act=ajax_change_brands&temp="+temp,changeBrandResponse,'GET','JSON');
+		page++;
+		ChangeBatches( page );
+
 	});	
+
+	function ChangeBatches( pages ){
+		$.ajax({
+			url: ChangeBatchesUrl,
+			data: {
+				'page': pages,
+			},
+			dataType: 'json',
+			type: 'post',
+			success: function( data ){
+				console.log(data);
+				var totalPage = data.lastPage;
+				if ( pages >= totalPage ){
+					page = 1;
+				}
+				$('#recommend_brands').children('ul').empty();
+				$('#recommend_brands').children('ul').html( data.items );
+			},
+			error: function(){
+				alert('加载失败');
+			}
+		});
+	}
 	
 	function changeBrandResponse(result){
 		$("#recommend_brands").html(result.content);

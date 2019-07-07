@@ -242,6 +242,8 @@ $(function () {
 		$('.viptitle>.con>ul').eq(aa).css('display','block');
 		$('.viptitle>.con>ul').eq(aa).siblings().css('display','none');
 	});
+
+	
 });
 
 function LoginArti() {
@@ -254,7 +256,6 @@ function LoginArti() {
 		dataType: 'json',
 		type: 'POST',
 		success: function (datas) {
-			console.log(datas);
 			$('.viptitle').children('.tit').empty();
 			$('.viptitle').children('.con').empty();
 			var list = datas;
