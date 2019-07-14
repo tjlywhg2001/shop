@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+{include file='/common/_meta'}
+<body>
+	<!-- 头部 -->
+{include file='/common/top'}
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+        {include file='/common/left'}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Index/index')}">系统</a>
+                        </li>
+                                            <li>
+                            <a href="{:url('alternateImg/lst')}">轮播图管理</a>
+                        </li>
+                        <li class="active">修改轮播图</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-header bordered-bottom bordered-blue">
+                <span class="widget-caption">修改轮播图</span>
+            </div>
+            <div class="widget-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="alimg_id" value="{$alterEdit.alimg_id}">
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">轮播图标题</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="alimg_title" rtype="text" value="{$alterEdit.alimg_title}">
+                            </div>
+                            <p class="help-block col-sm-4 red">* 必填</p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">链接地址</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="alimg_url" type="text" value="{$alterEdit.alimg_url}">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">轮播图图片</label>
+                            <div class="col-sm-6">
+                                <input class="" id="username" name="alimg_src" type="file" value="{$alterEdit.alimg_src}">
+                                {if condition="$alterEdit['alimg_src'] neq ''"}
+                                    <img src="__upload__/{$alterEdit.alimg_src}" style="height: 30px">
+                                {else/}
+                                    暂无图片
+                                {/if}
+                            </div>
+                        </div>
+
+
+                       <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">轮播图状态</label>
+                            <div class="col-sm-6">
+                                <div class="radio" style="float:left; padding-right: 10px;">
+                                    <label>
+                                        <input class="inverted colored-blue" value="1" name="alimg_status" type="radio" {if condition="$alterEdit['alimg_status'] eq 1"} checked="checked" {/if}>
+                                        <span class="text">显示</span>
+                                    </label>
+                                </div>
+                                <div class="radio" style="float:left">
+                                    <label>
+                                        <input class="inverted colored-blue" value="0" name="alimg_status" type="radio" {if condition="$alterEdit['alimg_status'] eq 0"} checked="checked" {/if}>
+                                        <span class="text">隐藏</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">保存信息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file='/common/footer'}
+    
+
+</body></html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+{include file='/common/_meta'}
+<body>
+	<!-- 头部 -->
+{include file='/common/top'}
+	<!-- /头部 -->
+	
+	<div class="main-container container-fluid">
+		<div class="page-container">
+			            <!-- Page Sidebar -->
+                {include file='/common/left'}
+            <!-- /Page Sidebar -->
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Page Breadcrumb -->
+                <div class="page-breadcrumbs">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="{:url('Index/index')}">系统</a>
+                        </li>
+                        <li class="active">轮播图管理</li>
+                    </ul>
+                </div>
+                <!-- /Page Breadcrumb -->
+
+                <!-- Page Body -->
+                <div class="page-body">
+                    
+<form action="" method="post">
+<button type="button" tooltip="" class="btn btn-sm btn-azure btn-addon" onClick="javascript:window.location.href = '{:url('alternateImg/add')}'"> <i class="fa fa-plus"></i> 添加轮播图
+<button type="submit" tooltip="" class="btn btn-sm btn-azure btn-addon" style="margin-left: 5px;"> <i class="fa fa-plus"></i> 轮播图排序
+</button>
+</button>
+<div class="row">
+    <div class="col-lg-12 col-sm-12 col-xs-12">
+        <div class="widget">
+            <div class="widget-body">
+                <div class="flip-scroll">
+                    <table class="table table-bordered table-hover">
+                        <thead class="">
+                            <tr styl>
+                                <th class="text-center">ID</th>
+                                <th class="text-center">轮播图标题</th>
+                                <th class="text-center">链接地址</th>
+                                <th class="text-center">轮播图图片</th>
+                                <th class="text-center">轮播图状态</th>
+                                <th class="text-center">排序</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        
+                        {volist name="alterlist" id="alter"}
+                        <tbody>
+                                <tr>
+                                <td align="center">{$alter.alimg_id}</td>
+                                <td align="center">{$alter.alimg_title}</td>
+                                <td align="center">{$alter.alimg_url}</td>
+                                <td align="center">
+                                {if condition="$alter['alimg_src'] neq ''"}
+                                    <img style="height: 30px" src="__upload__/{$alter.alimg_src}" />
+                                {else /}
+                                    暂无图片
+                                {/if}
+                                </td>
+                                <td align="center">
+                                
+                                {if condition="$alter['alimg_status'] neq 0"}
+                                    显示
+                                {else /}
+                                    隐藏
+                                {/if}
+
+                                </td>
+                                <td align="center">
+                                    <input type="text" name="alimg_sort[{$alter.alimg_id}]" value="{$alter.alimg_sort}" style="width: 30px; text-align: center;" />
+                                </td>
+                                <td align="center">
+                                    <a href="{:url('edit',array('alimg_id'=>$alter['alimg_id']))}" class="btn btn-primary btn-sm shiny">
+                                        <i class="fa fa-edit"></i> 编辑
+                                    </a>
+                                    <a href="#" onClick="warning('确实要删除吗', '{:url('del',array('alimg_id'=>$alter['alimg_id']))}')" class="btn btn-danger btn-sm shiny">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        {/volist}
+                    </table>
+                </div>
+                <div> 
+                    {$alterlist->render()}
+              	</div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+
+                </div>
+                <!-- /Page Body -->
+            </div>
+            <!-- /Page Content -->
+		</div>	
+	</div>
+
+	    <!--Basic Scripts-->
+    {include file='/common/footer'}    
+
+
+</body></html>

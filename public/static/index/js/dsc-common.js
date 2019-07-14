@@ -568,7 +568,7 @@ $(function(){
 				console.log(data);
 				var totalPage = data.lastPage;
 				if ( pages >= totalPage ){
-					page = 1;
+					page = 0;
 				}
 				$('#recommend_brands').children('ul').empty();
 				$('#recommend_brands').children('ul').html( data.items );
