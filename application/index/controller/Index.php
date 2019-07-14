@@ -60,16 +60,22 @@ class Index extends Base
 
         }
 
+        // 获取轮播图
+        $IndexAlternateImg = model('AlternateImg') -> GetIndexAlternateImg();
+
+        // dump($CatesRecpos[$k]['newBrand']);die;
+
         // 获得首页商品
         $CommRecpos = model('commodity') -> HomeShowGoods( 7,20 );
 
-        // dump($loginList1);die;
+        // dump($CatesRecpos);die;
         
 
     	$this -> assign([
     		'show_nav' => 1,
             'CatesRecpos' => $CatesRecpos,
             'CommRecpos' => $CommRecpos,
+            'IndexAlternateImg' => $IndexAlternateImg,
     	]);
 
         return view();

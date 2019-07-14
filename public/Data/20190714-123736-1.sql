@@ -6,11 +6,32 @@
 -- Database : tested
 -- 
 -- Part : #1
--- Date : 2019-06-30 14:27:57
+-- Date : 2019-07-14 12:37:36
 -- -----------------------------
 
 SET FOREIGN_KEY_CHECKS = 0;
 
+
+-- -----------------------------
+-- Table structure for `tp_alternate_img`
+-- -----------------------------
+DROP TABLE IF EXISTS `tp_alternate_img`;
+CREATE TABLE `tp_alternate_img` (
+  `alimg_id` smallint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `alimg_title` varchar(255) NOT NULL COMMENT '图片标题',
+  `alimg_src` varchar(255) NOT NULL COMMENT '图片路径',
+  `alimg_url` varchar(255) NOT NULL COMMENT '链接地址',
+  `alimg_sort` smallint(6) NOT NULL COMMENT '排序',
+  `alimg_status` tinyint(4) NOT NULL COMMENT '图片显示隐藏：0隐藏，1显示',
+  PRIMARY KEY (`alimg_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+-- -----------------------------
+-- Records of `tp_alternate_img`
+-- -----------------------------
+INSERT INTO `tp_alternate_img` VALUES ('1', '首页-轮播图1', '20190714/63f85758fffaa1b619325e114ec4492e.jpg', 'http://demo.dscmall.com', '0', '1');
+INSERT INTO `tp_alternate_img` VALUES ('2', '首页-轮播图2', '20190714/b75f93defa72549cd1bf0faddbb2294f.jpg', 'http://demo.dscmall.com', '0', '1');
+INSERT INTO `tp_alternate_img` VALUES ('3', '首页-轮播图3', '20190714/04be2f07ccacc56482b8a50a15ec7083.jpg', 'http://demo.dscmall.com', '0', '1');
 
 -- -----------------------------
 -- Table structure for `tp_article`
@@ -31,7 +52,7 @@ CREATE TABLE `tp_article` (
   `ar_cateid` smallint(6) NOT NULL COMMENT '所属栏目',
   `ar_addtime` int(10) NOT NULL COMMENT '发布时间',
   PRIMARY KEY (`ar_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=44 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_article`
@@ -56,6 +77,12 @@ INSERT INTO `tp_article` VALUES ('40', '联系我们', '', '', '', '', '', '', '
 INSERT INTO `tp_article` VALUES ('41', '免责条款', '', '', '', '', '', '', '<p><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">免责条款</a></p>', '0', '1', '26', '1555837063');
 INSERT INTO `tp_article` VALUES ('42', '公司简介', '', '', '', '', '', '', '<p>公司简介公司简介公司简介公司简介</p>', '0', '1', '26', '1555837076');
 INSERT INTO `tp_article` VALUES ('43', '意见反馈', '', '', '', '', '', '', '<p><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a><a href=\"http://c.com/index/index/index.html\" target=\"_blank\">意见反馈</a></p>', '0', '1', '26', '1555837087');
+INSERT INTO `tp_article` VALUES ('44', '服务店突破2000多家', '服务店突破2000多家', '服务店突破2000多家11111', '', '', '', '', '<h2>服务店突破2000多家</h2><p><br/></p>', '0', '1', '23', '1562461470');
+INSERT INTO `tp_article` VALUES ('45', '我们成为中国最大家电零售B2B2C系统', '我们成为中国最大家电零售B2B2C系统', '大商创成为中国最大家电零售B2B2C系统', '', '', '', '', '<h2>我们成为中国最大家电零售B2B2C系统</h2><p><br/></p>', '0', '1', '23', '1562461504');
+INSERT INTO `tp_article` VALUES ('46', '三大国际腕表品牌签约', '三大国际腕表品牌签约', '三大国际腕表品牌签约', '', '', '', '', '<h2>三大国际腕表品牌签约</h2><p><br/></p>', '0', '1', '23', '1562461529');
+INSERT INTO `tp_article` VALUES ('47', '春季家装季，家电买一送一', '春季家装季，家电买一送一', '春季家装季，家电买一送一', '', '', '', '', '<h2>春季家装季，家电买一送一</h2><p><br/></p>', '0', '1', '24', '1562461584');
+INSERT INTO `tp_article` VALUES ('48', '抢百元优惠券，享4.22%活期', '抢百元优惠券，享4.22%活期', '抢百元优惠券，享4.22%活期', '', '', '', '', '<h2>抢百元优惠券，享4.22%活期</h2><p><br/></p>', '0', '1', '24', '1562461607');
+INSERT INTO `tp_article` VALUES ('49', 'Macbook最高返50000消费豆！', 'Macbook最高返50000消费豆！', 'Macbook最高返50000消费豆！', '', '', '', '', '<h2>Macbook最高返50000消费豆！</h2><p><br/></p>', '0', '1', '24', '1562461631');
 
 -- -----------------------------
 -- Table structure for `tp_attr`
@@ -255,7 +282,7 @@ CREATE TABLE `tp_cates` (
   `cates_sort` int(10) NOT NULL DEFAULT '20' COMMENT '商品分类排序',
   `cates_pid` int(11) NOT NULL COMMENT '商品分类级别',
   PRIMARY KEY (`cates_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=534 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=538 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_cates`
@@ -1011,7 +1038,7 @@ CREATE TABLE `tp_commodity` (
   KEY `brand_id` (`brand_id`) USING BTREE,
   KEY `cates_id` (`cates_id`) USING BTREE,
   KEY `type_id` (`type_id`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=165 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=168 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_commodity`
@@ -1427,7 +1454,7 @@ CREATE TABLE `tp_recpos` (
   `rec_name` mediumtext NOT NULL COMMENT '推荐位名称',
   `rec_type` tinyint(1) NOT NULL COMMENT '推荐位类型：1.商品2.分类',
   PRIMARY KEY (`rec_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- -----------------------------
 -- Records of `tp_recpos`
@@ -1438,6 +1465,7 @@ INSERT INTO `tp_recpos` VALUES ('3', '最新商品', '1');
 INSERT INTO `tp_recpos` VALUES ('4', '精品商品', '1');
 INSERT INTO `tp_recpos` VALUES ('5', '首页推荐', '2');
 INSERT INTO `tp_recpos` VALUES ('6', '推荐分类', '2');
+INSERT INTO `tp_recpos` VALUES ('7', '首页商品', '1');
 
 -- -----------------------------
 -- Table structure for `tp_recpos_comm`
@@ -1581,6 +1609,8 @@ INSERT INTO `tp_recpos_comm` VALUES ('4', '135', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '136', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '137', '1');
 INSERT INTO `tp_recpos_comm` VALUES ('4', '138', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('7', '160', '1');
+INSERT INTO `tp_recpos_comm` VALUES ('7', '161', '1');
 
 -- -----------------------------
 -- Table structure for `tp_type`
