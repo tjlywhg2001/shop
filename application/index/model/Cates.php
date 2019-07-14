@@ -52,7 +52,7 @@ class Cates extends Model
 			}
 		}
 		// dump($CatesArr);die;
-		return $CatesArr;
+		return json_decode( json_encode($CatesArr), true );
 
 
 	}

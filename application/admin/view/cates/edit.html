@@ -109,6 +109,24 @@
 
 
                         <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类图标英文名</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cates_icon" value="{$catess.cates_icon}" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="username" class="col-sm-2 control-label no-padding-right">商品分类颜色英文名</label>
+                            <div class="col-sm-6">
+                                <input class="form-control" id="username" placeholder="" name="cates_color" value="{$catess.cates_color}" type="text">
+                            </div>
+                            <p class="help-block col-sm-4 red"></p>
+                        </div>
+
+
+                        <div class="form-group">
                             <label for="username" class="col-sm-2 control-label no-padding-right">商品分类图片</label>
                             <div class="col-sm-6">
                                 <input class="" id="username" name="cates_img" type="file" value="{$cates.cates_img}"> {if condition="$cates['cates_img'] neq ''"}

@@ -44,6 +44,8 @@
                                 <th class="text-center">商品分类名称</th>
                                 <th class="text-center">商品分类关键词</th>
                                 <th class="text-center">商品分类描述</th>
+                                <th class="text-center">商品分类图标英文名</th>
+                                <th class="text-center">商品分类颜色英文名</th>
                                 <th class="text-center">商品分类图片</th>
                                 <th class="text-center">显示导航</th>
                                 <th class="text-center">排序</th>
@@ -65,6 +67,8 @@
                                 </td>
                                 <td align="center" width="10%" height="30">{$cates.cates_keywords}</td>
                                 <td align="center" width="10%" height="30">{$cates.cates_description}</td>
+                                <td align="center" width="10%" height="30">{$cates.cates_icon}</td>
+                                <td align="center" width="10%" height="30">{$cates.cates_color}</td>
                                 <td align="center" width="10%" height="30">
                                 {if condition="$cates['cates_img'] neq ''"}
                                     <img style="height: 30px" src="__upload__/{$cates.cates_img}" />

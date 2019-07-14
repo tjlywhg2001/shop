@@ -19,15 +19,29 @@ class Index extends Base
 
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------
 
+        // dump( cache('_CatesRecpos') );die;
+        
+
+
+
+
         // 获取热卖商品
 
 
-        // 获取商品的推荐分类
-        $_CatesRecpos = model('cates') -> getRecpos(5,0);
 
-        // 将对象转为数组
-        $CatesRecpos = json_decode( json_encode( $_CatesRecpos ), true );
-        // $loginList = json_decode( json_encode( $_loginList ), true );
+        // 获取商品的推荐分类
+        if ( cache('CatesRecpos') ){
+            $CatesRecpos = cache('CatesRecpos');
+        } else {
+            // dump( $this );die;
+            if ( $this -> configss['cache'] == '是' ){
+                 // 将对象转为数组
+                $CatesRecpos = model('cates') -> getRecpos(5,0);
+                cache('CatesRecpos', $CatesRecpos);
+            }
+        }
+            dump( $CatesRecpos );die;
+
 
         foreach ($CatesRecpos as $k => $v) {
 

@@ -23,96 +23,36 @@
 
 
 
-
-// think\Route::rule('i/:dd','admin/index/he','GET',['ext'=>'html']);
-// return [
-//     '__pattern__' => [
-//         'name' => '\w+',
-//     ],
-//     '[hello]'     => [
-//         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-//         ':name' => ['index/hello', ['method' => 'post']],
-//     ],
-
-// ];
-
-
-
-// think\Route::group('aa',[
-// 			'/:num'=>'index1',
-// 			'/:str'=>'index2',
-// 			'/:bool'=>'index3',
-// 		],['method'=>'get','prefix'=>'admin/index/'],[
-// 			'num'=>'\d{2,5}',
-// 			'str'=>'[a-zA-Z]',
-// 			'bool'=>'0|1',]
-// 	);
-
-// think\Route::group(['name'=>'aa','method'=>'get','prefix'=>'admin/index/'],[
-// 			'/:num'=>'index1',
-// 			'/:str'=>'index2',
-// 			'/:bool'=>'index3',
-// 		],[
-// 			'num'=>'\d{2,5}',
-// 			'str'=>'[a-zA-Z]',
-// 			'bool'=>'0|1',]
-// 	);
-
-
-// think\Route::group('aa',function(){
-// 	think\Route::get(':num','admin/index/index1',[],['num'=>'\d{2,5}']);
-// 	think\Route::get(':str','admin/index/index2',[],['str'=>'[a-zA-Z]']);
-// 	think\Route::get(':bool','admin/index/index3',[],['bool'=>'0|1']);
-// 	});
-
-// think\Route::group('aa',[
-// 		'/:num'=>['admin/index/index1',['method'=>'get'],['num'=>'\d{2,5}']],
-// 		'/:str'=>['admin/index/index2',['method'=>'get'],['str'=>'[a-zA-Z]']],
-// 		'/:bool'=>['admin/index/index3',['method'=>'get'],['bool'=>'0|1']],
-// 	]);
-// return [
-
-// 	'[aa]'=>[
-// 		'/:num'=>['admin/index/index1',['method'=>'get'],['num'=>'\d{2,5}']],
-// 		'/:str'=>['admin/index/index2',['method'=>'get'],['str'=>'[a-zA-Z]']],
-// 		'/:bool'=>['admin/index/index3',['method'=>'get'],['bool'=>'0|1']],
-// 	],
-// ];
-// 
-// 
-// 
-// 
-
-
-
-
-
-
-
 use think\Route;
 
-// 首页
-Route::rule('index','index/Index/index','GET',['ext'=>'html']);
+// // 首页
+// Route::rule('index','index/Index/index','GET',['ext'=>'html']);
 
-// 文章和分类列表
-Route::rule([
-	'goods/:commodity_id'=>[
-		'index/goods/index',
-		['commodity_id'=>'\d{1,4}']
-	],
-	'category/:cate_id'=>[
-		'index/category/index',
-		['cate_id'=>'\d{1,4}']
-	],
-	'article/:ar_id'=>[
-		'index/article/index',
-		['ar_id'=>'\d{1,4}']
-	],
-	'cates/:Catesid'=>[
-		'index/cates/index',
-		['Catesid'=>'\d{1,4}']
-	]
-], '', 'GET', ['ext'=>'html']);
+// // 文章和分类列表
+// Route::rule([
+// 	'goods/:commodity_id'=>[
+// 		'index/goods/index',
+// 		['commodity_id'=>'\d{1,4}']
+// 	],
+// 	'category/:cate_id'=>[
+// 		'index/category/index',
+// 		['cate_id'=>'\d{1,4}']
+// 	],
+// 	'article/:ar_id'=>[
+// 		'index/article/index',
+// 		['ar_id'=>'\d{1,4}']
+// 	],
+// 	'cates/:Catesid'=>[
+// 		'index/cates/index',
+// 		['Catesid'=>'\d{1,4}']
+// 	]
+// ], '', 'GET', ['ext'=>'html']);
 
 
 
+Route::rule('cate/:Catesid','index/category/index','get',['ext'=>'html'],['Catesid'=>'\d{1,3}']);
+Route::rule('article/:ar_id','index/article/index','get',['ext'=>'html'],['ar_id'=>'\d{1,3}']);
+Route::rule('cates/:cate_id','index/cates/index','get',['ext'=>'html'],['cate_id'=>'\d{1,3}']);
+Route::rule('goods/:commodity_id','index/goods/index','get',['ext'=>'html'],['commodity_id'=>'\d{1,3}']);
+
+Route::rule('index','index/Index/index','get',['ext'=>'html']);
