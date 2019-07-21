@@ -23,7 +23,14 @@
 	        }
 
 			// 面包屑导航
-			$cateNav = model('category') -> position($articleContent['ar_cateid']);
+			if( cache('cateNav') ){
+				$cateNav = cache('cateNav');
+			} else {
+				$cateNav = model('category') -> position($articleContent['ar_cateid']);
+				if ( $cache == '是' ){
+					cache('cateNav',$cateNav ,$times);
+				}
+			}
 			// dump( $cateNav );die;
 			$this -> assign([
 				'articleContent' => $articleContent,
