@@ -7,14 +7,24 @@
 	{
 		public function index($ar_id)
 		{
+			// dump( $this -> configss );die;
+	        // 定义清除缓存时间
+	        $cache = $this -> configss['cache'];
+	        $times = $this -> configss['cache_time'];
 			$article = db('article');
 			$category = db('category');
-			$articleContent = $article -> find( $ar_id );
+			// 文章内容
+			$artName = $ar_id.'_article';
+	        if ( cache( $artName ) ){
+	        	$articleContent = cache( $artName );
+	        } else {
+				$articleContent = $article -> find( $ar_id );
+	        	cache( $artName, $articleContent , $times);
+	        }
+
 			// 面包屑导航
 			$cateNav = model('category') -> position($articleContent['ar_cateid']);
- 
 			// dump( $cateNav );die;
-			
 			$this -> assign([
 				'articleContent' => $articleContent,
 				'cateNav' => $cateNav,

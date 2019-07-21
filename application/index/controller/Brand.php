@@ -7,6 +7,8 @@
 	class Brand extends Base
 	{
 		public function getIndexBrand( $page ){
+			// dump($this -> configss);die;
+			// 品牌换一批
 			$brandlistArr = array();
 			$brandlist = db('brand') -> order('brand_id desc') -> paginate(17);
 			$brandlistArr['lastPage'] = $brandlist -> lastPage();
