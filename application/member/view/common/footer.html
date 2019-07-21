@@ -1,0 +1,76 @@
+<!-- 登录和注册页面 -->
+<div class="footer user-footer">
+	<div class="dsc-copyright">
+		<div class="w w1200">
+			<p class="footer-ecscinfo pb10">
+
+				<a href="{:url('index/Index/index')}">首页</a>
+
+				
+            	{volist name="bottoms" id="bottomNav"}
+
+				 		<span style="padding: 0 10px;">|</span>
+						<a {if condition="$bottomNav.ar_linkurl neq ''"} href="{$bottomNav.ar_linkurl}" target="_blank" {else /} href="{:url('index/article/index',array('ar_id'=>$bottomNav['ar_id']))}" {/if} >{$bottomNav.ar_title}</a>
+
+
+				{/volist}
+
+
+
+
+			</p>
+
+ 			<p>
+			 <?php 
+				$footerCopyright = explode(',',$configArr['footer_copyright']);
+				foreach ($footerCopyright as $k => $v ):
+			 ?>
+				<?php if ($k <=1 ) { echo '<span>'.$v.'</span>'; } else { echo '<a href="#">'.$v.'</a>'; }?>
+			<?php endforeach?>
+			</p>
+
+
+		</div>
+	</div>
+    <div class="hidden">
+        <input type="hidden" name="seller_kf_IM" value="" rev="" ru_id="" />
+        <input type="hidden" name="seller_kf_qq" value="349488953" />
+        <input type="hidden" name="seller_kf_tel" value="4000-000-000" />
+        <input type="hidden" name="user_id" value="0" />
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+$(function () {
+	var navshow = $('.navshow').length;
+	if ( navshow > 1){ 
+		$('.navshow').eq(1).css('display','none');
+		$('.nav-main').eq(1).remove();
+		$('.dsc-zoom').eq(1).removeClass('dsc-zoom');
+		$('.topShows').eq(0).remove();
+	} else {
+		$('.topShows').eq(0).remove();
+	}
+
+	var dataType = $('body').data('type');
+	var indexType = 'index1', 
+		index2Type = 'index2', 
+		loginType = 'login1', 
+		regType = 'reg1', 
+		cartListType = 'cart_list1', 
+		goodsListType = 'goodsList1';
+
+	if ( dataType === loginType || dataType === regType ){
+		// 购物车
+		// $('.tit').remove();
+		$('.button-icon').remove();
+		// 注册
+		if ( dataType === regType ){
+			$('.header-href span').html('已注册可<a href="#" class="jump">在此登录</a>')
+		}
+	}
+
+
+</script>

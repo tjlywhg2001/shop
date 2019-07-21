@@ -89,7 +89,7 @@ class Base extends Controller
 		}
 		// dump($bottoms);die;
 		
-		// 左边nav
+		// 左边栏目
 		if ( cache('ComCate')){
 			$ComCate = cache('ComCate');
 		} else {

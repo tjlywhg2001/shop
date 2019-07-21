@@ -16,22 +16,23 @@
 
 			// 获取栏目以及子栏目ID，返回数组
 			$category = db('category');
-			// 文章
+			$categorys = new Categorytree();
+			$cateId = $categorys -> childrenids( $cate_id, db('category') );
+			$cateId[] = $cate_id;
+			$artiArr['ar_cateid'] = array('IN', $cateId );
+			
+			// 左边栏目获取栏目ID查询子栏目或文章
 			$artiName = $cate_id.'_category';
 			if ( cache( $artiName ) ){
 				$artiRes = cache( $artiName );
 			} else {
-				$categorys = new Categorytree();
-				$cateId = $categorys -> childrenids( $cate_id, db('category') );
-				$cateId[] = $cate_id;
-				$artiArr['ar_cateid'] = array('IN', $cateId );
 				$artiRes = db('article') -> where( $artiArr ) -> select();
 				if ( $cache == '是' ){
 					cache( $artiName , $artiRes , $times );
 				}
 			}
 
-			// 栏目
+			// 右边的标题为栏目名字
 			$categoryName = $cate_id.'_categorys';
 			if ( cache( $categoryName ) ){
 				$cateName = cache( $categoryName );

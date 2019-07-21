@@ -23,12 +23,13 @@
 	        }
 
 			// 面包屑导航
-			if( cache('cateNav') ){
-				$cateNav = cache('cateNav');
+			$artiCateId = $articleContent['ar_cateid'].'_art';
+			if( cache( $artiCateId ) ){
+				$cateNav = cache( $artiCateId );
 			} else {
 				$cateNav = model('category') -> position($articleContent['ar_cateid']);
 				if ( $cache == '是' ){
-					cache('cateNav',$cateNav ,$times);
+					cache( $artiCateId,$cateNav ,$times);
 				}
 			}
 			// dump( $cateNav );die;
