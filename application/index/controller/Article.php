@@ -32,7 +32,6 @@
 			return view('article');
 		}
 
-
 		public function add()
 		{
 
