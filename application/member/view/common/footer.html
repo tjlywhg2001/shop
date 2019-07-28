@@ -21,12 +21,6 @@
 			</p>
 
  			<p>
-			 <?php 
-				$footerCopyright = explode(',',$configArr['footer_copyright']);
-				foreach ($footerCopyright as $k => $v ):
-			 ?>
-				<?php if ($k <=1 ) { echo '<span>'.$v.'</span>'; } else { echo '<a href="#">'.$v.'</a>'; }?>
-			<?php endforeach?>
 			</p>
 
 
@@ -44,33 +38,17 @@
 
 <script type="text/javascript">
 $(function () {
-	var navshow = $('.navshow').length;
-	if ( navshow > 1){ 
-		$('.navshow').eq(1).css('display','none');
-		$('.nav-main').eq(1).remove();
-		$('.dsc-zoom').eq(1).removeClass('dsc-zoom');
-		$('.topShows').eq(0).remove();
-	} else {
-		$('.topShows').eq(0).remove();
-	}
 
 	var dataType = $('body').data('type');
-	var indexType = 'index1', 
-		index2Type = 'index2', 
-		loginType = 'login1', 
-		regType = 'reg1', 
-		cartListType = 'cart_list1', 
-		goodsListType = 'goodsList1';
+	var loginType = 'login1', 
+		regType = 'reg1';
 
 	if ( dataType === loginType || dataType === regType ){
 		// 购物车
-		// $('.tit').remove();
+		$('.tit').remove();
 		$('.button-icon').remove();
-		// 注册
-		if ( dataType === regType ){
-			$('.header-href span').html('已注册可<a href="#" class="jump">在此登录</a>')
-		}
 	}
 
+});
 
 </script>

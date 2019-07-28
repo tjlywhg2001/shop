@@ -6,63 +6,79 @@
 <body class="bg-ligtGary" data-type="login1">
     <div class="login">
 
-		{include file='/common/heads_logo'}
+		<div class="loginRegister-header">
+		    <div class="w w1200">
+		        <div class="logo">
+		            <div class="logoImg"><a href="#" class="logo"><img src="__index__/img/user_login_logo.png"></a></div>
+		            <div class="logoAdv"></div>
 
-    <div class="container">
-        <div class="login-wrap">
-			<div class="w w1200">
-			    <div class="login-form">
-			        <div class="coagent">
-					    <div class="tit"><h3>用第三方账号直接登录</h3><span></span></div>
-			            <div class="coagent-warp">
-					        <a href="#" class="weibo"><b class="third-party-icon weibo-icon"></b></a>
-					        <a href="#" class="qq"><b class="third-party-icon qq-icon"></b></a>
-				        </div>
+			        <!-- 登录 -->
+				    <div class="logo-span">
+						<b style="background:url(__index__/img/login_logo_pic.png) no-repeat;"></b>
 					</div>
-			        <div class="login-box">
-			            <div class="tit"><h3>账号登录</h3><span></span></div>
-			            <div class="msg-wrap">
-							<div class="msg-error" style="display:none">账户名与密码不匹配，请重新输入</div>
-			            </div>
-			            <div class="form">
-							<form name="formLogin" action="user.php" method="post" onSubmit="userLogin();return false;">
-							    <div class="item">
-							        <div class="item-info">
-							            <i class="iconfont icon-name"></i>
-							            <input type="text" id="username" name="username" class="text" value="" placeholder="用户名/邮箱/手机" autocomplete="off" />
-							        </div>
-							    </div>
-							    <div class="item">
-							        <div class="item-info">
-							            <i class="iconfont icon-password"></i>
-							            <input type="password" style="display:none"/>
-							            <input type="password" id="nloginpwd" name="password" class="text" value="" placeholder="密码" autocomplete="off" />
-							        </div>
-							    </div>
-							        <div class="item">
-							        <input id="remember" name="remember" type="checkbox" class="ui-checkbox">
-							        <label for="remember" class="ui-label">请保存我这次的登录信息。</label>
-							    </div>
-							    <div class="item item-button">
-									<input type="hidden" name="dsc_token" value="015596ebc0548cc4e216ba27981f5902" />
-							        <input type="hidden" name="act" value="act_login" />
-							        <input type="hidden" name="back_act" value="https%3A%2F%2Ftest.dscmall.cn%2Fgoods.php%3Fid%3D800" />
-							        <input type="submit" name="submit" id="loginSubmit" value="登&nbsp;&nbsp;录" class="btn sc-redBg-btn">
-							    </div>
-							    <a href="#" class="notpwd gary">忘记密码？</a>
-							</form>
-			            </div>
-			        </div>
-			    </div>
-			</div>
-			<div class="login-banner" style="background:url(__index__/img/1488936109167439630.jpg) center center no-repeat;">
-			    <div class="w w1200">
-			        <div class="banner-bg"></div>
-			    </div>
-			</div>
-        </div>
-    </div>
-</div>
+		        </div>
+
+				<div class="header-href">
+				    <span>还没有账号<a href="{:url('member/user/reg')}" class="jump">免费注册</a></span>
+				</div>
+		    </div>
+		</div>
+
+	    <div class="container">
+	        <div class="login-wrap">
+				<div class="w w1200">
+				    <div class="login-form">
+				        <div class="coagent">
+						    <div class="tit"><h3>用第三方账号直接登录</h3><span></span></div>
+				            <div class="coagent-warp">
+						        <a href="#" class="weibo"><b class="third-party-icon weibo-icon"></b></a>
+						        <a href="#" class="qq"><b class="third-party-icon qq-icon"></b></a>
+					        </div>
+						</div>
+				        <div class="login-box">
+				            <div class="tit"><h3>账号登录</h3><span></span></div>
+				            <div class="msg-wrap">
+								<div class="msg-error" style="display:none">账户名与密码不匹配，请重新输入</div>
+				            </div>
+				            <div class="form">
+								<form name="formLogin" action="user.php" method="post" onSubmit="userLogin();return false;">
+								    <div class="item">
+								        <div class="item-info">
+								            <i class="iconfont icon-name"></i>
+								            <input type="text" id="username" name="username" class="text" value="" placeholder="用户名/邮箱/手机" autocomplete="off" />
+								        </div>
+								    </div>
+								    <div class="item">
+								        <div class="item-info">
+								            <i class="iconfont icon-password"></i>
+								            <input type="password" style="display:none"/>
+								            <input type="password" id="nloginpwd" name="password" class="text" value="" placeholder="密码" autocomplete="off" />
+								        </div>
+								    </div>
+								        <div class="item">
+								        <input id="remember" name="remember" type="checkbox" class="ui-checkbox">
+								        <label for="remember" class="ui-label">请保存我这次的登录信息。</label>
+								    </div>
+								    <div class="item item-button">
+										<input type="hidden" name="dsc_token" value="015596ebc0548cc4e216ba27981f5902" />
+								        <input type="hidden" name="act" value="act_login" />
+								        <input type="hidden" name="back_act" value="https%3A%2F%2Ftest.dscmall.cn%2Fgoods.php%3Fid%3D800" />
+								        <input type="submit" name="submit" id="loginSubmit" value="登&nbsp;&nbsp;录" class="btn sc-redBg-btn">
+								    </div>
+								    <a href="#" class="notpwd gary">忘记密码？</a>
+								</form>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+				<div class="login-banner" style="background:url(__index__/img/1488936109167439630.jpg) center center no-repeat;">
+				    <div class="w w1200">
+				        <div class="banner-bg"></div>
+				    </div>
+				</div>
+	        </div>
+	    </div>
+	</div>
 
 
     {include file='/common/footer'}   

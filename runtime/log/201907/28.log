@@ -1,0 +1,662 @@
+---------------------------------------------------------------
+[ 2019-07-28T11:46:14+08:00 ] 127.0.0.1 GET c.com/member/user/reg.html
+[运行时间：0.043000s] [吞吐率：23.26req/s] [内存消耗：2,694.42kb] [文件加载：54]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:46:21+08:00 ] 127.0.0.1 GET c.com/member/user/reg
+[运行时间：0.050000s] [吞吐率：20.00req/s] [内存消耗：2,521.68kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:46:37+08:00 ] 127.0.0.1 GET c.com/member/user/login
+[运行时间：0.043000s] [吞吐率：23.26req/s] [内存消耗：2,681.72kb] [文件加载：54]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->login[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\login.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:46:37+08:00 ] 127.0.0.1 GET c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[运行时间：0.021000s] [吞吐率：47.62req/s] [内存消耗：1,384.87kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/member/user/login',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-28T11:46:37+08:00 ] 127.0.0.1 GET c.com/static/index/images/login-icon.png
+[运行时间：0.024000s] [吞吐率：41.67req/s] [内存消耗：1,384.41kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/static/index/css/style.css',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-28T11:46:40+08:00 ] 127.0.0.1 GET c.com/member/user/reg.html
+[运行时间：0.047000s] [吞吐率：21.28req/s] [内存消耗：2,522.32kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/member/user/login',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:46:42+08:00 ] 127.0.0.1 GET c.com/static/index/images/login-icon.png
+[运行时间：0.022000s] [吞吐率：45.45req/s] [内存消耗：1,384.41kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/static/index/css/style.css',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-28T11:46:57+08:00 ] 127.0.0.1 GET c.com/member/user/reg.html
+[运行时间：0.047000s] [吞吐率：21.28req/s] [内存消耗：2,522.32kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/member/user/login',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:48:35+08:00 ] 127.0.0.1 GET c.com/member/user/reg.html
+[运行时间：0.048000s] [吞吐率：20.83req/s] [内存消耗：2,522.32kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://c.com/member/user/login',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:48:35+08:00 ] 127.0.0.1 GET c.com/member/user/favicon.ico
+[运行时间：0.050000s] [吞吐率：20.00req/s] [内存消耗：2,465.89kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:48:40+08:00 ] 127.0.0.1 GET c.com/member/user/reg/
+[运行时间：0.040000s] [吞吐率：25.00req/s] [内存消耗：2,521.68kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:48:40+08:00 ] 127.0.0.1 GET c.com/member/user/reg/favicon.ico
+[运行时间：0.037000s] [吞吐率：27.03req/s] [内存消耗：2,521.31kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:48:47+08:00 ] 127.0.0.1 GET c.com/member/user/reg/
+[运行时间：0.047000s] [吞吐率：21.28req/s] [内存消耗：2,521.68kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:48:47+08:00 ] 127.0.0.1 GET c.com/member/user/reg/favicon.ico
+[运行时间：0.052000s] [吞吐率：19.23req/s] [内存消耗：2,521.31kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:51:12+08:00 ] 127.0.0.1 GET c.com/member/user/reg/
+[运行时间：0.052000s] [吞吐率：19.23req/s] [内存消耗：2,693.83kb] [文件加载：54]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:51:15+08:00 ] 127.0.0.1 GET c.com/member/user/login.html
+[运行时间：0.040000s] [吞吐率：25.00req/s] [内存消耗：2,682.24kb] [文件加载：54]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/member/user/reg/',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->login[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\login.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:51:15+08:00 ] 127.0.0.1 GET c.com/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js
+[运行时间：0.024000s] [吞吐率：41.67req/s] [内存消耗：1,384.88kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/member/user/login.html',
+)
+[ info ] [ PARAM ] array (
+  'scrollbar' => 'perfect-scrollbar.min.js',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-28T11:51:15+08:00 ] 127.0.0.1 GET c.com/static/index/images/login-icon.png
+[运行时间：0.023000s] [吞吐率：43.48req/s] [内存消耗：1,384.41kb] [文件加载：38]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'images',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/static/index/css/style.css',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-07-28T11:51:16+08:00 ] 127.0.0.1 GET c.com/member/user/favicon.ico
+[运行时间：0.038000s] [吞吐率：26.32req/s] [内存消耗：2,465.89kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'image/webp,*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:51:17+08:00 ] 127.0.0.1 GET c.com/member/user/reg.html
+[运行时间：0.046000s] [吞吐率：21.74req/s] [内存消耗：2,522.28kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/member/user/login.html',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-07-28T11:52:03+08:00 ] 127.0.0.1 POST c.com/member/user/user.php
+[运行时间：0.047000s] [吞吐率：21.28req/s] [内存消耗：2,469.28kb] [文件加载：52]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'user.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'c.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '215',
+  'connection' => 'keep-alive',
+  'referer' => 'http://c.com/member/user/reg.html',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => '',
+  'password' => '',
+  'confirm_password' => '',
+  'mobile_phone' => '',
+  'email' => '',
+  'send_code' => '',
+  'mobileagreement' => '1',
+  'flag' => 'register',
+  'register_type' => '1',
+  'seccode' => '0',
+  'act' => 'act_register',
+  'register_mode' => '1',
+  'Submit' => '立即注册',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
