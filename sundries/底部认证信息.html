@@ -1,0 +1,6 @@
+			 <?php 
+				$footerCopyright = explode(',',$configArr['footer_copyright']);
+				foreach ($footerCopyright as $k => $v ):
+			 ?>
+				<?php if ($k <=1 ) { echo '<span>'.$v.'</span>'; } else { echo '<a href="#">'.$v.'</a>'; }?>
+			<?php endforeach?>

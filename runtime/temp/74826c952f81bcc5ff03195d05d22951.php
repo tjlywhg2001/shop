@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"B:\aaaweb\shop\public/../application/member\view\user\login.html";i:1564285330;s:56:"B:\aaaweb\shop\application\member\view\common\_meta.html";i:1564280942;s:57:"B:\aaaweb\shop\application\member\view\common\footer.html";i:1564285870;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:64:"B:\aaaweb\shop\public/../application/member\view\user\login.html";i:1564304181;s:56:"B:\aaaweb\shop\application\member\view\common\_meta.html";i:1564280942;s:57:"B:\aaaweb\shop\application\member\view\common\footer.html";i:1564301173;}*/ ?>
 <!doctype html>
 <html>
 
@@ -171,7 +171,7 @@
 				<div class="header-href">
 				    <span>还没有账号<a href="<?php echo url('member/user/reg'); ?>" class="jump">免费注册</a></span>
 				</div>
-		    </div>
+		    </div>@
 		</div>
 
 	    <div class="container">
@@ -191,29 +191,29 @@
 								<div class="msg-error" style="display:none">账户名与密码不匹配，请重新输入</div>
 				            </div>
 				            <div class="form">
-								<form name="formLogin" action="user.php" method="post" onSubmit="userLogin();return false;">
+								<form name="formLogin" action="" method="post">
 								    <div class="item">
 								        <div class="item-info">
 								            <i class="iconfont icon-name"></i>
-								            <input type="text" id="username" name="username" class="text" value="" placeholder="用户名/邮箱/手机" autocomplete="off" />
+								            <input type="text" id="username" name="us_name" class="text" value="" placeholder="用户名/邮箱/手机" autocomplete="off" />
 								        </div>
 								    </div>
 								    <div class="item">
 								        <div class="item-info">
 								            <i class="iconfont icon-password"></i>
 								            <input type="password" style="display:none"/>
-								            <input type="password" id="nloginpwd" name="password" class="text" value="" placeholder="密码" autocomplete="off" />
+								            <input type="password" id="nloginpwd" name="us_password" class="text" value="" placeholder="密码" autocomplete="off" />
 								        </div>
 								    </div>
 								        <div class="item">
-								        <input id="remember" name="remember" type="checkbox" class="ui-checkbox">
+								        <input id="remember" name="" type="checkbox" class="ui-checkbox">
 								        <label for="remember" class="ui-label">请保存我这次的登录信息。</label>
 								    </div>
 								    <div class="item item-button">
-										<input type="hidden" name="dsc_token" value="015596ebc0548cc4e216ba27981f5902" />
+<!-- 										<input type="hidden" name="dsc_token" value="015596ebc0548cc4e216ba27981f5902" />
 								        <input type="hidden" name="act" value="act_login" />
-								        <input type="hidden" name="back_act" value="https%3A%2F%2Ftest.dscmall.cn%2Fgoods.php%3Fid%3D800" />
-								        <input type="submit" name="submit" id="loginSubmit" value="登&nbsp;&nbsp;录" class="btn sc-redBg-btn">
+								        <input type="hidden" name="back_act" value="https%3A%2F%2Ftest.dscmall.cn%2Fgoods.php%3Fid%3D800" /> -->
+								        <input type="submit" name="" id="loginSubmit" value="登&nbsp;&nbsp;录" class="btn sc-redBg-btn">
 								    </div>
 								    <a href="#" class="notpwd gary">忘记密码？</a>
 								</form>
@@ -278,7 +278,6 @@ $(function () {
 
 	if ( dataType === loginType || dataType === regType ){
 		// 购物车
-		$('.tit').remove();
 		$('.button-icon').remove();
 	}
 
@@ -290,7 +289,7 @@ $(function () {
 
 <script type="text/javascript" src="/static/index/js/scroll_city.js"></script>
 <script type="text/javascript" src="/static/index/js/user.js"></script>
-<script type="text/javascript" src="/static/index/js/user_register.js"></script>
+<!-- <script type="text/javascript" src="/static/index/js/user_register.js"></script> -->
 <script type="text/javascript" src="/static/index/js/utils.js"></script>
 <script type="text/javascript" src="/static/index/js/jquery.SuperSlide.2.1.1.js"></script>
 <script type="text/javascript" src="/static/index/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
@@ -321,7 +320,7 @@ $(function(){
 		$("#form_getPassword1").siblings().css({'width':'50%'});
 	}
 	
-	/*$(".email_open").click(function(){
+	$(".email_open").click(function(){
 		$("#email_yz").show();
 		$(this).parent().hide();
 		$("#email_yz").find(".tx_rm").show();
@@ -331,7 +330,7 @@ $(function(){
 		$("#email_yz").hide();
 		$(this).parent().hide();
 		$("#phone_yz").find(".tx_rm").show();
-	});*/
+	});
 	
 	$(".email_open").click(function(){
 	
@@ -379,8 +378,34 @@ $(function(){
 	});
 	
 	
-	$.divselect("#divselect","#passwd_quesetion");
-	$.divselect("#divselect2","#passwd_quesetion2");
+	// $.divselect("#divselect","#passwd_quesetion");
+	// $.divselect("#divselect2","#passwd_quesetion2");
+
+	$('#loginSubmit').click(function () {
+
+		console.log(111111);
+		$.ajax({
+			url:'<?php echo url("member/user/checking"); ?>',
+			data:{
+				'name': $('input[name=us_name]').val(),
+				'password': $('input[name=us_password]').val(),
+			},
+			dataType:'json',
+			type:'post',
+			success: function (status) {
+				console.log( status );
+				if ( status == 1){
+					alert('OK');
+				} else {
+					alert('用户名或密码有错误');
+				}
+			},
+			error: function(){
+				alert('网络出问题，请刷新');
+			}
+		});
+	});
+
 });
 </script>
 </body>

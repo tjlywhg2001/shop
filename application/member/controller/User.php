@@ -2,6 +2,8 @@
 namespace app\member\controller;
 
 use think\Controller;
+use sms\sms;
+
 header("Content-Type: text/html;charset=utf-8");
 /**
 * 
@@ -11,6 +13,16 @@ class User extends Controller
 
 	public function reg()
 	{
+		if ( request() -> isPost() ){
+			$data = input('post.');
+			// dump($data);die;
+			$reg = db('user') -> insert($data);
+			if ( $reg ){
+				$this -> assign('注册成功！');
+			} else {
+				$this -> assign('注册失败！');
+			}
+		}
 		return view();
 	}
 
@@ -39,6 +51,22 @@ class User extends Controller
 		]);
 
 	}
+
+	public function checking( $name, $password )
+	{
+		$data = db('user') ->select();
+		foreach ( $data as $k => $v ){
+			if ( $v['us_name'] == $name && $v['us_password'] == $password ){
+				$aa = 1;
+			}
+		}
+		if ( $aa = 1){
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+
 
 
 
