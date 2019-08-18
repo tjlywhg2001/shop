@@ -2,7 +2,7 @@
 namespace app\member\controller;
 
 use think\Controller;
-use sms\sms;
+use sendcode\SendCode;
 
 header("Content-Type: text/html;charset=utf-8");
 /**
@@ -79,6 +79,30 @@ class User extends Controller
 	}
 
 
+	public function sendcode(){
+
+		$phone = '13821656007';
+		$phonepassword = 'Whg963852';
+		$phoneNumber = '18522268833';
+		$var = mt_rand(100000,999999);
+		$phoness = '111您的验证码是'.$var.'，如非本人操作，请忽略本短信！ha';
+
+		$send = new SendCode();
+ 
+		// $re = $send->send('您的账号','您的密码','手机号','短信内容',time(),1);
+		$re = $send->send( $phone, $phonepassword, $phoneNumber, $phoness,time(),1);
+		
+		dump($re);
+		if ( !is_null($re) ){
+			if ( $re['result'] == 0 ){
+				echo "短信发送成功！";
+			} else {
+				echo $re['result_msg'];
+			}
+		} else {
+			return $re;
+		}
+	}
 
 
 }

@@ -1,0 +1,977 @@
+---------------------------------------------------------------
+[ 2019-08-18T12:09:38+08:00 ] 127.0.0.1 POST c.com/get_ajax_content.php
+[运行时间：0.017000s] [吞吐率：58.82req/s] [内存消耗：1,728.37kb] [文件加载：35]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'http://c.com/',
+  'connection' => 'close',
+  'content-length' => '132',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'floor_cat_content',
+  'cat_id' => '9',
+  'floor_num' => '6',
+  'warehouse_id' => '2',
+  'area_id' => '19',
+  'area_city' => '543',
+  'goods_ids' => '',
+  'floorcat' => 'undefined',
+  'seller_id' => 'undefined',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T12:12:57+08:00 ] 127.0.0.1 POST c.com/member/user/reg.html
+[运行时间：0.044000s] [吞吐率：22.73req/s] [内存消耗：3,354.95kb] [文件加载：51]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'reg',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'content-length' => '54',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'referer' => 'http://c.com/member/user/reg.html',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/reg_html' => '',
+  'us_name' => '111',
+  'us_password' => '222',
+  'us_mobile_phone' => '',
+  'us_email' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->reg[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ VIEW ] B:\aaaweb\shop\public/../application/member\view\user\reg.html [ array (
+  0 => 'bottoms',
+  1 => '注册成功！',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_user` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] INSERT INTO `tp_user` (`us_name` , `us_password` , `us_mobile_phone` , `us_email`) VALUES ('111' , '222' , '' , '') [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:12:58+08:00 ] 127.0.0.1 GET c.com/static/index/js/jquery.min.map
+[运行时间：0.014000s] [吞吐率：71.43req/s] [内存消耗：1,726.65kb] [文件加载：35]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'index',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => '*/*',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/static/index/js/jquery_min_map' => '',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T12:13:22+08:00 ] 127.0.0.1 GET c.com/member/user/sendCode
+[运行时间：0.033000s] [吞吐率：30.30req/s] [内存消耗：3,096.02kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendCode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendCode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendCode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [1]Class 'app\member\controller\SendCode' not found[B:\aaaweb\shop\application\member\controller\User.php:89]
+---------------------------------------------------------------
+[ 2019-08-18T12:14:14+08:00 ] 127.0.0.1 GET c.com/member/user/sendCode
+[运行时间：0.025000s] [吞吐率：40.00req/s] [内存消耗：3,096.16kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendCode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendCode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendCode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [1]Class 'sms\SendCode' not found[B:\aaaweb\shop\application\member\controller\User.php:89]
+---------------------------------------------------------------
+[ 2019-08-18T12:15:24+08:00 ] 127.0.0.1 GET c.com/member/user/sendCode
+[运行时间：0.035000s] [吞吐率：28.57req/s] [内存消耗：3,096.09kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendCode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendCode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendCode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [1]Class 'app\member\controller\SendCode' not found[B:\aaaweb\shop\application\member\controller\User.php:89]
+---------------------------------------------------------------
+[ 2019-08-18T12:15:51+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.032000s] [吞吐率：31.25req/s] [内存消耗：3,096.02kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [1]Class 'app\member\controller\SendCode' not found[B:\aaaweb\shop\application\member\controller\User.php:89]
+---------------------------------------------------------------
+[ 2019-08-18T12:16:37+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.033000s] [吞吐率：30.30req/s] [内存消耗：3,096.09kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [1]Class 'app\member\controller\SendCode' not found[B:\aaaweb\shop\application\member\controller\User.php:89]
+---------------------------------------------------------------
+[ 2019-08-18T12:17:47+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.034000s] [吞吐率：29.41req/s] [内存消耗：3,105.16kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [4]语法错误: unexpected 'class' (T_CLASS), expecting \\ (T_NS_SEPARATOR) or ';' or '{'[B:\aaaweb\shop\extend\sms\Sms.php:5]
+---------------------------------------------------------------
+[ 2019-08-18T12:17:56+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.033000s] [吞吐率：30.30req/s] [内存消耗：3,096.16kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [1]Class 'sms\SendCode' not found[B:\aaaweb\shop\application\member\controller\User.php:89]
+---------------------------------------------------------------
+[ 2019-08-18T12:20:26+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.026000s] [吞吐率：38.46req/s] [内存消耗：3,105.32kb] [文件加载：50]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+[ error ] [4]语法错误: unexpected 'class' (T_CLASS), expecting \\ (T_NS_SEPARATOR) or ';' or '{'[B:\aaaweb\shop\extend\sendcode\SendCode.php:5]
+---------------------------------------------------------------
+[ 2019-08-18T12:21:31+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.541000s] [吞吐率：1.85req/s] [内存消耗：2,942.86kb] [文件加载：45]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:31:01+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.014000s] [吞吐率：71.43req/s] [内存消耗：1,770.72kb] [文件加载：36]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ LOG ] INIT File
+[ error ] [4]语法错误: unexpected ';'[B:\aaaweb\shop\application\member\controller\User.php:94]
+---------------------------------------------------------------
+[ 2019-08-18T12:31:12+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.556000s] [吞吐率：1.80req/s] [内存消耗：2,943.22kb] [文件加载：45]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.005000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:31:23+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.160000s] [吞吐率：6.25req/s] [内存消耗：2,943.16kb] [文件加载：45]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:31:50+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.131000s] [吞吐率：7.63req/s] [内存消耗：2,943.45kb] [文件加载：45]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:31:56+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.135000s] [吞吐率：7.41req/s] [内存消耗：2,943.40kb] [文件加载：45]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:47:08+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.131000s] [吞吐率：7.63req/s] [内存消耗：3,043.45kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:50:00+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.137000s] [吞吐率：7.30req/s] [内存消耗：3,043.51kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:51:55+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.128000s] [吞吐率：7.81req/s] [内存消耗：3,105.31kb] [文件加载：51]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: result_msg [B:\aaaweb\shop\application\member\controller\User.php:100]
+---------------------------------------------------------------
+[ 2019-08-18T12:52:16+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.111000s] [吞吐率：9.01req/s] [内存消耗：3,043.48kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2019-08-18T12:53:19+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.117000s] [吞吐率：8.55req/s] [内存消耗：3,043.48kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T13:07:34+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.549000s] [吞吐率：1.82req/s] [内存消耗：3,043.44kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.005000s ]
+---------------------------------------------------------------
+[ 2019-08-18T13:09:39+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.134000s] [吞吐率：7.46req/s] [内存消耗：3,043.42kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T13:15:24+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.138000s] [吞吐率：7.25req/s] [内存消耗：3,043.42kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T13:20:33+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.119000s] [吞吐率：8.40req/s] [内存消耗：3,043.42kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T13:20:46+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.141000s] [吞吐率：7.09req/s] [内存消耗：3,043.42kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[ 2019-08-18T13:21:07+08:00 ] 127.0.0.1 POST c.com/get_ajax_content.php
+[运行时间：0.014000s] [吞吐率：71.43req/s] [内存消耗：1,728.38kb] [文件加载：35]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'get_ajax_content.php',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'referer' => 'http://c.com/',
+  'connection' => 'close',
+  'content-length' => '133',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/get_ajax_content_php' => '',
+  'act' => 'floor_cat_content',
+  'cat_id' => '22',
+  'floor_num' => '6',
+  'warehouse_id' => '2',
+  'area_id' => '19',
+  'area_city' => '543',
+  'goods_ids' => '',
+  'floorcat' => 'undefined',
+  'seller_id' => 'undefined',
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2019-08-18T13:21:11+08:00 ] 127.0.0.1 GET c.com/member/user/sendcode
+[运行时间：0.149000s] [吞吐率：6.71req/s] [内存消耗：3,043.42kb] [文件加载：47]
+[ info ] [ LANG ] B:\aaaweb\shop\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'member',
+    1 => 'user',
+    2 => 'sendcode',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'dnt' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:68.0) Gecko/20100101 Firefox/68.0',
+  'host' => 'c.com',
+)
+[ info ] [ PARAM ] array (
+  '/member/user/sendcode' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\member\controller\User->sendcode[ B:\aaaweb\shop\application\member\controller\User.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;dbname=tested;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `tp_article` [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `ar_id`,`ar_title`,`ar_linkurl` FROM `tp_article` WHERE  `ar_cateid` = 26 [ RunTime:0.000000s ]
