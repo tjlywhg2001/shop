@@ -21,7 +21,7 @@
 				<div class="header-href">
 				    <span>还没有账号<a href="{:url('member/user/reg')}" class="jump">免费注册</a></span>
 				</div>
-		    </div>@
+		    </div>
 		</div>
 
 	    <div class="container">
@@ -90,8 +90,8 @@
 <!-- <script type="text/javascript" src="__index__/js/user_register.js"></script> -->
 <script type="text/javascript" src="__index__/js/utils.js"></script>
 <script type="text/javascript" src="__index__/js/jquery.SuperSlide.2.1.1.js"></script>
-<script type="text/javascript" src="__index__/js/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-<script type="text/javascript" src="__index__/js/dsc-common.js"></script>
+<script type="text/javascript" src="__index__/js/perfect-scrollbar.min.js"></script>
+<!-- <script type="text/javascript" src="__index__/js/dsc-common.js"></script> -->
 <script type="text/javascript">
 
 
@@ -183,11 +183,8 @@ $(function(){
 
 		console.log(111111);
 		$.ajax({
-			url:'{:url("member/user/checking")}',
-			data:{
-				'name': $('input[name=us_name]').val(),
-				'password': $('input[name=us_password]').val(),
-			},
+			url:'{:url("member/user/login")}',
+			data:'',
 			dataType:'json',
 			type:'post',
 			success: function (status) {

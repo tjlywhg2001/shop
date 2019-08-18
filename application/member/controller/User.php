@@ -28,6 +28,18 @@ class User extends Controller
 
 	public function login()
 	{
+		if ( request() -> isPost() ){
+			$data = input('post.');
+			$user = db('user') -> select();
+			foreach ( $user as $k => $v ){
+				if ( $v['us_name'] == $data['us_name'] && $v['us_password'] == $data['us_password'] ){
+					// dump($data);die;
+					$this -> assign('登录成功！');
+				} else {
+					$this -> assign('登录失败！');
+				}
+			}
+		}
 		return view();
 	}
 
@@ -44,7 +56,6 @@ class User extends Controller
 		// 		cache('bottoms',$bottoms ,$times);
 		// 	}
 		// }
-		// dump($bottoms);die;
 		// 赋值输出
 		$this -> assign([
 			'bottoms' => $bottoms,
@@ -60,7 +71,7 @@ class User extends Controller
 				$aa = 1;
 			}
 		}
-		if ( $aa = 1){
+		if ( $aa == 1){
 			return 1;
 		} else {
 			return 0;
