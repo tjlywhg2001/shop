@@ -82,10 +82,11 @@ class User extends Controller
 
 
 	public function sendcode(){
-
-		$phone = '13821656007';
-		$phonepassword = 'Whg963852';
-		$phoneNumber = '18522268833';
+		// 官网的账号和密码
+		$phone = '阿斯蒂芬';
+		$phonepassword = 'asdfasdf';
+		// 该收到短信的手机号
+		$phoneNumber = '啊手动阀';
 		$var = mt_rand(100000,999999);
 		$phoness = '111您的验证码是'.$var.'，如非本人操作，请忽略本短信！ha';
 
@@ -108,7 +109,7 @@ class User extends Controller
 
 	public function sendMail(){
 		// 收件人的信息
-		$ToMail = '79092521@qq.com';
+		$ToMail = 'asdfasf@qq.com';
 		$ToTitle = '你好';
 		$ToContent = '你吃过饭吗？';
 
@@ -121,12 +122,12 @@ class User extends Controller
 		// 是否需要身份验证
 		$Mail -> SMTPAuth = TRUE;
 		// 邮件服务器上的帐号是什么 -> 到163.注册一个帐号即可
-		$Mail -> From = 'html2020@163.com';
-		$Mail -> FromName = 'html2020';
+		$Mail -> From = 'asdf@163.com';
+		$Mail -> FromName = 'asdf';
 		//发送邮件的服务协议地址
 		$Mail -> Host = 'smtp.163.com';
-		$Mail -> Username = 'html2020@163.com';
-		$Mail -> Password = 'asdf123';
+		$Mail -> Username = 'asdf@163.com';
+		$Mail -> Password = 'asdf';
 		// 发邮件端口号默认25
 		$Mail -> Port = 25;
 		// 收件人
@@ -147,7 +148,6 @@ class User extends Controller
 		} else {
 			echo "发送成功";
 		}
-
 		// return ( $ToMailSuccess );
 
 	}
