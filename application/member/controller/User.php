@@ -3,6 +3,8 @@ namespace app\member\controller;
 
 use think\Controller;
 use sendcode\SendCode;
+use PHPMailer\PHPMailer\PHPMailer;
+// use PHPMailer\PHPMailer\Exception;
 
 header("Content-Type: text/html;charset=utf-8");
 /**
@@ -103,6 +105,53 @@ class User extends Controller
 			return $re;
 		}
 	}
+
+	public function sendMail(){
+		// 收件人的信息
+		$ToMail = '79092521@qq.com';
+		$ToTitle = '你好';
+		$ToContent = '你吃过饭吗？';
+
+		$Mail = new PHPMailer();
+		// 设置为要发邮件
+		$Mail -> isSMTP();
+		// 是否允许发送HTML代码作为邮件的内容
+		$Mail -> IsHTML(TRUE);
+		$Mail -> CharSet ='UTF-8';
+		// 是否需要身份验证
+		$Mail -> SMTPAuth = TRUE;
+		// 邮件服务器上的帐号是什么 -> 到163.注册一个帐号即可
+		$Mail -> From = 'html2020@163.com';
+		$Mail -> FromName = 'html2020';
+		//发送邮件的服务协议地址
+		$Mail -> Host = 'smtp.163.com';
+		$Mail -> Username = 'html2020@163.com';
+		$Mail -> Password = 'asdf123';
+		// 发邮件端口号默认25
+		$Mail -> Port = 25;
+		// 收件人
+		$Mail -> AddAddress($ToMail);
+		// 邮件标题
+		$Mail -> Subject = $ToTitle;
+		// 邮件内容
+		$Mail -> Body = $ToContent;
+
+		// dump($Mail);die;
+
+		$ToMailSuccess = $Mail -> Send();
+
+		// dump($ToMailSuccess);die;
+		if ( !$ToMailSuccess ){
+		   echo "邮件发送失败. <p>";
+		   echo "错误原因: " . $Mail->ErrorInfo;
+		} else {
+			echo "发送成功";
+		}
+
+		// return ( $ToMailSuccess );
+
+	}
+
 
 
 }
