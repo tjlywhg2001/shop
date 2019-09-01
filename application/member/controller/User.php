@@ -81,37 +81,43 @@ class User extends Controller
 	}
 
 
-	public function sendcode(){
+	public function sendcode( $phoneNumber ){
 		// 官网的账号和密码
-		$phone = '阿斯蒂芬';
-		$phonepassword = 'asdfasdf';
+		$phone = '13821656007';
+		$phonepassword = 'Gang123456aa';
 		// 该收到短信的手机号
-		$phoneNumber = '啊手动阀';
+		// $phoneNumber = '18522268833';
 		$var = mt_rand(100000,999999);
-		$phoness = '111您的验证码是'.$var.'，如非本人操作，请忽略本短信！ha';
+		$phoness = '您的验证码是'.$var.'，如非本人操作，请忽略本短信！';
 
 		$send = new SendCode();
  
 		// $re = $send->send('您的账号','您的密码','手机号','短信内容',time(),1);
 		$re = $send->send( $phone, $phonepassword, $phoneNumber, $phoness,time(),1);
 		
-		dump($re);
+		// dump($re);
+		// $ss = "{'aa':".$re['result'].",'bb':".$re['result_msg']."}";
+
+		// dump($ss);
 		if ( !is_null($re) ){
 			if ( $re['result'] == 0 ){
-				echo "短信发送成功！";
+				// return "短信发送成功！";
+				return $re;
 			} else {
-				echo $re['result_msg'];
+				return $re;
+				// return $re['result_msg'];
 			}
 		} else {
 			return $re;
 		}
 	}
 
-	public function sendMail(){
+	public function sendMail( $ToMail ){
 		// 收件人的信息
-		$ToMail = 'asdfasf@qq.com';
-		$ToTitle = '你好';
-		$ToContent = '你吃过饭吗？';
+		// $ToMail = 'asdfasf@qq.com';
+		$ToTitle = '零下二十度';
+		$var = mt_rand(100000,999999);
+		$ToContent = '你的验证码是'.$var;
 
 		$Mail = new PHPMailer();
 		// 设置为要发邮件
@@ -122,12 +128,12 @@ class User extends Controller
 		// 是否需要身份验证
 		$Mail -> SMTPAuth = TRUE;
 		// 邮件服务器上的帐号是什么 -> 到163.注册一个帐号即可
-		$Mail -> From = 'asdf@163.com';
-		$Mail -> FromName = 'asdf';
+		$Mail -> From = 'html2020@126.com';
+		$Mail -> FromName = 'html2020';
 		//发送邮件的服务协议地址
-		$Mail -> Host = 'smtp.163.com';
-		$Mail -> Username = 'asdf@163.com';
-		$Mail -> Password = 'asdf';
+		$Mail -> Host = 'smtp.126.com';
+		$Mail -> Username = 'html2020';
+		$Mail -> Password = 'asdf123';
 		// 发邮件端口号默认25
 		$Mail -> Port = 25;
 		// 收件人
@@ -143,10 +149,14 @@ class User extends Controller
 
 		// dump($ToMailSuccess);die;
 		if ( !$ToMailSuccess ){
-		   echo "邮件发送失败. <p>";
-		   echo "错误原因: " . $Mail->ErrorInfo;
+			$res = ['status'=> 1, 'msg'=> '发送失败', 'msgErr'=> $Mail->ErrorInfo ];
+			return json($res);
+		   // echo "邮件发送失败. <p>";
+		   // echo "错误原因: " . $Mail->ErrorInfo;
 		} else {
-			echo "发送成功";
+			$res = ['status'=> 0, 'msg'=> '发送成功', 'msgErr'=> $Mail->ErrorInfo ];
+			return json($res);
+			// echo "发送成功";
 		}
 		// return ( $ToMailSuccess );
 
