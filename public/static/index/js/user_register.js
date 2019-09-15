@@ -415,6 +415,6 @@ function SetTimes(Doms) {
 		// 	CountTime = 10;
 		// 	$('#zphone').on('click',sendChangePhone());
 		// }
-	},1000);	
+	},1000);
 
 }
