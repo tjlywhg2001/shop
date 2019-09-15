@@ -361,30 +361,60 @@ function sendChangeEmail(type){
 }
 
 //获取手机验证码
-function sendChangePhone(type) {
+function sendChangePhone(Doms) {
 	var obj = $("input[name='us_mobile_phone']"),
 	PhoneNum = obj.val(),
 	where = "";
-	if ( PhoneNum === '' ){
-		alert('请输入手机号');
-		return;
-	}
+	// if ( PhoneNum === '' ){
+	// 	alert('请输入手机号');
+	// 	return;
+	// }
 	$.ajax({
 		type: 'post',
 		dataType: 'json',
 		url: Phone_url,
 		data: { phoneNumber:PhoneNum },
 		success: function ( data ) {
-			if ( data.result === '0' ){
-				$('#zphone').text('发送成功');
-			} else if ( data.result === '101' ){
-				$('#zphone').text(data.result_msg);
-			} else {
-				$('#zphone').text('发送失败');
-			}
+			$('#zphone').val(data.result_msg);
+			// if ( data.result === '0' ){
+				SetTimes(Doms);
+		// 		$('#zphone').text('发送成功');
+		// 		// $('#zphone').off('click');
+		// 	} else if ( data.result === '101' ){
+		// 		$('#zphone').text(data.result_msg);
+		// 		// $('#zphone').off('click');
+			// } else {
+			// 	$('#zphone').text('发送失败');
+			// }
 		},
 		error: function () {	
-			// body...
+			alert('aaa')
 		}
 	});
+}
+
+
+function SetTimes(Doms) {
+	var CountTime = 10;
+	var int=setInterval(function(){
+		CountTime--;
+		console.log(CountTime);
+		$('#zphone').attr('disabled',true);
+		$('#zphone').val(CountTime+'s后重新发送');
+		if ( CountTime === 0 ) {
+			$('#zphone').val('继续发送');
+			clearInterval(int);
+			CountTime = 10;
+			$('#zphone').attr('disabled',false);
+		}
+		// $('#zphone').off('click');
+		// $('#zphone').text(CountTime+'s后重新发送');
+		// if ( CountTime === 0 ) {
+		// 	$('#zphone').text('继续发送');
+		// 	clearInterval(int);
+		// 	CountTime = 10;
+		// 	$('#zphone').on('click',sendChangePhone());
+		// }
+	},1000);	
+
 }

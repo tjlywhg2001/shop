@@ -83,7 +83,7 @@ class User extends Controller
 
 	public function sendcode( $phoneNumber ){
 		// 官网的账号和密码
-		$phone = '13821656007';
+		$phone = '138216560077';
 		$phonepassword = 'Gang123456aa';
 		// 该收到短信的手机号
 		// $phoneNumber = '18522268833';
@@ -98,7 +98,7 @@ class User extends Controller
 		// dump($re);
 		// $ss = "{'aa':".$re['result'].",'bb':".$re['result_msg']."}";
 
-		// dump($ss);
+		// dump($re);
 		if ( !is_null($re) ){
 			if ( $re['result'] == 0 ){
 				// return "短信发送成功！";
