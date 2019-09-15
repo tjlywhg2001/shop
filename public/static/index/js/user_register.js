@@ -12,11 +12,10 @@ $(function(){
 		}
 	});
 	
-	$("form[name='formUser']").validate({
+$("form[name='formUser']").validate({
 		errorPlacement:function(error, element){
 			var error_div = element.parents('div.item').find('div.input-tip');
 			error_div.html("").append(error);
-			console.log(11111)
 		},
 		ignore:".ignore",
 		rules:{
@@ -32,8 +31,7 @@ $(function(){
 					url:isRegisteredUserName,
 					data:{
 						username:function(){
-							return $("input[name='us_name']").val();
-			console.log(2222)
+							return $("input[name='username']").val();
 						}
 					}
 				}
@@ -135,55 +133,55 @@ $(function(){
 				required : true
 			}
 		},
-		// messages:{
-		// 	username:{
-		// 		required : username_empty,
-		// 		StringminLength : msg_un_length,
-		// 		StringLength : username_shorter,
-		// 		stringCheck : msg_un_format,
-		// 		remote : msg_un_registered
-		// 	},
-		// 	password :{
-		// 		required : password_empty,
-		// 		minlength : password_shorter
-		// 	},
-		// 	confirm_password :{
-		// 		required : msg_confirm_pwd_blank,
-		// 		equalTo : confirm_password_invalid
-		// 	},
-		// 	mobile_phone:{
-		// 		required : msg_phone_blank,
-		// 		isMobile : mobile_phone_invalid,
-		// 		notequalTo : mobile_phone_username_equalTo,
-		// 		remote : msg_phone_registered
-		// 	},
-		// 	captcha :{
-		// 		required : msg_identifying_code,
-		// 		remote : msg_identifying_not_correct
-		// 	},
-		// 	mobile_code :{
-		// 		required : msg_mobile_code_blank,
-		// 		remote : msg_mobile_code_not_correct
-		// 	},
-		// 	email :{
-		// 		required : msg_email_blank,
-		// 		email : msg_email_format,
-		// 		remote : msg_email_registered
-		// 	},
-		// 	mobileagreement:{
-		// 		required : agreement
-		// 	},
-		// 	send_code :{
-		// 		required : msg_email_code,
-		// 		remote : msg_email_code_not
-		// 	},
-		// 	sel_question :{
-		// 		required : select_password_question
-		// 	},
-		// 	passwd_answer:{
-		// 		required : null_password_question
-		// 	}
-		// },
+		messages:{
+			username:{
+				required : username_empty,
+				StringminLength : msg_un_length,
+				StringLength : username_shorter,
+				stringCheck : msg_un_format,
+				remote : msg_un_registered
+			},
+			password :{
+				required : password_empty,
+				minlength : password_shorter
+			},
+			confirm_password :{
+				required : msg_confirm_pwd_blank,
+				equalTo : confirm_password_invalid
+			},
+			mobile_phone:{
+				required : msg_phone_blank,
+				isMobile : mobile_phone_invalid,
+				notequalTo : mobile_phone_username_equalTo,
+				remote : msg_phone_registered
+			},
+			captcha :{
+				required : msg_identifying_code,
+				remote : msg_identifying_not_correct
+			},
+			mobile_code :{
+				required : msg_mobile_code_blank,
+				remote : msg_mobile_code_not_correct
+			},
+			email :{
+				required : msg_email_blank,
+				email : msg_email_format,
+				remote : msg_email_registered
+			},
+			mobileagreement:{
+				required : agreement
+			},
+			send_code :{
+				required : msg_email_code,
+				remote : msg_email_code_not
+			},
+			sel_question :{
+				required : select_password_question
+			},
+			passwd_answer:{
+				required : null_password_question
+			}
+		},
 		success:function(label){
 			label.removeClass().addClass("succeed").html("<i></i>");
 		},

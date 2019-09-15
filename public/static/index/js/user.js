@@ -8,9 +8,9 @@ function userEdit()
   var frm = document.forms['formEdit'];
   
   if(frm.elements['email']){
-	  var email = frm.elements['email'].value;
+    var email = frm.elements['email'].value;
   }else{ 
-  	  var email = $("#profile_email").html();
+      var email = $("#profile_email").html();
   }
   
   var msg = '';
@@ -35,14 +35,14 @@ function userEdit()
     msg += no_select_question + '\n';
   }
 
-  for (i = 7; i < frm.elements.length - 2; i++)	// 从第七项开始循环检查是否为必填项
+  for (i = 7; i < frm.elements.length - 2; i++) // 从第七项开始循环检查是否为必填项
   {
-	needinput = document.getElementById(frm.elements[i].name + 'i') ? document.getElementById(frm.elements[i].name + 'i') : '';
+  needinput = document.getElementById(frm.elements[i].name + 'i') ? document.getElementById(frm.elements[i].name + 'i') : '';
 
-	if (needinput != '' && frm.elements[i].value.length == 0)
-	{
-	  msg += '- ' + needinput.innerHTML + "<i></i>"+msg_blank + '\n';
-	}
+  if (needinput != '' && frm.elements[i].value.length == 0)
+  {
+    msg += '- ' + needinput.innerHTML + "<i></i>"+msg_blank + '\n';
+  }
   }
 
   if (msg.length > 0)
@@ -141,131 +141,131 @@ function submitMsg()
  */
 function submitPwdInfo(obj)
 {
-	var obj = $(obj).parents("form[name='getPassword']");
-	var obj_div = obj.parent();
-	var user_name = obj.find("input[name='user_name']");
-	var email     = obj.find("input[name='email']");
-	var phone     = obj.find("input[name='mobile_phone']");
-	var wenti     = obj.find("input[name='wenti']");
-	var captcha     = obj.find("input[name='captcha']");
-	var sel_question     = obj.find("select[name='sel_question']");
-	var passwd_answer     = obj.find("input[name='passwd_answer']");
-	var errorMsg = '';
-	var msg = obj.find('.msg_ts');
-	var email_enabled_captcha = obj.find("input[name='email_enabled_captcha']");
-	var captcha_verification =obj.find("input[name='captcha_verification']");
-	var seKey = $(obj).find("img[name='img_captcha']").data('key');
-	
-	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
-	var fade = false;
+  var obj = $(obj).parents("form[name='getPassword']");
+  var obj_div = obj.parent();
+  var user_name = obj.find("input[name='user_name']");
+  var email     = obj.find("input[name='email']");
+  var phone     = obj.find("input[name='mobile_phone']");
+  var wenti     = obj.find("input[name='wenti']");
+  var captcha     = obj.find("input[name='captcha']");
+  var sel_question     = obj.find("select[name='sel_question']");
+  var passwd_answer     = obj.find("input[name='passwd_answer']");
+  var errorMsg = '';
+  var msg = obj.find('.msg_ts');
+  var email_enabled_captcha = obj.find("input[name='email_enabled_captcha']");
+  var captcha_verification =obj.find("input[name='captcha_verification']");
+  var seKey = $(obj).find("img[name='img_captcha']").data('key');
   
-	if(obj_div.hasClass('formEmail')){
-		if(user_name.val().length==0){
-			msg.show();
-			msg.find(".error").html(json_languages.null_username);
-			return false;
-		}else if(email.val().length==0){
-			msg.show();
-			msg.find('.error').html(json_languages.null_email);
-			return false;
-		}else if(document.getElementById('captcha') && captcha.val().length==0){
-			msg.show();
-			msg.find('.error').html(json_languages.null_captcha);
-			return false;
-		}else{
-			fade = true;
-		}
-	}
+  var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/;
+  var fade = false;
   
-	if(obj_div.hasClass('formPhone')){ 
-		if(user_name.val().length==0){
-			 msg.show();
-			 msg.find('.error').html(json_languages.null_username);
-			 return false;
-		}else if(phone.val().length==0){
-			 msg.show();
-			 msg.find('.error').html(json_languages.null_phone);
-			 return false;
-		}else if(phone.val().length>0){
-			if(phone.val().length != 11){
-				msg.find('.error').html('<i></i>'+phone_address_empty_11);
-				return false;
-			}else if(!myreg.test(phone.val())){
-				msg.find('.error').html('<i></i>'+phone_address_empty_bzq);
-				return false;
-			}
-		}else{
-			fade = true;
-		}
-	}
+  if(obj_div.hasClass('formEmail')){
+    if(user_name.val().length==0){
+      msg.show();
+      msg.find(".error").html(json_languages.null_username);
+      return false;
+    }else if(email.val().length==0){
+      msg.show();
+      msg.find('.error').html(json_languages.null_email);
+      return false;
+    }else if(document.getElementById('captcha') && captcha.val().length==0){
+      msg.show();
+      msg.find('.error').html(json_languages.null_captcha);
+      return false;
+    }else{
+      fade = true;
+    }
+  }
   
-	if(obj_div.hasClass('formWenti')){ 
-		if(user_name.val().length==0){
-			msg.show();
-			msg.find('.error').html(json_languages.null_username);
-			return false;
-		}else if(sel_question.val() == 0){
-			msg.show();
-			msg.find('.error').html(json_languages.select_password_question);
-			return false;
-		}else if(passwd_answer.val().length==0){
-			msg.show();
-			msg.find('.error').html(json_languages.null_password_question);
-			return false;
-		}else if(captcha.val().length==0){
-			msg.show();
-			msg.find('.error').html(json_languages.null_captcha);
-			return false;
-		}else{
-			fade = true;
-		}
-	}
+  if(obj_div.hasClass('formPhone')){ 
+    if(user_name.val().length==0){
+       msg.show();
+       msg.find('.error').html(json_languages.null_username);
+       return false;
+    }else if(phone.val().length==0){
+       msg.show();
+       msg.find('.error').html(json_languages.null_phone);
+       return false;
+    }else if(phone.val().length>0){
+      if(phone.val().length != 11){
+        msg.find('.error').html('<i></i>'+phone_address_empty_11);
+        return false;
+      }else if(!myreg.test(phone.val())){
+        msg.find('.error').html('<i></i>'+phone_address_empty_bzq);
+        return false;
+      }
+    }else{
+      fade = true;
+    }
+  }
+  
+  if(obj_div.hasClass('formWenti')){ 
+    if(user_name.val().length==0){
+      msg.show();
+      msg.find('.error').html(json_languages.null_username);
+      return false;
+    }else if(sel_question.val() == 0){
+      msg.show();
+      msg.find('.error').html(json_languages.select_password_question);
+      return false;
+    }else if(passwd_answer.val().length==0){
+      msg.show();
+      msg.find('.error').html(json_languages.null_password_question);
+      return false;
+    }else if(captcha.val().length==0){
+      msg.show();
+      msg.find('.error').html(json_languages.null_captcha);
+      return false;
+    }else{
+      fade = true;
+    }
+  }
 
-	if(obj_div.hasClass('formEmail')){
-		if(document.getElementById('captcha')){
-			if(captcha.val().length == 4){
-				Ajax.call( 'user.php?act=captchas_pass', 'captcha=' + captcha.val() + '&seKey='+seKey, check_captcha_callback , 'GET', 'TEXT', true, true );
-			}else{
-				msg.show();
-				msg.find('.error').html(json_languages.error_email);
-				return false;
-			}
-		}
-	}else{
-		if(document.getElementById('mobile_captcha')){
-			if(captcha.val().length == 4){
-				Ajax.call( 'user.php?act=captchas_pass', 'captcha=' + captcha.val() + '&seKey='+seKey, check_captcha_callback , 'GET', 'TEXT', true, true );
-			}else{
-				msg.show();
-				msg.find('.error').html(json_languages.error_email);
-				return false;
-			}
-		}
-	}
-	
-	function check_captcha_callback(result){
-		
-		if ( result.replace(/\r\n/g,'') == ' ok' )
-		{
-			captcha_verification.val(0);
-		}
-		else
-		{
-			captcha_verification.val(1);
-		}
-	}
-	
-	if(document.getElementById('captcha') && captcha_verification.val()==0){
-		fade = false;
-		msg.show();
-		msg.find('.msg_error').html(json_languages.error_email);
-	}else{
-		fade = true;
-	}
-	
-	if(fade == true){
-		obj.submit();
-	}
+  if(obj_div.hasClass('formEmail')){
+    if(document.getElementById('captcha')){
+      if(captcha.val().length == 4){
+        Ajax.call( 'user.php?act=captchas_pass', 'captcha=' + captcha.val() + '&seKey='+seKey, check_captcha_callback , 'GET', 'TEXT', true, true );
+      }else{
+        msg.show();
+        msg.find('.error').html(json_languages.error_email);
+        return false;
+      }
+    }
+  }else{
+    if(document.getElementById('mobile_captcha')){
+      if(captcha.val().length == 4){
+        Ajax.call( 'user.php?act=captchas_pass', 'captcha=' + captcha.val() + '&seKey='+seKey, check_captcha_callback , 'GET', 'TEXT', true, true );
+      }else{
+        msg.show();
+        msg.find('.error').html(json_languages.error_email);
+        return false;
+      }
+    }
+  }
+  
+  function check_captcha_callback(result){
+    
+    if ( result.replace(/\r\n/g,'') == ' ok' )
+    {
+      captcha_verification.val(0);
+    }
+    else
+    {
+      captcha_verification.val(1);
+    }
+  }
+  
+  if(document.getElementById('captcha') && captcha_verification.val()==0){
+    fade = false;
+    msg.show();
+    msg.find('.msg_error').html(json_languages.error_email);
+  }else{
+    fade = true;
+  }
+  
+  if(fade == true){
+    obj.submit();
+  }
 }
 
 
@@ -374,56 +374,56 @@ function addBooking()
 */ 
 function userLogin()
 {
-	var frm = $("form[name='formLogin']");
-	var username = frm.find("input[name='username']");
-	var password = frm.find("input[name='password']");
-	var captcha = frm.find("input[name='captcha']");
-	var remember = frm.find("input[name='remember']");
-	var dsc_token = frm.find("input[name='dsc_token']");
-	var error = frm.find(".msg-error");
-	var msg = '';
-	var remember_string = "";
-	
-	
-	/*保存登录信息 by wu start*/
-	if(remember.filter(":checked").length > 0)
-	{
-		remember_string = '&remember='+remember.val();
-	}
-	/*保存登录信息 by wu end*/
-	if(username.val()==""){
-		error.show();
-		username.parents(".item").addClass("item-error");
-		msg += username_empty;
-		showMesInfo(msg);
-		return false;
-	}
+  var frm = $("form[name='formLogin']");
+  var username = frm.find("input[name='username']");
+  var password = frm.find("input[name='password']");
+  var captcha = frm.find("input[name='captcha']");
+  var remember = frm.find("input[name='remember']");
+  var dsc_token = frm.find("input[name='dsc_token']");
+  var error = frm.find(".msg-error");
+  var msg = '';
+  var remember_string = "";
+  
+  
+  /*保存登录信息 by wu start*/
+  if(remember.filter(":checked").length > 0)
+  {
+    remember_string = '&remember='+remember.val();
+  }
+  /*保存登录信息 by wu end*/
+  if(username.val()==""){
+    error.show();
+    username.parents(".item").addClass("item-error");
+    msg += username_empty;
+    showMesInfo(msg);
+    return false;
+  }
 
-	if(password.val()==""){
-		error.show();
-		password.parents(".item").addClass("item-error");
-		msg += password_empty;
-		showMesInfo(msg);
-		return false;
-	}
-	
-	if(captcha.val()==""){
-		error.show();
-		captcha.parents(".item").addClass("item-error");
-		msg += captcha_empty;
-		showMesInfo(msg);
-		return false;
-	}
-	var back_act = frm.find("input[name='back_act']").val();
-	
-	Ajax.call( 'user.php?act=act_login', 'username=' + username.val()+'&password='+password.val()+remember_string+'&captcha='+captcha.val()+'&dsc_token='+dsc_token.val()+'&back_act='+back_act, return_login , 'POST', 'JSON');
+  if(password.val()==""){
+    error.show();
+    password.parents(".item").addClass("item-error");
+    msg += password_empty;
+    showMesInfo(msg);
+    return false;
+  }
+  
+  if(captcha.val()==""){
+    error.show();
+    captcha.parents(".item").addClass("item-error");
+    msg += captcha_empty;
+    showMesInfo(msg);
+    return false;
+  }
+  var back_act = frm.find("input[name='back_act']").val();
+  
+  Ajax.call( 'user.php?act=act_login', 'username=' + username.val()+'&password='+password.val()+remember_string+'&captcha='+captcha.val()+'&dsc_token='+dsc_token.val()+'&back_act='+back_act, return_login , 'POST', 'JSON');
 }
 
 function return_login(result)
 {
-	if(result.error>0)
-	{
-		showMesInfo(result.message);	
+  if(result.error>0)
+  {
+    showMesInfo(result.message);  
     if(result.captcha){
       if($("[ectype='captcha']").length > 0){
         $("[ectype='captcha']").replaceWith(result.captcha);
@@ -431,24 +431,24 @@ function return_login(result)
         $("[ectype='password']").after(result.captcha);
       }
     }
-	}
-	else
-	{
-		if(result.ucdata){
-			$("body").append(result.ucdata)
-		}
-		if(result.is_validated == 1){
-			location.href = result.url;
-		}else{
-			location.href = "user.php?act=user_email_verify";
-		}
-	}
+  }
+  else
+  {
+    if(result.ucdata){
+      $("body").append(result.ucdata)
+    }
+    if(result.is_validated == 1){
+      location.href = result.url;
+    }else{
+      location.href = "user.php?act=user_email_verify";
+    }
+  }
 }
 
 function showMesInfo(msg) {
-	$('.login-wrap .msg-wrap').empty();
-	var info = '<div class="msg-error"><b></b>' + msg + '</div>';
-	$('.login-wrap .msg-wrap').append(info);
+  $('.login-wrap .msg-wrap').empty();
+  var info = '<div class="msg-error"><b></b>' + msg + '</div>';
+  $('.login-wrap .msg-wrap').append(info);
 }
 
 function chkstr(str)
@@ -496,15 +496,15 @@ function check_conform_password( conform_password )
 
 function is_registered( username, register_mode )
 {
-	if(register_mode == 1){
-		var frm  = document.forms['formUser'];
-	}else{
-		var frm  = document.forms['formUserE'];
-	}
-	
+  if(register_mode == 1){
+    var frm  = document.forms['formUser'];
+  }else{
+    var frm  = document.forms['formUserE'];
+  }
+  
     var submit_disabled = false;
     var unlen = username.replace(/[^\x00-\xff]/g, "**").length;
-	
+  
     if(!Utils.isNumber(register_mode)){
         var submit_disabled = true;
     }
@@ -539,14 +539,13 @@ function is_registered( username, register_mode )
         $('#username_notice_'+register_mode).removeClass().addClass("error");
         return false;
     }
-    // Ajax.call( 'user.php?act=is_registered', 'username=' + username + "&mode=" + register_mode, registed_callback , 'GET', 'JSON', true, true );
-    Ajax.call( isRegisteredUserName, 'username=' + username + "&mode=" + register_mode, registed_callback , 'GET', 'JSON', true, true );
+    Ajax.call( 'user.php?act=is_registered', 'username=' + username + "&mode=" + register_mode, registed_callback , 'GET', 'JSON', true, true );
 }
 
 function is_extend_field(val, id, form){
-	if(val != ''){
-		$("form[name='" + form + "']").find(".extend_field" + id).html('');
-	}
+  if(val != ''){
+    $("form[name='" + form + "']").find(".extend_field" + id).html('');
+  }
 }
 
 function registed_callback(data)
@@ -563,7 +562,7 @@ function registed_callback(data)
   }
   else
   {
-	document.getElementById('username_notice_'+data.mode).className="error";
+  document.getElementById('username_notice_'+data.mode).className="error";
     document.getElementById('username_notice_'+data.mode).innerHTML = msg_un_registered;
     if(data.mode == 1){
         document.forms['formUser'].elements['Submit'].disabled = 'disabled';
@@ -577,21 +576,21 @@ function registed_callback(data)
 function is_mobile_phone( phone )
 {
     var submit_disabled = false;
-	var unlen = phone.replace(/[^\x00-\xff]/g, "**").length;
-	var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/; 
-	
-	if(!myreg.test(phone)) 
-	{ 
-		document.getElementById('phone_notice').innerHTML = Mobile_error;
+  var unlen = phone.replace(/[^\x00-\xff]/g, "**").length;
+  var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1})|(17[0-9]{1}))+\d{8})$/; 
+  
+  if(!myreg.test(phone)) 
+  { 
+    document.getElementById('phone_notice').innerHTML = Mobile_error;
         var submit_disabled = true;
-	} 
-	
-	if(unlen != 11){
-		document.getElementById('phone_notice').innerHTML = Mobile_error;
+  } 
+  
+  if(unlen != 11){
+    document.getElementById('phone_notice').innerHTML = Mobile_error;
         var submit_disabled = true;
-	}
-	
-	if ( submit_disabled )
+  }
+  
+  if ( submit_disabled )
     {
         document.forms['formUser'].elements['Submit'].disabled = 'disabled';
         return false;
