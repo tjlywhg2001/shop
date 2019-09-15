@@ -16,6 +16,7 @@ $(function(){
 		errorPlacement:function(error, element){
 			var error_div = element.parents('div.item').find('div.input-tip');
 			error_div.html("").append(error);
+			console.log(11111)
 		},
 		ignore:".ignore",
 		rules:{
@@ -28,10 +29,11 @@ $(function(){
 					cache: false,
 					async:false,
 					type:'POST',
-					url:'user.php?act=is_registered',
+					url:isRegisteredUserName,
 					data:{
 						username:function(){
-							return $("input[name='username']").val();
+							return $("input[name='us_name']").val();
+			console.log(2222)
 						}
 					}
 				}
@@ -377,7 +379,7 @@ function sendChangePhone(Doms) {
 		success: function ( data ) {
 			$('#zphone').val(data.result_msg);
 			// if ( data.result === '0' ){
-				SetTimes(Doms);
+				SetTimes(Doms,10);
 		// 		$('#zphone').text('发送成功');
 		// 		// $('#zphone').off('click');
 		// 	} else if ( data.result === '101' ){
@@ -394,27 +396,20 @@ function sendChangePhone(Doms) {
 }
 
 
-function SetTimes(Doms) {
-	var CountTime = 10;
+function SetTimes(Doms, CountTimes) {
+	var CountTime = CountTimes;
 	var int=setInterval(function(){
 		CountTime--;
-		console.log(CountTime);
 		$('#zphone').attr('disabled',true);
 		$('#zphone').val(CountTime+'s后重新发送');
+		$.cookie('CountDownTime',CountTime);
 		if ( CountTime === 0 ) {
 			$('#zphone').val('继续发送');
 			clearInterval(int);
-			CountTime = 10;
+			CountTime = CountTimes;
 			$('#zphone').attr('disabled',false);
+			$.cookie('CountDownTime',CountTime, { expires: -1 });
 		}
-		// $('#zphone').off('click');
-		// $('#zphone').text(CountTime+'s后重新发送');
-		// if ( CountTime === 0 ) {
-		// 	$('#zphone').text('继续发送');
-		// 	clearInterval(int);
-		// 	CountTime = 10;
-		// 	$('#zphone').on('click',sendChangePhone());
-		// }
 	},1000);
 
 }

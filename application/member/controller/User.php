@@ -164,4 +164,10 @@ class User extends Controller
 
 
 
+	public function isRegistered(){
+		echo 'aaa';
+	}
+
+
+
 }
